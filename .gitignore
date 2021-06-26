@@ -1,0 +1,6 @@
+# Default ignored files
+/.idea
+/hosts/*
+/files/*.pdf
+/templates_c
+
