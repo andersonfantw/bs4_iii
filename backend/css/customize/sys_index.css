@@ -1,0 +1,12 @@
+#bg{
+	width:1024px;
+	height:674px;
+	background-image:url(../../images/page.jpg);
+	background-position-y: 60px;
+	position: absolute;
+
+	filter:alpha(opacity=70);
+	-moz-opacity:0.7;
+	opacity:0.7;
+	-khtml-opacity: 0.7;
+}

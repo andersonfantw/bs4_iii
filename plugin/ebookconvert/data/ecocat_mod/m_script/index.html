@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="apple-mobile-web-app-capable" content="no" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <!-- css -->
+  <link rel="stylesheet" type="text/css" media="screen,print" href="./css/import.css" />
+  <link rel="stylesheet" type="text/css" media="screen,print" href="./css/jqtouch.css" />
+  <script src="./js/check.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/jqtouch.js" type="application/x-javascript" charset="utf-8"></script>
+  <script type="text/javascript" charset="utf-8">
+var jQT = new $.jQTouch();
+  </script>
+  <script src="./js/common.js" type="application/x-javascript" charset="utf-8"></script>
+  <script type="text/javascript">
+function hideAdBar(){
+  setTimeout("scrollTo(0,1)", 100);
+}
+  </script>
+</head>
+<body onLoad="hideAdBar()" onOrientationChange="hideAdBar()">
+<div id="carousel" class="wrap">
+  <div class="toolbar">
+    <h1></h1>
+    <dfn></dfn>
+  </div>
+  <div id="gallery"></div>
+  <div class="taskbar">
+    <ul>
+      <li><a href="#list" class="button" onClick="jQT.goTo('#list')"><img src="./img/task/list.png" alt="功能一覽" /></a></li>
+      <li><a href="#thumb" class="button" onClick="jQT.goTo('#thumb')"><img src="./img/task/thumb.png" alt="小圖目次" /></a></li>
+      <li><a href="#" name="link"><img src="./img/task/link.png" alt="連結" /></a></li>
+      <!-- <li><a href="#" name="pdf"><img src="./img/task/pdf.png" alt="下載PDF" /></a></li> -->
+      <li class="search">
+        <form action="./index.html" method="get" id="frm">
+          <input type="text" name="search" id="search" class="keyword" value="" placeholder="檢索" />
+        </form>
+      </li>
+    </ul>
+  </div>
+</div>
+<div id="list" class="body">
+  <div class="toolbar">
+    <h2>功能一覽</h2>
+    <a href="#" class="btn back">關閉</a>
+  </div>
+  <div class="contents">
+    <div class="icon-box">
+      <dl id="funcIndex"><dt><a href="#text" class="button" onClick="jQT.goTo('#text')"><img src="./img/nav/text.png" alt="目次" /></a></dt><dd>目次</dd></dl>
+      <dl><dt><a href="#thumb" class="button" onClick="jQT.goTo('#thumb')"><img src="./img/nav/thumb.png" alt="小圖目次" /></a></dt><dd>小圖目次</dd></dl>
+<!--
+      <dl><dt><a onClick="location.href='http://twitter.com/?status=http://bit.ly/dGQN7C'"><img src="./img/nav/twitter.png" alt="_blank" />Twitter</a></dt><dd>Twitter</dd></dl>
+      <dl><dt><a onClick="location.href='http://www.facebook.com/sharer.php?u=http%3a%2f%2fstaging%2eweb%2dblending%2ecom%2fdmx%2fm%2f'"><img src="./img/nav/facebook.png" alt="facebook" /></a></dt><dd>facebook</dd></dl>
+      <dl><dt><a onClick="location.href = 'mailto:mailto:?body=http://bit.ly/dGQN7C'" target="_blank"><img src="./img/nav/mail.png" alt="e-mail" /></a></dt><dd>e-mail</dd></dl>
+-->
+      <dl id="funcTwitter"><dt><a target="_blank"><img src="./img/nav/twitter.png" alt="_blank" />Twitter</a></dt><dd>Twitter</dd></dl>
+      <dl id="funcFaceBook"><dt><a target="_blank"><img src="./img/nav/facebook.png" alt="facebook" /></a></dt><dd>facebook</dd></dl>
+      <dl id="funcMail"><dt><a target="_blank"><img src="./img/nav/mail.png" alt="e-mail" /></a></dt><dd>e-mail</dd></dl>
+      <dl id="funcForum"><dt><a target="_blank"><img src="./img/nav/forum.png" alt="討論區" /></a></dt><dd>討論區</dd></dl>
+    </div>
+  </div>
+</div>
+<div id="text" class="body">
+  <div class="toolbar">
+    <h2>目次</h2>
+    <a href="#" class="btn back">關閉</a>
+  </div>
+  <div class="contents" style="background-color: #FFF;">
+    <div class="icon-box jCarouselNavi"></div>
+  </div>
+</div>
+<div id="thumb" class="body">
+  <div class="toolbar">
+    <h2>小圖目次</h2>
+    <a href="#" class="btn back">關閉</a>
+  </div>
+  <div class="pagerbar">
+    <ul>
+    	<li></li>
+    </ul>
+  </div>
+  <div class="contents">
+    <div class="icon-box jCarouselNavi"></div>
+  </div>
+</div>
+<div id="result" class="body">
+  <div class="toolbar">
+    <h2>檢索結果</h2>
+    <a href="#" class="btn back">關閉</a>
+  </div>
+  <div class="contents">
+    <div class="icon-box jCarouselNavi"></div>
+  </div>
+</div>
+<div id="link" class="body">
+  <div class="toolbar">
+    <h2>連結一覧</h2>
+    <a href="#" class="btn back">關閉</a>
+  </div>
+  <div class="contents">
+    <div class="icon-box jCarouselNavi"></div>
+  </div>
+</div>
+</body>
+</html>

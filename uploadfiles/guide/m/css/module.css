@@ -1,0 +1,199 @@
+@charset "utf8";
+
+/*--------------------------------------------------------------------
+	IDENTIFICATION DIVISION.
+	Version.	1.4.1.2;
+	Author.	Kenta Aga(admin)
+	Aptx.	4.8.6.9;
+
+	PROGRAM-ID.	"共通のスタイル指定(ヘッダー、フッター)"
+-------------------------------------------------------------------*/
+
+/*************************************
+	DATA DIVISION.
+	WORKING-STRAGE SECTION.
+*************************************/
+
+.area{
+	zoom: 1;
+}
+
+/*------------------------------------------------
+	TOOLBAR
+------------------------------------------------*/
+.toolbar{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 20px;
+	color: #fff;
+	text-align: left;
+	line-height: 20px;
+	background: #000;
+	overflow: hidden;
+	z-index: 20;
+}
+
+.toolbar h1{
+	float: left;
+	display: inline;
+	margin-left: 5px;
+	font-weight: bold;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.toolbar dfn{
+	float: right;
+	display: inline;
+	margin-right: 5px;
+}
+
+/* body
+￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣*/
+.body .toolbar{
+	height: 44px;
+	color: #fff;
+	text-align: center;
+	line-height: 44px;
+	background: #000;
+}
+
+.body .toolbar h2{
+	float: none;
+	display: block;
+	margin-left: 0;
+	font-size: 118%;
+	font-weight: bold;
+	text-align: center;
+	letter-spacing: 0.1em;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.body .toolbar .btn{
+	position: absolute;
+	top: 7px;
+	right: 5px;
+	padding: 5px 10px;
+	font-size: 12px;
+	line-height: 1.4;
+        color: #000;
+        text-shadow: #fff 0px 1px 1px;
+        -webkit-border-radius: 9px;
+        background: -webkit-gradient(linear,left top, left bottom,
+                        from(#fff),
+                        color-stop(0.01,#eaeaea),
+                        color-stop(0.05,#e3e3e3),
+                        color-stop(0.10,#dfdfdf),
+                        color-stop(0.49,#cdcdcd),
+                        color-stop(0.50,#bcbcbc),
+                        to(#bfbfbf));
+        -webkit-box-shadow: 0 1px 4px rgba(0,0,0,0.8);
+}
+
+/*------------------------------------------------
+	TASKBAR
+------------------------------------------------*/
+.taskbar{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	margin-top: 0;
+	width: 100%;
+	height: 44px;
+	color: #fff;
+	text-align: left;
+	line-height: 20px;
+	background: #000;
+	z-index: 100;
+}
+
+.taskbar ul{
+	position: relative;
+	margin-left: -8px;
+	padding-top: 8px;
+}
+.taskbar li{
+	float: left;
+	margin-left: 5px;
+}
+
+.taskbar li img{
+	height:28px;
+}
+
+.taskbar li.search{
+	position: relative;
+	float: right;
+	display: inline;
+	margin-top: 4px;
+	margin-right: 16px;
+}
+.taskbar li input.keyword{
+	margin-top: -4px;
+	padding: 0 4px;
+	width: 90px;
+	height: 24px;
+	line-height: 24px;
+	outline: 0;
+	border-radius: 12px;        /* CSS3草案 */  
+	-webkit-border-radius: 12px;    /* Safari,Google Chrome用 */  
+	-moz-border-radius: 12px;   /* Firefox用 */ 
+}
+
+.taskbar li input.btn-search{
+	position: absolute;
+	margin-top: -24px;
+
+
+}
+
+.taskbar li a[name=pdf] {
+	diplay: none;
+}
+
+/*------------------------------------------------
+	PAGERBAR
+------------------------------------------------*/
+.pagerbar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    margin-top: 0;
+    width: 100%;
+    height: 37px;
+    color: #fff;
+    text-align: center;
+    line-height: 20px;
+    background: #000;
+    z-index: 100;
+    padding: 7px 7px;
+}
+
+.pagerbar ul {
+    position: relative;
+    list-style-type: none;
+}
+.pagerbar li {
+    display: block;
+    line-height: 30px;
+    position: relative;
+    width: 25px;
+    height: 30px;
+    margin: 4px;
+    float: left;
+}
+.pagerbar li.pager {
+    background-color: #e3e3e3;
+    color: #333;
+    cursor: pointer;
+}
+.pagerbar li.curpager {
+    background-color: #666666;
+    color: #FFF;
+    cursor: default;
+}

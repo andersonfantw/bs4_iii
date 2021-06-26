@@ -1,0 +1,111 @@
+#accordion-1 .card-header {
+  cursor: pointer;
+}
+
+body.index .w1 {
+  font-size: 54px !important;
+}
+
+body.index .w2 {
+  font-size: 30px !important;
+  line-height: 2.2em !important;
+}
+
+body.index main {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+body.index main > .row {
+  margin: 50px 0;
+}
+
+body.index main > .row > .col {
+  padding: 25px 10px;
+  float: left;
+  flex-grow: unset;
+	margin: 0;
+}
+
+body.index main > .row > .col > div {
+  width: 167.3px;
+  height: 210px;
+  border-radius: 13px;
+  border: solid 1px #d6d6d6;
+}
+
+body.index main > .row > .col > div > a.del {
+  width: 16px;
+  height: 16px;
+  border-radius: 8px;
+  display: block;
+  line-height: 12px;
+  text-align: center;
+  color: #ffffff;
+  float: right;
+  margin: 8px;
+  opacity: 0.3;
+  background: #9B9B9B;
+}
+
+body.index main > .row > .col > div > a.del:hover {
+  opacity: 0.5;
+  background: #9B9B9B;
+}
+
+body.index main > .row > .col > div > a.link {
+  width: 86px;
+  height: 86px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+  border: solid 8px #ffcb60;
+  background-color: #f6a500;
+  border-radius: 43px;
+  margin: 20px auto 5px auto;
+  display: block;
+  font-family: 'Noto Sans TC', sans-serif;
+  font-size: 28px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.2em;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+body.index main > .row > .col > div > span {
+  width: 120px;
+  height: 32px;
+  font-family: 'Noto Sans TC', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.33;
+  letter-spacing: normal;
+  text-align: center;
+  color: #8d8b8d;
+  display: block;
+  margin: 15px auto 0 auto;
+  text-align: center;
+  word-break: break-all;
+}
+
+body.index main > .row > .col.add > div {
+  border: none;
+}
+
+body.index main > .row > .col.add > div > a {
+  width: 86px;
+  height: 86px;
+  border: solid 8px #e5e5e5;
+  background-color: #c5c5c5;
+  font-family: Blackoak Std;
+  line-height: 72px;
+}
+
+body.index .col{
+	flex-basis: 167px;
+	max-width: 187.3px;
+}

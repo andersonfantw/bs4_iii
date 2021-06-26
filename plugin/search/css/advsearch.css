@@ -1,0 +1,90 @@
+#QuickSearchShortName {
+  width: 50%;
+}
+
+#QuickSearchName {
+  width: 100%;
+}
+
+#fulltext {
+  height: 50px;
+  margin: 20px 0;
+}
+
+p {
+  margin: 10px 0 20px 0;
+}
+
+blockquote{
+	font-size: 0.8em;
+}
+
+blockquote:hover{
+	font-size: 1.2em;
+}
+
+body.save #add{
+	display:none;
+}
+
+body.advsearch main {
+  margin: 50px auto;
+}
+
+.condition {
+  border-top: solid 3px #333;
+  border-bottom: solid 3px #333;
+}
+
+.condition label {
+  font-size: 1.2em;
+  font-weight: bold;
+  padding: 10px 0;
+  text-indent: 20px;
+}
+
+.condition select,
+.condition .chosen-container-multi .chosen-choices,
+.condition .chosen-container-single .chosen-single,
+.condition .chosen-search-input{
+  height: 50px !important;
+  border: none;
+	background-image: none;
+}
+
+.condition .chosen-container-active .chosen-choices,
+.condition .chosen-container-active .chosen-single{
+	border:solid 1px #ccd4da;
+}
+
+.condition input[type=text] {
+  height: 50px;
+  border: none;
+}
+
+.condition > div {
+  border-bottom: solid 1px #eee;
+  background: #ffffff;
+}
+
+.buttons {
+  margin-top: 30px;
+}
+
+.buttons button {
+  border: none;
+}
+
+.condition .chosen-container-multi .chosen-choices .search-choice{
+	height: 44px;
+	border-radius: 4px;
+	border: solid 1px #dedcdc;
+	background-color: #f7f5f5;
+	font-size: 1.4em;
+	line-height: 1.3em;
+	padding-left: 10px;
+}
+
+.condition .chosen-container-multi .chosen-choices .search-choice .search-choice-close{
+	top: .8rem;
+}

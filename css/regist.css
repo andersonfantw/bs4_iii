@@ -1,0 +1,128 @@
+/* function page style */
+#body{
+	width:776px !important;
+}
+
+#header{
+	width:776px !important;
+}
+
+#bookshelf{
+	float:none !important;
+	width:776px !important;
+
+	background:url(../images/bg1.jpg);
+  background-color: #fff2e1;
+  margin-bottom: 0;
+  background-repeat: no-repeat;
+  height: 970px;
+}
+#bookshelf #button{
+    margin-right: 140px;
+}
+
+#bookshelf .window{
+	margin: 0 auto;
+	width: 625px;
+
+	-webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+	box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+
+#bookshelf .window .head{
+	background:url(../images/title.jpg);
+	width:625px;
+	height:44px;	
+}
+
+#bookshelf .window .regist-step1{
+	background-position:0 0;
+}
+
+#bookshelf .window .regist-step2{
+	background-position:0 -44px;
+}
+
+#bookshelf .window .regist-step3{
+	background-position:0 -88px;
+}
+
+#bookshelf .window .forget{
+	background-position:0 -132px;
+}
+
+#bookshelf .window .content{
+	border: solid 1px #FEAC0B;
+	width: 523px;
+	background: #fff9f0;
+	padding: 50px;
+  font-size: 1.5em;
+  line-height: 2em;
+}
+
+#bookshelf .window .content .forms{
+	width:500px;
+	margin:0 auto;
+}
+
+#bookshelf .window .content .forms > input,
+#bookshelf .window .content .forms > select{
+	font-size: 1em;
+}
+
+#bookshelf .window .content li{
+  margin-left: 20px;
+}
+
+#bookshelf .window .content .buttons{
+	margin:10px auto 0 auto;
+	display: table;
+}
+
+#bookshelf .window .content .buttons input{
+	font-size: 1.5em;
+}
+
+#bookshelf .window .content .item{
+	min-width: 120px;
+	display: inline-block;
+}
+
+#bookshelf .window form label.error {
+	margin-left: 120px;
+	color: red;
+	font-size: 12px;
+	line-height: 12px;
+	width: auto;
+	display: block;
+}
+
+#bookshelf .content #activecode{
+	width: 500px;
+	height: 40px;
+	font-size: 1.5em;
+	padding: 3px;
+}
+
+#footer{
+	width: 776px !important;
+}
+
+.ios{
+	display: inline-block;
+	background:url(../images/appstore.png);
+	height:40px;
+	width:130px;
+	vertical-align: bottom;
+	margin:0 10px;
+
+}
+.android{
+	display: inline-block;
+	background:url(../images/googleplay.png);
+	height:40px;
+	width:130px;
+	vertical-align: bottom;
+	margin:0 10px;
+}

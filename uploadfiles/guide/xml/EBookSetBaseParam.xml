@@ -1,0 +1,2437 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<EBookRoot>
+  <ProgramParam>
+    <!-- Program Version -->
+    <ProgramVersion>2.7.001</ProgramVersion>
+    <!-- Program Defauld Full Path -->
+    <ProgramPath>C:\Program Files (x86)\DigitalMax\LiveBookMasterZHTW\</ProgramPath>
+    <!-- Data Defauld Full Path -->
+    <DataPath>C:\Users\kuochun\Desktop\</DataPath>
+    <!-- eDBBookProjectフラッグ -->
+    <DBBookProject>False</DBBookProject>
+    <!-- 仕様プロジェクト名 -->
+    <SpecificationProjectName>
+    </SpecificationProjectName>
+  </ProgramParam>
+  <!-- 設定タブ　選択パラメータ -->
+  <SETEnvParam>
+    <!-- ページめくり -->
+    <SETEnvPage>
+      <!-- ページめくりアクション選択 -->
+      <!-- 1:右とじ  2:左とじ  3:上めくり  4:下めくり  5:右スライド  6:左スライド -->
+      <PageAction>2</PageAction>
+      <!-- 連続めくり -->
+      <PageActionContinuousness>True</PageActionContinuousness>
+      <!-- めくりアクション中にページを歪ませる -->
+      <PageActionAnimation>True</PageActionAnimation>
+      <!-- ページめくりのタイミング 紙面をクリック -->
+      <PageTimmingPaper>True</PageTimmingPaper>
+      <!-- ページめくりのタイミング ボタンをクリック -->
+      <PageTimmingButton>True</PageTimmingButton>
+      <!-- ページめくりのタイミング ←→キーを押下 -->
+      <PageTimmingRLKey>True</PageTimmingRLKey>
+      <!-- ページめくりのタイミング 自動ページめくり -->
+      <PageTimmingAutoPage>True</PageTimmingAutoPage>
+      <!-- ページめくりのタイミング 自動ページめくり 秒数 -->
+      <PageTimmingAutoPageSec>2</PageTimmingAutoPageSec>
+      <!-- ページめくりの速さ -->
+      <PageSpeed>9</PageSpeed>
+      <!-- 開始ページ番号表示 ページ番号表示 -->
+      <PageDisp>False</PageDisp>
+      <!-- 開始ページ番号表示 開始ページ -->
+      <PageDispStartPage>0</PageDispStartPage>
+      <!-- 開始ページ番号表示 開始番号 -->
+      <PageDispStartCont>0</PageDispStartCont>
+      <!-- 開始ページ番号表示 色番号 -->
+      <PageDispColor>000000</PageDispColor>
+      <!-- 表紙の対向ページを非表示 -->
+      <PageActionCover>True</PageActionCover>
+      <!-- 裏表紙の対向ページを非表示 -->
+      <PageActionEndCover>True</PageActionEndCover>
+      <!-- ページめくり時に音を鳴らす -->
+      <PageActionSound>True</PageActionSound>
+      <!-- ページめくり時に音を鳴らす (サウンドファイル名) -->
+      <PageActionSoundFileName>pageflip.mp3</PageActionSoundFileName>
+      <!-- ページ端のめくれるアニメーション -->
+      <PageActionBothEndsAnimation>True</PageActionBothEndsAnimation>
+      <!-- ページ端のめくれるアニメーション (アイコン名:左) -->
+      <PageActionBothEndsAnimationLFileName>PageFlip-L_icon.swf</PageActionBothEndsAnimationLFileName>
+      <!-- ページ端のめくれるアニメーション (アイコン名:右) -->
+      <PageActionBothEndsAnimationRFileName>PageFlip-R_icon.swf</PageActionBothEndsAnimationRFileName>
+      <!-- ページ番号表示位置(上端) -->
+      <PageDispPageTop>10</PageDispPageTop>
+      <!-- ページ番号表示位置(両端) -->
+      <PageDispPageSide>10</PageDispPageSide>
+      <!-- ページ番号表示(フォントサイズ) -->
+      <PageDispFontSize>10</PageDispFontSize>
+      <!-- 起動直後に表示するページ番号 -->
+      <PageStartPage>0</PageStartPage>
+      <!-- 起動直後に表示するページ変更フラグ -->
+      <!-- 0:指定なし  1:Book側で指定する  2:リンクパラメータで指定する -->
+      <PageStartPageEditFlag>0</PageStartPageEditFlag>
+    </SETEnvPage>
+    <!-- インデックス -->
+    <SETEnvIndex>
+      <!-- インデックスの有無 -->
+      <!-- True:インデックス有 -->
+      <!-- False:インデックス無 -->
+      <IndexEnabled>False</IndexEnabled>
+      <!-- インデックスのアクション選択 -->
+      <!-- 1:フレーム内に埋込む。 -->
+      <!-- 2:インデックスボタン押すとポップアップする。 -->
+      <!-- 3:インデックスボタン押す、または、
+             紙面の左端にマウスオーバーするとスライドインする。 -->
+      <IndexAction>0</IndexAction>
+      <!-- インデックスメニューを押した後のアクション -->
+      <!-- 1:メニューを押した後も継続して表示する。 -->
+      <!-- 2:メニューを押した後、自動で閉じる。 -->
+      <IndexActionAfter>2</IndexActionAfter>
+      <!-- インデックスの指定方法 -->
+      <!-- 1:デザインで指定する。 -->
+      <!-- 2:テキストで指定する。 -->
+      <IndexKindDesign>2</IndexKindDesign>
+      <!-- ビジュアルインデックスの有無 -->
+      <!-- True:ビジュアルインデックス有 -->
+      <!-- False:ビジュアルインデックス無 -->
+      <VisIndexEnabled>True</VisIndexEnabled>
+      <!-- ビジュアルインデックスのアクション選択 -->
+      <!-- 1:ビジュアルインデックスボタンを押すとポップアップする -->
+      <!-- 2:ビジュアルインデックスボタンを押すとスライドする -->
+      <VisIndexAction>1</VisIndexAction>
+      <!-- ビジュアルインデックスメニューを押した後のアクション -->
+      <!-- 1:メニューを押した後も継続して表示する。 -->
+      <!-- 2:メニューを押した後、自動で閉じる。 -->
+      <VisIndexActionAfter>2</VisIndexActionAfter>
+    </SETEnvIndex>
+    <!-- 検索 -->
+    <SETEnvSearch>
+      <!-- 検索の有無 -->
+      <!-- True:検索有 -->
+      <!-- False:検索無 -->
+      <SearchEnabled>False</SearchEnabled>
+      <!-- 検索のアクション選択 -->
+      <!-- X:フレーム内に埋込む。 -->
+      <!-- 1:検索ボタン押すとポップアップする。 -->
+      <!-- 2:検索ボタン押す、または、
+             紙面の左端にマウスオーバーするとスライドインする。 -->
+      <SearchAction>0</SearchAction>
+      <!-- 検索メニューを押した後のアクション -->
+      <!-- 1:メニューを押した後も継続して表示する。 -->
+      <!-- 2:メニューを押した後、自動で閉じる。 -->
+      <SearchActionAfter>2</SearchActionAfter>
+      <!-- 全文検索の有無 -->
+      <!-- True:全文検索有 -->
+      <!-- False:全文検索無 -->
+      <SearchALLEnabled>True</SearchALLEnabled>
+      <!-- 全文検索のアクション選択 -->
+      <!-- X:フレーム内に埋込む。 -->
+      <!-- 1:全文検索ボタン押すとポップアップする。 -->
+      <!-- 2:全文検索ボタン押す、または、
+             紙面の左端にマウスオーバーするとスライドインする。 -->
+      <SearchALLAction>1</SearchALLAction>
+      <!-- 全文検索メニューを押した後のアクション -->
+      <!-- 1:メニューを押した後も継続して表示する。 -->
+      <!-- 2:メニューを押した後、自動で閉じる。 -->
+      <SearchALLActionAfter>2</SearchALLActionAfter>
+      <!-- 検索対象 -->
+      <!-- 全文検索 -->
+      <SearchFullText>True</SearchFullText>
+      <!-- 品番 -->
+      <SearchNumber>False</SearchNumber>
+      <!-- 品名 -->
+      <SearchName>False</SearchName>
+    </SETEnvSearch>
+    <!-- 拡大・縮小 -->
+    <SETEnvZoom>
+      <!-- 基本設定 -->
+      <!-- 基本設定 拡大回数 -->
+      <ZoomInCount>3</ZoomInCount>
+      <!-- 基本設定 紙面全体拡大 -->
+      <ZoomAll>True</ZoomAll>
+      <!-- 拡大時の全画面表示 -->
+      <!-- 1:全画面表示しない -->
+      <!-- 2:全画面表示する -->
+      <PageAction>3</PageAction>
+      <!-- 拡大時の全画面表示 全画面表示のタイミング -->
+      <PageActionTimming>3</PageActionTimming>
+      <!-- 拡大時のツール -->
+      <!-- ナビゲート機能 -->
+      <ZoomNavi>True</ZoomNavi>
+      <!-- ページめくり機能 -->
+      <ZoomPage>True</ZoomPage>
+      <!-- 上下左右スクロール機能 -->
+      <Zoom4>True</Zoom4>
+      <!-- 中央８方向スクロール機能 -->
+      <Zoom9>True</Zoom9>
+      <!-- 拡大倍率(200%) -->
+      <ZoomZoomScale02>True</ZoomZoomScale02>
+      <!-- 拡大倍率(400%) -->
+      <ZoomZoomScale03>True</ZoomZoomScale03>
+      <!-- 拡大倍率(600%) -->
+      <ZoomZoomScale04>False</ZoomZoomScale04>
+      <!-- 拡大倍率(800%) -->
+      <ZoomZoomScale05>False</ZoomZoomScale05>
+      <!-- 拡大倍率(1000%) -->
+      <ZoomZoomScale06>True</ZoomZoomScale06>
+    </SETEnvZoom>
+    <!-- 付箋・メモ帳機能 -->
+    <SETEnvMemo>
+      <!-- 付箋設定 -->
+      <!-- 付箋設定 設定数 -->
+      <MemoNoteCount>10</MemoNoteCount>
+      <!-- 付箋設定 ローカル保存機能 -->
+      <MemoNoteSave>True</MemoNoteSave>
+      <!-- 付箋設定 色数 -->
+      <MemoNoteColor>10</MemoNoteColor>
+      <!-- 付箋設定 ページ数 -->
+      <MemoPage>True</MemoPage>
+      <!-- 付箋設定 ページ数コメント1 -->
+      <MemoPageText1>goto </MemoPageText1>
+      <!-- 付箋設定 ページ数コメント2 -->
+      <MemoPageText2> page.</MemoPageText2>
+      <!-- 付箋設定 テキスト -->
+      <MemoText>True</MemoText>
+      <!-- 付箋設定 サムネイル -->
+      <MemoThumbnail>True</MemoThumbnail>
+      <!-- 付箋設定 任意テキスト -->
+      <MemoFreeText>True</MemoFreeText>
+      <!-- メモ帳設定 -->
+      <!-- メモ帳設定 設定数 -->
+      <MemoMemoCount>10</MemoMemoCount>
+      <!-- メモ帳設定 ローカル保存機能 -->
+      <MemoMemoSave>True</MemoMemoSave>
+      <!-- メモ帳設定 色数 -->
+      <MemoMemoColor>5</MemoMemoColor>
+      <!-- メモ帳設定 情報配信機能（管理者・閲覧者） -->
+      <MemoMemoInfo>False</MemoMemoInfo>
+    </SETEnvMemo>
+    <!-- 印刷 -->
+    <SETEnvPrint>
+      <!-- 印刷設定 -->
+      <!-- 印刷設定 品質 -->
+      <PrintKind>標準品質</PrintKind>
+      <!-- 印刷設定 PDFから印刷機能 -->
+      <PrintPDF>False</PrintPDF>
+      <!-- 印刷設定 PDFから印刷機能 Path -->
+      <PrintPDFPath>
+      </PrintPDFPath>
+      <!-- 印刷設定 PDFから印刷機能 PDFファイル名 -->
+      <PrintPDFFiles>
+      </PrintPDFFiles>
+      <!-- 表示設定 -->
+      <!-- 1:印刷コンボボックス -->
+      <!-- 2:印刷ボタン -->
+      <!-- 3:印刷ボタン　→　ダイアログ -->
+      <PrintDisp>3</PrintDisp>
+    </SETEnvPrint>
+    <!-- 出力型式 -->
+    <SETEnvOutput>
+      <!-- HTMLタイトル -->
+      <OutputHTMLTitle>LiveBook</OutputHTMLTitle>
+      <!-- ビュワーの選択 -->
+      <!-- 1:実行ファイル形式 -->
+      <!-- 2:FLASHビューワー -->
+      <!-- 3:JAVAビューワー -->
+      <OutputViewer>2</OutputViewer>
+      <!-- 出力品質(JPEGの圧縮率) -->
+      <OutputJPGQualty>100</OutputJPGQualty>
+      <!-- ターゲット -->
+      <!-- 1:CDROM -->
+      <!-- 2:WEB -->
+      <OutputTarget>2</OutputTarget>
+      <!-- コンテンツセキュリティ 1:キャプチャー  2:CDROMコピー -->
+      <!-- 1:キャプチャー -->
+      <!-- 2:CDROMコピー -->
+      <OutputSecurity>2</OutputSecurity>
+      <!-- ローディング・メッセージ -->
+      <OutputLoadingMsg>檔案讀取下載時顯示的文字</OutputLoadingMsg>
+      <!-- ローディング・背景色 -->
+      <OutputLoadingBackColor>000000</OutputLoadingBackColor>
+      <!-- カタログ名 -->
+      <OutputCatalogName>
+      </OutputCatalogName>
+      <!-- カタログ名(URLEncode) -->
+      <OutputCatalogNameURLEnc>
+      </OutputCatalogNameURLEnc>
+      <!-- カタログタイトル -->
+      <OutputCatalogTitle>LiveBook</OutputCatalogTitle>
+      <!-- プリント・スクリーン -->
+      <OutputPrintScreen>False</OutputPrintScreen>
+      <!-- 高解像度印刷 -->
+      <OutputHighQualityPrint>False</OutputHighQualityPrint>
+      <!-- メディアID -->
+      <OutputMediaID>
+      </OutputMediaID>
+    </SETEnvOutput>
+    <!-- マウスクリック -->
+    <SETEnvMouse>
+      <!-- 左クリック -->
+      <!-- ページめくり -->
+      <MouseLPage>True</MouseLPage>
+      <!-- 右クリック -->
+      <!-- ページめくり -->
+      <MouseRPage>False</MouseRPage>
+      <!-- 拡大縮小 -->
+      <MouseRZoom>True</MouseRZoom>
+      <!-- 付箋 -->
+      <MouseRNote>False</MouseRNote>
+      <!-- 印刷 -->
+      <MouseRPrint>True</MouseRPrint>
+    </SETEnvMouse>
+    <!-- 機能のON/OFF -->
+    <SETEnvFunction>
+      <!-- キャプチャ -->
+      <FunctionCapture>True</FunctionCapture>
+      <!-- PDF印刷 -->
+      <FunctionPDFPrint>True</FunctionPDFPrint>
+      <!-- カタログ請求 -->
+      <FunctionCatalog>True</FunctionCatalog>
+      <!-- WebNative連携 -->
+      <FunctionWebNative>True</FunctionWebNative>
+      <!-- 拡大率維持ページめくり -->
+      <FunctionKeepFactor>True</FunctionKeepFactor>
+      <!-- カタログ一覧 -->
+      <FunctionCatalogList>True</FunctionCatalogList>
+      <!-- ペンツール -->
+      <FunctionPenTool>True</FunctionPenTool>
+      <!-- ページ端をつまんでめくる -->
+      <FunctionPageEdgePicked>True</FunctionPageEdgePicked>
+    </SETEnvFunction>
+  </SETEnvParam>
+  <!-- レイアウトタブ　選択パラメータ -->
+  <LayoutParam>
+    <!-- 全体デザイン -->
+    <LayoutALL>
+      <!-- 全体画像 通常時 -->
+      <ImageNorm>ecocat1010×655-01.jpg</ImageNorm>
+      <!-- 全体画像 マウスオーバー時 -->
+      <ImageMouseOver>ecocat1010×655+-01.jpg</ImageMouseOver>
+    </LayoutALL>
+    <!-- インデックス -->
+    <LayoutIndex>
+      <!-- 全体画像 通常時 -->
+      <ImageNorm>
+      </ImageNorm>
+      <!-- 全体画像 マウスオーバー時 -->
+      <ImageMouseOver>
+      </ImageMouseOver>
+      <!-- 全体画像(Bild時にImageDIRにコピー) 通常時 -->
+      <BildIndexLaouyImageNorm>
+      </BildIndexLaouyImageNorm>
+      <!-- 全体画像(Bild時にImageDIRにコピー) マウスオーバー時 -->
+      <BildIndexLaouyImageNormMouseOver>
+      </BildIndexLaouyImageNormMouseOver>
+    </LayoutIndex>
+    <!-- ペンツール -->
+    <LayoutPenTool>
+      <!-- 全体画像 通常時 -->
+      <ImageNorm>PenToolDesignBackZHTW_MouseOut.png</ImageNorm>
+      <!-- 全体画像 マウスオーバー時 -->
+      <ImageMouseOver>PenToolDesignBackZHTW_MouseOver.png</ImageMouseOver>
+      <!-- ImageSize X -->
+      <ImageSizeX>431</ImageSizeX>
+      <!-- ImageSize Y -->
+      <ImageSizeY>98</ImageSizeY>
+    </LayoutPenTool>
+    <!-- メモツールパネル -->
+    <LayoutMemoToolPanel>
+      <!-- 全体画像 通常時 -->
+      <ImageNorm>MemoToolPanelDesignBackZHTW_MouseOut.png</ImageNorm>
+      <!-- 全体画像 マウスオーバー時 -->
+      <ImageMouseOver>MemoToolPanelDesignBackZHTW_MouseOver.png</ImageMouseOver>
+      <!-- ImageSize X -->
+      <ImageSizeX>391</ImageSizeX>
+      <!-- ImageSize Y -->
+      <ImageSizeY>141</ImageSizeY>
+    </LayoutMemoToolPanel>
+    <!-- メモ本体 -->
+    <LayoutMemoToolBody>
+      <!-- 全体画像 通常時 -->
+      <ImageNorm>
+      </ImageNorm>
+      <!-- 全体画像 マウスオーバー時 -->
+      <ImageMouseOver>
+      </ImageMouseOver>
+      <!-- ImageSize X -->
+      <ImageSizeX>0</ImageSizeX>
+      <!-- ImageSize Y -->
+      <ImageSizeY>0</ImageSizeY>
+    </LayoutMemoToolBody>
+    <!-- 全画面表示操作パネルデザイン -->
+    <LayoutFullScreen>
+      <!-- 全画面表示操作パネル画像 通常時 -->
+      <ImageNorm>
+      </ImageNorm>
+      <!-- 全画面表示操作パネル画像 マウスオーバー時 -->
+      <ImageMouseOver>
+      </ImageMouseOver>
+    </LayoutFullScreen>
+    <!-- 全体デザイン 背景 -->
+    <LayoutBack>
+      <LayoutBackData No="1">
+        <ImageNameMouseOut>LayoutBackMouseOut1.jpg</ImageNameMouseOut>
+        <ImageNameMouseOver>
+        </ImageNameMouseOver>
+        <ImageXStr>0</ImageXStr>
+        <ImageYStr>0</ImageYStr>
+        <ImageXLen>62</ImageXLen>
+        <ImageYLen>11</ImageYLen>
+      </LayoutBackData>
+      <LayoutBackData No="2">
+        <ImageNameMouseOut>LayoutBackMouseOut2.jpg</ImageNameMouseOut>
+        <ImageNameMouseOver>
+        </ImageNameMouseOver>
+        <ImageXStr>62</ImageXStr>
+        <ImageYStr>0</ImageYStr>
+        <ImageXLen>894</ImageXLen>
+        <ImageYLen>11</ImageYLen>
+      </LayoutBackData>
+      <LayoutBackData No="3">
+        <ImageNameMouseOut>LayoutBackMouseOut3.jpg</ImageNameMouseOut>
+        <ImageNameMouseOver>
+        </ImageNameMouseOver>
+        <ImageXStr>956</ImageXStr>
+        <ImageYStr>0</ImageYStr>
+        <ImageXLen>54</ImageXLen>
+        <ImageYLen>11</ImageYLen>
+      </LayoutBackData>
+      <LayoutBackData No="4">
+        <ImageNameMouseOut>LayoutBackMouseOut4.jpg</ImageNameMouseOut>
+        <ImageNameMouseOver>
+        </ImageNameMouseOver>
+        <ImageXStr>0</ImageXStr>
+        <ImageYStr>11</ImageYStr>
+        <ImageXLen>62</ImageXLen>
+        <ImageYLen>588</ImageYLen>
+      </LayoutBackData>
+      <LayoutBackData No="5">
+        <ImageNameMouseOut>LayoutBackMouseOut5.jpg</ImageNameMouseOut>
+        <ImageNameMouseOver>
+        </ImageNameMouseOver>
+        <ImageXStr>956</ImageXStr>
+        <ImageYStr>11</ImageYStr>
+        <ImageXLen>54</ImageXLen>
+        <ImageYLen>588</ImageYLen>
+      </LayoutBackData>
+      <LayoutBackData No="6">
+        <ImageNameMouseOut>LayoutBackMouseOut6.jpg</ImageNameMouseOut>
+        <ImageNameMouseOver>
+        </ImageNameMouseOver>
+        <ImageXStr>0</ImageXStr>
+        <ImageYStr>599</ImageYStr>
+        <ImageXLen>62</ImageXLen>
+        <ImageYLen>56</ImageYLen>
+      </LayoutBackData>
+      <LayoutBackData No="7">
+        <ImageNameMouseOut>LayoutBackMouseOut7.jpg</ImageNameMouseOut>
+        <ImageNameMouseOver>
+        </ImageNameMouseOver>
+        <ImageXStr>62</ImageXStr>
+        <ImageYStr>599</ImageYStr>
+        <ImageXLen>894</ImageXLen>
+        <ImageYLen>56</ImageYLen>
+      </LayoutBackData>
+      <LayoutBackData No="8">
+        <ImageNameMouseOut>LayoutBackMouseOut8.jpg</ImageNameMouseOut>
+        <ImageNameMouseOver>
+        </ImageNameMouseOver>
+        <ImageXStr>956</ImageXStr>
+        <ImageYStr>599</ImageYStr>
+        <ImageXLen>54</ImageXLen>
+        <ImageYLen>56</ImageYLen>
+      </LayoutBackData>
+      <LayoutBackData No="9">
+        <ImageNameMouseOut>LayoutBackMouseOut9.jpg</ImageNameMouseOut>
+        <ImageNameMouseOver>
+        </ImageNameMouseOver>
+        <ImageXStr>62</ImageXStr>
+        <ImageYStr>11</ImageYStr>
+        <ImageXLen>894</ImageXLen>
+        <ImageYLen>588</ImageYLen>
+      </LayoutBackData>
+    </LayoutBack>
+    <!-- メモ本体 背景 -->
+    <LayoutMemoBodyBack>
+      <LayoutMemoBodyBackData No="1">
+        <MemoBodyImageNameMouseOut>LayoutMemoBodyBackMouseOut1.jpg</MemoBodyImageNameMouseOut>
+        <MemoBodyImageNameMouseOver>
+        </MemoBodyImageNameMouseOver>
+        <ImageXStr>0</ImageXStr>
+        <ImageYStr>0</ImageYStr>
+        <ImageXLen>1</ImageXLen>
+        <ImageYLen>1</ImageYLen>
+      </LayoutMemoBodyBackData>
+      <LayoutMemoBodyBackData No="2">
+        <MemoBodyImageNameMouseOut>LayoutMemoBodyBackMouseOut2.jpg</MemoBodyImageNameMouseOut>
+        <MemoBodyImageNameMouseOver>
+        </MemoBodyImageNameMouseOver>
+        <ImageXStr>0</ImageXStr>
+        <ImageYStr>0</ImageYStr>
+        <ImageXLen>1</ImageXLen>
+        <ImageYLen>1</ImageYLen>
+      </LayoutMemoBodyBackData>
+      <LayoutMemoBodyBackData No="3">
+        <MemoBodyImageNameMouseOut>LayoutMemoBodyBackMouseOut3.jpg</MemoBodyImageNameMouseOut>
+        <MemoBodyImageNameMouseOver>
+        </MemoBodyImageNameMouseOver>
+        <ImageXStr>0</ImageXStr>
+        <ImageYStr>0</ImageYStr>
+        <ImageXLen>1</ImageXLen>
+        <ImageYLen>1</ImageYLen>
+      </LayoutMemoBodyBackData>
+      <LayoutMemoBodyBackData No="4">
+        <MemoBodyImageNameMouseOut>LayoutMemoBodyBackMouseOut4.jpg</MemoBodyImageNameMouseOut>
+        <MemoBodyImageNameMouseOver>
+        </MemoBodyImageNameMouseOver>
+        <ImageXStr>0</ImageXStr>
+        <ImageYStr>0</ImageYStr>
+        <ImageXLen>1</ImageXLen>
+        <ImageYLen>1</ImageYLen>
+      </LayoutMemoBodyBackData>
+      <LayoutMemoBodyBackData No="5">
+        <MemoBodyImageNameMouseOut>LayoutMemoBodyBackMouseOut5.jpg</MemoBodyImageNameMouseOut>
+        <MemoBodyImageNameMouseOver>
+        </MemoBodyImageNameMouseOver>
+        <ImageXStr>0</ImageXStr>
+        <ImageYStr>0</ImageYStr>
+        <ImageXLen>1</ImageXLen>
+        <ImageYLen>1</ImageYLen>
+      </LayoutMemoBodyBackData>
+      <LayoutMemoBodyBackData No="6">
+        <MemoBodyImageNameMouseOut>LayoutMemoBodyBackMouseOut6.jpg</MemoBodyImageNameMouseOut>
+        <MemoBodyImageNameMouseOver>
+        </MemoBodyImageNameMouseOver>
+        <ImageXStr>0</ImageXStr>
+        <ImageYStr>0</ImageYStr>
+        <ImageXLen>1</ImageXLen>
+        <ImageYLen>1</ImageYLen>
+      </LayoutMemoBodyBackData>
+      <LayoutMemoBodyBackData No="7">
+        <MemoBodyImageNameMouseOut>LayoutMemoBodyBackMouseOut7.jpg</MemoBodyImageNameMouseOut>
+        <MemoBodyImageNameMouseOver>
+        </MemoBodyImageNameMouseOver>
+        <ImageXStr>0</ImageXStr>
+        <ImageYStr>0</ImageYStr>
+        <ImageXLen>1</ImageXLen>
+        <ImageYLen>1</ImageYLen>
+      </LayoutMemoBodyBackData>
+      <LayoutMemoBodyBackData No="8">
+        <MemoBodyImageNameMouseOut>LayoutMemoBodyBackMouseOut8.jpg</MemoBodyImageNameMouseOut>
+        <MemoBodyImageNameMouseOver>
+        </MemoBodyImageNameMouseOver>
+        <ImageXStr>0</ImageXStr>
+        <ImageYStr>0</ImageYStr>
+        <ImageXLen>1</ImageXLen>
+        <ImageYLen>1</ImageYLen>
+      </LayoutMemoBodyBackData>
+      <LayoutMemoBodyBackData No="9">
+        <MemoBodyImageNameMouseOut>LayoutMemoBodyBackMouseOut9.jpg</MemoBodyImageNameMouseOut>
+        <MemoBodyImageNameMouseOver>
+        </MemoBodyImageNameMouseOver>
+        <ImageXStr>0</ImageXStr>
+        <ImageYStr>0</ImageYStr>
+        <ImageXLen>1</ImageXLen>
+        <ImageYLen>1</ImageYLen>
+      </LayoutMemoBodyBackData>
+    </LayoutMemoBodyBack>
+    <!-- 拡大時の設定 -->
+    <LayoutZoom>
+      <!-- 拡大ボックス -->
+      <!-- 塗りつぶし -->
+      <ZoomPaintColor>808080</ZoomPaintColor>
+      <ZoomPaintTransparent>30</ZoomPaintTransparent>
+      <!-- 線 -->
+      <ZoomLineColor>5D5D5D</ZoomLineColor>
+      <ZoomLineWidth>2 pix</ZoomLineWidth>
+      <!-- ナビゲートボックス -->
+      <!-- 大きさ -->
+      <ZoomNaviXLen>170</ZoomNaviXLen>
+      <ZoomNaviYLen>130</ZoomNaviYLen>
+      <!-- 表示位置 -->
+      <!-- 0:表示しない -->
+      <!-- 1:左上に表示 -->
+      <!-- 2:左下に表示 -->
+      <!-- 3:右上に表示 -->
+      <!-- 4:右下に表示 -->
+      <ZoomNaviPosition>3</ZoomNaviPosition>
+      <!-- 線 -->
+      <ZoomNaviColor>5D5D5D</ZoomNaviColor>
+      <ZoomNaviWidth>3 pix</ZoomNaviWidth>
+    </LayoutZoom>
+    <!-- 付箋・メモの設定 -->
+    <LayoutMemo>
+      <!-- チップ色設定 -->
+      <!-- 背景 -->
+      <NoteBackColor>FFFF80</NoteBackColor>
+      <NoteBackTransparent>246</NoteBackTransparent>
+      <!-- 枠 -->
+      <NoteLineColor>5D5D5D</NoteLineColor>
+      <NoteLineWidth>1 pix</NoteLineWidth>
+      <!-- 文字 -->
+      <NoteTextColor>5D5D5D</NoteTextColor>
+      <!-- 付箋の太さ -->
+      <NoteWidth>20 pix</NoteWidth>
+      <!-- 付箋の色 -->
+      <NoteColor01>C00000</NoteColor01>
+      <NoteColor02>C0C000</NoteColor02>
+      <NoteColor03>FFFF00</NoteColor03>
+      <NoteColor04>00C000</NoteColor04>
+      <NoteColor05>8080FF</NoteColor05>
+      <NoteColor06>0000FF</NoteColor06>
+      <NoteColor07>804000</NoteColor07>
+      <NoteColor08>FFC0C0</NoteColor08>
+      <NoteColor09>FFFFC0</NoteColor09>
+      <NoteColor10>FFFF80</NoteColor10>
+      <NoteColor11>C0FFC0</NoteColor11>
+      <NoteColor12>C0FFFF</NoteColor12>
+      <NoteColor13>C0C0FF</NoteColor13>
+      <NoteColor14>FFC0FF</NoteColor14>
+      <NoteColor15>404040</NoteColor15>
+      <!-- メモ帳 -->
+      <!-- タイトル -->
+      <MemoTitle>記事本Title</MemoTitle>
+      <!-- タイトルバー -->
+      <MemoTitleBarColor>5D5D5D</MemoTitleBarColor>
+      <!-- タイトル文字 -->
+      <MemoTitleTextColor>FFFFFF</MemoTitleTextColor>
+      <!-- 文字 -->
+      <MemoCharColor>5D5D5D</MemoCharColor>
+      <!-- メモの色 -->
+      <MemoColor01>FFFFC0</MemoColor01>
+      <MemoColor02>C0FFC0</MemoColor02>
+      <MemoColor03>C0FFFF</MemoColor03>
+      <MemoColor04>C0C0FF</MemoColor04>
+      <MemoColor05>FFC0FF</MemoColor05>
+      <!-- メモ本体 -->
+      <!-- メモ本体・新規作成直後のデフォルト文字 -->
+      <MemoBodyInitDefText>入力して下さい。</MemoBodyInitDefText>
+      <!-- メモ本体・リサイズフラグ -->
+      <MemoBodyResize>False</MemoBodyResize>
+      <!-- メモ本体・メモ最小サイズ(横) -->
+      <MemoBodyMiniX>0</MemoBodyMiniX>
+      <!-- メモ本体・メモ最小サイズ(縦) -->
+      <MemoBodyMiniY>0</MemoBodyMiniY>
+      <!-- メモ本体・メモ本体透過率 -->
+      <MemoBodyBodyTransparent>246</MemoBodyBodyTransparent>
+      <!-- メモ本体・最小化アイコン透過率 -->
+      <MemoBodyMiniIconTransparent>246</MemoBodyMiniIconTransparent>
+      <!-- ペンの色 -->
+      <PenColor01>68E468</PenColor01>
+      <PenColor02>7FCEFF</PenColor02>
+      <PenColor03>1F6AFF</PenColor03>
+      <PenColor04>963FFF</PenColor04>
+      <PenColor05>FF7FAD</PenColor05>
+      <PenColor06>FF495F</PenColor06>
+      <PenColor07>FFA81F</PenColor07>
+      <PenColor08>BF6700</PenColor08>
+      <PenColor09>5D5D5D</PenColor09>
+      <PenColor10>000000</PenColor10>
+    </LayoutMemo>
+    <!-- 紙面内ボタンの設定 -->
+    <LayoutPButton>
+      <!-- ページめくりボタン -->
+      <!-- 戻る Normal -->
+      <PButtonPageRevN>Layout_PButton_RevN.png</PButtonPageRevN>
+      <!-- 戻る MouseOver -->
+      <PButtonPageRevM>Layout_PButton_RevM.png</PButtonPageRevM>
+      <!-- 次へ Normal -->
+      <PButtonPageNextN>Layout_PButton_NextN.png</PButtonPageNextN>
+      <!-- 次へ MouseOver -->
+      <PButtonPageNextM>Layout_PButton_NextM.png</PButtonPageNextM>
+      <!-- 上下左右４方向移動ボタン -->
+      <!-- 上方向 Normal -->
+      <PButtonVect4UpN>Layout_PButton_UpN.png</PButtonVect4UpN>
+      <!-- 上方向 MouseOver -->
+      <PButtonVect4UpM>Layout_PButton_UpM.png</PButtonVect4UpM>
+      <!-- 下方向 Normal -->
+      <PButtonVect4DownN>Layout_PButton_DownN.png</PButtonVect4DownN>
+      <!-- 下方向 MouseOver -->
+      <PButtonVect4DownM>Layout_PButton_DownM.png</PButtonVect4DownM>
+      <!-- 左方向 Normal -->
+      <PButtonVect4LeftN>Layout_PButton_LeftN.png</PButtonVect4LeftN>
+      <!-- 左方向 MouseOver -->
+      <PButtonVect4LeftM>Layout_PButton_LeftM.png</PButtonVect4LeftM>
+      <!-- 右方向 Normal -->
+      <PButtonVect4RightN>Layout_PButton_RightN.png</PButtonVect4RightN>
+      <!-- 右方向 MouseOver -->
+      <PButtonVect4RightM>Layout_PButton_RightM.png</PButtonVect4RightM>
+      <!-- 中央表示８方向移動ボタン -->
+      <!-- ８方向 Normal -->
+      <PButtonVect8N>Layout_PButton_Vict8RoundN.png</PButtonVect8N>
+      <!-- ８方向 MouseOver -->
+      <PButtonVect8M>Layout_PButton_Vict8RoundM.png</PButtonVect8M>
+    </LayoutPButton>
+    <!-- 検索ウィンドウの設定 -->
+    <LayoutSearch>
+      <!-- 検索ウィンドウの色設定 -->
+      <!-- タイトル -->
+      <SearchTitle>檢索.Title</SearchTitle>
+      <!-- タイトルバー -->
+      <SearchTitleBarColor>5D5D5D</SearchTitleBarColor>
+      <!-- タイトル文字 -->
+      <SearchTitleTextColor>5D5D5D</SearchTitleTextColor>
+      <!-- 背景 -->
+      <SearchBackColor>EFEFEF</SearchBackColor>
+      <!-- 文字 -->
+      <SearchCharColor>5D5D5D</SearchCharColor>
+      <!-- 外部ファィルの読込 -->
+      <!-- ファィルパス -->
+      <SearchImportPath>
+      </SearchImportPath>
+    </LayoutSearch>
+    <!-- 全文検索ウィンドウの設定 -->
+    <LayoutSearchALL>
+      <!-- 全文検索ウィンドウの色設定 -->
+      <!-- タイトル -->
+      <SearchTitle>全文検索</SearchTitle>
+      <!-- タイトルバー -->
+      <SearchTitleBarColor>5D5D5D</SearchTitleBarColor>
+      <!-- タイトル文字 -->
+      <SearchTitleTextColor>5D5D5D</SearchTitleTextColor>
+      <!-- 背景 -->
+      <SearchBackColor>EFEFEF</SearchBackColor>
+      <!-- 文字 -->
+      <SearchCharColor>5D5D5D</SearchCharColor>
+      <!-- 外部ファィルの読込 -->
+      <!-- ファィルパス -->
+      <SearchImportPath>
+      </SearchImportPath>
+    </LayoutSearchALL>
+    <!-- インデックスウィンドウの設定 -->
+    <LayoutIndexWin>
+      <!-- ウィンドウの色設定 -->
+      <!-- タイトル -->
+      <IndexWinTitle>索引.Tile</IndexWinTitle>
+      <!-- タイトルバー -->
+      <IndexWinTitleBarColor>5D5D5D</IndexWinTitleBarColor>
+      <!-- タイトル文字 -->
+      <IndexWinTitleTextColor>5D5D5D</IndexWinTitleTextColor>
+      <!-- 背景 -->
+      <IndexWinBackColor>EFEFEF</IndexWinBackColor>
+      <!-- 文字 -->
+      <IndexWinCharColor>5D5D5D</IndexWinCharColor>
+      <!-- 外部ファィルの読込 -->
+      <!-- ファィルパス -->
+      <IndexWinImportPath>
+      </IndexWinImportPath>
+    </LayoutIndexWin>
+    <!-- 全画面表示操作パネル背景色の設定 -->
+    <LayoutFullScreenCtrl>
+      <!-- 操作パネル背景色 -->
+      <FullScreenCtrlBackColor>5D5D5D</FullScreenCtrlBackColor>
+      <!-- 全体背景色 -->
+      <FullScreenHTMLBackColor>000000</FullScreenHTMLBackColor>
+    </LayoutFullScreenCtrl>
+    <!-- ビジュアルインデックスウィンドウの設定 -->
+    <LayoutVisIndex>
+      <!-- ウィンドウの色設定 -->
+      <!-- タイトル -->
+      <VisIndexTitle>小圖索引.Title</VisIndexTitle>
+      <!-- タイトル文字 -->
+      <VisIndexTitleTextColor>5D5D5D</VisIndexTitleTextColor>
+      <!-- 背景 -->
+      <VisIndexBackColor>EFEFEF</VisIndexBackColor>
+      <!-- 文字 -->
+      <VisIndexCharColor>5D5D5D</VisIndexCharColor>
+    </LayoutVisIndex>
+    <!-- 全体デザイン 紙面枠 -->
+    <DesignPaper>
+      <!-- 紙面枠 Topの位置 (X座標) -->
+      <ImageXStr>62</ImageXStr>
+      <!-- 紙面枠 Topの位置 (Y座標) -->
+      <ImageYStr>11</ImageYStr>
+      <!-- 紙面枠 大きさ (X座標) -->
+      <ImageXLen>894</ImageXLen>
+      <!-- 紙面枠 大きさ (Y座標) -->
+      <ImageYLen>588</ImageYLen>
+      <!-- イメージ 通常時 -->
+      <ImageMouseOut>ALLDesignPaper_MouseOut.jpg</ImageMouseOut>
+      <!-- イメージ マウスオーバー時 -->
+      <ImageMouseOver>ALLDesignPaper_MouseOver.jpg</ImageMouseOver>
+    </DesignPaper>
+    <!-- 全体デザイン 拡大枠 -->
+    <DesignFrame>
+      <!-- 検索表示位置 Topの位置 (X座標) -->
+      <ImageXStr>42</ImageXStr>
+      <!-- 検索表示位置 Topの位置 (Y座標) -->
+      <ImageYStr>6</ImageYStr>
+      <!-- 検索表示位置 大きさ (X座標) -->
+      <ImageXLen>937</ImageXLen>
+      <!-- 検索表示位置 大きさ (Y座標) -->
+      <ImageYLen>598</ImageYLen>
+    </DesignFrame>
+    <!-- 全体デザイン 右ページめくりボタン -->
+    <DesignPageR>
+      <!-- Topの位置 (X座標) -->
+      <ImageXStr>357</ImageXStr>
+      <!-- Topの位置 (Y座標) -->
+      <ImageYStr>614</ImageYStr>
+      <!-- 大きさ (X座標) -->
+      <ImageXLen>51</ImageXLen>
+      <!-- 大きさ (Y座標) -->
+      <ImageYLen>26</ImageYLen>
+      <!-- イメージ種別 -->
+      <!-- 0:範囲指定 -->
+      <!-- 1:イメージ -->
+      <ImageKind>0</ImageKind>
+      <!-- イメージ 通常時 別ファィル指定フラッグ -->
+      <ImageNormLoadFlag>True</ImageNormLoadFlag>
+      <!-- イメージ 通常時 -->
+      <ImageNorm>ALLDesignPageR_MouseOut.jpg</ImageNorm>
+      <!-- イメージ マウスオーバー時 別ファィル指定フラッグ -->
+      <ImageMouseOverLoadFlag>True</ImageMouseOverLoadFlag>
+      <!-- イメージ マウスオーバー時 -->
+      <ImageMouseOver>ALLDesignPageR_MouseOver.jpg</ImageMouseOver>
+    </DesignPageR>
+    <!-- 全体デザイン 左ページめくりボタン -->
+    <DesignPageL>
+      <!-- Topの位置 (X座標) -->
+      <ImageXStr>307</ImageXStr>
+      <!-- Topの位置 (Y座標) -->
+      <ImageYStr>613</ImageYStr>
+      <!-- 大きさ (X座標) -->
+      <ImageXLen>50</ImageXLen>
+      <!-- 大きさ (Y座標) -->
+      <ImageYLen>27</ImageYLen>
+      <!-- イメージ種別 -->
+      <!-- 0:範囲指定 -->
+      <!-- 1:イメージ -->
+      <ImageKind>0</ImageKind>
+      <!-- イメージ 通常時 別ファィル指定フラッグ -->
+      <ImageNormLoadFlag>True</ImageNormLoadFlag>
+      <!-- イメージ 通常時 -->
+      <ImageNorm>ALLDesignPageL_MouseOut.jpg</ImageNorm>
+      <!-- イメージ マウスオーバー時 別ファィル指定フラッグ -->
+      <ImageMouseOverLoadFlag>True</ImageMouseOverLoadFlag>
+      <!-- イメージ マウスオーバー時 -->
+      <ImageMouseOver>ALLDesignPageL_MouseOver.jpg</ImageMouseOver>
+    </DesignPageL>
+    <!-- 全体デザイン 自動ページめくりボタン -->
+    <DesignAutoPage>
+      <!-- Topの位置 (X座標) -->
+      <ImageXStr>407</ImageXStr>
+      <!-- Topの位置 (Y座標) -->
+      <ImageYStr>614</ImageYStr>
+      <!-- 大きさ (X座標) -->
+      <ImageXLen>40</ImageXLen>
+      <!-- 大きさ (Y座標) -->
+      <ImageYLen>26</ImageYLen>
+      <!-- イメージ種別 -->
+      <!-- 0:範囲指定 -->
+      <!-- 1:イメージ -->
+      <ImageKind>0</ImageKind>
+      <!-- イメージ 通常時 別ファィル指定フラッグ -->
+      <ImageNormLoadFlag>True</ImageNormLoadFlag>
+      <!-- イメージ 通常時 -->
+      <ImageNorm>ALLDesignAutoPage_MouseOut.jpg</ImageNorm>
+      <!-- イメージ マウスオーバー時 別ファィル指定フラッグ -->
+      <ImageMouseOverLoadFlag>True</ImageMouseOverLoadFlag>
+      <!-- イメージ マウスオーバー時 -->
+      <ImageMouseOver>ALLDesignAutoPage_MouseOver.jpg</ImageMouseOver>
+    </DesignAutoPage>
+    <!-- 全体デザイン 自動ページめくりボタン(戻る) -->
+    <DesignAutoPageBack>
+      <!-- Topの位置 (X座標) -->
+      <ImageXStr>268</ImageXStr>
+      <!-- Topの位置 (Y座標) -->
+      <ImageYStr>615</ImageYStr>
+      <!-- 大きさ (X座標) -->
+      <ImageXLen>40</ImageXLen>
+      <!-- 大きさ (Y座標) -->
+      <ImageYLen>24</ImageYLen>
+      <!-- イメージ種別 -->
+      <!-- 0:範囲指定 -->
+      <!-- 1:イメージ -->
+      <ImageKind>0</ImageKind>
+      <!-- イメージ 通常時 別ファィル指定フラッグ -->
+      <ImageNormLoadFlag>True</ImageNormLoadFlag>
+      <!-- イメージ 通常時 -->
+      <ImageNorm>ALLDesignAutoPageBack_MouseOut.jpg</ImageNorm>
+      <!-- イメージ マウスオーバー時 別ファィル指定フラッグ -->
+      <ImageMouseOverLoadFlag>True</ImageMouseOverLoadFlag>
+      <!-- イメージ マウスオーバー時 -->
+      <ImageMouseOver>ALLDesignAutoPageBack_MouseOver.jpg</ImageMouseOver>
+    </DesignAutoPageBack>
+    <!-- 全体デザイン 拡大ボタン -->
+    <DesignZoomIn>
+      <!-- Topの位置 (X座標) -->
+      <ImageXStr>493</ImageXStr>
+      <!-- Topの位置 (Y座標) -->
+      <ImageYStr>614</ImageYStr>
+      <!-- 大きさ (X座標) -->
+      <ImageXLen>53</ImageXLen>
+      <!-- 大きさ (Y座標) -->
+      <ImageYLen>26</ImageYLen>
+      <!-- イメージ種別 -->
+      <!-- 0:範囲指定 -->
+      <!-- 1:イメージ -->
+      <ImageKind>0</ImageKind>
+      <!-- イメージ 通常時 別ファィル指定フラッグ -->
+      <ImageNormLoadFlag>True</ImageNormLoadFlag>
+      <!-- イメージ 通常時 -->
+      <ImageNorm>ALLDesignZoomIn_MouseOut.jpg</ImageNorm>
+      <!-- イメージ マウスオーバー時 別ファィル指定フラッグ -->
+      <ImageMouseOverLoadFlag>True</ImageMouseOverLoadFlag>
+      <!-- イメージ マウスオーバー時 -->
+      <ImageMouseOver>ALLDesignZoomIn_MouseOver.jpg</ImageMouseOver>
+    </DesignZoomIn>
+    <!-- 全体デザイン 縮小ボタン -->
+    <DesignZoomOut>
+      <!-- Topの位置 (X座標) -->
+      <ImageXStr>544</ImageXStr>
+      <!-- Topの位置 (Y座標) -->
+      <ImageYStr>614</ImageYStr>
+      <!-- 大きさ (X座標) -->
+      <ImageXLen>52</ImageXLen>
+      <!-- 大きさ (Y座標) -->
+      <ImageYLen>26</ImageYLen>
+      <!-- イメージ種別 -->
+      <!-- 0:範囲指定 -->
+      <!-- 1:イメージ -->
+      <ImageKind>0</ImageKind>
+      <!-- イメージ 通常時 別ファィル指定フラッグ -->
+      <ImageNormLoadFlag>True</ImageNormLoadFlag>
+      <!-- イメージ 通常時 -->
+      <ImageNorm>ALLDesignZoomOut_MouseOut.jpg</ImageNorm>
+      <!-- イメージ マウスオーバー時 別ファィル指定フラッグ -->
+      <ImageMouseOverLoadFlag>True</ImageMouseOverLoadFlag>
+      <!-- イメージ マウスオーバー時 -->
+      <ImageMouseOver>ALLDesignZoomOut_MouseOver.jpg</ImageMouseOver>
+    </DesignZoomOut>
+    <!-- 全体デザイン 再読込(拡大解除)ボタン -->
+    <DesignReload>
+      <!-- Topの位置 (X座標) -->
+      <ImageXStr>866</ImageXStr>
+      <!-- Topの位置 (Y座標) -->
+      <ImageYStr>614</ImageYStr>
+      <!-- 大きさ (X座標) -->
+      <ImageXLen>51</ImageXLen>
+      <!-- 大きさ (Y座標) -->
+      <ImageYLen>25</ImageYLen>
+      <!-- イメージ種別 -->
+      <!-- 0:範囲指定 -->
+      <!-- 1:イメージ -->
+      <ImageKind>0</ImageKind>
+      <!-- イメージ 通常時 別ファィル指定フラッグ -->
+      <ImageNormLoadFlag>True</ImageNormLoadFlag>
+      <!-- イメージ 通常時 -->
+      <ImageNorm>ALLDesignReload_MouseOut.jpg</ImageNorm>
+      <!-- イメージ マウスオーバー時 別ファィル指定フラッグ -->
+      <ImageMouseOverLoadFlag>True</ImageMouseOverLoadFlag>
+      <!-- イメージ マウスオーバー時 -->
+      <ImageMouseOver>ALLDesignReload_MouseOver.jpg</ImageMouseOver>
+    </DesignReload>
+    <!-- 全体デザイン 印刷ボタン -->
+    <DesignPrint>
+      <!-- Topの位置 (X座標) -->
+      <ImageXStr>764</ImageXStr>
+      <!-- Topの位置 (Y座標) -->
+      <ImageYStr>614</ImageYStr>
+      <!-- 大きさ (X座標) -->
+      <ImageXLen>51</ImageXLen>
+      <!-- 大きさ (Y座標) -->
+      <ImageYLen>25</ImageYLen>
+      <!-- イメージ種別 -->
+      <!-- 0:範囲指定 -->
+      <!-- 1:イメージ -->
+      <ImageKind>0</ImageKind>
+      <!-- イメージ 通常時 別ファィル指定フラッグ -->
+      <ImageNormLoadFlag>True</ImageNormLoadFlag>
+      <!-- イメージ 通常時 -->
+      <ImageNorm>ALLDesignPrint_MouseOut.jpg</ImageNorm>
+      <!-- イメージ マウスオーバー時 別ファィル指定フラッグ -->
+      <ImageMouseOverLoadFlag>True</ImageMouseOverLoadFlag>
+      <!-- イメージ マウスオーバー時 -->
+      <ImageMouseOver>ALLDesignPrint_MouseOver.jpg</ImageMouseOver>
+      <!-- 印刷ボタン種別 -->
+      <!-- 0:左ページ印刷 -->
+      <!-- 1:右ページ印刷 -->
+      <!-- 2:両ページ印刷 -->
+      <!-- 3:全ページ印刷 -->
+      <!-- 4:プルダウンメニュー -->
+      <!-- 5:印刷ダイアログ表示 -->
+      <PrintKind>4</PrintKind>
+      <PrintPullDownL>True</PrintPullDownL>
+      <PrintPullDownR>True</PrintPullDownR>
+      <PrintPullDownLR>True</PrintPullDownLR>
+      <PrintPullDownAll>True</PrintPullDownAll>
+      <!-- 高解像度印刷 -->
+      <PrintHighQualityPrint>False</PrintHighQualityPrint>
+    </DesignPrint>
+    <!-- 全体デザイン ヘルプボタン -->
+    <DesignHelp>
+      <!-- Topの位置 (X座標) -->
+      <ImageXStr>916</ImageXStr>
+      <!-- Topの位置 (Y座標) -->
+      <ImageYStr>614</ImageYStr>
+      <!-- 大きさ (X座標) -->
+      <ImageXLen>52</ImageXLen>
+      <!-- 大きさ (Y座標) -->
+      <ImageYLen>25</ImageYLen>
+      <!-- イメージ種別 -->
+      <!-- 0:範囲指定 -->
+      <!-- 1:イメージ -->
+      <ImageKind>0</ImageKind>
+      <!-- イメージ 通常時 別ファィル指定フラッグ -->
+      <ImageNormLoadFlag>True</ImageNormLoadFlag>
+      <!-- イメージ 通常時 -->
+      <ImageNorm>ALLDesignHelp_MouseOut.jpg</ImageNorm>
+      <!-- イメージ マウスオーバー時 別ファィル指定フラッグ -->
+      <ImageMouseOverLoadFlag>True</ImageMouseOverLoadFlag>
+      <!-- イメージ マウスオーバー時 -->
+      <ImageMouseOver>ALLDesignHelp_MouseOver.jpg</ImageMouseOver>
+      <!-- ペルプ自動作成フラッグ -->
+      <HelpAutoMakeFlag>False</HelpAutoMakeFlag>
+    </DesignHelp>
+    <!-- 全体デザイン ヘルプイメージ -->
+    <DesignHelpImage>
+      <!-- ヘルプファイル名 -->
+      <ImageFileName>help.jpg</ImageFileName>
+      <!-- ヘルプファイルの大きさ (幅) -->
+      <ImageSizeX>768</ImageSizeX>
+      <!-- ヘルプファイルの大きさ (高さ) -->
+      <ImageSizeY>1852</ImageSizeY>
+    </DesignHelpImage>
+    <!-- 全体デザイン インデックスボタン -->
+    <DesignIndex>
+    </DesignIndex>
+    <!-- 全体デザイン 目次表示位置 -->
+    <DesignIndexPos>
+      <!-- 目次表示位置 Topの位置 (X座標) -->
+      <ImageXStr>0</ImageXStr>
+      <!-- 目次表示位置 Topの位置 (Y座標) -->
+      <ImageYStr>0</ImageYStr>
+      <!-- 目次表示位置 大きさ (X座標) -->
+      <ImageXLen>0</ImageXLen>
+      <!-- 目次表示位置 大きさ (Y座標) -->
+      <ImageYLen>0</ImageYLen>
+    </DesignIndexPos>
+    <!-- 全体デザイン リンクボタン -->
+    <DesignLink>
+    </DesignLink>
+    <!-- 全体デザイン Gotoボタン -->
+    <DesignGoto>
+      <!-- Topの位置 (X座標) -->
+      <ImageXStr>176</ImageXStr>
+      <!-- Topの位置 (Y座標) -->
+      <ImageYStr>614</ImageYStr>
+      <!-- 大きさ (X座標) -->
+      <ImageXLen>46</ImageXLen>
+      <!-- 大きさ (Y座標) -->
+      <ImageYLen>26</ImageYLen>
+      <!-- イメージ種別 -->
+      <!-- 0:範囲指定 -->
+      <!-- 1:イメージ -->
+      <ImageKind>0</ImageKind>
+      <!-- イメージ 通常時 別ファィル指定フラッグ -->
+      <ImageNormLoadFlag>True</ImageNormLoadFlag>
+      <!-- イメージ 通常時 -->
+      <ImageNorm>ALLDesignGoto_MouseOut.jpg</ImageNorm>
+      <!-- イメージ マウスオーバー時 別ファィル指定フラッグ -->
+      <ImageMouseOverLoadFlag>True</ImageMouseOverLoadFlag>
+      <!-- イメージ マウスオーバー時 -->
+      <ImageMouseOver>ALLDesignGoto_MouseOver.jpg</ImageMouseOver>
+    </DesignGoto>
+    <!-- 全体デザイン GotoTextボタン -->
+    <DesignGotoText>
+      <!-- Topの位置 (X座標) -->
+      <ImageXStr>132</ImageXStr>
+      <!-- Topの位置 (Y座標) -->
+      <ImageYStr>618</ImageYStr>
+      <!-- 大きさ (X座標) -->
+      <ImageXLen>40</ImageXLen>
+      <!-- 大きさ (Y座標) -->
+      <ImageYLen>17</ImageYLen>
+      <!-- GotoText 色 -->
+      <TextColor>000000</TextColor>
+    </DesignGotoText>
+    <!-- 全体デザイン スライダーボタン -->
+    <DesignSlid>
+      <!-- Topの位置 (X座標) -->
+      <ImageXStr>0</ImageXStr>
+      <!-- Topの位置 (Y座標) -->
+      <ImageYStr>0</ImageYStr>
+      <!-- 大きさ (X座標) -->
+      <ImageXLen>0</ImageXLen>
+      <!-- 大きさ (Y座標) -->
+      <ImageYLen>0</ImageYLen>
+      <!-- イメージ種別 -->
+      <!-- 0:範囲指定 -->
+      <!-- 1:イメージ -->
+      <ImageKind>0</ImageKind>
+      <!-- スライダー・フォントサイズ -->
+      <ImageFontSize>10</ImageFontSize>
+      <!-- イメージ 通常時 別ファィル指定フラッグ -->
+      <ImageNormLoadFlag>True</ImageNormLoadFlag>
+      <!-- イメージ 通常時 -->
+      <ImageNorm>
+      </ImageNorm>
+      <!-- イメージ マウスオーバー時 別ファィル指定フラッグ -->
+      <ImageMouseOverLoadFlag>True</ImageMouseOverLoadFlag>
+      <!-- イメージ マウスオーバー時 -->
+      <ImageMouseOver>
+      </ImageMouseOver>
+      <!-- イメージ 通常時 背景色1 -->
+      <ImageNormBackColor1>EFEFEF</ImageNormBackColor1>
+      <!-- イメージ 通常時 背景色2 -->
+      <ImageNormBackColor2>5D5D5D</ImageNormBackColor2>
+      <!-- イメージ つまみ 通常時 -->
+      <ImageSwitchNorm>
+      </ImageSwitchNorm>
+      <!-- イメージ つまみ マウスオーバー時 -->
+      <ImageSwitchMouseOver>
+      </ImageSwitchMouseOver>
+      <!-- イメージ つまみ 背景色1 -->
+      <ImageSwitchBackColor1>EFEFEF</ImageSwitchBackColor1>
+      <!-- イメージ つまみ 背景色2 -->
+      <ImageSwitchBackColor2>5D5D5D</ImageSwitchBackColor2>
+    </DesignSlid>
+    <!-- 全体デザイン 検索ボタン -->
+    <DesignSearch>
+      <!-- Topの位置 (X座標) -->
+      <ImageXStr>0</ImageXStr>
+      <!-- Topの位置 (Y座標) -->
+      <ImageYStr>0</ImageYStr>
+      <!-- 大きさ (X座標) -->
+      <ImageXLen>0</ImageXLen>
+      <!-- 大きさ (Y座標) -->
+      <ImageYLen>0</ImageYLen>
+      <!-- イメージ種別 -->
+      <!-- 0:範囲指定 -->
+      <!-- 1:イメージ -->
+      <ImageKind>0</ImageKind>
+      <!-- イメージ 通常時 別ファィル指定フラッグ -->
+      <ImageNormLoadFlag>True</ImageNormLoadFlag>
+      <!-- イメージ 通常時 -->
+      <ImageNorm>
+      </ImageNorm>
+      <!-- イメージ マウスオーバー時 別ファィル指定フラッグ -->
+      <ImageMouseOverLoadFlag>True</ImageMouseOverLoadFlag>
+      <!-- イメージ マウスオーバー時 -->
+      <ImageMouseOver>
+      </ImageMouseOver>
+    </DesignSearch>
+    <!-- 全体デザイン 検索表示位置 -->
+    <DesignSearchPos>
+      <!-- 検索表示位置 Topの位置 (X座標) -->
+      <ImageXStr>0</ImageXStr>
+      <!-- 検索表示位置 Topの位置 (Y座標) -->
+      <ImageYStr>0</ImageYStr>
+      <!-- 検索表示位置 大きさ (X座標) -->
+      <ImageXLen>0</ImageXLen>
+      <!-- 検索表示位置 大きさ (Y座標) -->
+      <ImageYLen>0</ImageYLen>
+    </DesignSearchPos>
+    <!-- 全体デザイン 全文検索ボタン -->
+    <DesignSearchALL>
+      <!-- Topの位置 (X座標) -->
+      <ImageXStr>0</ImageXStr>
+      <!-- Topの位置 (Y座標) -->
+      <ImageYStr>151</ImageYStr>
+      <!-- 大きさ (X座標) -->
+      <ImageXLen>33</ImageXLen>
+      <!-- 大きさ (Y座標) -->
+      <ImageYLen>111</ImageYLen>
+      <!-- イメージ種別 -->
+      <!-- 0:範囲指定 -->
+      <!-- 1:イメージ -->
+      <ImageKind>0</ImageKind>
+      <!-- イメージ 通常時 別ファィル指定フラッグ -->
+      <ImageNormLoadFlag>True</ImageNormLoadFlag>
+      <!-- イメージ 通常時 -->
+      <ImageNorm>ALLDesignSearchALL_MouseOut.jpg</ImageNorm>
+      <!-- イメージ マウスオーバー時 別ファィル指定フラッグ -->
+      <ImageMouseOverLoadFlag>True</ImageMouseOverLoadFlag>
+      <!-- イメージ マウスオーバー時 -->
+      <ImageMouseOver>ALLDesignSearchALL_MouseOver.jpg</ImageMouseOver>
+    </DesignSearchALL>
+    <!-- 全体デザイン 全文検索表示位置 -->
+    <DesignSearchALLPos>
+      <!-- 検索表示位置 Topの位置 (X座標) -->
+      <ImageXStr>74</ImageXStr>
+      <!-- 検索表示位置 Topの位置 (Y座標) -->
+      <ImageYStr>22</ImageYStr>
+      <!-- 検索表示位置 大きさ (X座標) -->
+      <ImageXLen>348</ImageXLen>
+      <!-- 検索表示位置 大きさ (Y座標) -->
+      <ImageYLen>567</ImageYLen>
+    </DesignSearchALLPos>
+    <!-- 全体デザイン 付箋左右ボタン -->
+    <DesignNoteLR>
+      <!-- Topの位置 (X座標) -->
+      <ImageXStr>704</ImageXStr>
+      <!-- Topの位置 (Y座標) -->
+      <ImageYStr>614</ImageYStr>
+      <!-- 大きさ (X座標) -->
+      <ImageXLen>52</ImageXLen>
+      <!-- 大きさ (Y座標) -->
+      <ImageYLen>25</ImageYLen>
+      <!-- イメージ種別 -->
+      <!-- 0:範囲指定 -->
+      <!-- 1:イメージ -->
+      <ImageKind>0</ImageKind>
+      <!-- イメージ 通常時 別ファィル指定フラッグ -->
+      <ImageNormLoadFlag>True</ImageNormLoadFlag>
+      <!-- イメージ 通常時 -->
+      <ImageNorm>ALLDesignNoteLR_MouseOut.jpg</ImageNorm>
+      <!-- イメージ マウスオーバー時 別ファィル指定フラッグ -->
+      <ImageMouseOverLoadFlag>True</ImageMouseOverLoadFlag>
+      <!-- イメージ マウスオーバー時 -->
+      <ImageMouseOver>ALLDesignNoteLR_MouseOver.jpg</ImageMouseOver>
+    </DesignNoteLR>
+    <!-- 全体デザイン 付箋左ボタン -->
+    <DesignNoteL>
+      <!-- Topの位置 (X座標) -->
+      <ImageXStr>0</ImageXStr>
+      <!-- Topの位置 (Y座標) -->
+      <ImageYStr>0</ImageYStr>
+      <!-- 大きさ (X座標) -->
+      <ImageXLen>0</ImageXLen>
+      <!-- 大きさ (Y座標) -->
+      <ImageYLen>0</ImageYLen>
+      <!-- イメージ種別 -->
+      <!-- 0:範囲指定 -->
+      <!-- 1:イメージ -->
+      <ImageKind>0</ImageKind>
+      <!-- イメージ 通常時 別ファィル指定フラッグ -->
+      <ImageNormLoadFlag>True</ImageNormLoadFlag>
+      <!-- イメージ 通常時 -->
+      <ImageNorm>
+      </ImageNorm>
+      <!-- イメージ マウスオーバー時 別ファィル指定フラッグ -->
+      <ImageMouseOverLoadFlag>True</ImageMouseOverLoadFlag>
+      <!-- イメージ マウスオーバー時 -->
+      <ImageMouseOver>
+      </ImageMouseOver>
+    </DesignNoteL>
+    <!-- 全体デザイン 付箋右ボタン -->
+    <DesignNoteR>
+      <!-- Topの位置 (X座標) -->
+      <ImageXStr>0</ImageXStr>
+      <!-- Topの位置 (Y座標) -->
+      <ImageYStr>0</ImageYStr>
+      <!-- 大きさ (X座標) -->
+      <ImageXLen>0</ImageXLen>
+      <!-- 大きさ (Y座標) -->
+      <ImageYLen>0</ImageYLen>
+      <!-- イメージ種別 -->
+      <!-- 0:範囲指定 -->
+      <!-- 1:イメージ -->
+      <ImageKind>0</ImageKind>
+      <!-- イメージ 通常時 別ファィル指定フラッグ -->
+      <ImageNormLoadFlag>True</ImageNormLoadFlag>
+      <!-- イメージ 通常時 -->
+      <ImageNorm>
+      </ImageNorm>
+      <!-- イメージ マウスオーバー時 別ファィル指定フラッグ -->
+      <ImageMouseOverLoadFlag>True</ImageMouseOverLoadFlag>
+      <!-- イメージ マウスオーバー時 -->
+      <ImageMouseOver>
+      </ImageMouseOver>
+    </DesignNoteR>
+    <!-- 全体デザイン メモボタン -->
+    <DesignMemo>
+      <!-- Topの位置 (X座標) -->
+      <ImageXStr>653</ImageXStr>
+      <!-- Topの位置 (Y座標) -->
+      <ImageYStr>613</ImageYStr>
+      <!-- 大きさ (X座標) -->
+      <ImageXLen>52</ImageXLen>
+      <!-- 大きさ (Y座標) -->
+      <ImageYLen>27</ImageYLen>
+      <!-- イメージ種別 -->
+      <!-- 0:範囲指定 -->
+      <!-- 1:イメージ -->
+      <ImageKind>0</ImageKind>
+      <!-- イメージ 通常時 別ファィル指定フラッグ -->
+      <ImageNormLoadFlag>True</ImageNormLoadFlag>
+      <!-- イメージ 通常時 -->
+      <ImageNorm>ALLDesignMemo_MouseOut.jpg</ImageNorm>
+      <!-- イメージ マウスオーバー時 別ファィル指定フラッグ -->
+      <ImageMouseOverLoadFlag>True</ImageMouseOverLoadFlag>
+      <!-- イメージ マウスオーバー時 -->
+      <ImageMouseOver>ALLDesignMemo_MouseOver.jpg</ImageMouseOver>
+    </DesignMemo>
+    <!-- 全体デザイン メモ表示位置 -->
+    <DesignMemoPos>
+      <!-- メモ表示位置 Topの位置 (X座標) -->
+      <ImageXStr>88</ImageXStr>
+      <!-- メモ表示位置 Topの位置 (Y座標) -->
+      <ImageYStr>30</ImageYStr>
+      <!-- メモ表示位置 大きさ (X座標) -->
+      <ImageXLen>323</ImageXLen>
+      <!-- メモ表示位置 大きさ (Y座標) -->
+      <ImageYLen>544</ImageYLen>
+    </DesignMemoPos>
+    <!-- 全体デザイン 閉じるボタン -->
+    <DesignClose>
+      <!-- Topの位置 (X座標) -->
+      <ImageXStr>0</ImageXStr>
+      <!-- Topの位置 (Y座標) -->
+      <ImageYStr>0</ImageYStr>
+      <!-- 大きさ (X座標) -->
+      <ImageXLen>0</ImageXLen>
+      <!-- 大きさ (Y座標) -->
+      <ImageYLen>0</ImageYLen>
+      <!-- イメージ種別 -->
+      <!-- 0:範囲指定 -->
+      <!-- 1:イメージ -->
+      <ImageKind>0</ImageKind>
+      <!-- イメージ 通常時 別ファィル指定フラッグ -->
+      <ImageNormLoadFlag>True</ImageNormLoadFlag>
+      <!-- イメージ 通常時 -->
+      <ImageNorm>
+      </ImageNorm>
+      <!-- イメージ マウスオーバー時 別ファィル指定フラッグ -->
+      <ImageMouseOverLoadFlag>True</ImageMouseOverLoadFlag>
+      <!-- イメージ マウスオーバー時 -->
+      <ImageMouseOver>
+      </ImageMouseOver>
+    </DesignClose>
+    <!-- 全体デザイン ページ数 -->
+    <DesignPageNumber>
+      <!-- ページ数 Topの位置 (X座標) -->
+      <ImageXStr>51</ImageXStr>
+      <!-- ページ数 Topの位置 (Y座標) -->
+      <ImageYStr>618</ImageYStr>
+      <!-- ページ数 大きさ (X座標) -->
+      <ImageXLen>65</ImageXLen>
+      <!-- ページ数 大きさ (Y座標) -->
+      <ImageYLen>18</ImageYLen>
+      <!-- ページ数 色 -->
+      <TextColor>000000</TextColor>
+    </DesignPageNumber>
+    <!-- 全体デザイン ペンツールボタン -->
+    <DesignPen>
+      <!-- Topの位置 (X座標) -->
+      <ImageXStr>602</ImageXStr>
+      <!-- Topの位置 (Y座標) -->
+      <ImageYStr>614</ImageYStr>
+      <!-- 大きさ (X座標) -->
+      <ImageXLen>52</ImageXLen>
+      <!-- 大きさ (Y座標) -->
+      <ImageYLen>25</ImageYLen>
+      <!-- イメージ種別 -->
+      <!-- 0:範囲指定 -->
+      <!-- 1:イメージ -->
+      <ImageKind>0</ImageKind>
+      <!-- イメージ 通常時 別ファィル指定フラッグ -->
+      <ImageNormLoadFlag>True</ImageNormLoadFlag>
+      <!-- イメージ 通常時 -->
+      <ImageNorm>ALLDesignPen_MouseOut.jpg</ImageNorm>
+      <!-- イメージ マウスオーバー時 別ファィル指定フラッグ -->
+      <ImageMouseOverLoadFlag>True</ImageMouseOverLoadFlag>
+      <!-- イメージ マウスオーバー時 -->
+      <ImageMouseOver>ALLDesignPen_MouseOver.jpg</ImageMouseOver>
+    </DesignPen>
+    <!-- 全体デザイン 全画面表示ボタン -->
+    <DesignFullScreen>
+      <!-- Topの位置 (X座標) -->
+      <ImageXStr>814</ImageXStr>
+      <!-- Topの位置 (Y座標) -->
+      <ImageYStr>614</ImageYStr>
+      <!-- 大きさ (X座標) -->
+      <ImageXLen>52</ImageXLen>
+      <!-- 大きさ (Y座標) -->
+      <ImageYLen>25</ImageYLen>
+      <!-- イメージ種別 -->
+      <!-- 0:範囲指定 -->
+      <!-- 1:イメージ -->
+      <ImageKind>0</ImageKind>
+      <!-- イメージ 通常時 別ファィル指定フラッグ -->
+      <ImageNormLoadFlag>True</ImageNormLoadFlag>
+      <!-- イメージ 通常時 -->
+      <ImageNorm>ALLDesignFullScreen_MouseOut.jpg</ImageNorm>
+      <!-- イメージ マウスオーバー時 別ファィル指定フラッグ -->
+      <ImageMouseOverLoadFlag>True</ImageMouseOverLoadFlag>
+      <!-- イメージ マウスオーバー時 -->
+      <ImageMouseOver>ALLDesignFullScreen_MouseOver.jpg</ImageMouseOver>
+    </DesignFullScreen>
+    <!-- Indexデザイン インデックスボタン -->
+    <IndexDesignIndex>
+    </IndexDesignIndex>
+    <!-- Indexデザイン リンクボタン -->
+    <IndexDesignLink>
+    </IndexDesignLink>
+    <!-- Indexデザイン 閉じるボタン -->
+    <IndexDesignClose>
+      <!-- Topの位置 (X座標) -->
+      <ImageXStr>0</ImageXStr>
+      <!-- Topの位置 (Y座標) -->
+      <ImageYStr>0</ImageYStr>
+      <!-- 大きさ (X座標) -->
+      <ImageXLen>0</ImageXLen>
+      <!-- 大きさ (Y座標) -->
+      <ImageYLen>0</ImageYLen>
+      <!-- イメージ種別 -->
+      <!-- 0:範囲指定 -->
+      <!-- 1:イメージ -->
+      <ImageKind>0</ImageKind>
+      <!-- イメージ 通常時 別ファィル指定フラッグ -->
+      <ImageNormLoadFlag>True</ImageNormLoadFlag>
+      <!-- イメージ 通常時 -->
+      <ImageNorm>
+      </ImageNorm>
+      <!-- イメージ マウスオーバー時 別ファィル指定フラッグ -->
+      <ImageMouseOverLoadFlag>True</ImageMouseOverLoadFlag>
+      <!-- イメージ マウスオーバー時 -->
+      <ImageMouseOver>
+      </ImageMouseOver>
+    </IndexDesignClose>
+    <!-- 全体デザイン ビジュアル目次ボタン -->
+    <DesignVIndex>
+      <!-- Topの位置 (X座標) -->
+      <ImageXStr>0</ImageXStr>
+      <!-- Topの位置 (Y座標) -->
+      <ImageYStr>42</ImageYStr>
+      <!-- 大きさ (X座標) -->
+      <ImageXLen>32</ImageXLen>
+      <!-- 大きさ (Y座標) -->
+      <ImageYLen>110</ImageYLen>
+      <!-- イメージ種別 -->
+      <!-- 0:範囲指定 -->
+      <!-- 1:イメージ -->
+      <ImageKind>0</ImageKind>
+      <!-- イメージ 通常時 別ファィル指定フラッグ -->
+      <ImageNormLoadFlag>True</ImageNormLoadFlag>
+      <!-- イメージ 通常時 -->
+      <ImageNorm>ALLDesignVisIndex_MouseOut.jpg</ImageNorm>
+      <!-- イメージ マウスオーバー時 別ファィル指定フラッグ -->
+      <ImageMouseOverLoadFlag>True</ImageMouseOverLoadFlag>
+      <!-- イメージ マウスオーバー時 -->
+      <ImageMouseOver>ALLDesignVisIndex_MouseOver.jpg</ImageMouseOver>
+    </DesignVIndex>
+    <!-- 全体デザイン ビジュアル目次表示位置 -->
+    <DesignVIndexPos>
+      <!-- メモ表示位置 Topの位置 (X座標) -->
+      <ImageXStr>81</ImageXStr>
+      <!-- メモ表示位置 Topの位置 (Y座標) -->
+      <ImageYStr>25</ImageYStr>
+      <!-- メモ表示位置 大きさ (X座標) -->
+      <ImageXLen>336</ImageXLen>
+      <!-- メモ表示位置 大きさ (Y座標) -->
+      <ImageYLen>558</ImageYLen>
+    </DesignVIndexPos>
+    <!-- 全体デザイン ページめくり 最初のページへボタン -->
+    <DesignGotoStartPage>
+      <!-- Topの位置 (X座標) -->
+      <ImageXStr>229</ImageXStr>
+      <!-- Topの位置 (Y座標) -->
+      <ImageYStr>614</ImageYStr>
+      <!-- 大きさ (X座標) -->
+      <ImageXLen>40</ImageXLen>
+      <!-- 大きさ (Y座標) -->
+      <ImageYLen>25</ImageYLen>
+      <!-- イメージ種別 -->
+      <!-- 0:範囲指定 -->
+      <!-- 1:イメージ -->
+      <ImageKind>0</ImageKind>
+      <!-- イメージ 通常時 別ファィル指定フラッグ -->
+      <ImageNormLoadFlag>True</ImageNormLoadFlag>
+      <!-- イメージ 通常時 -->
+      <ImageNorm>ALLDesignGotoStrPage_MouseOut.jpg</ImageNorm>
+      <!-- イメージ マウスオーバー時 別ファィル指定フラッグ -->
+      <ImageMouseOverLoadFlag>True</ImageMouseOverLoadFlag>
+      <!-- イメージ マウスオーバー時 -->
+      <ImageMouseOver>ALLDesignGotoStrPage_MouseOver.jpg</ImageMouseOver>
+    </DesignGotoStartPage>
+    <!-- 全体デザイン ページめくり 最後のページへボタン -->
+    <DesignGotoEndPage>
+      <!-- Topの位置 (X座標) -->
+      <ImageXStr>447</ImageXStr>
+      <!-- Topの位置 (Y座標) -->
+      <ImageYStr>614</ImageYStr>
+      <!-- 大きさ (X座標) -->
+      <ImageXLen>40</ImageXLen>
+      <!-- 大きさ (Y座標) -->
+      <ImageYLen>25</ImageYLen>
+      <!-- イメージ種別 -->
+      <!-- 0:範囲指定 -->
+      <!-- 1:イメージ -->
+      <ImageKind>0</ImageKind>
+      <!-- イメージ 通常時 別ファィル指定フラッグ -->
+      <ImageNormLoadFlag>True</ImageNormLoadFlag>
+      <!-- イメージ 通常時 -->
+      <ImageNorm>ALLDesignGotoEndPage_MouseOut.jpg</ImageNorm>
+      <!-- イメージ マウスオーバー時 別ファィル指定フラッグ -->
+      <ImageMouseOverLoadFlag>True</ImageMouseOverLoadFlag>
+      <!-- イメージ マウスオーバー時 -->
+      <ImageMouseOver>ALLDesignGotoEndPage_MouseOver.jpg</ImageMouseOver>
+    </DesignGotoEndPage>
+    <!-- 全体デザイン キャプチャーボタン -->
+    <DesignCapture>
+      <!-- Topの位置 (X座標) -->
+      <ImageXStr>0</ImageXStr>
+      <!-- Topの位置 (Y座標) -->
+      <ImageYStr>0</ImageYStr>
+      <!-- 大きさ (X座標) -->
+      <ImageXLen>0</ImageXLen>
+      <!-- 大きさ (Y座標) -->
+      <ImageYLen>0</ImageYLen>
+      <!-- イメージ種別 -->
+      <!-- 0:範囲指定 -->
+      <!-- 1:イメージ -->
+      <ImageKind>0</ImageKind>
+      <!-- イメージ 通常時 別ファィル指定フラッグ -->
+      <ImageNormLoadFlag>False</ImageNormLoadFlag>
+      <!-- イメージ 通常時 -->
+      <ImageNorm>
+      </ImageNorm>
+      <!-- イメージ マウスオーバー時 別ファィル指定フラッグ -->
+      <ImageMouseOverLoadFlag>False</ImageMouseOverLoadFlag>
+      <!-- イメージ マウスオーバー時 -->
+      <ImageMouseOver>
+      </ImageMouseOver>
+    </DesignCapture>
+    <!-- 全体デザイン ページ閲覧履歴(戻る)ボタン -->
+    <DesignHistBK>
+      <!-- Topの位置 (X座標) -->
+      <ImageXStr>0</ImageXStr>
+      <!-- Topの位置 (Y座標) -->
+      <ImageYStr>0</ImageYStr>
+      <!-- 大きさ (X座標) -->
+      <ImageXLen>0</ImageXLen>
+      <!-- 大きさ (Y座標) -->
+      <ImageYLen>0</ImageYLen>
+      <!-- イメージ種別 -->
+      <!-- 0:範囲指定 -->
+      <!-- 1:イメージ -->
+      <ImageKind>0</ImageKind>
+      <!-- イメージ 通常時 別ファィル指定フラッグ -->
+      <ImageNormLoadFlag>False</ImageNormLoadFlag>
+      <!-- イメージ 通常時 -->
+      <ImageNorm>
+      </ImageNorm>
+      <!-- イメージ マウスオーバー時 別ファィル指定フラッグ -->
+      <ImageMouseOverLoadFlag>False</ImageMouseOverLoadFlag>
+      <!-- イメージ マウスオーバー時 -->
+      <ImageMouseOver>
+      </ImageMouseOver>
+    </DesignHistBK>
+    <!-- 全体デザイン ページ閲覧履歴(進む)ボタン -->
+    <DesignHistFF>
+      <!-- Topの位置 (X座標) -->
+      <ImageXStr>0</ImageXStr>
+      <!-- Topの位置 (Y座標) -->
+      <ImageYStr>0</ImageYStr>
+      <!-- 大きさ (X座標) -->
+      <ImageXLen>0</ImageXLen>
+      <!-- 大きさ (Y座標) -->
+      <ImageYLen>0</ImageYLen>
+      <!-- イメージ種別 -->
+      <!-- 0:範囲指定 -->
+      <!-- 1:イメージ -->
+      <ImageKind>0</ImageKind>
+      <!-- イメージ 通常時 別ファィル指定フラッグ -->
+      <ImageNormLoadFlag>False</ImageNormLoadFlag>
+      <!-- イメージ 通常時 -->
+      <ImageNorm>
+      </ImageNorm>
+      <!-- イメージ マウスオーバー時 別ファィル指定フラッグ -->
+      <ImageMouseOverLoadFlag>False</ImageMouseOverLoadFlag>
+      <!-- イメージ マウスオーバー時 -->
+      <ImageMouseOver>
+      </ImageMouseOver>
+    </DesignHistFF>
+    <!-- 全体デザイン PDF印刷ボタン -->
+    <DesignPDFPrint>
+      <!-- Topの位置 (X座標) -->
+      <ImageXStr>0</ImageXStr>
+      <!-- Topの位置 (Y座標) -->
+      <ImageYStr>0</ImageYStr>
+      <!-- 大きさ (X座標) -->
+      <ImageXLen>0</ImageXLen>
+      <!-- 大きさ (Y座標) -->
+      <ImageYLen>0</ImageYLen>
+      <!-- イメージ種別 -->
+      <!-- 0:範囲指定 -->
+      <!-- 1:イメージ -->
+      <ImageKind>0</ImageKind>
+      <!-- イメージ 通常時 別ファィル指定フラッグ -->
+      <ImageNormLoadFlag>False</ImageNormLoadFlag>
+      <!-- イメージ 通常時 -->
+      <ImageNorm>
+      </ImageNorm>
+      <!-- イメージ マウスオーバー時 別ファィル指定フラッグ -->
+      <ImageMouseOverLoadFlag>False</ImageMouseOverLoadFlag>
+      <!-- イメージ マウスオーバー時 -->
+      <ImageMouseOver>
+      </ImageMouseOver>
+    </DesignPDFPrint>
+    <!-- 全体デザイン カタログ一覧ボタン -->
+    <DesignCatalog>
+      <!-- Topの位置 (X座標) -->
+      <ImageXStr>0</ImageXStr>
+      <!-- Topの位置 (Y座標) -->
+      <ImageYStr>0</ImageYStr>
+      <!-- 大きさ (X座標) -->
+      <ImageXLen>0</ImageXLen>
+      <!-- 大きさ (Y座標) -->
+      <ImageYLen>0</ImageYLen>
+      <!-- イメージ種別 -->
+      <!-- 0:範囲指定 -->
+      <!-- 1:イメージ -->
+      <ImageKind>0</ImageKind>
+      <!-- イメージ 通常時 別ファィル指定フラッグ -->
+      <ImageNormLoadFlag>False</ImageNormLoadFlag>
+      <!-- イメージ 通常時 -->
+      <ImageNorm>
+      </ImageNorm>
+      <!-- イメージ マウスオーバー時 別ファィル指定フラッグ -->
+      <ImageMouseOverLoadFlag>False</ImageMouseOverLoadFlag>
+      <!-- イメージ マウスオーバー時 -->
+      <ImageMouseOver>
+      </ImageMouseOver>
+    </DesignCatalog>
+    <!-- ペンツール 閉じるボタン -->
+    <PenToolDesignClose>
+      <!-- Topの位置 (X座標) -->
+      <ImageXStr>399</ImageXStr>
+      <!-- Topの位置 (Y座標) -->
+      <ImageYStr>14</ImageYStr>
+      <!-- 大きさ (X座標) -->
+      <ImageXLen>16</ImageXLen>
+      <!-- 大きさ (Y座標) -->
+      <ImageYLen>16</ImageYLen>
+      <!-- イメージ種別 -->
+      <!-- 0:範囲指定 -->
+      <!-- 1:イメージ -->
+      <ImageKind>0</ImageKind>
+      <!-- イメージ 通常時 別ファィル指定フラッグ -->
+      <ImageNormLoadFlag>True</ImageNormLoadFlag>
+      <!-- イメージ 通常時 -->
+      <ImageNorm>PenToolDesignClose_MouseOut.jpg</ImageNorm>
+      <!-- イメージ マウスオーバー時 別ファィル指定フラッグ -->
+      <ImageMouseOverLoadFlag>True</ImageMouseOverLoadFlag>
+      <!-- イメージ マウスオーバー時 -->
+      <ImageMouseOver>PenToolDesignClose_MouseOver.jpg</ImageMouseOver>
+    </PenToolDesignClose>
+    <!-- ペンツール 全て隠すボタン -->
+    <PenToolDesignALLHide>
+      <!-- Topの位置 (X座標) -->
+      <ImageXStr>0</ImageXStr>
+      <!-- Topの位置 (Y座標) -->
+      <ImageYStr>0</ImageYStr>
+      <!-- 大きさ (X座標) -->
+      <ImageXLen>0</ImageXLen>
+      <!-- 大きさ (Y座標) -->
+      <ImageYLen>0</ImageYLen>
+      <!-- イメージ種別 -->
+      <!-- 0:範囲指定 -->
+      <!-- 1:イメージ -->
+      <ImageKind>0</ImageKind>
+      <!-- イメージ 通常時 別ファィル指定フラッグ -->
+      <ImageNormLoadFlag>False</ImageNormLoadFlag>
+      <!-- イメージ 通常時 -->
+      <ImageNorm>
+      </ImageNorm>
+      <!-- イメージ マウスオーバー時 別ファィル指定フラッグ -->
+      <ImageMouseOverLoadFlag>False</ImageMouseOverLoadFlag>
+      <!-- イメージ マウスオーバー時 -->
+      <ImageMouseOver>
+      </ImageMouseOver>
+    </PenToolDesignALLHide>
+    <!-- ペンツール 太さ(小)ボタン -->
+    <PenToolDesignWidthS>
+      <!-- Topの位置 (X座標) -->
+      <ImageXStr>216</ImageXStr>
+      <!-- Topの位置 (Y座標) -->
+      <ImageYStr>50</ImageYStr>
+      <!-- 大きさ (X座標) -->
+      <ImageXLen>32</ImageXLen>
+      <!-- 大きさ (Y座標) -->
+      <ImageYLen>32</ImageYLen>
+      <!-- イメージ種別 -->
+      <!-- 0:範囲指定 -->
+      <!-- 1:イメージ -->
+      <ImageKind>0</ImageKind>
+      <!-- イメージ 通常時 別ファィル指定フラッグ -->
+      <ImageNormLoadFlag>True</ImageNormLoadFlag>
+      <!-- イメージ 通常時 -->
+      <ImageNorm>PenToolDesignWidthS_MouseOut.jpg</ImageNorm>
+      <!-- イメージ マウスオーバー時 別ファィル指定フラッグ -->
+      <ImageMouseOverLoadFlag>True</ImageMouseOverLoadFlag>
+      <!-- イメージ マウスオーバー時 -->
+      <ImageMouseOver>PenToolDesignWidthS_MouseOver.jpg</ImageMouseOver>
+    </PenToolDesignWidthS>
+    <!-- ペンツール 太さ(中)ボタン -->
+    <PenToolDesignWidthM>
+      <!-- Topの位置 (X座標) -->
+      <ImageXStr>247</ImageXStr>
+      <!-- Topの位置 (Y座標) -->
+      <ImageYStr>50</ImageYStr>
+      <!-- 大きさ (X座標) -->
+      <ImageXLen>32</ImageXLen>
+      <!-- 大きさ (Y座標) -->
+      <ImageYLen>32</ImageYLen>
+      <!-- イメージ種別 -->
+      <!-- 0:範囲指定 -->
+      <!-- 1:イメージ -->
+      <ImageKind>0</ImageKind>
+      <!-- イメージ 通常時 別ファィル指定フラッグ -->
+      <ImageNormLoadFlag>True</ImageNormLoadFlag>
+      <!-- イメージ 通常時 -->
+      <ImageNorm>PenToolDesignWidthM_MouseOut.jpg</ImageNorm>
+      <!-- イメージ マウスオーバー時 別ファィル指定フラッグ -->
+      <ImageMouseOverLoadFlag>True</ImageMouseOverLoadFlag>
+      <!-- イメージ マウスオーバー時 -->
+      <ImageMouseOver>PenToolDesignWidthM_MouseOver.jpg</ImageMouseOver>
+    </PenToolDesignWidthM>
+    <!-- ペンツール 太さ(大)ボタン -->
+    <PenToolDesignWidthL>
+      <!-- Topの位置 (X座標) -->
+      <ImageXStr>278</ImageXStr>
+      <!-- Topの位置 (Y座標) -->
+      <ImageYStr>50</ImageYStr>
+      <!-- 大きさ (X座標) -->
+      <ImageXLen>32</ImageXLen>
+      <!-- 大きさ (Y座標) -->
+      <ImageYLen>32</ImageYLen>
+      <!-- イメージ種別 -->
+      <!-- 0:範囲指定 -->
+      <!-- 1:イメージ -->
+      <ImageKind>0</ImageKind>
+      <!-- イメージ 通常時 別ファィル指定フラッグ -->
+      <ImageNormLoadFlag>True</ImageNormLoadFlag>
+      <!-- イメージ 通常時 -->
+      <ImageNorm>PenToolDesignWidthL_MouseOut.jpg</ImageNorm>
+      <!-- イメージ マウスオーバー時 別ファィル指定フラッグ -->
+      <ImageMouseOverLoadFlag>True</ImageMouseOverLoadFlag>
+      <!-- イメージ マウスオーバー時 -->
+      <ImageMouseOver>PenToolDesignWidthL_MouseOver.jpg</ImageMouseOver>
+    </PenToolDesignWidthL>
+    <!-- ペンツール 直線ボタン -->
+    <PenToolDesignLine>
+      <!-- Topの位置 (X座標) -->
+      <ImageXStr>27</ImageXStr>
+      <!-- Topの位置 (Y座標) -->
+      <ImageYStr>50</ImageYStr>
+      <!-- 大きさ (X座標) -->
+      <ImageXLen>32</ImageXLen>
+      <!-- 大きさ (Y座標) -->
+      <ImageYLen>32</ImageYLen>
+      <!-- イメージ種別 -->
+      <!-- 0:範囲指定 -->
+      <!-- 1:イメージ -->
+      <ImageKind>0</ImageKind>
+      <!-- イメージ 通常時 別ファィル指定フラッグ -->
+      <ImageNormLoadFlag>True</ImageNormLoadFlag>
+      <!-- イメージ 通常時 -->
+      <ImageNorm>PenToolDesignLine_MouseOut.jpg</ImageNorm>
+      <!-- イメージ マウスオーバー時 別ファィル指定フラッグ -->
+      <ImageMouseOverLoadFlag>True</ImageMouseOverLoadFlag>
+      <!-- イメージ マウスオーバー時 -->
+      <ImageMouseOver>PenToolDesignLine_MouseOver.jpg</ImageMouseOver>
+    </PenToolDesignLine>
+    <!-- ペンツール 長方形ボタン -->
+    <PenToolDesignRect>
+      <!-- Topの位置 (X座標) -->
+      <ImageXStr>57</ImageXStr>
+      <!-- Topの位置 (Y座標) -->
+      <ImageYStr>50</ImageYStr>
+      <!-- 大きさ (X座標) -->
+      <ImageXLen>32</ImageXLen>
+      <!-- 大きさ (Y座標) -->
+      <ImageYLen>32</ImageYLen>
+      <!-- イメージ種別 -->
+      <!-- 0:範囲指定 -->
+      <!-- 1:イメージ -->
+      <ImageKind>0</ImageKind>
+      <!-- イメージ 通常時 別ファィル指定フラッグ -->
+      <ImageNormLoadFlag>True</ImageNormLoadFlag>
+      <!-- イメージ 通常時 -->
+      <ImageNorm>PenToolDesignRect_MouseOut.jpg</ImageNorm>
+      <!-- イメージ マウスオーバー時 別ファィル指定フラッグ -->
+      <ImageMouseOverLoadFlag>True</ImageMouseOverLoadFlag>
+      <!-- イメージ マウスオーバー時 -->
+      <ImageMouseOver>PenToolDesignRect_MouseOver.jpg</ImageMouseOver>
+    </PenToolDesignRect>
+    <!-- ペンツール 楕円ボタン -->
+    <PenToolDesignOval>
+      <!-- Topの位置 (X座標) -->
+      <ImageXStr>88</ImageXStr>
+      <!-- Topの位置 (Y座標) -->
+      <ImageYStr>50</ImageYStr>
+      <!-- 大きさ (X座標) -->
+      <ImageXLen>32</ImageXLen>
+      <!-- 大きさ (Y座標) -->
+      <ImageYLen>32</ImageYLen>
+      <!-- イメージ種別 -->
+      <!-- 0:範囲指定 -->
+      <!-- 1:イメージ -->
+      <ImageKind>0</ImageKind>
+      <!-- イメージ 通常時 別ファィル指定フラッグ -->
+      <ImageNormLoadFlag>True</ImageNormLoadFlag>
+      <!-- イメージ 通常時 -->
+      <ImageNorm>PenToolDesignOval_MouseOut.jpg</ImageNorm>
+      <!-- イメージ マウスオーバー時 別ファィル指定フラッグ -->
+      <ImageMouseOverLoadFlag>True</ImageMouseOverLoadFlag>
+      <!-- イメージ マウスオーバー時 -->
+      <ImageMouseOver>PenToolDesignOval_MouseOver.jpg</ImageMouseOver>
+    </PenToolDesignOval>
+    <!-- ペンツール えんぴつボタン -->
+    <PenToolDesignPencil>
+      <!-- Topの位置 (X座標) -->
+      <ImageXStr>118</ImageXStr>
+      <!-- Topの位置 (Y座標) -->
+      <ImageYStr>50</ImageYStr>
+      <!-- 大きさ (X座標) -->
+      <ImageXLen>32</ImageXLen>
+      <!-- 大きさ (Y座標) -->
+      <ImageYLen>32</ImageYLen>
+      <!-- イメージ種別 -->
+      <!-- 0:範囲指定 -->
+      <!-- 1:イメージ -->
+      <ImageKind>0</ImageKind>
+      <!-- イメージ 通常時 別ファィル指定フラッグ -->
+      <ImageNormLoadFlag>True</ImageNormLoadFlag>
+      <!-- イメージ 通常時 -->
+      <ImageNorm>PenToolDesignPencil_MouseOut.jpg</ImageNorm>
+      <!-- イメージ マウスオーバー時 別ファィル指定フラッグ -->
+      <ImageMouseOverLoadFlag>True</ImageMouseOverLoadFlag>
+      <!-- イメージ マウスオーバー時 -->
+      <ImageMouseOver>PenToolDesignPencil_MouseOver.jpg</ImageMouseOver>
+    </PenToolDesignPencil>
+    <!-- ペンツール 削除ボタン -->
+    <PenToolDesignDelete>
+      <!-- Topの位置 (X座標) -->
+      <ImageXStr>149</ImageXStr>
+      <!-- Topの位置 (Y座標) -->
+      <ImageYStr>50</ImageYStr>
+      <!-- 大きさ (X座標) -->
+      <ImageXLen>32</ImageXLen>
+      <!-- 大きさ (Y座標) -->
+      <ImageYLen>32</ImageYLen>
+      <!-- イメージ種別 -->
+      <!-- 0:範囲指定 -->
+      <!-- 1:イメージ -->
+      <ImageKind>0</ImageKind>
+      <!-- イメージ 通常時 別ファィル指定フラッグ -->
+      <ImageNormLoadFlag>True</ImageNormLoadFlag>
+      <!-- イメージ 通常時 -->
+      <ImageNorm>PenToolDesignDelete_MouseOut.jpg</ImageNorm>
+      <!-- イメージ マウスオーバー時 別ファィル指定フラッグ -->
+      <ImageMouseOverLoadFlag>True</ImageMouseOverLoadFlag>
+      <!-- イメージ マウスオーバー時 -->
+      <ImageMouseOver>PenToolDesignDelete_MouseOver.jpg</ImageMouseOver>
+    </PenToolDesignDelete>
+    <!-- ペンツール 全て削除ボタン -->
+    <PenToolDesignALLDelete>
+      <!-- Topの位置 (X座標) -->
+      <ImageXStr>180</ImageXStr>
+      <!-- Topの位置 (Y座標) -->
+      <ImageYStr>50</ImageYStr>
+      <!-- 大きさ (X座標) -->
+      <ImageXLen>32</ImageXLen>
+      <!-- 大きさ (Y座標) -->
+      <ImageYLen>32</ImageYLen>
+      <!-- イメージ種別 -->
+      <!-- 0:範囲指定 -->
+      <!-- 1:イメージ -->
+      <ImageKind>0</ImageKind>
+      <!-- イメージ 通常時 別ファィル指定フラッグ -->
+      <ImageNormLoadFlag>True</ImageNormLoadFlag>
+      <!-- イメージ 通常時 -->
+      <ImageNorm>PenToolDesignALLDelete_MouseOut.jpg</ImageNorm>
+      <!-- イメージ マウスオーバー時 別ファィル指定フラッグ -->
+      <ImageMouseOverLoadFlag>True</ImageMouseOverLoadFlag>
+      <!-- イメージ マウスオーバー時 -->
+      <ImageMouseOver>PenToolDesignALLDelete_MouseOver.jpg</ImageMouseOver>
+    </PenToolDesignALLDelete>
+    <!-- ペンツール 色(01)ボタン -->
+    <DesignPenToolColor01>
+      <!-- Topの位置 (X座標) -->
+      <ImageXStr>315</ImageXStr>
+      <!-- Topの位置 (Y座標) -->
+      <ImageYStr>51</ImageYStr>
+      <!-- 大きさ (X座標) -->
+      <ImageXLen>16</ImageXLen>
+      <!-- 大きさ (Y座標) -->
+      <ImageYLen>16</ImageYLen>
+      <!-- イメージ種別 -->
+      <!-- 0:範囲指定 -->
+      <!-- 1:イメージ -->
+      <ImageKind>0</ImageKind>
+      <!-- イメージ 通常時 別ファィル指定フラッグ -->
+      <ImageNormLoadFlag>True</ImageNormLoadFlag>
+      <!-- イメージ 通常時 -->
+      <ImageNorm>PenToolDesignColor01_MouseOut.jpg</ImageNorm>
+      <!-- イメージ マウスオーバー時 別ファィル指定フラッグ -->
+      <ImageMouseOverLoadFlag>True</ImageMouseOverLoadFlag>
+      <!-- イメージ マウスオーバー時 -->
+      <ImageMouseOver>PenToolDesignColor01_MouseOver.jpg</ImageMouseOver>
+      <!-- 色 -->
+      <Color>68E468</Color>
+    </DesignPenToolColor01>
+    <!-- ペンツール 色(02)ボタン -->
+    <DesignPenToolColor02>
+      <!-- Topの位置 (X座標) -->
+      <ImageXStr>331</ImageXStr>
+      <!-- Topの位置 (Y座標) -->
+      <ImageYStr>51</ImageYStr>
+      <!-- 大きさ (X座標) -->
+      <ImageXLen>16</ImageXLen>
+      <!-- 大きさ (Y座標) -->
+      <ImageYLen>16</ImageYLen>
+      <!-- イメージ種別 -->
+      <!-- 0:範囲指定 -->
+      <!-- 1:イメージ -->
+      <ImageKind>0</ImageKind>
+      <!-- イメージ 通常時 別ファィル指定フラッグ -->
+      <ImageNormLoadFlag>True</ImageNormLoadFlag>
+      <!-- イメージ 通常時 -->
+      <ImageNorm>PenToolDesignColor02_MouseOut.jpg</ImageNorm>
+      <!-- イメージ マウスオーバー時 別ファィル指定フラッグ -->
+      <ImageMouseOverLoadFlag>True</ImageMouseOverLoadFlag>
+      <!-- イメージ マウスオーバー時 -->
+      <ImageMouseOver>PenToolDesignColor02_MouseOver.jpg</ImageMouseOver>
+      <!-- 色 -->
+      <Color>7FCEFF</Color>
+    </DesignPenToolColor02>
+    <!-- ペンツール 色(03)ボタン -->
+    <DesignPenToolColor03>
+      <!-- Topの位置 (X座標) -->
+      <ImageXStr>346</ImageXStr>
+      <!-- Topの位置 (Y座標) -->
+      <ImageYStr>51</ImageYStr>
+      <!-- 大きさ (X座標) -->
+      <ImageXLen>16</ImageXLen>
+      <!-- 大きさ (Y座標) -->
+      <ImageYLen>16</ImageYLen>
+      <!-- イメージ種別 -->
+      <!-- 0:範囲指定 -->
+      <!-- 1:イメージ -->
+      <ImageKind>0</ImageKind>
+      <!-- イメージ 通常時 別ファィル指定フラッグ -->
+      <ImageNormLoadFlag>True</ImageNormLoadFlag>
+      <!-- イメージ 通常時 -->
+      <ImageNorm>PenToolDesignColor03_MouseOut.jpg</ImageNorm>
+      <!-- イメージ マウスオーバー時 別ファィル指定フラッグ -->
+      <ImageMouseOverLoadFlag>True</ImageMouseOverLoadFlag>
+      <!-- イメージ マウスオーバー時 -->
+      <ImageMouseOver>PenToolDesignColor03_MouseOver.jpg</ImageMouseOver>
+      <!-- 色 -->
+      <Color>1F6AFF</Color>
+    </DesignPenToolColor03>
+    <!-- ペンツール 色(04)ボタン -->
+    <DesignPenToolColor04>
+      <!-- Topの位置 (X座標) -->
+      <ImageXStr>362</ImageXStr>
+      <!-- Topの位置 (Y座標) -->
+      <ImageYStr>51</ImageYStr>
+      <!-- 大きさ (X座標) -->
+      <ImageXLen>16</ImageXLen>
+      <!-- 大きさ (Y座標) -->
+      <ImageYLen>16</ImageYLen>
+      <!-- イメージ種別 -->
+      <!-- 0:範囲指定 -->
+      <!-- 1:イメージ -->
+      <ImageKind>0</ImageKind>
+      <!-- イメージ 通常時 別ファィル指定フラッグ -->
+      <ImageNormLoadFlag>True</ImageNormLoadFlag>
+      <!-- イメージ 通常時 -->
+      <ImageNorm>PenToolDesignColor04_MouseOut.jpg</ImageNorm>
+      <!-- イメージ マウスオーバー時 別ファィル指定フラッグ -->
+      <ImageMouseOverLoadFlag>True</ImageMouseOverLoadFlag>
+      <!-- イメージ マウスオーバー時 -->
+      <ImageMouseOver>PenToolDesignColor04_MouseOver.jpg</ImageMouseOver>
+      <!-- 色 -->
+      <Color>963FFF</Color>
+    </DesignPenToolColor04>
+    <!-- ペンツール 色(05)ボタン -->
+    <DesignPenToolColor05>
+      <!-- Topの位置 (X座標) -->
+      <ImageXStr>378</ImageXStr>
+      <!-- Topの位置 (Y座標) -->
+      <ImageYStr>51</ImageYStr>
+      <!-- 大きさ (X座標) -->
+      <ImageXLen>16</ImageXLen>
+      <!-- 大きさ (Y座標) -->
+      <ImageYLen>16</ImageYLen>
+      <!-- イメージ種別 -->
+      <!-- 0:範囲指定 -->
+      <!-- 1:イメージ -->
+      <ImageKind>0</ImageKind>
+      <!-- イメージ 通常時 別ファィル指定フラッグ -->
+      <ImageNormLoadFlag>True</ImageNormLoadFlag>
+      <!-- イメージ 通常時 -->
+      <ImageNorm>PenToolDesignColor05_MouseOut.jpg</ImageNorm>
+      <!-- イメージ マウスオーバー時 別ファィル指定フラッグ -->
+      <ImageMouseOverLoadFlag>True</ImageMouseOverLoadFlag>
+      <!-- イメージ マウスオーバー時 -->
+      <ImageMouseOver>PenToolDesignColor05_MouseOver.jpg</ImageMouseOver>
+      <!-- 色 -->
+      <Color>FF7FAD</Color>
+    </DesignPenToolColor05>
+    <!-- ペンツール 色(06)ボタン -->
+    <DesignPenToolColor06>
+      <!-- Topの位置 (X座標) -->
+      <ImageXStr>315</ImageXStr>
+      <!-- Topの位置 (Y座標) -->
+      <ImageYStr>67</ImageYStr>
+      <!-- 大きさ (X座標) -->
+      <ImageXLen>16</ImageXLen>
+      <!-- 大きさ (Y座標) -->
+      <ImageYLen>16</ImageYLen>
+      <!-- イメージ種別 -->
+      <!-- 0:範囲指定 -->
+      <!-- 1:イメージ -->
+      <ImageKind>0</ImageKind>
+      <!-- イメージ 通常時 別ファィル指定フラッグ -->
+      <ImageNormLoadFlag>True</ImageNormLoadFlag>
+      <!-- イメージ 通常時 -->
+      <ImageNorm>PenToolDesignColor06_MouseOut.jpg</ImageNorm>
+      <!-- イメージ マウスオーバー時 別ファィル指定フラッグ -->
+      <ImageMouseOverLoadFlag>True</ImageMouseOverLoadFlag>
+      <!-- イメージ マウスオーバー時 -->
+      <ImageMouseOver>PenToolDesignColor06_MouseOver.jpg</ImageMouseOver>
+      <!-- 色 -->
+      <Color>FF495F</Color>
+    </DesignPenToolColor06>
+    <!-- ペンツール 色(07)ボタン -->
+    <DesignPenToolColor07>
+      <!-- Topの位置 (X座標) -->
+      <ImageXStr>331</ImageXStr>
+      <!-- Topの位置 (Y座標) -->
+      <ImageYStr>67</ImageYStr>
+      <!-- 大きさ (X座標) -->
+      <ImageXLen>16</ImageXLen>
+      <!-- 大きさ (Y座標) -->
+      <ImageYLen>16</ImageYLen>
+      <!-- イメージ種別 -->
+      <!-- 0:範囲指定 -->
+      <!-- 1:イメージ -->
+      <ImageKind>0</ImageKind>
+      <!-- イメージ 通常時 別ファィル指定フラッグ -->
+      <ImageNormLoadFlag>True</ImageNormLoadFlag>
+      <!-- イメージ 通常時 -->
+      <ImageNorm>PenToolDesignColor07_MouseOut.jpg</ImageNorm>
+      <!-- イメージ マウスオーバー時 別ファィル指定フラッグ -->
+      <ImageMouseOverLoadFlag>True</ImageMouseOverLoadFlag>
+      <!-- イメージ マウスオーバー時 -->
+      <ImageMouseOver>PenToolDesignColor07_MouseOver.jpg</ImageMouseOver>
+      <!-- 色 -->
+      <Color>FFA81F</Color>
+    </DesignPenToolColor07>
+    <!-- ペンツール 色(08)ボタン -->
+    <DesignPenToolColor08>
+      <!-- Topの位置 (X座標) -->
+      <ImageXStr>346</ImageXStr>
+      <!-- Topの位置 (Y座標) -->
+      <ImageYStr>67</ImageYStr>
+      <!-- 大きさ (X座標) -->
+      <ImageXLen>16</ImageXLen>
+      <!-- 大きさ (Y座標) -->
+      <ImageYLen>16</ImageYLen>
+      <!-- イメージ種別 -->
+      <!-- 0:範囲指定 -->
+      <!-- 1:イメージ -->
+      <ImageKind>0</ImageKind>
+      <!-- イメージ 通常時 別ファィル指定フラッグ -->
+      <ImageNormLoadFlag>True</ImageNormLoadFlag>
+      <!-- イメージ 通常時 -->
+      <ImageNorm>PenToolDesignColor08_MouseOut.jpg</ImageNorm>
+      <!-- イメージ マウスオーバー時 別ファィル指定フラッグ -->
+      <ImageMouseOverLoadFlag>True</ImageMouseOverLoadFlag>
+      <!-- イメージ マウスオーバー時 -->
+      <ImageMouseOver>PenToolDesignColor08_MouseOver.jpg</ImageMouseOver>
+      <!-- 色 -->
+      <Color>BF6700</Color>
+    </DesignPenToolColor08>
+    <!-- ペンツール 色(09)ボタン -->
+    <DesignPenToolColor09>
+      <!-- Topの位置 (X座標) -->
+      <ImageXStr>362</ImageXStr>
+      <!-- Topの位置 (Y座標) -->
+      <ImageYStr>67</ImageYStr>
+      <!-- 大きさ (X座標) -->
+      <ImageXLen>16</ImageXLen>
+      <!-- 大きさ (Y座標) -->
+      <ImageYLen>16</ImageYLen>
+      <!-- イメージ種別 -->
+      <!-- 0:範囲指定 -->
+      <!-- 1:イメージ -->
+      <ImageKind>0</ImageKind>
+      <!-- イメージ 通常時 別ファィル指定フラッグ -->
+      <ImageNormLoadFlag>True</ImageNormLoadFlag>
+      <!-- イメージ 通常時 -->
+      <ImageNorm>PenToolDesignColor09_MouseOut.jpg</ImageNorm>
+      <!-- イメージ マウスオーバー時 別ファィル指定フラッグ -->
+      <ImageMouseOverLoadFlag>True</ImageMouseOverLoadFlag>
+      <!-- イメージ マウスオーバー時 -->
+      <ImageMouseOver>PenToolDesignColor09_MouseOver.jpg</ImageMouseOver>
+      <!-- 色 -->
+      <Color>5D5D5D</Color>
+    </DesignPenToolColor09>
+    <!-- ペンツール 色(10)ボタン -->
+    <DesignPenToolColor10>
+      <!-- Topの位置 (X座標) -->
+      <ImageXStr>378</ImageXStr>
+      <!-- Topの位置 (Y座標) -->
+      <ImageYStr>67</ImageYStr>
+      <!-- 大きさ (X座標) -->
+      <ImageXLen>16</ImageXLen>
+      <!-- 大きさ (Y座標) -->
+      <ImageYLen>16</ImageYLen>
+      <!-- イメージ種別 -->
+      <!-- 0:範囲指定 -->
+      <!-- 1:イメージ -->
+      <ImageKind>0</ImageKind>
+      <!-- イメージ 通常時 別ファィル指定フラッグ -->
+      <ImageNormLoadFlag>True</ImageNormLoadFlag>
+      <!-- イメージ 通常時 -->
+      <ImageNorm>PenToolDesignColor10_MouseOut.jpg</ImageNorm>
+      <!-- イメージ マウスオーバー時 別ファィル指定フラッグ -->
+      <ImageMouseOverLoadFlag>True</ImageMouseOverLoadFlag>
+      <!-- イメージ マウスオーバー時 -->
+      <ImageMouseOver>PenToolDesignColor10_MouseOver.jpg</ImageMouseOver>
+      <!-- 色 -->
+      <Color>000001</Color>
+    </DesignPenToolColor10>
+    <!-- メモツールパネル 閉じるボタン -->
+    <MemoToolPanelDesignClose>
+      <!-- Topの位置 (X座標) -->
+      <ImageXStr>362</ImageXStr>
+      <!-- Topの位置 (Y座標) -->
+      <ImageYStr>15</ImageYStr>
+      <!-- 大きさ (X座標) -->
+      <ImageXLen>16</ImageXLen>
+      <!-- 大きさ (Y座標) -->
+      <ImageYLen>16</ImageYLen>
+      <!-- イメージ種別 -->
+      <!-- 0:範囲指定 -->
+      <!-- 1:イメージ -->
+      <ImageKind>0</ImageKind>
+      <!-- イメージ 通常時 別ファィル指定フラッグ -->
+      <ImageNormLoadFlag>True</ImageNormLoadFlag>
+      <!-- イメージ 通常時 -->
+      <ImageNorm>MemoToolPanelDesignClose_MouseOut.jpg</ImageNorm>
+      <!-- イメージ マウスオーバー時 別ファィル指定フラッグ -->
+      <ImageMouseOverLoadFlag>True</ImageMouseOverLoadFlag>
+      <!-- イメージ マウスオーバー時 -->
+      <ImageMouseOver>MemoToolPanelDesignClose_MouseOver.jpg</ImageMouseOver>
+    </MemoToolPanelDesignClose>
+    <!-- メモツールパネル 全て隠すボタン -->
+    <MemoToolPanelDesignALLHide>
+      <!-- Topの位置 (X座標) -->
+      <ImageXStr>249</ImageXStr>
+      <!-- Topの位置 (Y座標) -->
+      <ImageYStr>79</ImageYStr>
+      <!-- 大きさ (X座標) -->
+      <ImageXLen>108</ImageXLen>
+      <!-- 大きさ (Y座標) -->
+      <ImageYLen>19</ImageYLen>
+      <!-- イメージ種別 -->
+      <!-- 0:範囲指定 -->
+      <!-- 1:イメージ -->
+      <ImageKind>0</ImageKind>
+      <!-- イメージ 通常時 別ファィル指定フラッグ -->
+      <ImageNormLoadFlag>True</ImageNormLoadFlag>
+      <!-- イメージ 通常時 -->
+      <ImageNorm>MemoToolPanelDesignALLHide_MouseOut.jpg</ImageNorm>
+      <!-- イメージ マウスオーバー時 別ファィル指定フラッグ -->
+      <ImageMouseOverLoadFlag>True</ImageMouseOverLoadFlag>
+      <!-- イメージ マウスオーバー時 -->
+      <ImageMouseOver>MemoToolPanelDesignALLHide_MouseOver.jpg</ImageMouseOver>
+    </MemoToolPanelDesignALLHide>
+    <!-- メモツールパネル 全て削除ボタン -->
+    <MemoToolPanelDesignALLDelete>
+      <!-- Topの位置 (X座標) -->
+      <ImageXStr>249</ImageXStr>
+      <!-- Topの位置 (Y座標) -->
+      <ImageYStr>101</ImageYStr>
+      <!-- 大きさ (X座標) -->
+      <ImageXLen>108</ImageXLen>
+      <!-- 大きさ (Y座標) -->
+      <ImageYLen>19</ImageYLen>
+      <!-- イメージ種別 -->
+      <!-- 0:範囲指定 -->
+      <!-- 1:イメージ -->
+      <ImageKind>0</ImageKind>
+      <!-- イメージ 通常時 別ファィル指定フラッグ -->
+      <ImageNormLoadFlag>True</ImageNormLoadFlag>
+      <!-- イメージ 通常時 -->
+      <ImageNorm>MemoToolPanelDesignALLDelete_MouseOut.jpg</ImageNorm>
+      <!-- イメージ マウスオーバー時 別ファィル指定フラッグ -->
+      <ImageMouseOverLoadFlag>True</ImageMouseOverLoadFlag>
+      <!-- イメージ マウスオーバー時 -->
+      <ImageMouseOver>MemoToolPanelDesignALLDelete_MouseOver.jpg</ImageMouseOver>
+    </MemoToolPanelDesignALLDelete>
+    <!-- メモツールパネル メモ一覧表示ボタン -->
+    <MemoToolPanelDesignMemoList>
+      <!-- Topの位置 (X座標) -->
+      <ImageXStr>249</ImageXStr>
+      <!-- Topの位置 (Y座標) -->
+      <ImageYStr>57</ImageYStr>
+      <!-- 大きさ (X座標) -->
+      <ImageXLen>108</ImageXLen>
+      <!-- 大きさ (Y座標) -->
+      <ImageYLen>19</ImageYLen>
+      <!-- イメージ種別 -->
+      <!-- 0:範囲指定 -->
+      <!-- 1:イメージ -->
+      <ImageKind>0</ImageKind>
+      <!-- イメージ 通常時 別ファィル指定フラッグ -->
+      <ImageNormLoadFlag>True</ImageNormLoadFlag>
+      <!-- イメージ 通常時 -->
+      <ImageNorm>MemoToolPanelDesignMemoList_MouseOut.jpg</ImageNorm>
+      <!-- イメージ マウスオーバー時 別ファィル指定フラッグ -->
+      <ImageMouseOverLoadFlag>True</ImageMouseOverLoadFlag>
+      <!-- イメージ マウスオーバー時 -->
+      <ImageMouseOver>MemoToolPanelDesignMemoList_MouseOver.jpg</ImageMouseOver>
+    </MemoToolPanelDesignMemoList>
+    <!-- メモツールパネル 色(01)ボタン -->
+    <DesignMemoToolPanelColor01>
+      <!-- Topの位置 (X座標) -->
+      <ImageXStr>35</ImageXStr>
+      <!-- Topの位置 (Y座標) -->
+      <ImageYStr>91</ImageYStr>
+      <!-- 大きさ (X座標) -->
+      <ImageXLen>40</ImageXLen>
+      <!-- 大きさ (Y座標) -->
+      <ImageYLen>31</ImageYLen>
+      <!-- イメージ種別 -->
+      <!-- 0:範囲指定 -->
+      <!-- 1:イメージ -->
+      <ImageKind>0</ImageKind>
+      <!-- イメージ 通常時 別ファィル指定フラッグ -->
+      <ImageNormLoadFlag>True</ImageNormLoadFlag>
+      <!-- イメージ 通常時 -->
+      <ImageNorm>MemoToolPanelDesignColor01_MouseOut.jpg</ImageNorm>
+      <!-- イメージ マウスオーバー時 別ファィル指定フラッグ -->
+      <ImageMouseOverLoadFlag>True</ImageMouseOverLoadFlag>
+      <!-- イメージ マウスオーバー時 -->
+      <ImageMouseOver>MemoToolPanelDesignColor01_MouseOver.jpg</ImageMouseOver>
+      <!-- 色 -->
+      <Color>FFFFC0</Color>
+    </DesignMemoToolPanelColor01>
+    <!-- メモツールパネル 色(02)ボタン -->
+    <DesignMemoToolPanelColor02>
+      <!-- Topの位置 (X座標) -->
+      <ImageXStr>76</ImageXStr>
+      <!-- Topの位置 (Y座標) -->
+      <ImageYStr>91</ImageYStr>
+      <!-- 大きさ (X座標) -->
+      <ImageXLen>40</ImageXLen>
+      <!-- 大きさ (Y座標) -->
+      <ImageYLen>31</ImageYLen>
+      <!-- イメージ種別 -->
+      <!-- 0:範囲指定 -->
+      <!-- 1:イメージ -->
+      <ImageKind>0</ImageKind>
+      <!-- イメージ 通常時 別ファィル指定フラッグ -->
+      <ImageNormLoadFlag>True</ImageNormLoadFlag>
+      <!-- イメージ 通常時 -->
+      <ImageNorm>MemoToolPanelDesignColor02_MouseOut.jpg</ImageNorm>
+      <!-- イメージ マウスオーバー時 別ファィル指定フラッグ -->
+      <ImageMouseOverLoadFlag>True</ImageMouseOverLoadFlag>
+      <!-- イメージ マウスオーバー時 -->
+      <ImageMouseOver>MemoToolPanelDesignColor02_MouseOver.jpg</ImageMouseOver>
+      <!-- 色 -->
+      <Color>C0FFC0</Color>
+    </DesignMemoToolPanelColor02>
+    <!-- メモツールパネル 色(03)ボタン -->
+    <DesignMemoToolPanelColor03>
+      <!-- Topの位置 (X座標) -->
+      <ImageXStr>117</ImageXStr>
+      <!-- Topの位置 (Y座標) -->
+      <ImageYStr>91</ImageYStr>
+      <!-- 大きさ (X座標) -->
+      <ImageXLen>40</ImageXLen>
+      <!-- 大きさ (Y座標) -->
+      <ImageYLen>31</ImageYLen>
+      <!-- イメージ種別 -->
+      <!-- 0:範囲指定 -->
+      <!-- 1:イメージ -->
+      <ImageKind>0</ImageKind>
+      <!-- イメージ 通常時 別ファィル指定フラッグ -->
+      <ImageNormLoadFlag>True</ImageNormLoadFlag>
+      <!-- イメージ 通常時 -->
+      <ImageNorm>MemoToolPanelDesignColor03_MouseOut.jpg</ImageNorm>
+      <!-- イメージ マウスオーバー時 別ファィル指定フラッグ -->
+      <ImageMouseOverLoadFlag>True</ImageMouseOverLoadFlag>
+      <!-- イメージ マウスオーバー時 -->
+      <ImageMouseOver>MemoToolPanelDesignColor03_MouseOver.jpg</ImageMouseOver>
+      <!-- 色 -->
+      <Color>C0FFFF</Color>
+    </DesignMemoToolPanelColor03>
+    <!-- メモツールパネル 色(04)ボタン -->
+    <DesignMemoToolPanelColor04>
+      <!-- Topの位置 (X座標) -->
+      <ImageXStr>158</ImageXStr>
+      <!-- Topの位置 (Y座標) -->
+      <ImageYStr>91</ImageYStr>
+      <!-- 大きさ (X座標) -->
+      <ImageXLen>40</ImageXLen>
+      <!-- 大きさ (Y座標) -->
+      <ImageYLen>31</ImageYLen>
+      <!-- イメージ種別 -->
+      <!-- 0:範囲指定 -->
+      <!-- 1:イメージ -->
+      <ImageKind>0</ImageKind>
+      <!-- イメージ 通常時 別ファィル指定フラッグ -->
+      <ImageNormLoadFlag>True</ImageNormLoadFlag>
+      <!-- イメージ 通常時 -->
+      <ImageNorm>MemoToolPanelDesignColor04_MouseOut.jpg</ImageNorm>
+      <!-- イメージ マウスオーバー時 別ファィル指定フラッグ -->
+      <ImageMouseOverLoadFlag>True</ImageMouseOverLoadFlag>
+      <!-- イメージ マウスオーバー時 -->
+      <ImageMouseOver>MemoToolPanelDesignColor04_MouseOver.jpg</ImageMouseOver>
+      <!-- 色 -->
+      <Color>C0C0FF</Color>
+    </DesignMemoToolPanelColor04>
+    <!-- メモツールパネル 色(05)ボタン -->
+    <DesignMemoToolPanelColor05>
+      <!-- Topの位置 (X座標) -->
+      <ImageXStr>199</ImageXStr>
+      <!-- Topの位置 (Y座標) -->
+      <ImageYStr>91</ImageYStr>
+      <!-- 大きさ (X座標) -->
+      <ImageXLen>40</ImageXLen>
+      <!-- 大きさ (Y座標) -->
+      <ImageYLen>31</ImageYLen>
+      <!-- イメージ種別 -->
+      <!-- 0:範囲指定 -->
+      <!-- 1:イメージ -->
+      <ImageKind>0</ImageKind>
+      <!-- イメージ 通常時 別ファィル指定フラッグ -->
+      <ImageNormLoadFlag>True</ImageNormLoadFlag>
+      <!-- イメージ 通常時 -->
+      <ImageNorm>MemoToolPanelDesignColor05_MouseOut.jpg</ImageNorm>
+      <!-- イメージ マウスオーバー時 別ファィル指定フラッグ -->
+      <ImageMouseOverLoadFlag>True</ImageMouseOverLoadFlag>
+      <!-- イメージ マウスオーバー時 -->
+      <ImageMouseOver>MemoToolPanelDesignColor05_MouseOver.jpg</ImageMouseOver>
+      <!-- 色 -->
+      <Color>FFC0FF</Color>
+    </DesignMemoToolPanelColor05>
+    <!-- メモ本体 閉じるボタン -->
+    <MemoToolBodyDesignClose>
+      <!-- Topの位置 (X座標) -->
+      <ImageXStr>0</ImageXStr>
+      <!-- Topの位置 (Y座標) -->
+      <ImageYStr>0</ImageYStr>
+      <!-- 大きさ (X座標) -->
+      <ImageXLen>0</ImageXLen>
+      <!-- 大きさ (Y座標) -->
+      <ImageYLen>0</ImageYLen>
+      <!-- イメージ種別 -->
+      <!-- 0:範囲指定 -->
+      <!-- 1:イメージ -->
+      <ImageKind>0</ImageKind>
+      <!-- イメージ 通常時 別ファィル指定フラッグ -->
+      <ImageNormLoadFlag>False</ImageNormLoadFlag>
+      <!-- イメージ 通常時 -->
+      <ImageNorm>
+      </ImageNorm>
+      <!-- イメージ マウスオーバー時 別ファィル指定フラッグ -->
+      <ImageMouseOverLoadFlag>False</ImageMouseOverLoadFlag>
+      <!-- イメージ マウスオーバー時 -->
+      <ImageMouseOver>
+      </ImageMouseOver>
+    </MemoToolBodyDesignClose>
+    <!-- メモ本体 最小化ボタン -->
+    <MemoToolBodyDesignMini>
+      <!-- Topの位置 (X座標) -->
+      <ImageXStr>0</ImageXStr>
+      <!-- Topの位置 (Y座標) -->
+      <ImageYStr>0</ImageYStr>
+      <!-- 大きさ (X座標) -->
+      <ImageXLen>0</ImageXLen>
+      <!-- 大きさ (Y座標) -->
+      <ImageYLen>0</ImageYLen>
+      <!-- イメージ種別 -->
+      <!-- 0:範囲指定 -->
+      <!-- 1:イメージ -->
+      <ImageKind>0</ImageKind>
+      <!-- イメージ 通常時 別ファィル指定フラッグ -->
+      <ImageNormLoadFlag>False</ImageNormLoadFlag>
+      <!-- イメージ 通常時 -->
+      <ImageNorm>
+      </ImageNorm>
+      <!-- イメージ マウスオーバー時 別ファィル指定フラッグ -->
+      <ImageMouseOverLoadFlag>False</ImageMouseOverLoadFlag>
+      <!-- イメージ マウスオーバー時 -->
+      <ImageMouseOver>
+      </ImageMouseOver>
+    </MemoToolBodyDesignMini>
+    <!-- メモ本体 作成日のテキストボタン -->
+    <MemoToolBodyDesignMakeDate>
+      <!-- Topの位置 (X座標) -->
+      <ImageXStr>0</ImageXStr>
+      <!-- Topの位置 (Y座標) -->
+      <ImageYStr>0</ImageYStr>
+      <!-- 大きさ (X座標) -->
+      <ImageXLen>0</ImageXLen>
+      <!-- 大きさ (Y座標) -->
+      <ImageYLen>0</ImageYLen>
+      <!-- Font 色 -->
+      <FontColor>5D5D5D</FontColor>
+      <!-- Font Size -->
+      <FontSize>10 pt</FontSize>
+    </MemoToolBodyDesignMakeDate>
+    <!-- メモ本体 本文のテキストボタン -->
+    <MemoToolBodyDesignDocText>
+      <!-- Topの位置 (X座標) -->
+      <ImageXStr>0</ImageXStr>
+      <!-- Topの位置 (Y座標) -->
+      <ImageYStr>0</ImageYStr>
+      <!-- 大きさ (X座標) -->
+      <ImageXLen>0</ImageXLen>
+      <!-- 大きさ (Y座標) -->
+      <ImageYLen>0</ImageYLen>
+      <!-- 背景色 -->
+      <BackColor>5D5D5D</BackColor>
+      <!-- Font 色 -->
+      <FontColor>5D5D5D</FontColor>
+      <!-- Font Size -->
+      <FontSize>10 pt</FontSize>
+      <!-- Border 色 -->
+      <BorderColor>5D5D5D</BorderColor>
+      <!-- Border 太さ -->
+      <BorderWidth>2 pix</BorderWidth>
+    </MemoToolBodyDesignDocText>
+    <!-- メモ本体 メモアイコン -->
+    <MemoToolBodyDesignMemoIcon>
+      <!-- Topの位置 (X座標) -->
+      <ImageXStr>0</ImageXStr>
+      <!-- Topの位置 (Y座標) -->
+      <ImageYStr>0</ImageYStr>
+      <!-- 大きさ (X座標) -->
+      <ImageXLen>0</ImageXLen>
+      <!-- 大きさ (Y座標) -->
+      <ImageYLen>0</ImageYLen>
+      <!-- メージ・ファイル名 -->
+      <ImageFileName>
+      </ImageFileName>
+    </MemoToolBodyDesignMemoIcon>
+    <!-- メモ本体 最小化アイコン -->
+    <MemoToolBodyDesignMiniIcon>
+      <!-- Topの位置 (X座標) -->
+      <ImageXStr>0</ImageXStr>
+      <!-- Topの位置 (Y座標) -->
+      <ImageYStr>0</ImageYStr>
+      <!-- 大きさ (X座標) -->
+      <ImageXLen>0</ImageXLen>
+      <!-- 大きさ (Y座標) -->
+      <ImageYLen>0</ImageYLen>
+      <!-- メージ・ファイル名 -->
+      <ImageFileName>
+      </ImageFileName>
+    </MemoToolBodyDesignMiniIcon>
+    <!-- メモ本体 リサイズ用ハンドルアイコン -->
+    <MemoToolBodyDesignResizeIcon>
+      <!-- Topの位置 (X座標) -->
+      <ImageXStr>0</ImageXStr>
+      <!-- Topの位置 (Y座標) -->
+      <ImageYStr>0</ImageYStr>
+      <!-- 大きさ (X座標) -->
+      <ImageXLen>0</ImageXLen>
+      <!-- 大きさ (Y座標) -->
+      <ImageYLen>0</ImageYLen>
+      <!-- メージ・ファイル名 -->
+      <ImageFileName>
+      </ImageFileName>
+    </MemoToolBodyDesignResizeIcon>
+  </LayoutParam>
+</EBookRoot>

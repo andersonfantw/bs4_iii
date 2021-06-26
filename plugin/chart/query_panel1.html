@@ -1,0 +1,155 @@
+<!--
+test, book
+
+軸 非結點tag(藍色), time period
+表格 top100
+條件 結點tag(綠色),books, bookshelfs, group, user,
+
+
+比較
+-->
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+<div id="selector_panel">
+	<h1>
+	Bookshelfs Analyze
+	<div class="bounds">
+		<label class="default"><input type="radio" name="toggle" checked /><span>Default</span></label>
+    <label class="query"><input type="radio" name="toggle" /><span>Query</span></label>
+	</div>
+	</h1>
+	<div class="default_webadmin">
+		<ul>
+			<li>
+				<a class="w8">全校科目程度指標</a>
+				<span>本學期區分難度的所有班級與全校的科目閱讀測驗圖表</span>
+				<input type="hidden" value="r=rw&co=Subject|r=rw&co=Subject&d=all|r=lt&co=Subject" />
+			</li>
+		</ul>
+		<ul>
+			<li>
+				<a class="w6">全校科目成績</a>
+				<span>區分難度的所有班級與全校的科目閱讀測驗圖表</span>
+				<input type="hidden" value="r=s&co=Subject|r=s&co=Subject&d=all|r=lt&co=Subject" />
+			</li>
+		</ul>
+		<ul>
+			<li>
+				<a class="w6">全校能力指標</a>
+				<span>本學期區分難度的所有班級與全校的能力指標閱讀測驗圖表</span>
+				<input type="hidden" value="r=s&co=Ability|r=s&co=Ability&d=all|r=lt&co=Ability" />
+			</li>
+		</ul>
+	</div>
+	<div class="default_manager">
+		<ul>
+			<li>
+				<a class="w8">班級科目程度指標</a>
+				<span>本學期區分難度的書櫃所屬的班級與全校的科目閱讀時間與程度指標圖表</span>
+				<input type="hidden" value="r=wr&co=Subject|r=wr&co=Subject&g=bs_all|r=wr&co=Subject&bs=this&d=all|r=lt&co=Subject" />
+			</li>
+		</ul>
+		<ul>
+			<li>
+				<a class="w8">班級科目成績</a>
+				<span>本學期區分難度的書櫃所屬的班級與全校的科目閱讀時間與測驗成績圖表</span>
+				<input type="hidden" value="r=s&co=Subject|r=s&co=Subject&g=bs_all|r=s&co=Subject&bs=this&d=all|r=lt&co=Subject" />
+			</li>
+		</ul>
+		<ul>
+			<li>
+				<a class="w6">班級能力指標</a>
+				<span>本學期區分難度的書櫃所屬的班級與全校的能力指標閱讀時間與能力指標圖表</span>
+				<input type="hidden" value="r=s&co=Ability|r=s&co=Ability&g=bs_all|r=s&co=Ability&bs=this&d=all|r=lt&co=Ability" />
+			</li>
+		</ul>
+	</div>
+	<div class="query">
+		<div>
+			<ul>
+				<li>time</li>
+				<li>
+					<input type="date" class="selector_startdate" /> ~ 
+					<input type="date" class="selector_enddate" />
+				</li>
+			</ul>
+		</div>
+		<div>
+			<ul>
+				<li>result</li>
+				<li>
+					<div class="bounds">
+						<label class="level"><input type="radio" name="x_align" value="rw" ><span>程度指標</span></label>
+						<label class="grade"><input type="radio" name="x_align" value="s"><span>成績</span></label>
+						<label class="learningtime"><input type="radio" name="x_align" value="lt"><span>學習時間</span></label>
+					</div>
+				</li>
+			</ul>
+			<ul>
+				<li>Course outline / Ability indicator</li>
+				<li>
+					<div class="selected_tags">
+						<input type="hidden" class="selector_y_align" name="selector_y_align" />
+						<button class="add_tag">Add Tags</button>
+						<div>
+						</div>
+					</div>
+					<div class="selector_tags">
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div>
+			<ul>
+				<li>bookshelfs</li>
+				<li>
+					<select class="selector_bookshelfs">
+						<option value="">----</option>
+					</select>
+				</li>
+			</ul>
+			<ul>
+				<li>group / user</li>
+				<li>
+					<select class="selector_groups">
+						<option value="">----</option>
+					</select>
+					<select class="selector_users">
+						<option value="">----</option>
+					</select>
+				</li>
+			</ul>
+			<ul>
+				<li>books</li>
+				<li>
+					<select class="selector_books">
+						<option value="">----</option>
+					</select>
+				</li>
+			</ul>
+			<ul>
+				<li>difficulty</li>
+				<li>
+					<select class="selector_difficulty">
+						<option value="">----</option>
+					</select>
+				</li>
+			</ul>
+			<ul>
+				<li>semester</li>
+				<li>
+					<select class="selector_semester">
+						<option value="">----</option>
+					</select>
+				</li>
+			</ul>
+		</div>
+		<div class="button">
+			<button class="add">ADD</button>
+			<button class="reset">Reset</button>
+		</div>
+	</div>
+	<div class="chart_selector">
+	</div>
+</div>
+<div id="panel"></div>

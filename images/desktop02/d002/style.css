@@ -1,0 +1,895 @@
+html{-webkit-text-size-adjust:none;}
+
+body{
+	background-color:#fff2e1;
+}
+body, ul, li{
+	padding: 0px;
+	margin:0px;	
+}
+
+#body
+{
+	width: 1024px;
+	/*padding:0 20px;*/
+	border-left: solid 1px #cccccc;
+	border-right:solid 1px #cccccc;
+	-moz-text-shadow: 0px 6px 16px #666;	/*此寫法無效*/
+	-khtml-text-shadow: 0px 6px 16px #666;	 /*此寫法無效*/
+	-webkit-text-shadow: 0px 6px 16px #666;  /*此寫法無效*/
+	-moz-box-shadow: 0px 6px 16px #666;	/*firfox*/
+	-khtml-box-shadow: 0px 6px 16px #666;	/*chrome及Safari*/
+	-webkit-box-shadow: 0px 6px 16px #666;  /*chrome及Safari*/
+	box-shadow: 0px 6px 16px #666;
+	margin: 0 auto;
+}
+
+.mode_bookshelf .info, .mode_bookshelf #bookshelf,.mode_bookshelf .lang
+{
+	display:block;
+}
+.mode_bookshelf .search,.mode_bookshelf .result_info,.mode_bookshelf #searchbook
+{
+	display:none;
+}
+
+.mode_search .info,.mode_search #buttonlogin,.mode_search #bookshelf,.mode_search .lang
+{
+	display:none;
+}
+.mode_search .search,.mode_search .result_info,.mode_search #searchbook
+{
+	display:block;
+}
+
+
+#content
+{
+	display: inline;
+	width: 1024px;
+}
+
+#header
+{
+	display: table;
+	width:1024px;
+	height:214px;
+	background-image:url(header.png);
+	background-repeat:no-repeat;
+}
+
+#button
+{
+	display: table;
+	width: 750px;
+	margin: 15px 10px 5px 0;
+	float:right;
+}
+
+#buttonlogin
+{
+	display:none;
+}
+#buttonlogin.login > .btnlogin
+{
+	display:block;
+}
+#buttonlogin.login > .btnlogout
+{
+	display:none;
+}
+#buttonlogin.logout > .btnlogin
+{
+	display:none;
+}
+#buttonlogin.logout > .btnlogout
+{
+	display:block;
+}
+
+.btnlogin
+{
+	float:right;
+	width: 65px;
+	height: 24px;
+	padding-right:5px;
+	background-image:url(login_word.png);
+	background-repeat:no-repeat;
+	cursor:pointer;
+}
+.btnlogin:hover
+{
+	background-image:url(login_word_hover.png);
+}
+.btnlogout
+{
+	float:right;
+	width: 65px;
+	height: 24px;
+	padding-right:5px;
+	background-image:url(logout_word.png);
+	background-repeat:no-repeat;
+	cursor:pointer;
+}
+.btnlogout:hover
+{
+	background-image:url(logout_word_hover.png);
+}
+
+#button .lang
+{
+    float: right;
+    font-family: 微軟正黑體;
+    font-size: 13px;
+    font-weight: bold;
+    margin-left: 15px;
+    margin-top: 5px;
+}
+
+#button .info
+{
+	float:right;
+	width: 132px;
+	height: 24px;
+	background-image:url(bookshlef_help.png);
+	cursor:pointer;
+}
+#button .info:hover
+{
+	background-image:url(bookshlef_help_hover.png);
+}
+#button .search
+{	
+	float: left;
+	width:494px;
+	height:16px;
+	background-image:url(icon_search.png);
+	background-repeat:no-repeat;
+	background-position:4px 4px;
+	border:solid 3px #ccc;
+	border-radius: 20px;
+	padding: 8px;
+	margin-left:2px;
+	background-color: #fff;
+}
+#button .search input
+{
+	width:440px;
+	margin-left:30px;
+	border:none;
+	height:20px;
+	color: #333;
+	font-size:18px;
+}
+#button .result_info
+{
+	margin-top:26px;
+	font-size: 12px;
+	float: right;
+}
+
+#menu
+{
+	display: table;
+	width:230px;
+	float:left;
+	margin-top: 45px;
+	margin-left:10px;
+}
+#menu.init
+{
+	border: dashed 2px #999999;
+	height: 400px;
+	color:#999;
+	font-size:28px;
+	padding:10px 0px;
+	text-align:center;
+	font-weight:bold;
+}
+
+#menu ul
+{
+	width:230px;
+	list-style: none;
+	border-bottom: solid 1px #c5B09C;
+}
+#menu ul:last-child
+{
+	border: none;
+}
+
+#menu ul li
+{
+	color:#310202;
+	font-size: 15px;
+	width:230px;
+	padding: 5px 0;
+	cursor:pointer;
+}
+#menu ul li > a
+{
+	line-height:30px;
+}
+
+#menu ul li p
+{
+	color:#310202;
+	width:220px;
+	margin: 0 0 2px 20px;
+	font-size: 12px;
+	display:none;
+	cursor:pointer;
+	padding-right:10px;
+}
+
+#menu ul li:hover, #menu ul li p:hover
+{
+	color: #e60012;
+}
+#menu ul li p:hover
+{
+	width:200px;
+	background-color:#ccc;
+}
+
+#menu ul li.selected
+{
+	color: #e60012;
+}
+
+#menu ul li.selected a.selected
+{
+	background-image:url(icon_item_selected.png);
+	background-repeat:no-repeat;
+	background-position:right center;
+	width: 9px;
+	height: 9px;
+	border: none;
+	padding-right:10px;
+	color: #E60012;
+}
+
+#menu ul li.selected > p
+{
+	display:block !important;
+}
+
+
+#bookshelf
+{
+	display: table;
+	width: 750px;
+	float : right;
+	margin-bottom: 20px;
+	margin-right: 10px;
+}
+
+#bookshelf ul{
+	list-style:none;
+}
+#bookshelf ul.top{
+	padding:52px 0 0 46px;
+}
+#bookshelf ul.mid{
+	padding:28px 0 0 46px;
+}
+#bookshelf > ul > li{
+	width: 132px;
+	height: 200px;
+	float: left;
+}
+#bookshelf .top{
+	width: 704px;
+	height: 220px;
+	background-image:url(bookshlef_top.png);
+}
+#bookshelf .mid{
+	width: 704px;
+	height: 231px;
+	background-image:url(bookshlef_middle.png);
+}
+#bookshelf .newbook
+{
+	margin: -40px 0 0 -30px;
+	width:714px;
+	height:24px;
+	color:#310202;
+}
+#bookshelf .allbook
+{
+	margin: -44px 0 0 -30px;
+	width:714px;
+	height:24px;
+	color:#310202;
+}
+#bookshelf .cate
+{
+	width:450px;
+	height:18px;
+	overflow:hidden;
+	float:left;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+	color: #dbe012;
+}
+
+#bookshelf .search
+{
+	display:inline-block;
+	background-image:url(bookshlef_search.png);
+	width: 212px;
+	height: 31px;
+	margin-left:20px;
+	float:right;
+}
+#bookshelf .search input
+{
+	width: 160px;
+	margin:4px 0 0 35px;
+	border: none;
+	background-color:#f8f8f8;
+}
+
+
+#bookshelf > ul > li > ul{
+	list-style:none;
+}
+#bookshelf > ul > li:nth-child(1)
+{
+	margin: -40px 0 0 -30px;
+	height:24px;
+}
+/* for ie8 */
+ #bookshelf > ul > li:first-child
+ {
+	margin: -40px 0 0 -30px;
+	height:24px;
+ }
+ 
+ #bookshelf > ul > li > ul.cover > li > h3{
+	width:126px;
+	height: 0;
+	background-color:#ddd;
+	position: absolute;
+	margin-top:145px;
+	margin-left:4px;
+	z-index:1100;
+	font-size:13px;
+	filter:alpha(opacity=80);
+	-moz-opacity:0.8;
+	opacity:0.8;
+	display: none;
+}
+
+#bookshelf > ul > li > ul.cover > li > div > img
+{
+	-moz-text-shadow: -5px -3px 7px #333;	/*此寫法無效*/
+	-khtml-text-shadow: -5px -3px 7px #333;	 /*此寫法無效*/
+	-webkit-text-shadow: -5px -3px 7px #333;  /*此寫法無效*/
+	-moz-box-shadow: -5px -3px 7px #333;	/*firfox*/
+	-khtml-box-shadow: -5px -3px 7px #333;	/*chrome及Safari*/
+	-webkit-box-shadow: -5px -3px 7px #333;  /*chrome及Safari*/
+	box-shadow: -0px -0px 10px #333;	/*chrome及firfox及opera*/
+	border-left:solid 3px #666;
+	border-bottom:solid 2px #666;	
+}
+
+a#bookshelf > ul > li:nth-child(2) > ul.cover > li > div > img
+{
+	-moz-text-shadow: -3px -1px 2px #000;	/*此寫法無效*/
+	-khtml-text-shadow: -3px -1px 2px #000;	 /*此寫法無效*/
+	-webkit-text-shadow: -3px -1px 2px #000;  /*此寫法無效*/
+	-moz-box-shadow: -3px -1px 2px #000;	/*firfox*/
+	-khtml-box-shadow: -3px -1px 2px #000;	/*chrome及Safari*/
+	-webkit-box-shadow: -3px -1px 2px #000;  /*chrome及Safari*/
+	box-shadow: -3px -1px 2px #333;			/*chrome及firfox及opera*/
+	border-left:solid 3px #666;
+	border-bottom:solid 1px #666;	
+}
+a#bookshelf > ul > li:nth-child(3) > ul.cover > li > div > img
+{
+	-moz-text-shadow: -1px -1px 2px #000;	/*此寫法無效*/
+	-khtml-text-shadow: -1px -1px 2px #000;	 /*此寫法無效*/
+	-webkit-text-shadow: -1px -1px 2px #000;  /*此寫法無效*/
+	-moz-box-shadow: -1px -1px 2px #000;	/*firfox*/
+	-khtml-box-shadow: -1px -1px 2px #000;	/*chrome及Safari*/
+	-webkit-box-shadow: -1px -1px 2px #000;  /*chrome及Safari*/
+	box-shadow: -1px -1px 2px #333;			/*chrome及firfox及opera*/
+	border-left:solid 3px #666;
+	border-bottom:solid 1px #666;
+}
+a#bookshelf > ul > li:nth-child(4) > ul.cover > li > div > img
+{
+	-moz-text-shadow: 0px -1px 2px #000;	/*此寫法無效*/
+	-khtml-text-shadow: 0px -1px 2px #000;	 /*此寫法無效*/
+	-webkit-text-shadow: 0px -1px 2px #000;  /*此寫法無效*/
+	-moz-box-shadow: 0px -1px 2px #000;	/*firfox*/
+	-khtml-box-shadow: 0px -1px 2px #000;	/*chrome及Safari*/
+	-webkit-box-shadow: 0px 5px 2px #000;  /*chrome及Safari*/
+	box-shadow: 0px -1px 2px #333;			/*chrome及firfox及opera*/
+	border-left:solid 3px #666;
+	border-bottom:solid 1px #666;
+}
+a#bookshelf > ul > li:nth-child(5) > ul.cover > li > div > img
+{
+	-moz-text-shadow: 1px -1px 2px #000;	/*此寫法無效*/
+	-khtml-text-shadow: 1px -1px 2px #000;	 /*此寫法無效*/
+	-webkit-text-shadow: 1px -1px 2px #000;  /*此寫法無效*/
+	-moz-box-shadow: 1px -1px 2px #000;	/*firfox*/
+	-khtml-box-shadow: 1px -1px 2px #000;	/*chrome及Safari*/
+	-webkit-box-shadow: 1px -1px 2px #000;  /*chrome及Safari*/
+	box-shadow: 1px -1px 2px #333;			/*chrome及firfox及opera*/
+	border-left:solid 3px #666;
+	border-bottom:solid 1px #666;
+}
+a#bookshelf > ul > li:nth-child(6) > ul.cover > li > div > img
+{
+	-moz-text-shadow: 3px -1px 2px #000;	/*此寫法無效*/
+	-khtml-text-shadow: 3px -1px 2px #000;	 /*此寫法無效*/
+	-webkit-text-shadow: 3px -1px 2px #000;  /*此寫法無效*/
+	-moz-box-shadow: 3px -1px 2px #000;	/*firfox*/
+	-khtml-box-shadow: 3px -1px 2px #000;	/*chrome及Safari*/
+	-webkit-box-shadow: 3px -1px 2px #000;  /*chrome及Safari*/
+	box-shadow: 3px -1px 2px #333;			/*chrome及firfox及opera*/
+	border-left:solid 3px #666;
+	border-bottom:solid 1px #666;
+}
+
+#bookshelf > ul > li > ul.cover > li{
+	background-repeat:no-repeat;
+	width: 130px;
+	height: 146px;
+	margin:19px 0 0 0;
+}
+#bookshelf > ul > li > ul.cover > li > div
+{
+	height: 146px;
+	width: 130px;
+	position:relative;
+}
+#bookshelf > ul > li > ul.cover > li > div > div{
+	height:120px;
+	width:90px;
+	position:absolute;
+	background-image:url(bookshlef_book_coverS.png);
+	background-repeat:repeat-y;
+	background-position:2px 0;
+	z-index:1000;
+	bottom:3px;
+	cursor:pointer;
+}
+#bookshelf > ul > li > ul.cover > li > div > img{
+	margin:5px 0 0 0;
+	position:absolute;
+	bottom:3px;
+}
+#bookshelf > ul > li > ul.btn {
+	margin: 8px auto;
+	padding:0px;
+	text-align: center;
+}
+#bookshelf > ul > li > ul.btn li{
+	padding:0px;
+	font-size:10px;
+	font-weight:bold;
+	display: inline;
+	cursor:pointer;
+}
+#bookshelf ul.btn .webbook a
+{
+	color:#000;
+	text-decoration:none;
+}
+#bookshelf ul.btn .webbook a:hover
+{
+	color:#c70000;
+}
+#bookshelf ul.btn .ibook a
+{
+	color:#6d0000;
+	text-decoration:none;
+}
+#bookshelf ul.btn .ibook a:hover
+{
+	color:#000;
+}
+
+#bookshelf > ul > li > ul.btn li:nth-child(1){
+}
+#bookshelf > ul > li > ul.btn li:nth-child(2){
+}
+#bookshelf > ul > li > ul.btn li:nth-child(3){
+}
+#bookshelf > ul > li > ul.btn li:nth-child(1):hover
+{
+	color:#c70000;
+}
+/* for ie8 */
+#bookshelf > ul > li > ul.btn li:nth-child:hover
+{
+	color:#c70000;
+}
+
+#searchbook
+{
+	border:solid 3px #ccc;
+	border-radius:15px;
+	width:760px;
+	float:right;
+	background-color:#fff;
+	height:800px;
+	padding:5px 4px;
+	margin-bottom: 20px;
+}
+#searchbook ul
+{
+	list-style:none;
+	height: 800px;
+	width:758px;
+	list-style:none;
+	overflow-y:auto;
+}
+#searchbook ul li
+{
+	width:100%;
+	height:200px;
+	display: table;
+}
+#searchbook ul li:nth-child(even)
+{
+	background-color:#e5e5e5;
+}
+#searchbook .bookimg
+{
+	width:162px;
+	height:162px;
+	padding:5px;
+	margin:5px;
+	float:left;
+	text-align:center;
+}
+#searchbook img
+{
+	border: solid 1px #333;
+	padding:5px;
+}
+#searchbook .booktitle
+{
+	width:510px;
+	border-bottom: solid 1px #b3b3b3;
+	float:right;
+	font-weight:bold;
+	padding: 10px 0;
+	display: table;
+}
+#searchbook .bookcontent
+{
+	width:490px;
+	height:85px;
+	float:right;
+	padding: 10px 20px 10px 0;
+	font-size: 12px;
+	line-height:22px;
+	display: table;
+	overflow:hidden;
+}
+#searchbook .button
+{
+	margin:10px 0 15px 0;
+	float:right;
+	width:510px;
+}
+#searchbook .button div
+{
+	float:right;
+	padding:6px 0;
+	text-align:center;
+	display: table;
+	margin-right:15px;
+	cursor:pointer;
+}
+
+.popup
+{
+	/* http://www.colorzilla.com/gradient-editor/ */
+	background: rgb(255,255,255); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(210,217,219,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(210,217,219,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(210,217,219,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(210,217,219,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(210,217,219,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(210,217,219,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#d2d9db',GradientType=0 ); /* IE6-9 */
+
+	border:solid 1px #999;
+	position:absolute;
+	z-index:2000;
+	border-radius:10px;
+}
+
+.show
+{
+	display:block !important;
+}
+
+#dialogue_bg
+{
+	position:absolute;
+	height:0;
+	width:0;
+	background-color:#000;
+	z-index:1100;
+	opacity:0.5;
+	display:none;
+	left:0;
+}
+
+#dialogue_bg.show
+{
+	display: block !important;
+}
+
+#login
+{
+	width:400px;
+	height:200px;
+	top:400px;
+	left:600px;
+	text-align:center;
+	display:none;
+}
+
+#login h1
+{
+	font-size:18px;
+	float:left;
+	margin:15px 0 0 10px;
+	padding-left:25px;
+	background-image:url(icon_user.png);
+	background-repeat:no-repeat;
+}
+
+#login h2
+{
+	font-size:22px;
+	float:right;
+	font-weight:normal;
+	margin:5px 5px 0 0;
+}
+
+#login h3
+{
+	width:400px;
+	display:table;
+	margin-top:80px;
+}
+
+#login h3 input
+{
+	width:180px;
+}
+
+#login .button
+{
+	width:250px;
+	margin:0 auto;
+}
+
+#login .button a
+{
+	font-size:12px;
+	float:left;
+	text-decoration:none;
+}
+
+#login .button div
+{
+	font-size:12px;
+	padding:6px 0;
+	text-align:center;
+	display: table;
+	cursor:pointer;
+	float:right;
+}
+
+#forget
+{
+	width:400px;
+	height:200px;
+	top:400px;
+	left:600px;
+	text-align:center;
+	display:none;
+}
+
+#forget h1
+{
+	font-size:18px;
+	float:left;
+	margin:15px 0 0 10px;
+	padding-left:25px;
+	background-image:url(icon_user.png);
+	background-repeat:no-repeat;
+}
+
+#forget h2
+{
+	font-size:22px;
+	float:right;
+	font-weight:normal;
+	margin:5px 5px 0 0;
+}
+
+#forget h3
+{
+	width:400px;
+	display:table;
+	margin-top:80px;
+}
+
+#forget .button div
+{
+	font-size:12px;
+	padding:6px 0;
+	text-align:center;
+	display: table;
+	cursor:pointer;
+	margin-left:170px;
+}
+
+#book_content
+{
+	border:solid 5px #FFF2E1;
+	width:650px;
+	height:400px;
+	position:absolute;
+	background-color:#FFF2E1;
+	top:400px;
+	left:250px;
+	z-index:2000;
+	border-radius:10px;
+	display:none;
+}
+#book_content .close
+{
+	margin:5px;
+	width:15px;
+	height:15px;
+	float:right;
+	background-image:url(icon_close.png);
+	cursor:pointer;
+}
+#book_content .close:hover
+{
+	background-image:url(icon_close_hover.png);
+}
+
+#book_content .bookimg
+{
+	width:210px;
+	height:270px;
+	padding:5px;
+	margin:5px;
+	float:left;
+	text-align:center;
+	margin-left:20px;
+	overflow:hidden;
+}
+#book_content img
+{
+	padding:5px;
+	border: solid 1px #b3b3b3;
+	width:200px;
+}
+#book_content .booktitle
+{
+	width:610px;
+	border-bottom: solid 1px #b3b3b3;
+	float:right;
+	font-weight:bold;
+	padding: 10px 0;
+	display: table;
+	margin:0 20px 10px 20px;
+}
+#book_content .bookcontent
+{
+	width:360px;
+	height:270px;
+	float:right;
+	padding: 10px 20px 10px 0;
+	font-size: 14px;
+	line-height:22px;
+	display: block;
+	overflow-y:scroll;
+	margin-right:20px;
+	margin-bottom:10px;
+	line-height: 150%;
+	text-align: justify;
+	text-justify:inter-ideograph;
+}
+#book_content .button
+{
+	width:650px;
+	display: table;
+	
+}
+#book_content .button div
+{
+	float:right;
+	font-size:12px;
+	padding:6px 0;
+	text-align:center;
+	display: table;
+	margin-right:15px;
+	cursor:pointer;
+}
+#book_content .button div a
+{
+	text-decoration:none;
+	color:#000;
+}
+
+#footer
+{
+	text-align:center;
+	background-color: #dcdcdc;
+	width: 1024px;
+	display: table;
+	padding: 20px 0;
+
+	font-family: 微軟正黑體;
+	font-size: 10px;
+
+}
+
+.button div
+{
+	background: rgb(255,255,255); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(210,217,219,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(210,217,219,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(210,217,219,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(210,217,219,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(210,217,219,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(210,217,219,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#d2d9db',GradientType=0 ); /* IE6-9 */
+
+	/*background-image:url(search_icon.png);*/
+	border: solid 1px #ccc;
+	border-radius:10px;
+	width:95px;
+	height:10px;
+	font-size:12px;
+}
+
+.button div:hover
+{
+	background: rgb(255,255,255); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(210,217,219,1) 0%, rgba(255,255,255,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(210,217,219,1)), color-stop(100%,rgba(255,255,255,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(210,217,219,1) 0%,rgba(255,255,255,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(210,217,219,1) 0%,rgba(255,255,255,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(210,217,219,1) 0%,rgba(255,255,255,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(210,217,219,1) 0%,rgba(255,255,255,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d2d9db', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+
+	/*background-image:url(search_icon_hover.png);*/
+}
+
+.shadow {
+	-moz-box-shadow: 5px 5px 2px #999;	/*firfox*/
+	-khtml-box-shadow: 5px 5px 2px #999;	/*chrome及Safari*/
+	-webkit-box-shadow: 5px 5px 2px #999;  /*chrome及Safari*/
+	box-shadow: 5px 5px 2px #999;			/*chrome及firfox及opera*/
+	
+	-moz-text-shadow: 5px 5px 2px #999;	/*此寫法無效*/
+	-khtml-text-shadow: 5px 5px 2px #999;	 /*此寫法無效*/
+	-webkit-text-shadow: 5px 5px 2px #999;  /*此寫法無效*/
+	
+	width:200px;
+	height:50px;
+}
+
+#TemplateFrame
+{
+	display:none;
+}

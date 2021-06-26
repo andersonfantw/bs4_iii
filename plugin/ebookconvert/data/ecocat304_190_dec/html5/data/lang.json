@@ -1,0 +1,20 @@
+﻿{"lang":{
+    "searchall":{
+        "branch":"頁面展開",
+        "result":"搜尋結果",
+        "hit":"%1個搜尋結果。",
+        "nohit":"查無資料。",
+        "sorthit":"選擇編號順序",
+        "sortpage":"頁面順序",
+        "reset":"重設",
+        "search":"搜尋"
+    },
+    "print":{
+        "left":"左翻書",
+        "right":"右翻書"
+    },
+    "memo":{
+        "memolist":"便利貼清單",
+        "defaultcontent":"請輸入。"
+    }
+}}

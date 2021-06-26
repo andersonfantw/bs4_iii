@@ -1,0 +1,39 @@
+@charset "Shift_JIS";
+
+/*-------------------------------------------------------------------
+	IDENTIFICATION DIVISION.
+	Version.					1.4.1.2;
+	Author.					Kenta Aga(admin)
+	Aptx.						4.8.6.9;
+-------------------------------------------------------------------*/
+
+/*************************************
+	DATA DIVISION.
+	WORKING-STRAGE SECTION.
+*************************************/
+
+/*	default Style - ƒfƒtƒHƒ‹ƒg‚ÌƒXƒ^ƒCƒ‹’²® Šî–{ƒŠƒ“ƒNƒJƒ‰[İ’è
+PPPPPPPPPPPPPPPPPPPPPP */
+@import "init.css";
+
+/*	main Style - ƒƒCƒ“˜g‚ÌƒXƒ^ƒCƒ‹’²®
+PPPPPPPPPPPPPPPPPPPPPP */
+@import "style.css";
+
+/*	‹¤’Ê‚ÌƒXƒ^ƒCƒ‹w’è(ƒwƒbƒ_[Aƒtƒbƒ^[)
+PPPPPPPPPPPPPPPPPPPPPP */
+@import "module.css";
+
+/*	menu Style - ƒƒjƒ…[•”•ª‚ÌƒXƒ^ƒCƒ‹’²®
+PPPPPPPPPPPPPPPPPPPPPP */
+/*@import "menu.css";*/
+
+/*	component Style - Še•”•i‚ÌƒXƒ^ƒCƒ‹’²®
+PPPPPPPPPPPPPPPPPPPPPP */
+@import "component.css";
+
+
+/*	thickbox Style - thickbox—pƒXƒ^ƒCƒ‹
+PPPPPPPPPPPPPPPPPPPPPP */
+/*@import "thickbox.css";*/
+

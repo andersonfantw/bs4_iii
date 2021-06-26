@@ -1,0 +1,35 @@
+li>div>span{
+	display:inline-block;
+	width:80px;
+	margin:4px 0 0 10px;
+}
+
+#tabs{
+	min-height: 500px;
+}
+
+#GiantviewURL{
+	width: 450px;
+}
+
+#main-content .APIBase{
+	width: 400px;
+}
+#main-content .ID{
+	width: 400px;
+}
+#main-content .PWD{
+	width: 400px;
+}
+#main-content .NoticeMail{
+	width: 400px;
+}
+
+#NAS{
+	display: none;
+}
+
+#ldapprefix{
+	width:100px;
+	margin-right:10px;
+}

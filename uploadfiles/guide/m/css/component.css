@@ -1,0 +1,97 @@
+@charset "Shift_JIS";
+
+/*-------------------------------------------------------------------
+	IDENTIFICATION DIVISION.
+	Version.					1.4.1.2;
+	Author.					Kenta Aga(admin)
+	Aptx.						4.8.6.9;
+
+	PROGRAM-ID.		"ÉRÉìÉ|Å[ÉlÉìÉg"
+-------------------------------------------------------------------*/
+
+/*************************************
+	DATA DIVISION.
+	WORKING-STRAGE SECTION.
+*************************************/
+/*------------------------------------------------
+	ã§í ê›íË - COMMON SETTING
+------------------------------------------------*/
+
+
+/*	âÊëúÇÃÉAÉå
+ÅPÅPÅPÅPÅPÅPÅPÅPÅPÅPÅPÅPÅPÅPÅPÅPÅPÅPÅPÅPÅPÅP*/
+.descriptionImage{
+	float								: right;
+	margin-left					: 34px;
+}
+
+.photo{
+	float								: right;
+	display							: inline;
+	margin-left					: 30px;
+}
+
+
+/*	âÊëúÇ…ëŒÇµÇƒÉZÉìÉ^ÉäÉìÉO
+ÅPÅPÅPÅPÅPÅPÅPÅPÅPÅPÅPÅPÅPÅPÅPÅPÅPÅPÅPÅPÅPÅP*/
+.centering{
+	clear								: both;
+	margin-bottom				: 24px;
+}
+
+.centering p{
+	margin								: 0;
+	display								: table-cell;
+	vertical-align						: middle;
+}
+
+/* for IE 6 */
+* html .centering p{
+	display								: inline;
+	zoom									: 1;
+}
+/* for IE7 */
+*:first-child+html .centering p{
+	display								: inline;
+	zoom									: 1;
+}
+.centering p.image{
+	padding-right					: 20px;
+}
+
+
+/*	ä»à’É}ÉEÉXÉIÅ[ÉoÅ[
+ÅPÅPÅPÅPÅPÅPÅPÅPÅPÅPÅPÅPÅPÅPÅPÅPÅPÅPÅPÅPÅPÅP*/
+.mouse-over a:hover img,
+.mouse-over:hover img,
+#header #subNavigation a:hover img,
+#header h1 a:hover img,
+#sub a:hover img,
+#sitemap a:hover img,
+.pagetop a:hover img,
+p.print a:hover img{
+	filter								: alpha(opacity=85);
+	-moz-opacity				: 0.85;
+	opacity							: 0.85;
+}
+
+
+/* ëóêMÉtÉHÅ[ÉÄ
+ÅPÅPÅPÅPÅPÅPÅPÅPÅPÅPÅPÅPÅPÅPÅPÅPÅPÅPÅPÅPÅPÅP*/
+.submitArea{
+	margin:15px 0;
+	text-align:center;
+}
+
+.submitArea img,
+.submitArea input{
+	vertical-align:bottom;
+}
+
+/* ÉGÉâÅ[
+ÅPÅPÅPÅPÅPÅPÅPÅPÅPÅPÅPÅPÅPÅPÅPÅPÅPÅPÅPÅPÅPÅP*/
+.warning{
+	color:#FF0000;
+	font-size:92%;
+	display:none;
+}

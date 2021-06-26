@@ -1,0 +1,78 @@
+#main-content .hastable thead td:nth-child(1)
+{
+	width:40px;
+}
+#main-content .hastable thead td:nth-child(5)
+{
+	width:60px;
+}
+#main-content .hastable thead td:nth-child(6)
+{
+	width:45px;
+}
+#main-content .hastable thead td:nth-child(7)
+{
+	width:135px;
+}
+
+#main-content .hastable tbody td:nth-child(1)
+{
+	text-align:center;
+}
+#main-content .hastable tbody td:nth-child(2)
+{
+        text-align:center;
+}
+#main-content .hastable tbody td:nth-child(4)
+{
+	text-align:center;
+}
+#main-content .hastable tbody td:nth-child(5)
+{
+	text-align:center;
+}
+#main-content .hastable tbody td:nth-child(6)
+{
+	text-align:center;
+}
+
+span.new{
+	color:red;
+}
+
+span.off{
+	text-decoration:line-through;
+}
+
+.writer{
+	display:inline;
+	margin-left:10px;
+}
+
+.cowriter{
+	margin-top:5px;
+}
+
+.link_row .name,.link_row .link,.imglink_row .icon,.imglink_row .link{
+	margin-left:10px;
+}
+
+#iconorgpic{
+	display:none;
+	position:absolute;
+	z-index:3000;
+	width:212px;
+}
+.imglink_row{
+	display:table;
+}
+.img{
+	float:left;
+}
+.img img{
+	height:50px;
+}
+.btnDel{
+	position: absolute;
+	margin: 25px 0 0 10px;
+}

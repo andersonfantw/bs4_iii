@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<EBookRoot>
+  <!-- PageData Link Parameter -->
+  <PageDataCount>23</PageDataCount>
+  <LinkDataPageBlock PageNo="20">
+    <LinkData>
+      <LinkURLFlag>True</LinkURLFlag>
+      <LinkURL>data/html5/14/demo.html</LinkURL>
+      <LinkTARGET>_blank</LinkTARGET>
+      <LinkALT>
+      </LinkALT>
+      <LinkAreaFlag>True</LinkAreaFlag>
+      <LinkImagePath>
+      </LinkImagePath>
+      <LinkAreaXStr>301</LinkAreaXStr>
+      <LinkAreaYStr>47</LinkAreaYStr>
+      <LinkAreaXLen>81</LinkAreaXLen>
+      <LinkAreaYLen>24</LinkAreaYLen>
+      <LinkAreaMouseOutColor>0080FF</LinkAreaMouseOutColor>
+      <LinkAreaMouseOutTransparent>0</LinkAreaMouseOutTransparent>
+      <LinkAreaMouseOverColor>0080FF</LinkAreaMouseOverColor>
+      <LinkAreaMouseOverTransparent>100</LinkAreaMouseOverTransparent>
+      <LinkPopupFlag>False</LinkPopupFlag>
+      <LinkPopupHeight>100</LinkPopupHeight>
+      <LinkPopupWidth>100</LinkPopupWidth>
+      <LinkPage>0</LinkPage>
+      <LinkAreaMouseOutOutLineColor>0080FF</LinkAreaMouseOutOutLineColor>
+      <LinkAreaMouseOutOutLineWidth>0</LinkAreaMouseOutOutLineWidth>
+      <LinkAreaMouseOverOutLineColor>0080FF</LinkAreaMouseOverOutLineColor>
+      <LinkAreaMouseOverOutLineWidth>0</LinkAreaMouseOverOutLineWidth>
+      <LinkHighlight>
+      </LinkHighlight>
+    </LinkData>
+    <LinkData>
+      <LinkURLFlag>True</LinkURLFlag>
+      <LinkURL>data/html5/15/demo.html</LinkURL>
+      <LinkTARGET>_blank</LinkTARGET>
+      <LinkALT>
+      </LinkALT>
+      <LinkAreaFlag>True</LinkAreaFlag>
+      <LinkImagePath>
+      </LinkImagePath>
+      <LinkAreaXStr>300</LinkAreaXStr>
+      <LinkAreaYStr>78</LinkAreaYStr>
+      <LinkAreaXLen>84</LinkAreaXLen>
+      <LinkAreaYLen>20</LinkAreaYLen>
+      <LinkAreaMouseOutColor>0080FF</LinkAreaMouseOutColor>
+      <LinkAreaMouseOutTransparent>0</LinkAreaMouseOutTransparent>
+      <LinkAreaMouseOverColor>0080FF</LinkAreaMouseOverColor>
+      <LinkAreaMouseOverTransparent>100</LinkAreaMouseOverTransparent>
+      <LinkPopupFlag>False</LinkPopupFlag>
+      <LinkPopupHeight>100</LinkPopupHeight>
+      <LinkPopupWidth>100</LinkPopupWidth>
+      <LinkPage>0</LinkPage>
+      <LinkAreaMouseOutOutLineColor>0080FF</LinkAreaMouseOutOutLineColor>
+      <LinkAreaMouseOutOutLineWidth>0</LinkAreaMouseOutOutLineWidth>
+      <LinkAreaMouseOverOutLineColor>0080FF</LinkAreaMouseOverOutLineColor>
+      <LinkAreaMouseOverOutLineWidth>0</LinkAreaMouseOverOutLineWidth>
+      <LinkHighlight>
+      </LinkHighlight>
+    </LinkData>
+  </LinkDataPageBlock>
+</EBookRoot>

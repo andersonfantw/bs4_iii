@@ -1,0 +1,572 @@
+@charset 'utf-8';
+
+/**
+ * 
+ * jQuery Digitalmax LiveBook css
+ * Version 1.2.4
+ * @requires jquery.dmx.livebook.js v1.2.4 or later
+ * 
+ * Copyright (c) 2014 - 2015 Digitalmax Co.,Ltd.
+ */
+
+#dmxlivebook.ui-page-theme-a {
+    background-color: #F7F7F7;
+}
+
+#controllbar {
+    left: 12px;
+    top: 142px;
+	width: 163px;
+	height: 361px;
+	background-image: url(../images/buttons-full_side-l.png);
+}
+#controllbar #menu_button_wrapper {
+    top: 5px;
+    left: 5px;
+    width: 153px;
+    height: 351px;
+}
+.pageflipbutton,
+#controllbar #menu_button_wrapper .button {
+    cursor: pointer;
+    background-image: url(../images/buttons-full_side-l.png);
+}
+#controllbar #l_page {
+    position: absolute;
+    width: 76px;
+    height: 76px;
+    left: 0px;
+    top: 34px;
+    background-position: -5px -39px;
+}
+#controllbar #l_page:hover {
+    background-position: -163px -39px;
+}
+#controllbar #r_page {
+    position: absolute;
+    width: 76px;
+    height: 76px;
+    left: 77px;
+    top: 34px;
+    background-position: -82px -39px;
+}
+#controllbar #r_page:hover {
+    background-position: -240px -39px;
+}
+#controllbar #goto_page {
+    width: 76px;
+    height: 28px;
+	left: 77px;
+	top: 5px;
+}
+#controllbar #t_index {
+    left: 0px;
+}
+#controllbar #v_index {
+    width: 76px;
+    height: 76px;
+    left: 77px;
+    top: 198px;
+    background-position: -82px -203px;
+}
+#controllbar #v_index:hover {
+    background-position: -240px -203px;
+}
+#controllbar #zoom_in {
+	width: 76px;
+    height: 76px;
+    left: 77px;
+	top: 116px;
+	background-position: -82px -121px;
+}
+#controllbar #zoom_in:hover {
+    background-position: -240px -121px;
+}
+#controllbar #zoom_out {
+	width: 76px;
+    height: 76px;
+    left: 0px;
+	top: 116px;
+	background-position: -5px -121px;
+}
+#controllbar #zoom_out:hover {
+    background-position: -163px -121px;
+}
+#controllbar #search_all {
+    width: 76px;
+    height: 76px;
+    left: 0px;
+    top: 198px;
+    background-position: -5px -203px;
+}
+#controllbar #search_all:hover {
+    background-position: -163px -203px;
+}
+#controllbar #print_btn {
+    width: 0px;
+    height: 0px;
+    left: 0px;
+    top: 275px;
+    background-position: -5px -280px;
+}
+#controllbar #print_btn:hover {
+    background-position: -163px -280px;
+}
+#controllbar #bookmarktag_btn {
+    width: 76px;
+    height: 76px;
+    left: 77px;
+    top: 275px;
+    background-position: -82px -280px;
+}
+#controllbar #bookmarktag_btn:hover {
+    background-position: -240px -280px;
+}
+#controllbar #memotool_btn {
+    left: 350px;
+}
+#controllbar #goto_text {
+    width: 69px;
+    height: 20px;
+    left: 0px;
+    top: 0px;
+    background-position: -5px -5px;
+    border: none;
+}
+#controllbar #goto_submit {
+    width: 76px;
+    height: 28px;
+    left: 77px;
+    top: 0px;
+    background-position: -82px -5px;
+}
+#controllbar #goto_submit:hover {
+    background-position: -240px -5px;
+}
+
+
+    .memo_dialog .minimize {
+        position: absolute;
+        width: 13px;
+        height: 13px;
+        top: 7px;
+        right: 32px;
+        border-bottom: 2px solid #555;
+    }
+        .memo_dialog .minimize a {
+            display: block;
+            width: 13px;
+            height: 13px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+        
+    .memo_dialog .resize {
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        right: 0;
+        bottom: 0;
+    }
+        .memo_dialog .resize a {
+            display: block;
+            width: 10px;
+            height: 10px;
+            cursor: se-resize;
+        }
+        
+        #memolist_dialog .list_wrapper,
+        #tindex_dialog .list_wrapper {
+            padding: 5px;
+        }
+        
+            #memolist_dialog .list_wrapper ul,
+            #tindex_dialog .list_wrapper ul {
+                list-style-type: none;
+                padding: 0;
+                margin: 0;
+            }
+                #tindex_dialog .list_wrapper ul li {
+                    line-height: 1.2em;
+                }
+                    #tindex_dialog .list_wrapper ul li a {
+                        display: block;
+                        text-decoration: none;
+                        font-size: 0.9em;
+                        font-weight: normal;
+                        color: #333;
+                    }
+                    #tindex_dialog .list_wrapper ul li a:hover {
+                        background-color: #cdffc1;
+                    }
+        
+        #vindex_dialog .thumbnail_wrapper .thumb_spread_wrapper {
+            margin: 0 10px 10px;
+        }
+        
+#memotool_dialog .color {
+    width: 50px;
+    height: 50px;
+    background: #F00;
+    float: left;
+    margin-right: 5px;
+    border: 1px solid #aaa;
+    cursor: pointer;
+}
+#memotool_dialog .color:last-child {
+    margin-right: 0px;
+}
+#memotool_dialog .memolist_btn {
+    position: absolute;
+    width: 75px;
+    height: 50px;
+    background: #666;
+    top: 42px;
+    left: 312px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    color: #FFF;
+    text-shadow: none;
+    font-size: 0.8em;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+}
+#memolist .list_wrapper li div {
+}
+#memolist .list_wrapper li div.color {
+    width: 20px;
+    height: 0.8em;
+    line-height: 1.0em;
+    margin-top: 0.2em;
+    margin-right: 5px;
+    float: left;
+}
+#memolist .list_wrapper li div.page {
+    width: 5.0em;
+    margin-right: 3px;
+    float: left;
+}
+#memolist .list_wrapper li:hover {
+    background-color: #cdffc1;
+}
+
+.print_wrapper {
+    position: relative;
+}
+.print_wrapper a {
+    display: block;
+    height: 27px;
+    background-repeat: no-repeat;
+}
+.print_wrapper a.l {
+    margin-bottom: 5px;
+}
+.print_wrapper a.title {
+    float: left;
+    text-decoration: none;
+    color: #666;
+    font-size: 13px;
+    font-weight: normal;
+    line-height: 27px;
+    margin-right: 10px;
+}
+.print_wrapper a.r.title {
+    clear: left;
+}
+.print_wrapper a.icon {
+    width: 35px;
+    height: 27px;
+    text-indent: -9999px;
+    float: left;
+}
+.print_wrapper a.l.icon {
+    background-image: url(../images/print_select.png);
+    background-position: 0 0;
+}
+.print_wrapper a.r.icon {
+    background-image: url(../images/print_select.png);
+    background-position: -35px 0;
+}
+
+#searchall_dialog {
+    position: absolute;
+    border: 1px solid #666;
+    background-color: #FFF;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-box-shadow: 1px 1px 4px #ccc;
+    -moz-box-shadow: 1px 1px 4px #ccc;
+}
+    #searchall_dialog .close {
+        position: absolute;
+        width: 17px;
+        height: 17px;
+        top: 7px;
+        right: 12px;
+    }
+        #searchall_dialog .close a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+        
+    #searchall_dialog .searchlist_wrapper {
+        position: absolute;
+        overflow-y: auto;
+        overflow-x: hidden;
+        border: 1px solid #999;
+        padding: 10px 0 0 5px;
+        -webkit-box-shadow: 1px 1px 4px #ccc inset;
+        -moz-box-shadow: 1px 1px 4px #ccc inset;
+    }
+        #searchall_dialog #search_keyword {
+            /*position: absolute;
+            top: 10px;
+            left: 10px;*/
+            width: 200px;
+            height: 1.2em;
+            float: left;
+            margin-top: 10px;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+        #search_mode_and,
+        #search_mode_or {
+            /*position: absolute;
+            top: 10px;
+            left: 210px;
+            width: 5.0em;*/
+            height: 1.2em;
+            font-size: 0.8em;
+            float: left;
+            margin-top: 10px;
+            margin-right: 10px;
+        }
+        #search_mode_and {
+            /*left: 220px;*/
+        }
+        #search_mode_or {
+            /*left: 266px;*/
+        }
+        #search_mode_and input,
+        #search_mode_or input {
+            vertical-align: middle;
+            margin: 0 5px 0 0;
+            height: 25px;
+        }
+        #search_btn {
+            /*position: absolute;
+            top: 10px;
+            left: 310px;*/
+            width: 58px;
+            height: 24px;
+            float: left;
+            margin-top: 10px;
+        }
+        #search_btn a {
+            display: block;
+            width: 58px;
+            height: 24px;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            background: #F60;
+            text-align: center;
+            color: #FFF;
+            text-decoration: none;
+            font-weight: normal;
+            font-size: 0.8em;
+            line-height: 24px;
+            font-family: Arial, Helvetica, Verdana, "ヒラギノ角ゴPro W3", "Hiragino Kaku Gothic Pro", Osaka, メイリオ, Meiryo, "ＭＳ Ｐゴシック", sans-serif;
+            text-shadow: none;
+        }
+        #search_sortorder_hit,
+        #search_sortorder_page {
+            position: absolute;
+            display: block;
+            top: 79px;
+            width: 100px;
+            height: 20px;
+            border-radius: 5px 5px 0 0;
+            text-align: center;
+            border: 1px solid #999;
+            font-size: 0.75em;
+            line-height: 20px;
+        }
+        #search_sortorder_hit.active,
+        #search_sortorder_page.active {
+            background-color: #999;
+        }
+        #search_sortorder_hit a,
+        #search_sortorder_page a {
+            text-decoration: none;
+            font-weight: normal;
+            text-shadow: none;
+            color: #666;
+        }
+        #search_sortorder_hit.active a,
+        #search_sortorder_page.active a {
+            color: #FFF;
+        }
+        #search_sortorder_hit {
+            left: 10px;
+        }
+        #search_sortorder_page {
+            left: 112px;
+        }
+        #search_branch_wrapper {
+            position: absolute;
+            overflow: hidden;
+            top: 40px;
+            left: 10px;
+            font-size: 0.8em;
+            width: 200px;
+        }
+        #search_branch_openall,
+        #search_branch_closeall {
+            position: absolute;
+            top: 0px;
+            width: 30px;
+            height: 13px;
+        }
+        #search_branch_openall {
+            left: 70px;
+        }
+        #search_branch_closeall {
+            left: 105px;
+        }
+        #search_branch_openall a,
+        #search_branch_closeall a {
+            display: block;
+            width: 30px;
+            -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+            color: #FFF;
+            background: #9D9D9D;
+            text-align: center;
+            text-shadow: none;
+            text-decoration: none;
+            font-weight: normal;
+        }
+        #search_clear_result {
+            position: absolute;
+            overflow: hidden;
+            top: 40px;
+            left: 310px;
+            font-size: 0.8em;
+            width: 6.0em;
+        }
+        #search_clear_result a {
+            text-align: center;
+            text-shadow: none;
+            text-decoration: none;
+            font-weight: normal;
+            color: #333;
+        }
+        #search_result_info {
+            position: absolute;
+            overflow: hidden;
+            top: 59px;
+            left: 10px;
+            font-size: 0.8em;
+            width: 368px;
+        }
+        
+        #searchall_dialog #search_result_content ul {
+            list-style-type: none;
+            padding: 0 0 0 10px;
+            margin: 0;
+            font-size: 0.9em;
+        }
+            #searchall_dialog #search_result_content ul li {
+                line-height: 18px;
+            }
+                #searchall_dialog #search_result_content ul li a {
+                    text-decoration: none;
+                    color: #333;
+                    padding-left: 4px;
+                }
+                    #searchall_dialog #search_result_content ul li a span {
+                        font-weight: normal;
+                    }
+                    
+                    #searchall_dialog #search_result_content ul li .page {
+                        display: inline-block;
+                        width: 50px;
+                    }
+                    #searchall_dialog #search_result_content ul li .hitstring {
+                        display: inline-block;
+                        width: 198px;
+                    }
+                    #searchall_dialog #search_result_content ul li .string {
+                        display: inline-block;
+                    }
+
+#bookmarktag_icon {
+    position: absolute;
+    z-index: 9999;
+    display: block;
+    width: 56px;
+    height: 17px;
+    background: no-repeat url(../images/bookmarktag_icon.png)
+}
+
+#memo_icon {
+    position: absolute;
+    z-index: 9999;
+    display: block;
+    width: 16px;
+    height: 22px;
+    background: no-repeat url(../images/memo_icon.png)
+}
+
+.memo_area {
+    position: absolute;
+    z-index: 100;
+}
+.memo_area .content_wrapper {
+    top: 30px;
+    left: 10px;
+    background-color: #FFF;
+    font-size: 0.8em;
+}
+.memo_area .minimize_icon {
+    display: none;
+    width: 16px;
+    height: 22px;
+    background: no-repeat url(../images/memo_icon.png)
+}
+    .memo_area .minimize_icon a {
+        display: block;
+        width: 16px;
+        height: 22px;
+    }
+
+.tag_area {
+    margin-bottom: 10px;
+    overflow: hidden;
+    position: absolute;
+    /*z-index: 100;*/
+}
+.tag_area span {
+    display: block;
+    height: 17px;
+    background-color: #F00;
+    filter: alpha(opacity=50);
+    -moz-opacity: 0.5;
+    opacity: 0.5;
+    cursor: pointer;
+}
+.tag_area span.left {
+    float: left;
+}
+.tag_area span.right {
+    float: right;
+}
+.tag_area span.on {
+    width: 70px;
+}
+.tag_area span.off {
+    width: 7px;
+}

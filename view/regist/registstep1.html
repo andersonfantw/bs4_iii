@@ -1,0 +1,63 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="zh-Hant-TW">
+<head>
+<title><{$smarty.const.TITLE}></title>
+<meta name="viewport" content="width=device-width" />
+<script src="<{$smarty.const.WEB_URL}>/scripts/jquery-1.11.2.min.js" type="text/javascript"></script>
+<script src="<{$smarty.const.WEB_URL}>/scripts/loader.class.js" type="text/javascript"></script>
+<script src="<{$smarty.const.WEB_URL}>/scripts/loader_regist.js" type="text/javascript"></script>
+<script src="<{$smarty.const.WEB_URL}>/scripts/regist_step1.js" type="text/javascript"></script>
+
+<link type="text/css" href="<{$smarty.const.WEB_URL}>/images/desktop/style.css" rel="stylesheet" />
+<link type="text/css" href="<{$smarty.const.WEB_URL}>/hosts/config.css" rel="stylesheet" />
+<script type="text/javascript">
+var uid=0;
+var bs_id=0;
+var web_url = '<{$smarty.const.WEB_URL}>';
+</script>
+</head>
+<body>
+	<{$header_html}>
+
+  <div id="body" class="mode_bookshelf">
+      <div id="header"></div>
+
+      <div id="bookshelf">
+				<div id="button">
+					<div id="buttonlogin">
+						<div class="btnlogin">
+							<div></div>
+							<span>登入</span>
+						</div>
+						<div class="btnlogout">
+							<div class="listlogout">
+								<div></div>
+								<span>登出</span>
+							</div>
+						</div>
+					</div>
+				</div>
+      	<br /><br /><br /><br />
+      	<div class="window">
+      		<div class="head regist-step1"></div>
+      		<div class="content">
+      			<form method="post" action="">
+      			<{$smarty.const.LANG_ACTIVECODE_ENTERCODE}><br />
+      			<{$smarty.const.LANG_ACTIVECODE_HASACCOUNT}><br />
+      			<{$smarty.const.LANG_ACTIVECODE_NOCODEHIT1}><a href="http://www.lnet.tw" target="_blank"><{$smarty.const.LANG_ACTIVECODE_NOCODEHIT2}></a><{$smarty.const.LANG_ACTIVECODE_NOCODEHIT3}><br /><br />
+      			<input type="text" id="activecode" name="activecode" type="activecode" />
+      			<br /><br />
+      			<div class="buttons">
+      				<input type="reset" id="reset" name="reset" value="<{$smarty.const.LANG_ACTIVECODE_BTN_CANCEL}>" /> &nbsp;&nbsp;&nbsp; <input type="submit" id="next" value="<{$smarty.const.LANG_ACTIVECODE_BTN_OK}>" />
+      			</div>
+      			<input type="hidden" id="token" name="token" value="<{$token}>" />
+      			</form>
+      		</div>
+      	</div>
+      </div>
+      <div id="footer">
+      	<{$smarty.const.FOOTER_TEXT}>
+      </div>
+  </div>
+</body>
+</html>

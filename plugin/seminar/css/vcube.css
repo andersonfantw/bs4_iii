@@ -1,0 +1,71 @@
+* {
+	font-size:12px;
+}
+
+#main-content{
+	margin-top:20px;
+}
+
+#main-content h1{
+	font-size:3em;
+	text-align:center;
+}
+
+#main-content .fc-day-header{
+	line-height:3;
+}
+
+#curriculum{
+	height: 1100px;
+}
+
+#curriculum .fc-unthemed th,
+#curriculum .fc-unthemed td,
+#curriculum .fc-unthemed thead,
+#curriculum .fc-unthemed tbody,
+#curriculum .fc-unthemed .fc-divider,
+#curriculum .fc-unthemed .fc-row,
+#curriculum .fc-unthemed .fc-popover {
+	border-color: #333 !important;
+}
+
+#curriculum .fc-view{
+	border:solid 2px;
+}
+
+#dialog-panel{
+	height: 0;
+}
+
+#dialog-panel .dialog-calendar{
+	display:none;
+}
+
+#dialog-panel .dialog-calendar > div{
+	z-index:2001;
+}
+
+.dialog > div{
+	z-index:2001;
+	display:inline-block;
+	top: 200px !important;
+	background-color: #fff;
+
+	-webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+	box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+#dialog-shadow{
+	height:800px;
+	width:900px;
+	display:none;
+	position:absolute;
+	z-index: 2000;
+}
+.room{
+	margin-bottom: 20px;
+}
+#calendar{
+  width: 900px;
+  margin: 0 auto;
+}

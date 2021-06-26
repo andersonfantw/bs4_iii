@@ -1,0 +1,162 @@
+#convert
+{
+	width:925px;
+	min-width:820px;
+	min-height:700px;
+	height:80%;
+	margin:-50px 0 0 -50px;
+	padding:50px;
+	background:#fff;
+	border-radius:10px;
+	display:none;
+	position: absolute;
+	z-index: 2000;
+}
+}
+#convert.show
+{
+	display:block !important;
+}
+
+#convert h3
+{
+	line-height:20px;
+}
+
+#convert .format-icon
+{
+		width:106px;
+		height:121px;
+		margin:65px 20px 0 10px;
+		background-image:url(../images/pdf.png);
+		float:left;
+}
+
+#convert .notice
+{
+	position:absolute;
+	margin:0 80px 0 140px;
+	min-width:670px;
+	font-size:16px;
+	font-family: Microsoft JhengHei;
+	float:left;
+}
+
+#convert #dropbox
+{
+	border:dashed 5px #ddd;
+	border-radius:10px;
+	margin: 120px 10px 20px 10px;
+	height:420px;
+	min-width:600px;
+	min-height:400px;
+	background-image:url(../images/convert_upload.png);
+	background-repeat:no-repeat;
+	background-position:50% 50%;
+	overflow: hidden;
+}
+
+#convert #dropbox.converting
+{
+	background-image:url(../images/convert_converting.gif);
+}
+
+#convert #dropbox.done
+{
+	background-image:url(../images/convert_done.gif);
+}
+#dropbox.done #upload{
+	display:none !important;
+}
+
+#convert #dropbox.done input[type=file]
+{
+	display: none;
+}
+#convert #dropbox input[type=file]
+{
+	filter:alpha(opacity=0);
+	opacity: 0;
+	font-size: 400px;
+	height: 380px;
+	width: 400p;
+}
+#convert #dropbox #upload{
+	display:block;
+}
+#dropbox.converting #upload{
+        display:block;
+}
+#dropbox.done #upload{
+        display:block;
+}
+
+
+.upload
+{
+	margin-top:320px;
+	margin-left:25px;
+	width:400px;
+	height:70px;
+}
+.item
+{
+	margin:5px auto 0 auto;
+	height: 40px;
+	width: 350px;
+}
+.filename
+{
+	float:left;
+	margin: 8px 0 0 10px;
+}
+.status
+{
+	float:left;
+	margin: 8px 0 0 20px;
+}
+.doc, .docx
+{
+	float:left;
+	background-image:url(../images/icons_s.png);
+	width:25px;
+	height:28px;
+	margin-top:-3px;
+}
+.ppt, pptx
+{
+	float:left;
+	background-image:url(../images/icons_s.png);
+	background-position:-25px 0;
+	width:25px;
+	height:28px;
+	margin-top:-3px;
+}
+.xls, xlsx
+{
+	float:left;
+	background-image:url(../images/icons_s.png);
+	background-position:-50px 0;
+	width:25px;
+	height:28px;
+	margin-top:-3px;
+}
+.pdf
+{
+	float:left;
+	background-image:url(../images/icons_s.png);
+	background-position:-75px 0;
+	width:25px;
+	height:28px;
+	margin-top:-3px;
+}
+.preview
+{
+	width:350px;
+	height:30px;
+}
+.ProgressContainer
+{
+	width:300px;
+	margin: 0 30px;
+}

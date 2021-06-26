@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<EBookRoot>
+  <!-- PageData Media Default Parameter -->
+  <MediaDataPageBlock PageNo="0">
+    <MediaData>
+      <MediaFileName></MediaFileName>
+      <MediaTimming></MediaTimming>
+      <MediaAreaFlag>True</MediaAreaFlag>
+      <MediaImagePath></MediaImagePath>
+      <MediaAreaXStr>0</MediaAreaXStr>
+      <MediaAreaYStr>0</MediaAreaYStr>
+      <MediaAreaXLen>0</MediaAreaXLen>
+      <MediaAreaYLen>0</MediaAreaYLen>
+      <MediaAreaMouseOutColor>0080FF</MediaAreaMouseOutColor>
+      <MediaAreaMouseOutTransparent>100</MediaAreaMouseOutTransparent>
+      <MediaAreaMouseOverColor>0080FF</MediaAreaMouseOverColor>
+      <MediaAreaMouseOverTransparent>246</MediaAreaMouseOverTransparent>
+      <MediaButtonAutoDelete>False</MediaButtonAutoDelete>
+      <MediaDispSkin>False</MediaDispSkin>
+      <MediaAreaMouseOutOutLineColor>FF8080</MediaAreaMouseOutOutLineColor>
+      <MediaAreaMouseOutOutLineWidth>0</MediaAreaMouseOutOutLineWidth>
+      <MediaAreaMouseOverOutLineColor>FF8080</MediaAreaMouseOverOutLineColor>
+      <MediaAreaMouseOverOutLineWidth>0</MediaAreaMouseOverOutLineWidth>
+    </MediaData>
+  </MediaDataPageBlock>
+</EBookRoot>

@@ -1,0 +1,25 @@
+#main-content .hastable thead td:nth-child(1)
+{
+	width:40px;
+}
+#main-content .hastable thead td:nth-child(3)
+{
+	width:135px;
+}
+
+#main-content .hastable tbody td:nth-child(1)
+{
+	text-align:center;
+}
+#main-content .hastable tbody td:nth-child(2)
+{
+	text-align:left;
+}
+#main-content .hastable tbody td:nth-child(3)
+{
+	text-align:center;
+}
+
+.hint{
+	margin-bottom: 15px;
+}

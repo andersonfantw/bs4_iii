@@ -1,0 +1,90 @@
+body
+{
+	background-color: #fff;
+	font-size:13px;
+}
+
+#content
+{
+	width:800px;
+	margin:10px auto;
+	background:#ecebd9;
+	border: solid 2px #aeac93;
+	display:block;
+}
+#content h1
+{
+	text-align:center;
+}
+#content span
+{
+	width:390px;
+	display: block;
+	float: left;
+	background: #aeac93;
+	color: #fff;
+	height:20px;
+	font-size:14px;
+	padding:5px;
+}
+#content > table
+{
+	width:800px;
+}
+#content > table td
+{
+	height:35px;
+}
+#content > table > thead > tr:nth-child(1) > th
+{
+	height: 24px;
+	font-size: 14px;
+}
+#content > table > thead > tr:nth-child(2)
+{
+	background: #aeac93;
+	color: #fff;
+	font-size: 14px;
+	height: 20px;
+	font-weight: normal;
+}
+#content > table > thead th:nth-child(2)
+{
+	width:150px;
+}
+#content > table > thead th:nth-child(3)
+{
+        width:100px;
+}
+#content > table > thead th:nth-child(4)
+{
+        width:100px;
+}
+#content > table > thead th:nth-child(5)
+{
+        width:100px;
+}
+
+#content > table > tbody td
+{
+	text-align:center;
+	border-bottom: solid 1px #aeac93;
+}
+#content > table > tbody td.date
+{
+	background: #fff;
+}
+#content > table > tbody td.points
+{
+        background: #fff;
+}
+#content > table > tbody td.avg
+{
+        background: #fff;
+}
+#content > table > tfoot td
+{
+        text-align:center;
+	color: #fff;
+	background: #936e5b;
+}

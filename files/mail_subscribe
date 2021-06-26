@@ -1,0 +1,17 @@
+<html>
+<head></head>
+<body>
+<div id="body" style="margin:0 auto;width:814px;height:448px;background:url(http://ebook.lnet.tw/images/mail/trial_letter.png);padding:160px 80px 160px 130px;font-size:1.2em;line-height:2em;">
+	<div id="app" style="float:right;margin-right:40px;">
+		<a class="ios" style="margin-left:10px;display:inline-block;width:130px;height:40px;background:url(http://ebook.lnet.tw/images/appstore.png);	"></a>
+		<a class="android" style="margin-left:10px;display:inline-block;width:130px;height:40px;background:url(http://ebook.lnet.tw/images/googleplay.png);"></a>
+	</div>
+	<div id="title" style="margin-top:30px;">親愛的學員您好</div>
+	<div id="subject">您要體驗的課程：@COURSENAME@</div>
+	<div id="code" style="font-size:2em;line-height:1.2em;text-align:center;border-bottom:solid 3px #333;margin:30px 100px;">@CODE@</div>
+	<div id="content">
+		按一下<a href="http://ebook.lnet.tw/regist/step1/">這裡</a>，開始註冊帳號。或是在APP中的[註冊]，輸入啟用碼，開始體驗課程。若您曾經註冊過，請您登入後再輸入序號，課程會自動加入到您的帳號中。
+	</div>
+</div>
+</body>
+</html>

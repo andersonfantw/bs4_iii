@@ -1,0 +1,41 @@
+.tag{
+	min-width: 200px;
+	height: 50px;
+	float:left;
+	display:table;
+}
+.tag > p{
+	font-size:20px;
+	font-weight:bold;
+	text-align:right;
+	margin:5px;
+	display:block;
+	float: left;
+	min-width:30px;
+}
+.tag > span{
+	display:block;
+	text-align:center;
+	line-height: 1.7em;
+	word-break: break-all;
+	width: 66%;
+	margin: 0 auto;
+}
+.container{
+	display: table;
+	float:left;
+	width: calc(100% - 200px);
+}
+.container > div{
+	display:flex;
+	border-bottom: solid 1px  #fff;
+	border-left: solid 1px #fff;
+}
+.last{
+	display:block;
+}
+.last > div{
+	float:left;
+	width: 200px !important;
+	display: block;
+}

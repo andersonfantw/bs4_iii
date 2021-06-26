@@ -1,0 +1,28 @@
+.dialog-panel{
+	height: 0;
+}
+.dialog > div{
+	z-index:2001;
+	display:inline-block;
+	top: 200px !important;
+	background-color: #fff;
+
+	-webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+	box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+.shadow{
+	height:800px;
+	width:900px;
+	display:none;
+	position:absolute;
+	z-index: 2000;
+	background-color: rgba(255, 255, 255, 0.6);
+}
+.room{
+	margin-bottom: 20px;
+}
+.calendar{
+	width: 900px;
+	margin: 0 auto;
+}

@@ -1,0 +1,77 @@
+#vcube{
+	position: absolute;
+	background-color: #fff;
+	width: 1024px;
+	height: 218px;
+	display:none;
+}
+
+#vcube > .blackboard{
+	position: absolute;
+	padding: 0 100px;
+	width:700px;
+	height:214px;
+	display:table;
+	background-color:white;
+	background-image:url(../images/blackboard.png);
+	background-repeat: no-repeat;
+	margin:4px 69px;
+
+	text-align: center;
+	font-size: 0.5em;
+	line-height: 2;
+	color: #fff;
+	font-family: Lucida Handwriting, 標楷體;
+	cursor: pointer;
+}
+
+#vcube > .blackboard > .classroom{
+	right: 40px;
+	margin: 135px 0 0 0;
+	position: absolute;
+}
+#vcube > .blackboard > .classroom > a{
+	vertical-align: top;
+	margin-right: 10px;
+	width: 49px;
+	height: 42px;
+	background-image: url(../images/brain.png);
+	display: inline-block;
+}
+#vcube > .blackboard > .class_info{
+	font-size: 0.8em;
+	position: absolute;
+	margin-top: 10px;
+	right: 40px;
+}
+#vcube > .blackboard > .class_info > a{
+	display: table-row;
+	text-align: right;
+	line-height: 1.3em;
+}
+
+#vcube > .blackboard > .msg{
+	height: 100%;
+	vertical-align: middle;
+	display: table-cell;
+	text-align: left;
+}
+#vcube > .blackboard > .msg > a {
+	height: 90px;
+	display: block;
+}
+
+#vcube a{
+	background-image: url(../images/blackboard-font-bg.png);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+#vcube > .teacher{
+	position: absolute;
+	margin-top: 18px;
+	width:316px;
+	height:200px;
+	display:block;
+	background-image:url(../images/teacher.png);
+}

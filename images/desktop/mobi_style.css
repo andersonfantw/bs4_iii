@@ -1,0 +1,45 @@
+.mobile_portrait{
+	width:774px !important;
+	border: none !important;
+	box-shadow: none !important;
+	overflow: hidden;
+}
+.mobile_landscape{
+	width:1024px;
+	border: none !important;
+}
+.mobile_portrait #dialogue_bg{
+	width:774px !important;
+}
+.mobile_landscape #dialogue_bg{
+	width:1024px;
+}
+
+.mobile_portrait #content-left {
+	width: 265px;
+	float: left;
+	margin-top: 0px;
+	padding-top: 40px;
+	background-color: #fff2e1;
+	z-index: 4000;
+	height: 1070px;
+  left: -279px;
+  position: absolute;
+  font-size: 1.5em;
+
+	-moz-text-shadow: -3px -1px 2px #000;	/*此寫法無效*/
+	-khtml-text-shadow: -3px -1px 2px #000;	 /*此寫法無效*/
+	-webkit-text-shadow: -3px -1px 2px #000;  /*此寫法無效*/
+	-moz-box-shadow: -3px -1px 2px #000;	/*firfox*/
+	-khtml-box-shadow: -3px -1px 2px #000;	/*chrome及Safari*/
+	-webkit-box-shadow: -3px -1px 2px #000;  /*chrome及Safari*/
+	box-shadow: 5px 0px 30px #666;			/*chrome及firfox及opera*/
+}
+
+.mobile_portrait #content-left #menu{
+	margin-top:12px;
+}
+
+.mobile_portrait #bookshelf .search,.mobile_landscape #bookshelf .search{
+	display:none !important;
+}

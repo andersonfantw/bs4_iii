@@ -1,0 +1,34 @@
+#body{
+	height:800px;
+}
+
+#container{
+	text-align:center;
+	margin: 0 auto;
+	padding-top: 100px;
+	float:none !important;
+	width:1024px !important;
+
+	background:url(../images/bg.jpg);
+	width:1024px;
+	height:753px;
+}
+
+#msg{
+	width:700px;
+	font-size: 20px;
+	line-height: 36px;
+	text-align:center;
+	margin: 20px auto;
+	background-color:#fff;
+	padding:50px;
+}
+
+#info{
+}
+
+#body > #container input{
+	display: block;
+  padding: 20px;
+  margin: 20px auto;
+}

@@ -1,0 +1,250 @@
+@charset 'utf-8';
+
+/**
+ * 
+ * jQuery Digitalmax LiveBook css
+ * Version 1.2.4
+ * @requires jquery.dmx.livebook.js v1.2.4 or later
+ * 
+ * Copyright (c) 2014 - 2015 Digitalmax Co.,Ltd.
+ */
+
+/*#paper_outer {
+	z-index: 1;
+}*/
+#zoom_outer {
+	z-index: 3;
+	overflow: hidden;
+}
+#paper_frame {
+    border: 1px solid #FFF;
+}
+#printarea {
+	display: none;
+}
+#leftmenubar {
+    position: absolute;
+    width: 30px;
+    top: 10px;
+    left: 10px;
+    z-index: 0;
+}
+#leftmenubar .share-button {
+    cursor: pointer;
+    background-repeat: no-repeat;
+    margin-bottom: 5px;
+    display: block;
+    text-indent: -9999px;
+}
+#leftmenubar .share-button:last-child {
+    margin-bottom: 0;
+}
+#leftmenubar #left_menu_wrapper {
+    position: absolute;
+    width: 30px;
+    top: 0px;
+    left: 0px;
+}
+#leftmenubar .fb-share-button,
+#leftmenubar .twitter-share-button {
+    width: 30px;
+    height: 30px;
+    background-image: url(../images/sns_icon.png);
+}
+#leftmenubar .fb-share-button {
+    background-position: 0 0;
+}
+#leftmenubar .twitter-share-button {
+    background-position: -30px 0;
+}
+
+#controllbar {
+	position: absolute;
+	height: 35px;
+	bottom: 13px;
+	left: 50%;
+	z-index: 0;
+}
+#controllbar .button {
+	cursor: pointer;
+	background-repeat: no-repeat;
+}
+#controllbar #menu_button_wrapper {
+	position: absolute;
+	height: 35px;
+	top: 0px;
+	right: 0px;
+}
+#controllbar #page_num {
+	position: absolute;
+	top: 2px;
+	width: 52px;
+	height: 30px;
+	line-height: 30px;
+	color: #666;
+    font-size: 12px;
+    text-align: center;
+    font-family: Verdana, Roboto, "Droid Sans", "游ゴシック", YuGothic, "メイリオ", Meiryo, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "ＭＳ Ｐゴシック", sans-serif;
+    font-weight: bold;
+}
+#controllbar #t_index {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+}
+#controllbar #t_index {
+    background-position: -70px -12px;
+}
+#controllbar #v_index {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+}
+#controllbar #v_index {
+    background-position: 0 -82px;
+}
+#controllbar #zoom_in, #controllbar #zoom_out {
+	position: absolute;
+	width: 35px;
+	height: 35px;
+}
+#controllbar #zoom_in {
+	background-position: 0 -47px;
+}
+#controllbar #zoom_out {
+	background-position: -35px -47px;
+}
+#controllbar #search_all {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    background-position: -35px -82px;
+}
+#controllbar #print_btn {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+}
+#controllbar #print_btn {
+    background-position: -70px -47px;
+}
+#controllbar #bookmarktag_btn {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+}
+#controllbar #bookmarktag_btn {
+    background-position: -105px -12px;
+}
+#controllbar #memotool_btn {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+}
+#controllbar #memotool_btn {
+    background-position: -105px -47px;
+}
+#controllbar #goto_text {
+    position: absolute;
+    background-color:transparent;
+    font-size: 14px;
+    letter-spacing: -1px;
+    line-height: 14px;
+    color: #666;
+    font-family: Verdana, Roboto, "Droid Sans", "游ゴシック", YuGothic, "メイリオ", Meiryo, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "ＭＳ Ｐゴシック", sans-serif;
+    font-weight: bold;
+    top: 0px;
+    width: 66px;
+    height: 25px;
+    padding: 4px;
+    text-align: center;
+    border: 1px solid #1D2088;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+}
+#controllbar #goto_submit {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+}
+#controllbar #goto_submit {
+    background-position: -70px -82px;
+}
+
+.pageflipbutton.left,
+.pageflipbutton.right {
+	width: 25px;
+	height: 47px;
+	opacity: 1.0;
+	cursor: pointer;
+}
+.pageflipbutton.left {
+	background-position: 0 0;
+}
+.pageflipbutton.left.disabled {
+	cursor: default;
+}
+.pageflipbutton.right {
+	background-position: -35px 0;
+}
+.pageflipbutton.right.disabled {
+	cursor: default;
+}
+
+.pagenombre {
+    position: absolute;
+    display: inline-block;
+    z-index: 100001;
+    text-shadow: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    cursor: default;
+    /*visibility: hidden;*/
+}
+
+.tag_area {
+    z-index: 100002;
+}
+
+/* jQuery Mobile */
+#dmxlivebook.ui-page-theme-a {
+    background-color: #FFF;
+}
+
+.dialog_wrapper {
+    position: absolute;
+    z-index: 3;
+    display: none;
+}
+
+.dialog {
+    position: absolute;
+    border: 1px solid #666;
+    background-color: #FFF;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-box-shadow: 1px 1px 4px #ccc;
+    -moz-box-shadow: 1px 1px 4px #ccc;
+}
+    .dialog .close {
+        position: absolute;
+        width: 17px;
+        height: 17px;
+        top: 7px;
+        right: 12px;
+    }
+        .dialog .close a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+        
+    .dialog_content {
+        position: absolute;
+        overflow-y: auto;
+        border: 1px solid #999;
+        padding: 10px 0 0 5px;
+        -webkit-box-shadow: 1px 1px 4px #ccc inset;
+        -moz-box-shadow: 1px 1px 4px #ccc inset;
+    }

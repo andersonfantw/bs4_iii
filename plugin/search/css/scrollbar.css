@@ -1,0 +1,27 @@
+td.details::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+td.details::-webkit-scrollbar-button {
+  width: 8px;
+  height: 5px;
+}
+
+td.details::-webkit-scrollbar-track {
+  background: #eee;
+  border: 2px solid lightgray;
+  box-shadow: 0px 2px 3px #dfdfdf inset;
+  border-radius: 10px;
+}
+
+td.details::-webkit-scrollbar-thumb {
+  background: #999;
+  border: 4px solid gray;
+  border-radius: 10px;
+}
+
+td.details::-webkit-scrollbar-thumb:hover {
+  background: #7d7d7d;
+}
+

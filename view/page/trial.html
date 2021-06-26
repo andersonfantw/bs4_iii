@@ -1,0 +1,53 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="zh-Hant-TW">
+<head>
+<title><{$smarty.const.TITLE}></title>
+<meta name="viewport" content="width=device-width" />
+<script src="<{$smarty.const.WEB_URL}>/scripts/jquery-1.11.2.min.js" type="text/javascript"></script>
+<script src="<{$smarty.const.WEB_URL}>/scripts/loader.class.js" type="text/javascript"></script>
+<script src="<{$smarty.const.WEB_URL}>/scripts/loader_trial.js" type="text/javascript"></script>
+
+<link type="text/css" href="<{$smarty.const.WEB_URL}>/images/desktop/style.css" rel="stylesheet" />
+<link type="text/css" href="<{$smarty.const.WEB_URL}>/hosts/config.css" rel="stylesheet" />
+<script type="text/javascript">
+var uid=0;
+var bs_id=0;
+var web_url = '<{$smarty.const.WEB_URL}>';
+</script>
+</head>
+<body>
+	<{$header_html}>
+
+  <div id="body" class="mode_bookshelf">
+      <div id="header"></div>
+      <div id="bookshelf">
+				<div class="content">
+	  			<form method="post" action="">
+	  				<div id="caption"><{$smarty.const.LANG_TRIAL_CAPTION}></div>
+	  				<div id="title"><{$smarty.const.LANG_TRIAL_TITLE}></div>
+	  				<div id="subject"><{$smarty.const.LANG_TRIAL_SUBJECT}> <{$data.g_name}></div>
+						<div id="content">
+						<{$smarty.const.LANG_TRIAL_APP}><a class="ios" target="appdownload" href="https://itunes.apple.com/tw/app/l-net-xue-yuan/id1110621293?l=zh&mt=8"></a> <a class="android" target="appdownload" href="https://play.google.com/store/apps/details?id=com.ttii.lnet" target="android"></a>，<{$smarty.const.LANG_TRIAL_BROWSER}><span class="chrome"></span><br />
+						<{$smarty.const.LANG_TRIAL_CONTENT}>
+						</div>
+						<{if $errmsg}>
+							<div id="msg">
+								<{$errmsg}>
+							</div>
+						<{else}>
+							<div id="inputs">
+							<span><{$smarty.const.LANG_TRIAL_NAME}> : </span><input type="text" name="name" id="name" /><br />
+							<span><{$smarty.const.LANG_TRIAL_EMAIL}> : </span><input type="text" name="email" id="email" />
+							</div>
+	
+							<div id="submit"><input type="submit" value="" /></div>
+						<{/if}>
+	  			</form>
+				</div>
+      </div>
+      <div id="footer">
+      	<{$smarty.const.FOOTER_TEXT}>
+      </div>
+  </div>
+</body>
+</html>

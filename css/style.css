@@ -1,0 +1,356 @@
+body
+{
+	background-color:#f4f4ea;
+}
+table, tr, td{
+	border: 0;
+	padding: 0;
+	margin: 0;
+}
+a
+{
+	text-decoration: none;
+}
+#main-content
+{
+	width: 776px;
+	margin:0 auto;
+}
+#header.list
+{
+	width: 776px;
+	height: 180px;
+	right: 0;
+	text-align: right;
+}
+
+#header.list .left .logout,
+#header.list .left .btnlogin{
+	margin-left:5px;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.frame .top{
+	width: 776px;
+	height: 86px;
+	background-image:url(../images/combine.png);
+	background-position: 0 -100px;
+	text-align: center;
+}
+.frame .top h2
+{
+	padding-top: 43px;
+	margin-bottom: 0px;
+	font-size:24px;
+	color: #ddd;
+	text-shadow: 1px 1px white, -1px -1px #444;
+	font-family: .....;
+	font-weight:normal;
+}
+.frame .mid .borderleft{
+	width: 21px;
+	background-image:url(../images/bookshelf_left.png);
+}
+.frame .mid .borderright{
+	width: 21px;
+	height: 100%;
+	background-image:url(../images/bookshelf_right.png);
+}
+.frame .mid img{
+	width: 736px;
+}
+.frame .bottom{
+	width: 776px;
+	height: 23px;
+	background-image:url(../images/combine.png);
+	background-position: 0 -188px;
+}
+.frame .info{
+	margin-bottom: 30px;
+	font-size: 1.5em;
+}
+.nopic .top{
+	width: 776px;
+	height: 98px;
+	background-position: 0 0 !important;
+}
+.nopic .top h2
+{
+	padding-top: 50px;
+}
+.nopic .mid{
+	display: none;
+}
+.nopic .bottom{
+	display: none;
+}
+#header .right{
+	float:right;
+	margin-top: -50px;
+}
+#header .left{
+	float:left;
+	margin-top: -50px;
+}
+
+
+.mode_bookshelf .info, .mode_bookshelf #bookshelf,.mode_bookshelf .lang
+{
+	display:block !important;
+}
+.mode_bookshelf .search,.mode_bookshelf .result_info,.mode_bookshelf #searchbook
+{
+	display:none;
+}
+
+.mode_search .info,.mode_search #buttonlogin,.mode_search #bookshelf,.mode_search .lang,.mode_search #buttonlogin
+{
+	display:none !important;
+}
+.mode_search .search,.mode_search .result_info,.mode_search #searchbook
+{
+	display:block;
+}
+
+#header.list #button{
+	float:left;
+}
+#header.list #button{
+	margin-top: 150px;
+}
+#header.list #button > div{
+	float:left;
+}
+.wonderboxid{
+	margin: 3px 10px;
+}
+
+#buttonlogin
+{
+	display:none;
+}
+#buttonlogin.login > .btnlogin
+{
+	display:block;
+}
+#buttonlogin.login > .btnlogout
+{
+	display:none;
+}
+#buttonlogin.logout > .btnlogin
+{
+	display:none;
+}
+#buttonlogin.logout > .btnlogout
+{
+	display:block;
+}
+
+#header.list #buttonlogin > div{
+	float: left;
+}
+
+#buttonlogin > div{
+	float: right;
+}
+
+.btnlogin
+{
+	padding-left:10px;
+	margin-right:5px;
+	cursor:pointer;
+	font-size: 14px;
+	font-weight:bolder;
+	line-height:22px;
+}
+.btnlogin *{
+	font-family: 微軟正黑體;
+	margin-right:5px;
+	float: left;
+}
+.btnlogin > div
+{
+	width: 21px;
+	height: 21px;
+	background-image:url(../images/small_icons.png);
+	background-position: 0px -21px;
+	background-repeat:no-repeat;
+}
+.btnlogin > div:first-child:hover
+{
+	background-image:url(../images/small_icons.png);
+	background-position: -21px -21px;
+}
+.btnlogout *{
+	font-family: 微軟正黑體;
+	float: left;
+}
+.btnlogout > div.logout,
+.btnlogout > div.listlogout
+{
+	width:65px;
+	padding-left:10px;
+	float:right;
+	cursor:pointer;
+	font-size: 14px;
+	font-weight:bolder;
+	line-height:22px;
+}
+.btnlogout > div.logout > div,
+.btnlogout > div.listlogout > div
+{
+	width: 21px;
+	height: 21px;
+	background-image:url(../images/small_icons.png);
+	background-position: 0px -21px;
+	background-repeat:no-repeat;
+	margin-right:5px;
+}
+.btnlogout > div.logout:hover > div,
+.btnlogout > div.listlogout:hover > div
+{
+	background-image:url(../images/small_icons.png);
+	background-position: -21px -21px;
+}
+
+.btnlogout > div.curriculum
+{
+	/*width:85px;*/
+	padding-left:10px;
+	float:right;
+	cursor:pointer;
+	font-size: 14px;
+	font-weight:bolder;
+	line-height:22px;
+}
+.btnlogout > div.curriculum > div
+{
+	width: 21px;
+	height: 21px;
+	background-image:url(../images/small_icons.png);
+	background-position: 0px -147px;
+	background-repeat:no-repeat;
+	margin-right:5px;
+}
+.btnlogout > div.curriculum:hover > div
+{
+	background-image:url(../images/small_icons.png);
+	background-position: -21px -147px;
+}
+.btnlogout > div.transcript
+{
+	/*width:75px;*/
+	padding-left:10px;
+	float:right;
+	cursor:pointer;
+	font-size: 14px;
+	font-weight:bolder;
+	line-height:22px;
+}
+.btnlogout > div.transcript > div
+{
+	width: 21px;
+	height: 21px;
+	background-image:url(../images/small_icons.png);
+	background-position: 0px -63px;
+	background-repeat:no-repeat;
+	margin-right:5px;
+}
+.btnlogout > div.transcript:hover > div
+{
+	background-image:url(../images/small_icons.png);
+	background-position: -21px -63px;
+}
+
+.btnlogout > div.webcam
+{
+	/*width:85px;*/
+	padding-left:10px;
+	float:right;
+	cursor:pointer;
+	font-size: 14px;
+	font-weight:bolder;
+	line-height:22px;
+}
+.btnlogout > div.webcam > div
+{
+	width: 21px;
+	height: 21px;
+	background-image:url(../images/small_icons.png);
+	background-position: 0px -84px;
+	background-repeat:no-repeat;
+	margin-right:5px;
+}
+.btnlogout > div.webcam:hover > div
+{
+	background-image:url(../images/small_icons.png);
+	background-position: -21px -84px;
+}
+
+#buttonbs{
+	margin-right:5px;
+	float:right;
+}
+#buttonbs.open .btnopenbs{
+	display:none;
+}
+#buttonbs.open .btnmybs{
+	display:block;
+	padding-left:10px;
+	/*width: 90px;*/
+	background-image: none;
+}
+#buttonbs.my .btnopenbs{
+	display:block;
+	padding-left:10px;
+	/*width: 110px;*/
+	background-image: none;
+}
+#buttonbs.my .btnmybs{
+	display:none;
+}
+
+.btnopenbs{
+	font-size: 14px;
+	font-weight:bolder;
+	line-height:22px;
+	cursor:pointer;
+}
+.btnopenbs *{
+	font-family: 微軟正黑體;
+	margin-right:5px;
+	float:left;
+}
+
+.btnopenbs div{
+	width: 21px;
+	height: 21px;
+	background-image:url(../images/small_icons.png);
+	background-position: 0px -42px;
+	background-repeat:no-repeat;
+}
+.btnopenbs:hover > div:first-child{
+	background-position: -21px -42px;
+}
+.btnmybs{
+	font-size: 14px;
+	font-weight:bolder;
+	line-height:22px;
+	cursor:pointer;
+}
+.btnmybs *{
+	font-family: 微軟正黑體;
+	margin-right:5px;
+	float:left;
+}
+.btnmybs div{
+	width: 21px;
+	height: 21px;
+	background-image:url(../images/small_icons.png);
+	background-position: 0px -42px;
+	background-repeat:no-repeat;
+}
+.btnmybs:hover > div:first-child{
+	background-position: -21px -42px;
+}

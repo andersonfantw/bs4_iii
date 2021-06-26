@@ -1,0 +1,44 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="zh-Hant-TW">
+<head>
+<title><{$smarty.const.TITLE}></title>
+<meta name="viewport" content="width=device-width" />
+<script src="<{$smarty.const.WEB_URL}>/scripts/jquery-1.11.2.min.js" type="text/javascript"></script>
+<script src="<{$smarty.const.WEB_URL}>/scripts/loader.class.js" type="text/javascript"></script>
+<script src="<{$smarty.const.WEB_URL}>/scripts/regist_loader.js" type="text/javascript"></script>
+
+<link type="text/css" href="<{$smarty.const.WEB_URL}>/images/desktop/style.css" rel="stylesheet" />
+<link type="text/css" href="<{$smarty.const.WEB_URL}>/hosts/config.css" rel="stylesheet" />
+<script type="text/javascript">
+var web_url = '<{$smarty.const.WEB_URL}>';
+</script>
+</head>
+<body>
+<{if $smarty.session.adminid}>
+<div id="topMenu">
+	<a class="MenuItem" href="<{$smarty.const.WEB_URL}>/promote/" target="_blank"><{$smarty.const.LANG_TOPMENU_GUIDE}></a>
+	<a class="MenuItem" href="<{$smarty.const.WEB_URL}>/dahhsin/100/" target="_blank"><{$smarty.const.LANG_TOPMENU_BOOKSHELF}></a>
+</div>
+<{else}>
+<div id="topMenu">
+	<a class="MenuItem">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+	<a class="MenuItem" href="" target="_blank"><{$smarty.const.LANG_TOPMENU_BACKEND}></a>
+</div>
+<{/if}>
+    <div id="body" class="mode_bookshelf">
+        <div id="header"></div>
+
+        <div id="bookshelf">
+		<br /><br /><br /><br /><br /><br /><br />
+        	<div class="window">
+        		<div class="head forget"></div>
+        		<div class="content"></div>
+        	</div>
+        </div>
+
+        <div id="footer">
+        	<{$smarty.const.FOOTER_TEXT}>
+        </div>
+    </div>
+</body>
+</html>

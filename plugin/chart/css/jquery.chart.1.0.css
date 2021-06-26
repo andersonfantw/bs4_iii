@@ -1,0 +1,99 @@
+#chart-panel{
+	margin-top:40px;
+	width:1024px;
+	height:674px;
+}
+
+#chart-panel > div{
+	width:900px;
+	height:120px;
+	background-color:#fff;
+	margin:20px auto;
+	border-radius:5px;
+	background-repeat:no-repeat;
+	background-position: center center;
+
+	filter:alpha(opacity=80);
+	-moz-opacity:0.8;
+	opacity:0.8;
+	-khtml-opacity: 0.8;
+}
+
+#chart-panel > div > div{
+	height:120px;
+	display:block;
+	float:left;
+	text-align: center;
+	font-size: 16px;
+}
+
+#chart-panel > .bs-panel{
+	border:solid 1px #000;
+}
+
+#chart-panel > .bs-panel > div{
+	width:225px;
+}
+
+#chart-panel > .book-panel{
+	border:solid 1px #000;
+}
+#chart-panel > .book-panel > div{
+	width:160px;
+}
+#chart-panel > .book-panel > .total{
+	width:220px;
+}
+
+#chart-panel > .user-panel{
+	height:160px;
+	border:solid 1px #000;
+}
+#chart-panel > .user-panel > div{
+  height:160px;
+  width:225px;
+}
+#chart-panel > .user-panel > .total{
+  height:120px;
+  margin-top:20px;
+}
+
+#chart-panel > .tag-panel{
+	border:solid 1px #000;
+}
+#chart-panel > .tag-panel > div{
+	height:160px;
+	width:225px;
+}
+
+#chart-panel > div > div > h4{
+	margin-top: 15px;
+	height:30px;
+	font-weight:bold;
+}
+
+#chart-panel > div > div > span{
+  margin: 5px 0;
+  display: block;
+	background-color: #fff;
+}
+
+#chart-panel > div > div > p{
+	position: absolute;
+  margin: -15px 140px;
+}
+
+#chart-panel > div > div > a{
+	font-size: 36px;
+	line-height:40px;
+	padding: 0;
+}
+
+#chart-panel .bs-panel{
+}
+#chart-panel .book-panel{
+}
+#chart-panel .user-panel{
+}
+#chart-panel .tag-panel{
+}

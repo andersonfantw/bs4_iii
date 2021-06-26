@@ -1,0 +1,18 @@
+$(document).ready(function(){
+	$('input[name=membersystem][value=4]').click(function(){
+		$('#NAS').show();
+	});
+	$('input[name=membersystem][value=1]').click(function(){
+		$('#NAS').hide();
+	});
+	$('input[name=membersystem][value=16]').click(function(){
+		$('#NAS').hide();
+	});
+	$('input[name=UploadQueueSetCID][value=1]').click(function(){
+		if($('input[name=UploadQueueSetCID]:check').length){
+			$('#UploadQueueCate').hide();
+		}else{
+			$('#UploadQueueCate').show();
+		}
+	});
+});

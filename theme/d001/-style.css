@@ -1,0 +1,111 @@
+#header
+{
+	width:1024px;
+	height:214px;
+	background-image:url(header.png);
+	background-repeat:no-repeat;
+}
+
+.btnlogin
+{
+	width: 65px;
+	height: 24px;
+	padding-right:5px;
+	background-image:url(login_word.png);
+	background-repeat:no-repeat;
+}
+.btnlogin:hover
+{
+	background-image:url(login_word_hover.png);
+}
+.btnlogout
+{
+	width: 65px;
+	height: 24px;
+	padding-right:5px;
+	background-image:url(logout_word.png);
+	background-repeat:no-repeat;
+}
+.btnlogout:hover
+{
+	background-image:url(logout_word_hover.png);
+}
+
+#button .info
+{
+	width: 132px;
+	height: 24px;
+	background-image:url(bookshlef_help.png);
+}
+#button .info:hover
+{
+	background-image:url(bookshlef_help_hover.png);
+}
+#button .search
+{	
+	width:494px;
+	height:16px;
+	background-image:url(icon_search.png);
+	background-repeat:no-repeat;
+	background-position:4px 4px;
+}
+
+#menu ul li.selected a.selected
+{
+	background-image:url(icon_item_selected.png);
+	background-repeat:no-repeat;
+	background-position:right center;
+	width: 9px;
+	height: 9px;
+}
+
+#bookshelf .top{
+	width: 704px;
+	height: 220px;
+	background-image:url(bookshlef_top.png);
+}
+#bookshelf .mid{
+	width: 704px;
+	height: 231px;
+	background-image:url(bookshlef_middle.png);
+}
+
+#bookshelf .search
+{
+	background-image:url(bookshlef_search.png);
+	width: 212px;
+	height: 31px;
+}
+
+#bookshelf > ul > li > ul.cover > li > div > div{
+	height:120px;
+	width:90px;
+	background-image:url(bookshlef_book_coverS.png);
+	background-repeat:repeat-y;
+	background-position:2px 0;
+}
+
+#login h1
+{
+	padding-left:25px;
+	background-image:url(icon_user.png);
+	background-repeat:no-repeat;
+}
+
+#forget h1
+{
+	padding-left:25px;
+	background-image:url(icon_user.png);
+	background-repeat:no-repeat;
+}
+
+#book_content .close
+{
+	width:15px;
+	height:15px;
+	background-image:url(icon_close.png);
+}
+#book_content .close:hover
+{
+	background-image:url(icon_close_hover.png);
+}

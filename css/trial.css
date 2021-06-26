@@ -1,0 +1,122 @@
+/* function page style */
+#body{
+	width:776px !important;
+}
+
+#header{
+	width:776px !important;
+}
+
+#bookshelf{
+	width:776px !important;
+	margin: 0;
+
+	background:url(../images/trial_bg1.png);
+	height:650px;
+}
+
+.ios{
+	display: inline-block;
+	background:url(../images/appstore.png);
+	height:40px;
+	width:130px;
+	vertical-align: bottom;
+	margin:0 10px;
+
+}
+.android{
+	display: inline-block;
+	background:url(../images/googleplay.png);
+	height:40px;
+	width:130px;
+	vertical-align: bottom;
+	margin:0 10px;
+}
+.chrome{
+	display: inline-block;
+	background:url(../images/chrome.png);
+	width:28px;
+	height:27px;
+	vertical-align: middle;
+	margin:0 10px;
+}
+
+#bookshelf .content{
+	width: 600px;
+	height: 450px;
+	margin: 40px;
+	font-family: Microsoft JhengHei;
+	background: rgba(255,255,255,0.3);
+	border-radius: 20px;
+	padding: 50px;
+	line-height:2em;
+}
+
+#bookshelf .content form{
+	background: url(../images/trial_bg2.png);
+	background-repeat: no-repeat;
+	background-position: 150px 150px;
+}
+
+#bookshelf .content .forms{
+	width:400px;
+	margin:0 auto;
+}
+
+#bookshelf .content #caption{
+	border-bottom: solid 3px #F8A543;
+	text-align: right;
+	width: 580px;
+	margin: 0px auto;
+	font-size: 1.5em;
+	font-family: Microsoft JhengHei;
+	font-weight: bold;
+	color: #F8A543;
+}
+#bookshelf .content #title{
+	margin: 10px 0 0 10px;
+}
+#bookshelf .content #subject{
+	line-height: 3em;
+	margin: 0 auto;
+	display: table;
+	font-size: 1.5em;
+}
+#bookshelf .content #content{
+	margin-left: 10px;
+	width: 580px;
+	display: block;
+	line-height: 2.5em;
+}
+#bookshelf .content #msg{
+	margin: 50px 100px;
+	width: 400px;
+	text-align: center;
+}
+#bookshelf .content #inputs{
+	margin: 50px 100px;
+	width: 400px;
+}
+#bookshelf .content #inputs span{
+	width: 70px;
+	display: inline-block;
+}
+#bookshelf .content #inputs input{
+	width:300px
+}
+#bookshelf .content #submit input{
+	background-image: url(../images/btn_activecode.png);
+  width: 103px;
+  height: 27px;
+  border: 0;
+  margin: 0 auto;
+  display: block;
+}
+#footer{
+	width: 776px !important;
+}
+
+.error {
+	color: red;
+	font-size: 12px;
+}

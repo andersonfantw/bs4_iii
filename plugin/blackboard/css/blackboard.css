@@ -1,0 +1,77 @@
+﻿#header.autoHeight{
+	height: 214px !important;
+}
+
+#blackboard{
+	position: absolute;
+	background-color: #fff;
+	width: 1024px;
+	height: 218px;
+	display:none;
+}
+
+#blackboard > .blackboard{
+	position: absolute;
+	padding: 0 100px;
+	width:700px;
+	height:214px;
+	display:table;
+	background-color:white;
+	background-image:url(../images/blackboard.png);
+  background-repeat: no-repeat;
+	margin:4px 69px;
+
+	color: #aaa;
+	font-family: Lucida Handwriting, 標楷體;
+	cursor: pointer;
+}
+
+#blackboard > .blackboard > .classroom{
+  right: 40px;
+  margin: 135px 0 0 0;
+  position: absolute;
+}
+#blackboard > .blackboard > .classroom > a{
+	vertical-align: top;
+	margin-right: 10px;
+  text-align: right;
+  line-height: 3;
+  width: 64px;
+  height: 42px;
+  background-image: url(../images/brain.png);
+  background-repeat: no-repeat;
+  display: inline-block;
+  -webkit-text-fill-color: initial;
+  -webkit-background-clip: initial;
+}
+#blackboard > .blackboard > .class_info{
+  font-size: 0.8em;
+  position: absolute;
+  margin-top: 15px;
+  right: 40px;
+  text-align: right;
+  line-height: 1.3em;
+}
+
+#blackboard > .blackboard > #msg{
+	height: 100%;
+	vertical-align: middle;
+	display: table-cell;
+	text-align: left;
+	font-size: 1.5em;
+}
+
+#blackboard a{
+	background-image: url(../images/blackboard-font-bg.png);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#blackboard > .teacher{
+	position: absolute;
+	margin-top: 18px;
+	width:316px;
+	height:200px;
+	display:block;
+	background-image:url(../images/teacher.png);
+}

@@ -1,0 +1,294 @@
+@charset "Shift_JIS";
+
+/*-------------------------------------------------------------------
+	Version.					1.4.1.2;
+	Author.					Kenta Aga(admin)
+	Aptx.						4.8.6.9;
+
+	PROGRAM-ID.		"äÓñ{ìIÇ…ÇÕÇ±Ç±Ç…ëSïîÇ†ÇÈÇÊcss"
+-------------------------------------------------------------------*/
+
+/*************************************
+	DATA DIVISION.
+	WORKING-STRAGE SECTION.
+*************************************/
+
+html,body{
+	margin: 0;
+	width: 100%;
+	height: 100%;
+}
+
+body{
+	color: #fff;
+	font-size: 62.5%;
+	font-family: HiraKakuProN-W6,"ÇlÇr ÇoÉSÉVÉbÉN",Verdana, Arial, Helvetica, sans-serif;
+	text-align: center;
+	background: #666;
+	height:100%;
+	min-height:100%;
+	color:#fff;
+}
+
+html>/**/body{
+	font-size: 10px; /* Except IE */
+}
+
+/*	äÓñ{ÉJÉâÉÄ
+ÅPÅPÅPÅPÅPÅPÅPÅPÅPÅPÅPÅPÅPÅPÅPÅPÅPÅPÅPÅPÅPÅP*/
+.wrap{
+	position: relative;
+	margin: 0 auto;
+	width: 100%;
+	height:100%;
+	font-size: 110%;
+	overflow: auto;
+
+}
+
+.body{
+	color:#000;
+	background:#fff;
+}
+
+/*------------------------------------------------
+	GALLERY
+------------------------------------------------*/
+#gallery{
+	position: absolute;
+	top: 20px;
+	left: 0;
+	width: 100%;
+	/*background: #f00;*/
+	vertical-align: middle;
+	z-index: 1;
+}
+
+#imageArea{
+	overflow: auto;
+}
+
+
+.jCarousel li {
+/*background:#00f;*/
+	position:relative;
+	text-align: center;
+}
+
+#carousel .jCarouselNavi{
+	display:none;
+}
+
+.contents {
+	position: absolute;
+	top: 44px;
+	left: 0;
+	padding-top:13px;
+	color: #000;
+	width: 100%;
+}
+#infoBody p {
+	font-size: 16px;
+	padding-bottom: 10px;
+	line-height: 1.6em;
+	text-shadow: 0px -1px 1px #555;
+	color: #fff;
+}
+#infoBody p a {
+	color: #fff;
+	text-decoration: underline;
+}
+
+
+/*------------------------------------------------
+	List
+------------------------------------------------*/
+#list .icon-box{
+	margin-left: 4px;
+}
+#list .icon-box dl{
+	float: left;
+	display: inline;
+	margin: 4px;
+	margin-top: 0;
+	margin-bottom: 13px;
+	width: 68px;
+}
+
+#list .icon-box dl a{
+	display: block;
+	height: 59px;
+}
+
+
+/*------------------------------------------------
+	Text
+------------------------------------------------*/
+#text .icon-box{
+	margin: 0 13px;
+	margin-bottom: 12px;
+	color: #fff;
+	background: -webkit-gradient(linear,left top, left bottom,
+		from(#fefefe),
+		to(#c0c0c0));
+	border: 1px solid #bcbcbc;
+	border-radius: 8px;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	text-align: left;
+}
+
+#text .icon-box li{
+	padding: 6px 10px;
+	font-weight: bold;
+	border-bottom: 1px solid #bcbcbc;
+}
+#text .icon-box li:last-child,
+#text .icon-box li.lastChild{
+	border-bottom: 0;
+}
+
+#text .icon-box a{
+	display: block;
+	padding-right: 14px;
+	color: #000;
+	line-height: 2;
+	text-decoration: none;
+}
+
+
+/*------------------------------------------------
+	Thumb
+------------------------------------------------*/
+#thumb .icon-box{
+	margin-left: 8px;
+}
+#thumb .icon-box dl{
+	float: left;
+	display: inline;
+	margin: 9px;
+	margin-top: 0;
+	margin-bottom: 13px;
+}
+
+#thumb .icon-box dl dt{
+	border: 2px solid #f1f1f1;
+	box-shadow: 0 0 4px #999;
+	-moz-box-shadow: 0 0 4px #999;
+	-webkit-box-shadow: 0 0 4px #999;
+}
+
+/*------------------------------------------------
+	Result
+------------------------------------------------*/
+#result .contents{
+	background:#fff;
+}
+
+#result .icon-box{
+	margin: 0 13px;
+	margin-bottom: 12px;
+	background: -webkit-gradient(linear,left top, left bottom,
+		from(#fefefe),
+		to(#c0c0c0));
+	border: 1px solid #bcbcbc;
+	border-radius: 8px;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	text-align: left;
+}
+
+
+
+#result .icon-box li{
+	padding: 6px 10px;
+	color: #000000;
+	font-weight: bold;
+	border-bottom: 1px solid #bcbcbc;
+}
+#result .icon-box li:last-child,
+#result .icon-box li.lastChild{
+	border-bottom: 0;
+}
+
+#result .icon-box a{
+	display: block;
+	padding-right: 14px;
+	color: #000;
+	line-height: 2;
+	text-decoration: none;
+}
+
+#result .icon-box span{
+	display: block;
+	color: #F33;
+}
+
+/*------------------------------------------------
+	#link
+------------------------------------------------*/
+#link .contents{
+	background:#fff;
+}
+
+#link .icon-box{
+	margin: 0 13px;
+	margin-bottom: 12px;
+	background: -webkit-gradient(linear,left top, left bottom,
+		from(#fefefe),
+		to(#c0c0c0));
+	border: 1px solid #bcbcbc;
+	border-radius: 8px;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	text-align: left;
+}
+
+
+
+#link .icon-box li{
+	padding: 6px 10px;
+	color: #000000;
+	font-weight: bold;
+	border-bottom: 1px solid #bcbcbc;
+}
+#link .icon-box li:last-child,
+#link .icon-box li.lastChild{
+	border-bottom: 0;
+}
+#link .icon-box a{
+	display: block;
+	padding-right: 14px;
+	color: #000;
+	line-height: 2;
+	text-decoration: none;
+}
+
+
+
+
+/*------------------------------------------------
+	Search
+------------------------------------------------*/
+.search_result{
+	position: absolute;
+	border:1px solid red;
+	background: #ff0000;
+	filter: alpha(opacity=35);
+	opacity: 0.35;
+	-moz-opacity: 0.35;
+}
+
+
+/*------------------------------------------------
+	Link
+------------------------------------------------*/
+a.link_result{
+	display: block;
+	position: absolute;
+	border:1px solid blue;
+	background: #0000ff;
+	filter: alpha(opacity=35);
+	opacity: 0.35;
+	-moz-opacity: 0.35;
+}

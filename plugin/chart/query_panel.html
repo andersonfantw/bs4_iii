@@ -1,0 +1,145 @@
+<!--
+test, book
+
+軸 非結點tag(藍色), time period
+表格 top100
+條件 結點tag(綠色),books, bookshelfs, group, user,
+
+
+比較
+-->
+<div id="selector_panel">
+	<h1>
+	@title@
+	<div class="bounds">
+		<label class="default"><input type="radio" name="toggle" checked /><span>Default</span></label>
+    <label class="query"><input type="radio" name="toggle" /><span>Query</span></label>
+	</div>
+	</h1>
+	<div class="default_webadmin">
+		<ul>
+			<li>
+				<a class="w8">@btn_rw@</a>
+				<span>@btn_rw_desc@</span>
+				<input class="query" type="hidden" value="r=rw&co=Subject|r=rw&co=Subject&d=all|r=lt&co=Subject" />
+			</li>
+		</ul>
+		<ul>
+			<li>
+				<a class="w6">@btn_s@</a>
+				<span>@btn_s_desc@</span>
+				<input class="query" type="hidden" value="r=s&co=Subject|r=s&co=Subject&d=all|r=lt&co=Subject" />
+			</li>
+		</ul>
+	</div>
+	<div class="default_manager">
+		<ul>
+			<li>
+				<a class="w8">班級科目程度指標</a>
+				<span>本學期區分難度的書櫃所屬的班級與全校的科目閱讀時間與程度指標圖表</span>
+				<input class="query" type="hidden" value="r=wr&co=Subject|r=wr&co=Subject&g=bs_all|r=wr&co=Subject&bs=this&d=all|r=lt&co=Subject" />
+			</li>
+		</ul>
+		<ul>
+			<li>
+				<a class="w8">班級科目成績</a>
+				<span>本學期區分難度的書櫃所屬的班級與全校的科目閱讀時間與測驗成績圖表</span>
+				<input class="query" type="hidden" value="r=s&co=Subject|r=s&co=Subject&g=bs_all|r=s&co=Subject&bs=this&d=all|r=lt&co=Subject" />
+			</li>
+		</ul>
+	</div>
+	<div class="query">
+		<div>
+			<div>1</div>
+			<ul class="x_axis">
+				<li>@x_axis@</li>
+				<li>
+					<div class="bounds">
+						<label class="level"><input type="radio" name="x_axis" value="rw" /><span>@rw@</span></label>
+				    <label class="grade"><input type="radio" name="x_axis" value="s" /><span>@s@</span></label>
+				    <label class="learningtime"><input type="radio" name="x_axis" value="lt"><span>@lt@</span></label>
+					</div>
+					<div class="rw_percent_panel disabled">
+						Filter: <span class="rw_percent_val">100</span><br />
+						<input type="range" class="rw_percent" name="rw_percent" min="0" max="100" value="100" style="width:300px">
+					</div>
+				</li>
+			</ul>
+			<div>2</div>
+			<ul class="y_axis">
+				<li>@y_axis@ <label><input class="listallsubject" type="checkbox" />List all subject</label></li>
+				<li>
+					<div class="selected_tags">
+						<button class="add_tag">@settag@</button>
+						<button class="reset_tag">@resettag@</button>
+						<input type="hidden" class="selector_y_axis" name="selector_y_axis" />
+						<div></div>
+					</div>
+					<div class="selector_tags"></div>
+				</li>
+			</ul>
+		</div>
+		<div>
+			<div>3</div> @option@
+		</div>
+		<div class="optional_condition">
+			<ul>
+				<li>@time@</li>
+				<li>
+					<input type="date" class="selector_startdate" /> ~ 
+					<input type="date" class="selector_enddate" />
+				</li>
+			</ul>
+			<ul>
+				<li>@gorup_user@</li>
+				<li>
+					<select class="selector_groups">
+						<option value="">----</option>
+					</select>
+					<select class="selector_users">
+						<option value="">----</option>
+					</select>
+				</li>
+			</ul>
+			<ul>
+				<li>@bookshelf@</li>
+				<li>
+					<select class="selector_bookshelfs">
+						<option value="">----</option>
+					</select>
+				</li>
+			</ul>
+			<ul>
+				<li>@book@</li>
+				<li>
+					<select class="selector_books">
+						<option value="">----</option>
+					</select>
+				</li>
+			</ul>
+			<ul>
+				<li>@difficulty@</li>
+				<li>
+					<select class="selector_difficulty">
+						<option value="">----</option>
+					</select>
+				</li>
+			</ul>
+			<ul>
+				<li>@semester@</li>
+				<li>
+					<select class="selector_semester">
+						<option value="">----</option>
+					</select>
+				</li>
+			</ul>
+		</div>
+		<div class="button">
+			<button class="add">@btn_add@</button>
+			<button class="reset">@btn_reset@</button>
+		</div>
+	</div>
+	<div class="chart_selector">
+	</div>
+</div>
+<div id="panel"></div>

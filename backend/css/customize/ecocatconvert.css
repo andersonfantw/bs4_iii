@@ -1,0 +1,125 @@
+#format
+{
+	width:80px;
+	height:100px;
+	background-image:url(../../images/convert_format.png);
+	background-position: -240px 0;
+	margin:30px auto;
+}
+#dropbox
+{
+	border:dashed 5px #ccc;
+	border-radius:30px;
+	width:400px;
+	height:400px;
+	background-image:url(../../images/convert_upload.png);
+	background-repeat:no-repeat;
+	background-position:50px 50px;
+	margin:0 auto;
+	overflow: hidden;
+}
+#dropbox.converting
+{
+	background-position:-45px -65px;
+	background-image:url(../../images/convert_converting.gif);
+}
+#dropbox.converting input[type=file]
+{
+	display: none;
+}
+#dropbox.done
+{
+        background-position:-45px -65px;
+        background-image:url(../../images/convert_done.gif);
+}
+#dropbox.done input[type=file]
+{
+	display: none;
+}
+#dropbox input[type=file]
+{
+	filter:alpha(opacity=0);
+	opacity: 0;
+	font-size: 400px;
+	height: 400px;
+	width: 400p;
+}
+#dropbox #upload{
+	display:none;
+}
+#dropbox.converting #upload{
+        display:block;
+}
+#dropbox.done #upload{
+        display:block;
+}
+
+
+#upload
+{
+	margin-top:320px;
+	margin-left:25px;
+	width:400px;
+	height:70px;
+}
+.item
+{
+	margin:5px 0;
+	height: 40px;
+	width: 350px;
+}
+.filename
+{
+	float:left;
+	margin: 8px 0 0 10px;
+}
+.status
+{
+	float:left;
+	margin: 8px 0 0 20px;
+}
+.doc, .docx
+{
+	float:left;
+	background-image:url(../../images/icons_s.png);
+	width:25px;
+	height:28px;
+	margin-top:-3px;
+}
+.ppt, pptx
+{
+	float:left;
+	background-image:url(../../images/icons_s.png);
+	background-position:-25px 0;
+	width:25px;
+	height:28px;
+	margin-top:-3px;
+}
+.xls, xlsx
+{
+	float:left;
+	background-image:url(../../images/icons_s.png);
+	background-position:-50px 0;
+	width:25px;
+	height:28px;
+	margin-top:-3px;
+}
+.pdf
+{
+	float:left;
+	background-image:url(../../images/icons_s.png);
+	background-position:-75px 0;
+	width:25px;
+	height:28px;
+	margin-top:-3px;
+}
+.preview
+{
+	width:350px;
+	height:30px;
+}
+.ProgressContainer
+{
+	width:300px;
+	margin: 0 30px;
+}

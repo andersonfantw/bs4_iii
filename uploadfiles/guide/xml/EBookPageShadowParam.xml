@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<EBookRoot>
+  <!-- Page Shadow Parameter -->
+  <PageDataCount>27</PageDataCount>
+  <PageShadow PageNo="0">
+    <PageShadowDispFlag>True</PageShadowDispFlag>
+    <PageShadowColor>000000</PageShadowColor>
+    <PageShadowWidth>20</PageShadowWidth>
+    <PageShadowTransparent>30</PageShadowTransparent>
+  </PageShadow>
+  <PageShadow PageNo="1">
+    <PageShadowDispFlag>True</PageShadowDispFlag>
+    <PageShadowColor>000000</PageShadowColor>
+    <PageShadowWidth>20</PageShadowWidth>
+    <PageShadowTransparent>30</PageShadowTransparent>
+  </PageShadow>
+  <PageShadow PageNo="2">
+    <PageShadowDispFlag>True</PageShadowDispFlag>
+    <PageShadowColor>000000</PageShadowColor>
+    <PageShadowWidth>20</PageShadowWidth>
+    <PageShadowTransparent>30</PageShadowTransparent>
+  </PageShadow>
+  <PageShadow PageNo="3">
+    <PageShadowDispFlag>True</PageShadowDispFlag>
+    <PageShadowColor>000000</PageShadowColor>
+    <PageShadowWidth>20</PageShadowWidth>
+    <PageShadowTransparent>30</PageShadowTransparent>
+  </PageShadow>
+  <PageShadow PageNo="4">
+    <PageShadowDispFlag>True</PageShadowDispFlag>
+    <PageShadowColor>000000</PageShadowColor>
+    <PageShadowWidth>20</PageShadowWidth>
+    <PageShadowTransparent>30</PageShadowTransparent>
+  </PageShadow>
+  <PageShadow PageNo="5">
+    <PageShadowDispFlag>True</PageShadowDispFlag>
+    <PageShadowColor>000000</PageShadowColor>
+    <PageShadowWidth>20</PageShadowWidth>
+    <PageShadowTransparent>30</PageShadowTransparent>
+  </PageShadow>
+  <PageShadow PageNo="6">
+    <PageShadowDispFlag>True</PageShadowDispFlag>
+    <PageShadowColor>000000</PageShadowColor>
+    <PageShadowWidth>20</PageShadowWidth>
+    <PageShadowTransparent>30</PageShadowTransparent>
+  </PageShadow>
+  <PageShadow PageNo="7">
+    <PageShadowDispFlag>True</PageShadowDispFlag>
+    <PageShadowColor>000000</PageShadowColor>
+    <PageShadowWidth>20</PageShadowWidth>
+    <PageShadowTransparent>30</PageShadowTransparent>
+  </PageShadow>
+  <PageShadow PageNo="8">
+    <PageShadowDispFlag>True</PageShadowDispFlag>
+    <PageShadowColor>000000</PageShadowColor>
+    <PageShadowWidth>20</PageShadowWidth>
+    <PageShadowTransparent>30</PageShadowTransparent>
+  </PageShadow>
+  <PageShadow PageNo="9">
+    <PageShadowDispFlag>True</PageShadowDispFlag>
+    <PageShadowColor>000000</PageShadowColor>
+    <PageShadowWidth>20</PageShadowWidth>
+    <PageShadowTransparent>30</PageShadowTransparent>
+  </PageShadow>
+  <PageShadow PageNo="10">
+    <PageShadowDispFlag>True</PageShadowDispFlag>
+    <PageShadowColor>000000</PageShadowColor>
+    <PageShadowWidth>20</PageShadowWidth>
+    <PageShadowTransparent>30</PageShadowTransparent>
+  </PageShadow>
+  <PageShadow PageNo="11">
+    <PageShadowDispFlag>True</PageShadowDispFlag>
+    <PageShadowColor>000000</PageShadowColor>
+    <PageShadowWidth>20</PageShadowWidth>
+    <PageShadowTransparent>30</PageShadowTransparent>
+  </PageShadow>
+  <PageShadow PageNo="12">
+    <PageShadowDispFlag>True</PageShadowDispFlag>
+    <PageShadowColor>000000</PageShadowColor>
+    <PageShadowWidth>20</PageShadowWidth>
+    <PageShadowTransparent>30</PageShadowTransparent>
+  </PageShadow>
+  <PageShadow PageNo="13">
+    <PageShadowDispFlag>True</PageShadowDispFlag>
+    <PageShadowColor>000000</PageShadowColor>
+    <PageShadowWidth>20</PageShadowWidth>
+    <PageShadowTransparent>30</PageShadowTransparent>
+  </PageShadow>
+  <PageShadow PageNo="14">
+    <PageShadowDispFlag>True</PageShadowDispFlag>
+    <PageShadowColor>000000</PageShadowColor>
+    <PageShadowWidth>20</PageShadowWidth>
+    <PageShadowTransparent>30</PageShadowTransparent>
+  </PageShadow>
+  <PageShadow PageNo="15">
+    <PageShadowDispFlag>True</PageShadowDispFlag>
+    <PageShadowColor>000000</PageShadowColor>
+    <PageShadowWidth>20</PageShadowWidth>
+    <PageShadowTransparent>30</PageShadowTransparent>
+  </PageShadow>
+  <PageShadow PageNo="16">
+    <PageShadowDispFlag>True</PageShadowDispFlag>
+    <PageShadowColor>000000</PageShadowColor>
+    <PageShadowWidth>20</PageShadowWidth>
+    <PageShadowTransparent>30</PageShadowTransparent>
+  </PageShadow>
+  <PageShadow PageNo="17">
+    <PageShadowDispFlag>True</PageShadowDispFlag>
+    <PageShadowColor>000000</PageShadowColor>
+    <PageShadowWidth>20</PageShadowWidth>
+    <PageShadowTransparent>30</PageShadowTransparent>
+  </PageShadow>
+  <PageShadow PageNo="18">
+    <PageShadowDispFlag>True</PageShadowDispFlag>
+    <PageShadowColor>000000</PageShadowColor>
+    <PageShadowWidth>20</PageShadowWidth>
+    <PageShadowTransparent>30</PageShadowTransparent>
+  </PageShadow>
+  <PageShadow PageNo="19">
+    <PageShadowDispFlag>True</PageShadowDispFlag>
+    <PageShadowColor>000000</PageShadowColor>
+    <PageShadowWidth>20</PageShadowWidth>
+    <PageShadowTransparent>30</PageShadowTransparent>
+  </PageShadow>
+  <PageShadow PageNo="20">
+    <PageShadowDispFlag>True</PageShadowDispFlag>
+    <PageShadowColor>000000</PageShadowColor>
+    <PageShadowWidth>20</PageShadowWidth>
+    <PageShadowTransparent>30</PageShadowTransparent>
+  </PageShadow>
+  <PageShadow PageNo="21">
+    <PageShadowDispFlag>True</PageShadowDispFlag>
+    <PageShadowColor>000000</PageShadowColor>
+    <PageShadowWidth>20</PageShadowWidth>
+    <PageShadowTransparent>30</PageShadowTransparent>
+  </PageShadow>
+  <PageShadow PageNo="22">
+    <PageShadowDispFlag>True</PageShadowDispFlag>
+    <PageShadowColor>000000</PageShadowColor>
+    <PageShadowWidth>20</PageShadowWidth>
+    <PageShadowTransparent>30</PageShadowTransparent>
+  </PageShadow>
+  <PageShadow PageNo="23">
+    <PageShadowDispFlag>True</PageShadowDispFlag>
+    <PageShadowColor>000000</PageShadowColor>
+    <PageShadowWidth>20</PageShadowWidth>
+    <PageShadowTransparent>30</PageShadowTransparent>
+  </PageShadow>
+  <PageShadow PageNo="24">
+    <PageShadowDispFlag>True</PageShadowDispFlag>
+    <PageShadowColor>000000</PageShadowColor>
+    <PageShadowWidth>20</PageShadowWidth>
+    <PageShadowTransparent>30</PageShadowTransparent>
+  </PageShadow>
+  <PageShadow PageNo="25">
+    <PageShadowDispFlag>True</PageShadowDispFlag>
+    <PageShadowColor>000000</PageShadowColor>
+    <PageShadowWidth>20</PageShadowWidth>
+    <PageShadowTransparent>30</PageShadowTransparent>
+  </PageShadow>
+  <PageShadow PageNo="26">
+    <PageShadowDispFlag>True</PageShadowDispFlag>
+    <PageShadowColor>000000</PageShadowColor>
+    <PageShadowWidth>20</PageShadowWidth>
+    <PageShadowTransparent>30</PageShadowTransparent>
+  </PageShadow>
+</EBookRoot>

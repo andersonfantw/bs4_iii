@@ -1,0 +1,20 @@
+{"lang":{
+    "searchall":{
+        "branch":"ページ展開",
+        "result":"検索結果",
+        "hit":"%1件ヒットしました。",
+        "nohit":"見つかりませんでした。",
+        "sorthit":"ヒット件数順",
+        "sortpage":"ページ順",
+        "reset":"リセット",
+        "search":"検索"
+    },
+    "print":{
+        "left":"左側ページの印刷",
+        "right":"右側ページの印刷"
+    },
+    "memo":{
+        "memolist":"メモ一覧",
+        "defaultcontent":"入力してください。"
+    }
+}}

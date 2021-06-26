@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<book>
+<detail No="1">
+  <process_id>9876f386_759ac57a</process_id>
+  <book_name>Doc1</book_name>
+  <category></category>
+  <image_url>http://59.125.179.139:9876/EcocatCMS/index.php?action=image_loader&amp;bid=9876f386_759ac57a&amp;type=d&amp;page=1&amp;rate=100&amp;apikey=0e7524f7fa6c6763423c1d8361213b0d&amp;apipass=89e4109e82a3b64fd4e89defa121b06b</image_url>
+  <book_url>http://59.125.179.139:9876/EcocatCMS/index.php?action=book_start&amp;bid=9876f386_759ac57a&amp;page=1&amp;apikey=0e7524f7fa6c6763423c1d8361213b0d&amp;apipass=89e4109e82a3b64fd4e89defa121b06b</book_url>
+  <pdf_path>http://59.125.179.139:9876/EcocatCMS/index.php?action=download&amp;type=p&amp;bid=9876f386_759ac57a&amp;apikey=0e7524f7fa6c6763423c1d8361213b0d&amp;apipass=89e4109e82a3b64fd4e89defa121b06b</pdf_path>
+  <original_path>http://59.125.179.139:9876/EcocatCMS/index.php?action=download&amp;type=g&amp;bid=9876f386_759ac57a&amp;apikey=0e7524f7fa6c6763423c1d8361213b0d&amp;apipass=89e4109e82a3b64fd4e89defa121b06b</original_path>
+  <create_user>admin</create_user>
+  <create_group_1>管理者</create_group_1>
+  <create_group_2>test</create_group_2>
+  <create_group_3>API</create_group_3>
+</detail>
+<detail No="2">
+  <process_id>b9559800_00ed11b0</process_id>
+  <book_name>20120906_lpes_2</book_name>
+  <category>測試檔</category>
+  <image_url>http://59.125.179.139:9876/EcocatCMS/index.php?action=image_loader&amp;bid=b9559800_00ed11b0&amp;type=d&amp;page=1&amp;rate=100&amp;apikey=0e7524f7fa6c6763423c1d8361213b0d&amp;apipass=89e4109e82a3b64fd4e89defa121b06b</image_url>
+  <book_url>http://59.125.179.139:9876/EcocatCMS/index.php?action=book_start&amp;bid=b9559800_00ed11b0&amp;page=1&amp;apikey=0e7524f7fa6c6763423c1d8361213b0d&amp;apipass=89e4109e82a3b64fd4e89defa121b06b</book_url>
+  <pdf_path>LBM?生成???????、PDF?????存在????。</pdf_path>
+  <original_path>LBM?生成???????、原文?????存在????。</original_path>
+  <create_user>admin</create_user>
+  <create_group_1>test</create_group_1>
+  <create_group_2>管理者</create_group_2>
+  <create_group_3>API</create_group_3>
+</detail>
+<detail No="3">
+  <process_id>ed415ebf_6a58d53b</process_id>
+  <book_name>執行進度</book_name>
+  <category>測試檔</category>
+  <image_url>http://59.125.179.139:9876/EcocatCMS/index.php?action=image_loader&amp;bid=ed415ebf_6a58d53b&amp;type=d&amp;page=1&amp;rate=100&amp;apikey=0e7524f7fa6c6763423c1d8361213b0d&amp;apipass=89e4109e82a3b64fd4e89defa121b06b</image_url>
+  <book_url>http://59.125.179.139:9876/EcocatCMS/index.php?action=book_start&amp;bid=ed415ebf_6a58d53b&amp;page=1&amp;apikey=0e7524f7fa6c6763423c1d8361213b0d&amp;apipass=89e4109e82a3b64fd4e89defa121b06b</book_url>
+  <pdf_path>http://59.125.179.139:9876/EcocatCMS/index.php?action=download&amp;type=p&amp;bid=ed415ebf_6a58d53b&amp;apikey=0e7524f7fa6c6763423c1d8361213b0d&amp;apipass=89e4109e82a3b64fd4e89defa121b06b</pdf_path>
+  <original_path>http://59.125.179.139:9876/EcocatCMS/index.php?action=download&amp;type=g&amp;bid=ed415ebf_6a58d53b&amp;apikey=0e7524f7fa6c6763423c1d8361213b0d&amp;apipass=89e4109e82a3b64fd4e89defa121b06b</original_path>
+  <create_user>admin</create_user>
+  <create_group_1>test</create_group_1>
+  <create_group_2>管理者</create_group_2>
+  <create_group_3>API</create_group_3>
+</detail>
+<detail No="4">
+  <process_id>bfdbe183_08d72bec</process_id>
+  <book_name>ECOCAT_1</book_name>
+  <category>測試檔</category>
+  <image_url>http://59.125.179.139:9876/EcocatCMS/index.php?action=image_loader&amp;bid=bfdbe183_08d72bec&amp;type=d&amp;page=1&amp;rate=100&amp;apikey=0e7524f7fa6c6763423c1d8361213b0d&amp;apipass=89e4109e82a3b64fd4e89defa121b06b</image_url>
+  <book_url>http://59.125.179.139:9876/EcocatCMS/index.php?action=book_start&amp;bid=bfdbe183_08d72bec&amp;page=1&amp;apikey=0e7524f7fa6c6763423c1d8361213b0d&amp;apipass=89e4109e82a3b64fd4e89defa121b06b</book_url>
+  <pdf_path>http://59.125.179.139:9876/EcocatCMS/index.php?action=download&amp;type=p&amp;bid=bfdbe183_08d72bec&amp;apikey=0e7524f7fa6c6763423c1d8361213b0d&amp;apipass=89e4109e82a3b64fd4e89defa121b06b</pdf_path>
+  <original_path>http://59.125.179.139:9876/EcocatCMS/index.php?action=download&amp;type=g&amp;bid=bfdbe183_08d72bec&amp;apikey=0e7524f7fa6c6763423c1d8361213b0d&amp;apipass=89e4109e82a3b64fd4e89defa121b06b</original_path>
+  <create_user>admin</create_user>
+  <create_group_1>管理者</create_group_1>
+  <create_group_2>API</create_group_2>
+</detail>
+</book>

@@ -1,0 +1,5 @@
+<?PHP
+abstract class ChartTargetEnum{
+	
+}
+?>

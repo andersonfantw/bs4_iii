@@ -1,0 +1,41 @@
+#body{
+	margin:0 auto;
+	width:814px;
+	height:448px;
+	background:url(trial_letter.png);
+	padding:160px 80px 160px 130px;
+	font-size:1.2em;
+	line-height:2em;
+}
+#app{
+	float:right;
+	margin-right:40px;
+}
+#app a{
+	margin-left:10px;
+	display:inline-block;
+}
+#app .ios{
+	width:130px;
+	height:40px;
+	background:url(../appstore.png);	
+}
+#app .android{
+	width:130px;
+	height:40px;
+	background:url(../googleplay.png);
+}
+#title{
+	margin-top:30px;
+}
+#subject{
+}
+#code{
+	font-size:2em;
+	line-height:1.2em;
+	text-align:center;
+	border-bottom:solid 3px #333;
+	margin:30px 100px;
+}
+#content{
+}

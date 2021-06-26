@@ -1,0 +1,73 @@
+$(document).ready(function(){
+	var param={
+		path:web_url+'/plugin/meeting/',
+		script:['vcube.class.1.0','typed.min'],
+		css:['vcube_notice'],
+		langJS:{'@class_is_beginning':'_class_is_beginning'},
+		langCSS:false,
+		html:'notice'
+	};
+
+	//loader example
+	new Loader(param,function(panel){
+		$('#header').prepend(panel);
+		EnableVcubeNotice();
+	});
+
+	login_callbacks.add(EnableVcubeNotice);
+	logout_callbacks.add(DisableVcubeNotice);
+
+	function EnableVcubeNotice(){
+		APIHandler.loginCheck(function(l){
+			switch(l.type){
+				case 'a':
+				case 'u':
+					VCubeAPIHandler.IsClassBegin(l.type,l.id,function(data){
+						if(!$.isEmptyObject(data)){
+							$('.blackboard').click(function(){
+								window.open('/api/redirect.php?cmd=get_vcube_url&reservationid='+data.id+'&name='+l.name);
+							});
+							$('.blackboard > .classroom').html('<a><img src="/plugin/meeting/images/brain.png">1</a>');
+							$('.blackboard > .class_info > a').html(data.name+' '+_vcube_admissiontime+' '+data.admissiontime+'<br />'+_vcube_starttime+' '+data.start);
+							var updateMsg = function(){
+								_admissiontime= Date.parse(data.admissiontime);
+								_start= Date.parse(data.start);
+								_end= Date.parse(data.end);
+								_now = Date.now();
+	
+								_str = _class_is_beginning;
+								if(_now < _admissiontime){
+								}else if(_now > _admissiontime && _now < _start){
+									_str += _vcube_countdown_meetingbegin.replace('@min@',Math.floor((_start-_now)/60000));
+								}else if(_now > _start && _now < _end){
+									_str += _vcube_countdown_meetingend.replace('@min@',Math.floor((_end-_now)/60000));
+								}else{
+									DisableVcubeNotice();
+								}
+
+								$('.blackboard > .msg > a').remove();
+								$('.blackboard > .msg').append('<a></a>');
+								$('.blackboard > .msg > a').typed({
+									strings: [_str.replace(/! /g, '! ^1000')],
+									loop: true,
+									typeSpeed: 50,
+									startDelay: 1000,
+									backDelay: 5000,
+									showCursor: false
+								});
+								setTimeout(updateMsg,30000);
+							}
+							updateMsg();
+
+							$('#vcube').show();
+						}
+					});
+					break;
+				}
+		});
+	}
+	
+	function DisableVcubeNotice(){
+		$('#vcube').hide();
+	}
+});

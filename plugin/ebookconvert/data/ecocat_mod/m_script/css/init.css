@@ -1,0 +1,190 @@
+@charset "Shift_JIS";
+
+/*-----------------------------------------------
+	IDENTIFICATION DIVISION.
+	Version.					1.4.1.2;
+	Author.					Kenta Aga(admin)
+	Aptx.						4.8.6.9;
+
+	PROGRAM-ID.		"‰Šú‰»"
+------------------------------------------------*/
+
+/*************************************
+	DATA DIVISION.
+	WORKING-STRAGE SECTION.
+*************************************/
+
+/*	•K—v—v‘f‚Ì‰Šú‰»
+PPPPPPPPPPPPPPPPPPPPPP*/
+body,
+div,
+dl, dt, dd,
+ul, ol, li,
+h2, h3, h4, h5, h6,
+pre,
+form, fieldset, input, textarea,
+p, blockquote,
+th, td{  
+	margin					: 0;
+	padding					: 0;
+}
+
+/*	Œ©o‚µƒ^ƒO‰Šú‰»
+PPPPPPPPPPPPPPPPPPPPPP*/
+h1,h2,h3,h4,h5,h6{
+	font-style				: normal; 
+	font-weight				: normal; 
+	font-size					: 1.0em; 
+} 
+
+
+/*	clearfix ƒnƒbƒN
+PPPPPPPPPPPPPPPPPPPPPP*/
+.clearfix:after{
+	content					: ".";
+	display					: block;
+	clear						: both;
+	height						: 0;
+	visibility					: hidden;
+}
+.clearfix{
+	display					: inline-block;
+}
+
+
+/*	ƒe[ƒuƒ‹‚Ì‰Šúİ’è
+PPPPPPPPPPPPPPPPPPPPPP*/
+table{
+	border-collapse	: collapse;
+	border					: none;
+	border-spacing		: 0;
+	font-size					: 100%;
+}
+caption{
+	text-align				: left;
+}
+th{
+	padding					: 5px;
+	font-weight			: normal;
+	text-align				: left;
+	vertical-align			: top;
+}
+td{
+	padding					: 5px;
+	vertical-align			: top;
+}
+
+table.list-tbl{
+	width						: 100%;
+}
+.list-tbl th,.list-tbl td{
+	border					: 1px solid #999;
+}
+
+
+/*	’i—‚Æ‚©ƒŠƒXƒg‚Æ‚©ƒeƒLƒXƒgü‚è‚Ìw’è
+PPPPPPPPPPPPPPPPPPPPPP*/
+p,li,dt,dl{
+    line-height			: 1.6;
+}
+
+p{
+    margin					: 0 0 20px 0;
+}
+
+sup,
+sub{
+	vertical-align			: baseline;
+	position					: relative;
+}
+
+sup{
+	top							: -2px
+}
+
+sub{
+	top							: 3px
+}
+
+li{
+	list-style-type		: none;
+}
+
+/*	img—v‘f‚Ìw’è
+PPPPPPPPPPPPPPPPPPPPPP*/
+img{
+	border					: 0;
+	vertical-align			: bottom;
+}
+
+
+/*	address,strong—v‘f‚Ìw’è
+PPPPPPPPPPPPPPPPPPPPPP*/
+address,strong,dfn,em{
+	font-style				: normal;
+}
+
+
+/*	‹}‚ÉƒJƒ‰ƒ€‚ª•K—v‚É‚È‚Á‚½‚Ì‚Å
+PPPPPPPPPPPPPPPPPPP*/
+.colLeft{
+	float					: left;
+}
+.colRight{
+	float					: right;
+}
+
+/*	‹}‚ÉŠñ‚¹‚½‚­‚È‚Á‚½‚Ì‚Å
+PPPPPPPPPPPPPPPPPPP*/
+.txtRight{
+	text-align				: right;
+}
+.txtLeft{
+	text-align				: left;
+}
+.txtCenter{
+	text-align				: center;
+}
+
+/*	Œrü‚ÉŠÖ‚·‚éİ’è
+PPPPPPPPPPPPPPPPPPP*/
+hr {
+	display					: none;
+}
+
+
+/*	å‚ÉƒŠƒXƒg‚ÉŠÖ‚·‚éİ’è
+PPPPPPPPPPPPPPPPPPP*/
+ol.list,ul.list{
+	margin-bottom		: 1em;
+}
+
+ol.list li{
+	list-style-type		: decimal;
+	margin					: 5px 0px 5px 30px;
+}
+ul.list li{
+	list-style-type		: square;
+	margin					: 5px 0px 5px 30px;
+}
+
+.sideList li{
+	display					: inline;
+}
+
+
+
+/*	Šî–{ƒŠƒ“ƒNİ’è
+PPPPPPPPPPPPPPPPPPP*/
+a:link{
+	color						: #ac0e5c;
+	text-decoration	: none;
+}
+a:visited{
+	color						: #ac0e5c;
+	text-decoration	: none;
+}
+a:hover{
+	color						: #bd7498;
+	text-decoration	: none;
+}

@@ -1,0 +1,14 @@
+#main-content .hastable thead td:nth-child(1){
+	width:150px;
+}
+
+#main-content .portlet-content .group_panel span{
+	padding-left:5px;
+	width: 170px;
+	display: inline-block;
+}
+
+#main-content .portlet-content .group_panel label{
+	width: 140px;
+	display: inline-block;
+}

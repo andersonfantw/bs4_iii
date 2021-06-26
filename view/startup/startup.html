@@ -1,0 +1,46 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="zh-Hant-TW">
+<head>
+<title><{$smarty.const.TITLE}></title>
+<meta name="viewport" content="width=device-width" />
+<script src="<{$smarty.const.WEB_URL}>/scripts/jquery-1.11.2.min.js" type="text/javascript"></script>
+<script src="<{$smarty.const.WEB_URL}>/scripts/loader.class.js" type="text/javascript"></script>
+<script src="<{$smarty.const.WEB_URL}>/scripts/loader.js" type="text/javascript"></script>
+
+<link type="text/css" href="<{$smarty.const.WEB_URL}>/css/style.css" rel="stylesheet" />
+<link type="text/css" href="<{$smarty.const.WEB_URL}>/css/startup.css" rel="stylesheet" />
+<script type="text/javascript">
+var bs_id=0;
+var uid=0;
+var web_url = '<{$smarty.const.WEB_URL}>';
+</script>
+</head>
+<body>
+	<{$header_html}>
+
+  <div id="body">
+
+<div id="container">
+	<div id="button">
+		<div class="lang">
+			<select></select>
+		</div>
+	</div>
+	<div id="msg">
+		Active ID: <{$smarty.const.wonderbox_id}>
+		<br />
+		<{$smarty.const.LANG_MESSAGE_STARTUP_MSG1|replace:'@date@':$activedate}>
+		<form method="post" action="">
+		<input type="submit" value="<{$smarty.const.LANG_BUTTON_ACTIVE}>" />
+		<input type="hidden" name="cmd" value="enabled" />
+		</form>
+		<{$smarty.const.LANG_MESSAGE_STARTUP_MSG2}>
+	</div>
+	<div id="info">
+		<{$smarty.const.LANG_MESSAGE_COMPANY_INFO}>
+	</div>
+</div>
+
+  </div>
+</body>
+</html>

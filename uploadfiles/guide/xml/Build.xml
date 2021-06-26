@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<EBookRoot>
+  <SETEnvUserSetParam>
+    <ProjectName>0327</ProjectName>
+    <PageSizeFlag>1</PageSizeFlag>
+    <LastPageNumber>22</LastPageNumber>
+    <MediaWidth>416</MediaWidth>
+    <MediaHeight>588</MediaHeight>
+    <PageThick_Flag>1</PageThick_Flag>
+    <LoadingMsg>檔案讀取下載時顯示的文字</LoadingMsg>
+    <SpecificationProjectName>
+    </SpecificationProjectName>
+  </SETEnvUserSetParam>
+</EBookRoot>

@@ -1,0 +1,83 @@
+ErrorDocument 400 /errorpage/error.php
+ErrorDocument 401 /errorpage/error.php
+ErrorDocument 403 /errorpage/error.php
+ErrorDocument 404 /errorpage/error.php
+ErrorDocument 405 /errorpage/error.php
+ErrorDocument 406 /errorpage/error.php
+ErrorDocument 407 /errorpage/error.php
+ErrorDocument 408 /errorpage/error.php
+ErrorDocument 409 /errorpage/error.php
+ErrorDocument 410 /errorpage/error.php
+ErrorDocument 411 /errorpage/error.php
+ErrorDocument 412 /errorpage/error.php
+ErrorDocument 413 /errorpage/error.php
+ErrorDocument 414 /errorpage/error.php
+ErrorDocument 415 /errorpage/error.php
+ErrorDocument 416 /errorpage/error.php
+ErrorDocument 417 /errorpage/error.php
+ErrorDocument 418 /errorpage/error.php
+ErrorDocument 419 /errorpage/error.php
+ErrorDocument 420 /errorpage/error.php
+ErrorDocument 421 /errorpage/error.php
+ErrorDocument 422 /errorpage/error.php
+ErrorDocument 423 /errorpage/error.php
+ErrorDocument 424 /errorpage/error.php
+ErrorDocument 425 /errorpage/error.php
+ErrorDocument 426 /errorpage/error.php
+ErrorDocument 500 /errorpage/error.php
+ErrorDocument 501 /errorpage/error.php
+ErrorDocument 502 /errorpage/error.php
+ErrorDocument 503 /errorpage/error.php
+ErrorDocument 504 /errorpage/error.php
+ErrorDocument 505 /errorpage/error.php
+ErrorDocument 506 /errorpage/error.php
+ErrorDocument 507 /errorpage/error.php
+ErrorDocument 508 /errorpage/error.php
+ErrorDocument 509 /errorpage/error.php
+ErrorDocument 510 /errorpage/error.php
+
+AddType text/cache-manifest .appcache
+
+Options -Indexes
+
+RewriteEngine on
+RewriteBase /
+#RewriteCond %{SERVER_PORT} !^443$
+#RewriteRule ^.*$ https://%{SERVER_NAME}%{REQUEST_URI} [L,R]
+#enable when ecocatcms211
+#RewriteRule ecocat211/ecopi/list/(.*)/(.*)/(.*)/ /ecocatcms211/lib/ecopi/list.php?id=$1&pass=$2&option=$3 [L]
+#RewriteRule ecocat211/ecopi/(.*)/(.*)/(.*) /ecocatcms211/lib/ecopi/api_controller.php?id=$1&pass=$2&option=$3 [L]
+#enable when ecocatcms304
+#RewriteRule ecocat304/ecopi/list/(.*)/(.*)/(.*)/ /ecocatcms304/lib/ecopi/list.php?id=$1&pass=$2&option=$3 [L]
+#RewriteRule ecocat304/ecopi/(.*)/(.*)/(.*) /ecocatcms304/lib/ecopi/api_controller.php?id=$1&pass=$2&option=$3 [L]
+RewriteRule ecocat305/ecopi/list/(.*)/(.*)/(.*)/ /ecocatcms305/lib/ecopi/list.php?id=$1&pass=$2&option=$3 [L]
+RewriteRule ecocat305/ecopi/(.*)/(.*)/(.*) /ecocatcms305/lib/ecopi/api_controller.php?id=$1&pass=$2&option=$3 [L]
+
+RewriteRule download/(.*)/(.*) /index.php?cmd=download&f=$1&n=$2 [L]
+RewriteRule api/queue/api.php /plugin/uploadqueue/api/api.php [L]
+
+RewriteRule desktop.init.js /index.php?page=desktop&func=js_setting [L]
+RewriteRule mobile.init.js /index.php?page=mobile&func=js_setting [L]
+RewriteRule desktop.appcache /index.php?page=desktop&func=manifest [L]
+RewriteRule mobile.appcache /index.php?page=mobile&func=manifest [L]
+RewriteRule logout/ /api/logout.php [L]
+
+
+#RewriteRule ^webs\@2\/ /plugin/rewriterule/api/api.php?type=ecocat304_190 [L]
+#RewriteRule ^webs@2\/ebook\/(\d+)\/(\d+)\/([\d\w]+)\/tbook.html /plugin/rewriterule/api/api.php?type=ecocat304_190&f=book&uid=$1&bs=$2&bkey=$3 [L]
+#RewriteRule ^webs@2\/ebook\/(\d+)\/(\d+)\/([\d\w]+)\/html5/tindex.html /plugin/rewriterule/api/api.php?type=ecocat304_190&f=index&uid=$1&bs=$2&bkey=$3 [L]
+
+
+RewriteRule ^((?!images\/|css\/|errorpage\/|plugin\/|hosts\/|scripts\/|languages\/|ga\/|api\/|backend\/|logs\/|uploadfiles\/|ecocat211\/|ecocat304\/|ecocat305\/|Tool\/)\w+)/([a-zA-Z]\w+)/ index.php?page=$1&func=$2 [L]
+
+RewriteRule ^((?!images\/|css\/|errorpage\/|plugin\/|hosts\/|scripts\/|languages\/|ga\/|api\/|backend\/|logs\/|uploadfiles\/|ecocat211\/|ecocat304\/|ecocat305\/|Tool\/)\w+)/(\d{1,20})/(.{1,20})/ index.php?account=$1&bsid=$2&device=$3 [L]
+RewriteRule ^((?!images\/|css\/|errorpage\/|plugin\/|hosts\/|scripts\/|languages\/|ga\/|api\/|backend\/|logs\/|uploadfiles\/|ecocat211\/|ecocat304\/|ecocat305\/|Tool\/)\w+)/(\d{1,20})/ index.php?account=$1&bsid=$2 [L]
+RewriteRule ^((?!images\/|css\/|errorpage\/|plugin\/|hosts\/|scripts\/|languages\/|ga\/|api\/|backend\/|logs\/|uploadfiles\/|ecocat211\/|ecocat304\/|ecocat305\/|Tool\/)\w+)/ index.php?account=$1 [L]
+
+
+<Files index.php>
+FileETag None
+Header unset ETag
+Header set Cache-Control "max-age=0, no-cache, no-store, must-revalidate"
+Header set Pragma "no-cache"
+</Files>

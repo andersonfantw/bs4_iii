@@ -1,0 +1,10 @@
+<?PHP
+define('GMAIL_HOST','smtp.gmail.com');
+define('GMAIL_USERNAME','ebook@ttii.com.tw');
+define('GMAIL_PASSWORD','ttii29717685123456');
+define('GMAIL_FROM','ebook@ttii.com.tw');
+define('GMAIL_FROMNAME','SUPPORT');
+define('GMAIL_APPLYTO','support@ttii.com.tw');
+define('GMAIL_APPLYTONAME',GMAIL_FROMNAME);
+define('MAIL_TEMPLATE_PATH',ROOT_PATH.'/files');
+?>

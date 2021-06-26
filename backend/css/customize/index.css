@@ -1,0 +1,16 @@
+#main-wrapper .hastable thead td:nth-child(1)
+{
+	width:80px;
+}
+#main-wrapper .hastable thead td:nth-child(3)
+{
+	width:80px;
+}
+#main-wrapper .hastable tbody td:nth-child(1)
+{
+	text-align:center;
+}
+#main-wrapper .hastable tbody td:nth-child(3)
+{
+	text-align:center;
+}

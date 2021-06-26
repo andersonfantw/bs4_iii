@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<EBookRoot>
+  <!-- Page Shadow Default Parameter -->
+  <PageDataCount>0</PageDataCount>
+  <PageShadow PageNo="0">
+    <PageShadowDispFlag>True</PageShadowDispFlag>
+    <PageShadowColor>000000</PageShadowColor>
+    <PageShadowWidth>20</PageShadowWidth>
+    <PageShadowTransparent>30</PageShadowTransparent>
+  </PageShadow>
+</EBookRoot>
