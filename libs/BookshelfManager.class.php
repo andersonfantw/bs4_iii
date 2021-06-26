@@ -44,7 +44,7 @@ class BookshelfManager{
 		}
 		
 		//insert db.
-		$account = new account(&$db);
+		$account = new account($db);
 		$uid = $account->insert($fs->sql_safe($data),true);
 		
 		//return result
@@ -63,7 +63,7 @@ class BookshelfManager{
 
 	function CheckAccount($name){
 		global $db;
-		$account = new account(&$db);
+		$account = new account($db);
 		$data = $account->getByName($name);
 		return $data['u_id'];
 	}
@@ -142,13 +142,13 @@ class BookshelfManager{
 		}*/
 		$_data = $data+$DEFAULT;
 
-		$bookshelf = new bookshelf(&$db);
+		$bookshelf = new bookshelf($db);
 		$bs_id = $bookshelf->insert($fs->sql_safe($_data),$uid);
 		if($bs_id){
 			self::CreateBookshelfFiles($_data,$uid,$bs_id);
 
 			if(empty($_data['bs_key'])){
-				$account = new account(&$db);
+				$account = new account($db);
 				$data = $account->getAccountByBSID($bs_id);
 				$data1 = array('bs_key'=>sprintf('%s%u',$_data['u_name'],$bs_id));
 				$bookshelf->update($bs_id,$data1);
@@ -169,7 +169,7 @@ class BookshelfManager{
 	function DeleteBookshelf($uid,$bsid){
 		global $db;
 		if(HostManager::RemoveBookshelfBase($uid,$bsid,'iamthepassword')){
-			$bookshelf = new bookshelf(&$db);
+			$bookshelf = new bookshelf($db);
 			if($bookshelf->del($bsid)){
 				return true;
 			}
@@ -179,14 +179,14 @@ class BookshelfManager{
 
 	public function countBookshelfUsersByBookshelf($bsid){
 		global $db;
-		$bookshelf = new bookshelf(&$db);
+		$bookshelf = new bookshelf($db);
 		$arr = $bookshelf->getUserByBookshelf($bsid);
 		return count($arr);
 	}
 
 	public function countBookshelfUsersByAccount($uid){
 		global $db;
-		$bookshelf = new bookshelf(&$db);
+		$bookshelf = new bookshelf($db);
 		$arr = $bookshelf->getUserByAccount($uid);
 		return count($arr);
 	}
@@ -239,8 +239,8 @@ class BookshelfManager{
 	function set_bookshelf_self_share($bs_id,$bs_name){
 		global $db;
 		global $fs;
-		$bookshelf_share = new bookshelf_share(&$db);
-		$bookshelf_share_source = new bookshelf_share_source(&$db);
+		$bookshelf_share = new bookshelf_share($db);
+		$bookshelf_share_source = new bookshelf_share_source($db);
 
     $bss_data['bss_ip'] = '127.0.0.1';
     $bss_data['bss_account'] = 'share';
@@ -323,7 +323,7 @@ class BookshelfManager{
 
 	function BSManagerLogout(){
 		global $db;
-		$login = new login(&$db);
+		$login = new login($db);
 
 		$uid = bssystem::getLoginUID();
 		$type='a';
@@ -347,7 +347,7 @@ class BookshelfManager{
 
 	function UserLogout(){
 		global $db;
-		$login = new login(&$db);
+		$login = new login($db);
 
 		$buid = bssystem::getLoginBUID();
 		$type='u';
@@ -413,11 +413,11 @@ class BookshelfManager{
 		global $fs;
 
 		$db_ecocat_book_arr = array();
-		$book = new book(&$db);
+		$book = new book($db);
 
 		//file_put_contents('/tmp/ecocat.xml',file_get_contents(ECOCAT_API_URL));
 		if($type=='share_bs'){
-		  $bookshelf_share_source = new bookshelf_share_source(&$db,'bookshelf_share_source');
+		  $bookshelf_share_source = new bookshelf_share_source($db,'bookshelf_share_source');
 		  $rs = $bookshelf_share_source->getByID($bsss_id);
 		  $url = $rs['bsss_source']."&ac=".$rs['bsss_account']."&pw=".md5($rs['bsss_password'])."&type=xml";
 		  $xml = simplexml_load_file($url);
@@ -430,7 +430,7 @@ class BookshelfManager{
 			$rs = $book->getList('',0,0,'');
 		}else{
 		  //file_put_contents('/tmp/ecocat.xml',file_get_contents(ECOCAT_API_URL));
-		  $bookshelf = new bookshelf(&$db);
+		  $bookshelf = new bookshelf($db);
 		  $rsb = $bookshelf->getByID($bs_code);
 		  if(substr($rsb['ecocat_api'],0,7)=='http://'){
 		  	$xml = simplexml_load_file($rsb['ecocat_api']);
@@ -481,18 +481,18 @@ class BookshelfManager{
 		  $data['ibook_link'] = $val['pdf_path'];
 		  $data['webbook_link'] = $val['book_url'];
 		
-		  //ecocat¦³¡ADB¦³(¤§«e´¿¸g±qecocat¶×¤J¹L)¥B¤W¬[¤¤ => DB¤º¦¹¥»®ÑÄyºû«ù¤W¬[¤£ÅÜ
-		  //ecocat¦³¡ADB¦³(¤§«e´¿¸g±qecocat¶×¤J¹L)¥B¤U¬[¤¤ => DB¤º¦¹¥»®ÑÄyºû«ù¤U¬[¤£ÅÜ
+		  //ecocatï¿½ï¿½ï¿½ADBï¿½ï¿½(ï¿½ï¿½ï¿½eï¿½ï¿½ï¿½gï¿½qecocatï¿½×¤Jï¿½L)ï¿½Bï¿½Wï¿½[ï¿½ï¿½ => DBï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½yï¿½ï¿½ï¿½ï¿½ï¿½Wï¿½[ï¿½ï¿½ï¿½ï¿½
+		  //ecocatï¿½ï¿½ï¿½ADBï¿½ï¿½(ï¿½ï¿½ï¿½eï¿½ï¿½ï¿½gï¿½qecocatï¿½×¤Jï¿½L)ï¿½Bï¿½Uï¿½[ï¿½ï¿½ => DBï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½yï¿½ï¿½ï¿½ï¿½ï¿½Uï¿½[ï¿½ï¿½ï¿½ï¿½
 		  if(array_key_exists($val['process_id'],$db_ecocat_book_arr)){
-		    //§ó·s®ÑÄy¸ê®Æ
+		    //ï¿½ï¿½sï¿½ï¿½ï¿½yï¿½ï¿½ï¿½
 		    if(!$book->update($db_ecocat_book_arr[$val['process_id']]['b_id'],$fs->sql_safe($data)))
 		      echo "update book infomation failed";
 		    unset($db_ecocat_book_arr[$val['process_id']]);
 		
-		  }else{  //ecocat¦³¡ADB¨S¦³ => ·s¼W®ÑÄy¦ÜDB¥B³]©w¬°¤W¬[
+		  }else{  //ecocatï¿½ï¿½ï¿½ADBï¿½Sï¿½ï¿½ => ï¿½sï¿½Wï¿½ï¿½ï¿½yï¿½ï¿½DBï¿½Bï¿½]ï¿½wï¿½ï¿½ï¿½Wï¿½[
 		    $data['b_status'] = '1';
 		    if($type=='share_bs'){
-		    	//¤À¨Éªº®ÑÂdecocat_id¥Î¨Ó°O¿ıbsss_id
+		    	//ï¿½ï¿½ï¿½Éªï¿½ï¿½ï¿½ï¿½decocat_idï¿½Î¨Ó°Oï¿½ï¿½bsss_id
 		      $data['share_bs_id'] = $val['process_id'];
 		      $data['ecocat_id'] = $bsss_id;
 		    }else{
@@ -526,7 +526,7 @@ class BookshelfManager{
 				$b_id = $book->insert($fs->sql_safe($data));
 		    if($b_id){
 		    	if(REFLECTION_GAME){
-			    	$game_reflection = new game_reflection(&$db);
+			    	$game_reflection = new game_reflection($db);
 			    	$isGameReflectionBS = $game_reflection->isGameReflectionBS($bs_code);
 				    if($isGameReflectionBS){
 				    	$nextseq = $game_reflection->getNextMapSeq($bs_code);
@@ -543,8 +543,8 @@ class BookshelfManager{
 				unset($val);
 		  }
 		}
-		//ecocat¨S¦³(¤U¬[¤F)¡ADB¦³(¤§«e´¿¸g±qecocat¶×¤J¹L)¥B¤W¬[¤¤ => DB¤º¦¹¥»®ÑÄy­nÅÜ¦¨¤U¬[
-		//ecocat¨S¦³(¤U¬[¤F)¡ADB¦³(¤§«e´¿¸g±qecocat¶×¤J¹L)¥B¤U¬[¤¤ => DB¤º¦¹¥»®ÑÄyºû«ù¤U¬[¤£ÅÜ
+		//ecocatï¿½Sï¿½ï¿½(ï¿½Uï¿½[ï¿½F)ï¿½ADBï¿½ï¿½(ï¿½ï¿½ï¿½eï¿½ï¿½ï¿½gï¿½qecocatï¿½×¤Jï¿½L)ï¿½Bï¿½Wï¿½[ï¿½ï¿½ => DBï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½yï¿½nï¿½Ü¦ï¿½ï¿½Uï¿½[
+		//ecocatï¿½Sï¿½ï¿½(ï¿½Uï¿½[ï¿½F)ï¿½ADBï¿½ï¿½(ï¿½ï¿½ï¿½eï¿½ï¿½ï¿½gï¿½qecocatï¿½×¤Jï¿½L)ï¿½Bï¿½Uï¿½[ï¿½ï¿½ => DBï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½yï¿½ï¿½ï¿½ï¿½ï¿½Uï¿½[ï¿½ï¿½ï¿½ï¿½
 		if(sizeof($db_ecocat_book_arr)!=0){
 		  foreach($db_ecocat_book_arr as $key=>$val){
 		    unset($data);

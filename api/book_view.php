@@ -20,10 +20,10 @@
   $data['bs_id'] = $bs_code;
 
   $json = new Services_JSON();
-  $db_process = new db_process(&$db,'books_views','bv_'); 
+  $db_process = new db_process($db,'books_views','bv_');
   if($db_process->insert($data))
   {
-    $book = new book(&$db);
+    $book = new book($db);
     if($book->update_views($data['b_id'],$bv_type)){
 		$out_data['code'] = '200';
 		$out_data['msg'] = 'ok';

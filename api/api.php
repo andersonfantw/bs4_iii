@@ -2,9 +2,9 @@
 require_once dirname(__FILE__).'/../init/config.php';
 //$init = new init('db','auth','bookshelf_auth','filter');
 $init = new init('db','filter','ejson');
-$tag = new tag(&$db);
-$system_tag = new system_tag(&$db);
-$scanexam_test_tag = new scanexam_test_tag(&$db);
+$tag = new tag($db);
+$system_tag = new system_tag($db);
+$scanexam_test_tag = new scanexam_test_tag($db);
 
 $cmd = $fs->valid($_REQUEST['cmd'],'cmd');
 $uid=intval($_SESSION['adminid']);
@@ -58,10 +58,10 @@ SQL;
 				$sql = sprintf($sql, $buid, $buid);
 				$data['result'] = $db->get_results($sql);
 			}elseif($uid>0){
-				$bookshelf = new bookshelf(&$db);
+				$bookshelf = new bookshelf($db);
 				$data = $bookshelf->getList('bs_id desc',0,0,'bs_status=1 and bs_list_status=1 and u_id='.$uid);
 			}else{
-				$bookshelf = new bookshelf(&$db,'bookshelfs');
+				$bookshelf = new bookshelf($db,'bookshelfs');
 				$data = $bookshelf->getList('bs_id desc',0,0,'bs_status=1 and bs_list_status=1');
 			}
 		}
@@ -183,7 +183,7 @@ SQL;
 		include_once $ConfigManager->getDefineSyspath();
 		$bsid=bssystem::getBSID();
 		$data = $tag->getBooksByTSID($bsid,$tsid,$bu_id);
-		$shortcut = new shortcut(&$db);
+		$shortcut = new shortcut($db);
 		$data1 = $shortcut->getByID($tsid);
 		$host_base = HostManager::getBookshelfBase();
 		if(MEMBER){
@@ -275,11 +275,11 @@ SQL;
 		$tag->delSysTag($json_str_path,$tid);
 		break;
 	case 'getMostContributed':
-		//°^Äm«×
+		//ï¿½^ï¿½mï¿½ï¿½
 		break;
 	case 'getShortcutList':
 		$bsid = $fs->valid($_POST['bsid'],'id');
-		$shortcut = new shortcut(&$db);
+		$shortcut = new shortcut($db);
 		$shortcut->reset();
 		$shortcut->setBSID($bsid);
 		$shortcut->setStatus(1);
@@ -482,7 +482,7 @@ SQL;
 		break;
 	case 'chkUserAccount':
 		$acc = $fs->valid($_GET['account'],'acc');
-		$bookshelf_user = new bookshelf_user(&$db);
+		$bookshelf_user = new bookshelf_user($db);
 		$rs = $bookshelf_user->getByName($acc);
 		if(empty($rs)){
 			$data = true;
@@ -496,7 +496,7 @@ SQL;
 		break;
 	case 'chkUserEmail':
 		$email = $fs->valid($_GET['email'],'acc');
-		$bookshelf_user = new bookshelf_user(&$db);
+		$bookshelf_user = new bookshelf_user($db);
 		$rs = $bookshelf_user->getByEmail($email);
 		if(empty($rs)){
 			$data = true;

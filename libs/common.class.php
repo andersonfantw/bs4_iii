@@ -159,7 +159,7 @@ class common{
 				break;
 				$base = ROOT_PATH.'/';
 		}
-		$files = new files(&$db);
+		$files = new files($db);
 		$data = $files->getByID($f_id);
 		$path = $base.$data['f_path'];
 		if(is_file($path)) @unlink($path);

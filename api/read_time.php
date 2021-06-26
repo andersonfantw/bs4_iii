@@ -3,7 +3,7 @@
 
   require_once dirname(__FILE__).'/../init/config.php';
   $init = new init('db','tpl','inputxss','filter','getIP','ejson');
-  $reading_time = new reading_time(&$db);
+  $reading_time = new reading_time($db);
   date_default_timezone_set('Asia/Taipei');
 
   $data['b_id'] = (int) $fs->valid($_POST['bid'],'id');

@@ -81,7 +81,7 @@ class MailManager{
 		}
 
 		//Set the subject line
-		//$mail->Subject = mb_convert_encoding(sprintf('[¼Æ¦ì¹Ï®ÑÀ]]ÀÉ®×Âà´«¥¢±Ñ³qª¾ - %s',$pn),"utf-8","big5");
+		//$mail->Subject = mb_convert_encoding(sprintf('[ï¿½Æ¦ï¿½Ï®ï¿½ï¿½]]ï¿½É®ï¿½ï¿½à´«ï¿½ï¿½ï¿½Ñ³qï¿½ï¿½ - %s',$pn),"utf-8","big5");
 
 		$mail->Subject = $this->subject;
 		$mail->Body = $this->content;
@@ -100,7 +100,7 @@ class MailManager{
 		$result = $mail->send();
 		if ($result) {
 			print_r("\nsend mail success");
-			$maillog = new maillog(&$db);
+			$maillog = new maillog($db);
 			$data = array(
 				'ML_TARGET' => MailTypeEnum::UploadQueue,
 				'TARGET_ID' => (int)$this->TargetID,

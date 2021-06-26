@@ -199,7 +199,7 @@ CONTENT;
 		global $db;
 		$action='';
 
-		$action_log = new action_log(&$db);
+		$action_log = new action_log($db);
 		$_page = basename($_SERVER['PHP_SELF']);
 
 		$type = $fs->valid($_GET['type'],'cmd');

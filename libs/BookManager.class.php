@@ -44,7 +44,7 @@ var_dump($result);
 
 	public function del($id){
 		global $db;
-		$book = new book(&$db);
+		$book = new book($db);
 		$data = $book->getByID($id);
     if($book->del($id)){
 			#delete covert image
@@ -57,7 +57,7 @@ var_dump($result);
 				//delete from decentralized system
 				$bookid = $data['b_key'];
 				$bsid = $data['bs_id'];
-				$account = new account(&$db);
+				$account = new account($db);
 				$arow = $account->getAccountByBSID($bsid);
 				$uid = $arow['u_id'];
 				CSDUtility::delete_ebook($uid, $bsid, $bookid);
@@ -97,7 +97,7 @@ var_dump($result);
 			}
 
 			//delete tag
-			$tag = new tag(&$db);
+			$tag = new tag($db);
 			$data = $tag->getTagsByBook($id);
 			$data = array_values($data);
 			foreach($data as $t){

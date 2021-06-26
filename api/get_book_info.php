@@ -14,7 +14,7 @@
   if($id<1)
     exit;
  
-  $book = new book(&$db);
+  $book = new book($db);
   $data = $book->getPublicByID($id);  
 
   //$fp = explode('/',$data['f_path']);

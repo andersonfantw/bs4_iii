@@ -66,7 +66,7 @@ if(!empty($_acc) && $_acc!='demo' && !in_array($_acc,$Reserved)){
 
 if(!empty($_acc) && !in_array($_acc,$Reserved)){
 	if(!isset($_SESSION[SITE_PREFIX.$_acc]) || !isset($_SESSION['accmapping'.$bs_code])){
-		$account = new account(&$db);
+		$account = new account($db);
 		$data = $account->getByName($_acc);
 		$adminid = $data['u_id'];
 		if(!empty($adminid)){
@@ -107,7 +107,7 @@ if(!empty($_acc) && !in_array($_acc,$Reserved)){
 			if(empty($buid)){
 				header('Location: /');
 			}
-			$bookshelf_user = new bookshelf_user(&$db);
+			$bookshelf_user = new bookshelf_user($db);
 			$data = $bookshelf_user->getByName($func);
 			if($data){
 				$buid = $data['bu_id'];
@@ -201,7 +201,7 @@ if(isset($module)){
 		default:
 /*
 			if(common::validSessionID($token)){
-				$login = new login(&$db);
+				$login = new login($db);
 				$rs = $login->getBySESSIONID($token);
 				$bu_id = $rs['bu_id'];
 				$_acc = $rs['bu_name'];
@@ -244,7 +244,7 @@ list($host,$port) = explode(':',$_SERVER['HTTP_HOST']);
 if($cmd=='download'){
 	//if(parse_url($_SERVER['HTTP_REFERER'], PHP_URL_HOST)==$host){
 	if(isset($_SESSION['uid']) || ($buid>0)){
-		$book = new book(&$db);
+		$book = new book($db);
 		$data = $book->getByKey($f);
 		if(empty($data)){
 			$ee->Error('404');
@@ -255,7 +255,7 @@ if($cmd=='download'){
 	
 		if(ENABLE_DECENTRALIZED){
 			$bsid = $data['bs_id'];
-			$bookshelf = new bookshelf(&$db);
+			$bookshelf = new bookshelf($db);
 			$data1 = $bookshelf->getByID($bsid);
 			$uid = $data1['u_id'];
 			$url = BookManager::setCyberhoodOrifileURL($filename.'.'.$subname,$f,false,$uid,$bsid);

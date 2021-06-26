@@ -7,7 +7,7 @@
   $t = $fs->valid($_POST['t'],'cmd');
   $q = $fs->valid($_POST['q'],'query');
 
-  $login = new login(&$db);
+  $login = new login($db);
   $login->setPeriod($p);
   $login->setType($t);
   $login->setQuery($q);

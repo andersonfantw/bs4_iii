@@ -39,7 +39,7 @@ class bssystem{
 		$uid = $_SESSION[SITE_PREFIX.'uid'];
 		if(!isset($uid) || $uid!=$_SESSION['adminid']){
 			global $db;
-			$account = new account(&$db);
+			$account = new account($db);
 			$bsid = bssystem::getBSID();
 			$uid = $account->getUIDByBSID($bsid);
 		}

@@ -3,7 +3,7 @@
   $init = new init('db','tpl','inputxss','filter','getIP','ejson');
 
 	$AuthManager = new AuthManager();
-  $itutor = new itutor(&$db);
+  $itutor = new itutor($db);
  	$buid = $_SESSION['buid'];
  	if(empty($buid)){
  		exit;

@@ -107,7 +107,7 @@ class ActiveCodeManager{
 		global $db;
 		//$code = common::encryptString(time().self::check_code);
 		$code = $this->getCode();
-		$activecode = new activecode(&$db);
+		$activecode = new activecode($db);
 		$data = array();
 		$data['code']=$code;
 		$data['data']=$json_data;
@@ -140,7 +140,7 @@ class ActiveCodeManager{
 	public function check($code){
 		global $db;
 		//check in db
-		$activecode = new activecode(&$db);
+		$activecode = new activecode($db);
 		$data = $activecode->getByID($code);
 		if($data){
 			return $data;
@@ -152,7 +152,7 @@ class ActiveCodeManager{
 	public function regist($code,$buid){
 		global $db;
 		if(self::check($code)){
-			$activecode = new activecode(&$db);
+			$activecode = new activecode($db);
 			$data1 = $activecode->getByID($code);
 
 			$acdata = json_decode($data1['ac_data'],TRUE);
@@ -205,7 +205,7 @@ SQL;
 				$registdate = $data2['duedate'];
 			}
 
-			$activecode = new activecode(&$db);
+			$activecode = new activecode($db);
 			$data = array();
 			$data['bu_id'] = $buid;
 			$data['arr_gid'] = $arr_gid;
@@ -217,7 +217,7 @@ SQL;
 
 	public function isRegist($code){
 		global $db;
-		$activecode = new activecode(&$db);
+		$activecode = new activecode($db);
 		$data = $activecode->getByID($code);
 		return !empty($data['registdate']);
 	}
@@ -229,7 +229,7 @@ SQL;
 	*/
 	public function isExpired($buid,$arr_gid){
 		global $db;
-		$activecode = new activecode(&$db);
+		$activecode = new activecode($db);
 		$data = $activecode->getByBUID($buid);
 		foreach($data as $row){
 			$json=json_decode($row['ac_data']);

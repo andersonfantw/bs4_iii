@@ -13,7 +13,7 @@
   $bss_password = $fs->valid($_GET['pw'],'pwd');
   $bs_id = (int) $fs->valid($_GET['bs'],'id');
 
-  $bookshelf_share = new bookshelf_share(&$db,'bookshelf_share');  
+  $bookshelf_share = new bookshelf_share($db,'bookshelf_share');
   if(!$bookshelf_share->AuthCheck($bs_id,$USER_IP,$bss_account,$bss_password)){
     header('HTTP/1.0 403 Forbidden');
     exit;

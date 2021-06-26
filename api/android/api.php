@@ -74,7 +74,7 @@ switch($cmd){
 	case 'mybs':
 	case 'transcript':
 	case 'website':
-    $login = new login(&$db);
+    $login = new login($db);
     $rs = $login->getBySESSIONID($token);
     $data = array();
     if(empty($rs)){

@@ -1,7 +1,7 @@
 <?PHP
 	require_once dirname(__FILE__).'/../init/config.php';
 	$init = new init('db','filter','ejson');
-	$login = new login(&$db);
+	$login = new login($db);
 	global $db;
 $ss = var_export($_SESSION,true);
 file_put_contents('/var/www/html/logs/logincheck.log',sprintf("%s=login_check\nsession_id=%s\n",date('Y:m:d H:i:s'),session_id()),FILE_APPEND);
@@ -27,7 +27,7 @@ file_put_contents('/var/www/html/logs/logincheck.log',sprintf("line8=ss:%s\n",$s
 		$data['uname'] = bssystem::getLoginBUName();
 	  	switch($cmd){
   			case 'group':
-  				$group = new group(&$db);
+  				$group = new group($db);
   				$data1 = $group->getListByBUID($_buid);
 				$data['groups'] = $data1;
   			break;
@@ -106,7 +106,7 @@ file_put_contents('/var/www/html/logs/logincheck.log',sprintf("line101,updateByK
 		switch($data['type']){
 			case 'u':
 				unset($_SESSION['notlogin']);
-				$bookshelf_user = new bookshelf_user(&$db);
+				$bookshelf_user = new bookshelf_user($db);
 				$bookshelf_user->setLastLogin($userid);
 				break;
 			case 'a':

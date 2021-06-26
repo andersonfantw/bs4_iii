@@ -17,7 +17,7 @@
     exit;
   }
 
-  $book = new book(&$db,'books');
+  $book = new book($db,'books');
   $rs = $book->getPublicByID($id);
   if($rs){
     if($type=='webbook' && WEBBOOK_STATUS){      

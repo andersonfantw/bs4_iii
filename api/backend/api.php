@@ -22,7 +22,7 @@ switch($cmd){
 				$ucname = $rs['u_cname'];
 				$uid = $rs['u_id'];
 				BookshelfManager::BSManagerLogin($uid,$uname,$ucname);
-				$bookshelf = new bookshelf(&$db);
+				$bookshelf = new bookshelf($db);
 				$data = $bookshelf->getByID($bs_code);
 				$bsname = $data['bs_name'];
 				$bsid = $data['bs_id'];

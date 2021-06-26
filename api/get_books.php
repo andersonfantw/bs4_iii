@@ -17,7 +17,7 @@
   	include_once $_path;
   }
   include_once $ConfigManager->getDefineSyspath();
-  $book = new book(&$db);
+  $book = new book($db);
   $cols = array('c_id','c_name','b_id','b_name','b_description','webbook_link','ibook_link','b_top','b_order','bs_id','webbook_show','ibook_show','f_path');
 
   if($bu_id==-1){

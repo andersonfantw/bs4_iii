@@ -5,7 +5,7 @@ $init = new init('db','tpl','inputxss','filter','ejson');
 global $bs_code;
 $bs_code = (int) $fs->valid($_POST['bs'],'id');
 $ConfigManager = new ConfigManager(0,$bs_code);
-$login = new login(&$db);
+$login = new login($db);
 $_path = $ConfigManager->getDefineUserbase();
 if(!empty($_path)){
 	include_once $_path;
@@ -55,7 +55,7 @@ if(empty($u_id)){
 	}
 
 	//check is mybook
-	$book = new book(&$db);
+	$book = new book($db);
 	$book->reset();
 	$book->setBookStatus('private');
 	$book->setBUID($bu_id);
@@ -132,7 +132,7 @@ SQL;
 }
 
 $data = array();
-$book = new book(&$db);
+$book = new book($db);
 $rsb = $book->getPublicByID($bid);
 
 if($bt=='webbook'){

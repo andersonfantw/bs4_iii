@@ -5,8 +5,8 @@
 	$itutor_cols = array("Name","Description","Date","UserID","TotalTime","SlideCount","TakenSlide","TotalInteraction","TakenInteraction","Correct","Points","MaxPoints","Percent","Result");
 	//$exercise_cols = array("SlideIndex","ReportID","Attempts","Points","MaxPoints","Result","Type","Answers");
 
-	$itutor = new itutor(&$db);
-	$db_process = new db_process(&$db,'itutor_exercise','e_');
+	$itutor = new itutor($db);
+	$db_process = new db_process($db,'itutor_exercise','e_');
 	$report = $fs->valid($_POST['report'],'xml');
 	$xml = simplexml_load_string($report);
 

@@ -12,7 +12,7 @@
   include_once $ConfigManager->getDefineSyspath();
   $q_str = $fs->valid($_POST['q'],'query');
  
-  $book = new book(&$db);
+  $book = new book($db);
   //$data = $book->getPublicListByKeyword($q_str,'b_order desc,b_id desc','','');
   $book->reset();
   $book->setBSID($bs_code);

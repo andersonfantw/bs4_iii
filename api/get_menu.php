@@ -4,7 +4,7 @@
   global $bs_code;
   $cmd = $fs->valid($_POST['cmd'],'cmd');
   $bs_code = (int) $fs->valid($_POST['bs'],'id');
-  $category = new category(&$db);
+  $category = new category($db);
   $data = $category->getCategoryStructure();
 
   $output = new Services_JSON();
