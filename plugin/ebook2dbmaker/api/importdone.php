@@ -7,8 +7,8 @@ $rc = $fs->valid($_REQUEST['rc'],'id');
 $errmsg = $fs->valid($_REQUEST['errmsg'],'content');
 
 global $ee;
-$book = new book(&$db);
-$queue = new queue(&$db);
+$book = new book($db);
+$queue = new queue($db);
 $data = $book->getByKey($bookid);
 if(empty($data)){
 	$ee->add('bookid',$bookid);

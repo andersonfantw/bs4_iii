@@ -3,7 +3,7 @@ require_once dirname(__FILE__).'/../init/config.php';
 
 $init = new init('db','sysauth','tpl','inputxss','filter','status','ehttp');
 $type = $fs->valid($_GET['type'],'cmd');
-$db_process = new db_process(&$db,'system_account','su_');
+$db_process = new db_process($db,'system_account','su_');
 
 $su_id = (int) $fs->valid($_REQUEST['id'],'id');
 

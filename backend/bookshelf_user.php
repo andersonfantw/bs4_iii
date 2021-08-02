@@ -5,7 +5,7 @@ require_once dirname(__FILE__).'/init.php';
 /* require_once dirname(__FILE__).'/../api/nas.php'; */
 
 $type = $fs->valid($_GET['type'],'cmd');
-$bookshelf_user = new bookshelf_user(&$db);
+$bookshelf_user = new bookshelf_user($db);
 
 $g_id = $fs->valid($_REQUEST['gid'],'id');
 $bu_id = (int) $fs->valid($_REQUEST['id'],'id');

@@ -663,14 +663,14 @@ SQL;
 	public function addBookTag($bid,$tid){
 		$rs = $this->getBookTagByID($bid,$tid);
 		if(empty($rs)){
-			$book_tag = new db_process(&$this->db,'book_tag','');
+			$book_tag = new db_process($this->db,'book_tag','');
 			$data = array();
 			$data['b_id'] = intval($bid);
 			$data['t_id'] = intval($tid);
 			$data['bt_type'] = 0;
 			$data['Createuser'] = bssystem::getUID();
 			$data['CreateDate'] = date('Y-m-d H:i:s');
-			$book_tag = new db_process(&$this->db,'book_tag','bt_');
+			$book_tag = new db_process($this->db,'book_tag','bt_');
 			$book_tag->insert($data);
 		}
 	}
@@ -691,7 +691,7 @@ SQL;
 		return $result;
 	}
 	public function setShortcutTag($tsid,$seq,$tid){
-		$shortcut_tag = new db_process(&$this->db,'tag_shortcut_tag','ts_');
+		$shortcut_tag = new db_process($this->db,'tag_shortcut_tag','ts_');
 		$where = sprintf('ts_id=%u and seq=%u and t_id=%u',$tsid,$seq,$tid);
 		$data = $shortcut_tag->getList('ts_id,seq,t_id',0,0,$where);
 		if($data['total']==0){
@@ -780,7 +780,7 @@ SQL;
 		}
 	}
 	private function _setKey($uid,$key){
-		$tagkey = new db_process(&$this->db,'tagkey','tk_');
+		$tagkey = new db_process($this->db,'tagkey','tk_');
 
 		$row = $tagkey->getByName($key);
 		if(empty($row)){
@@ -796,7 +796,7 @@ SQL;
 		return $kid;
 	}
 	private function _setVal($uid,$val){
-		$tagval = new db_process(&$this->db,'tagval','tv_');
+		$tagval = new db_process($this->db,'tagval','tv_');
 		$row = $tagval->getByName($val);
 		if(empty($row)){
 			$data=array();
@@ -828,7 +828,7 @@ SQL;
 		return $tid;
 	}
 	private function _setBookTag($uid,$bid,$tid){
-		$book_tag = new db_process(&$this->db,'book_tag','bt_');
+		$book_tag = new db_process($this->db,'book_tag','bt_');
 
 		$where = sprintf('b_id=%u and t_id=%u',$bid,$tid);
 		$data = $book_tag->getList('b_id,t_id',0,0,$where);

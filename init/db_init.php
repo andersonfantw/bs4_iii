@@ -1,5 +1,6 @@
 <?PHP
 //mysql, dbmaker
+define('MYSQL_ASSOC', 1);
 //define('DB_TYPE','mysql');
 define('DB_TYPE','dbmaker');
 

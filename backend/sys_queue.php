@@ -3,7 +3,7 @@ require_once dirname(__FILE__).'/../init/config.php';
 $init = new init('db','sysauth','tpl','inputxss','filter','status','ealert');
 
 $type = $fs->valid($_GET['type'],'cmd');
-$queue = new queue(&$db);
+$queue = new queue($db);
 if($type=='do_add' || $type=='do_update'){
 }
 $id = (int) $fs->valid($_REQUEST['id'],'id');
@@ -19,7 +19,7 @@ switch ($type) {
   case 'delete':
   	$data = $queue->getByID($id);
   	$key = $data['q_key'];
-  	$book = new book(&$db);
+  	$book = new book($db);
 		$book->delByKey($key);
 		if($queue->del($id))
 		  $status->go('sys_queue.php?page='.$page,'success',LANG_MESSAGE_DELETE_SUCCESS);

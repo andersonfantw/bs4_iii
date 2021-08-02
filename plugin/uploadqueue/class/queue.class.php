@@ -110,7 +110,7 @@ SELECT;
 				$where_str .= ' and isdelete=0 and status>0 and status<100 and q_retry<3';
 				break;
 			case QueueTypeEnum::FailureList:
-				$ini = new ini(&$db);
+				$ini = new ini($db);
 				$row = $ini->getByKey('uploadqueue','notice');
 				$notice_qid = (int)$row['val'];
 				$row = $this->getNext();

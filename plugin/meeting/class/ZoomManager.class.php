@@ -90,7 +90,7 @@ class ZoomManager{
 	}
 	function getReservationListForUser($buid,$start_limit,$end_limit){
 		global $db;
-		$zoom_meetings_calendar = new zoom_meetings_calendar(&$db);
+		$zoom_meetings_calendar = new zoom_meetings_calendar($db);
 		$_data = $zoom_meetings_calendar->getListByBUID($buid);
 		$data = array();
 		for($i=0;$i<count($_data['result']);$i++){
@@ -120,7 +120,7 @@ class ZoomManager{
 		$lang = 'en';
 
 		$uid = $data['u_id'];
-		$account = new account(&$db);
+		$account = new account($db);
 		$rows = $account->getByID($uid);
 
 		$gid = $data['g_id'];
@@ -129,7 +129,7 @@ class ZoomManager{
 		$end = $data['zmc_end'];
 /*
 		unset($data['g_id']);
-		$bookshelf_users = bookshelf_users(&$db);
+		$bookshelf_users = bookshelf_users($db);
 		$rows = $bookshelf_users->getList('',0,0,sprintf('g_id=%u',$gid));
 		$guest = array();
 		$arr_buid = array();
@@ -149,7 +149,7 @@ class ZoomManager{
 		$data['zmc_starturl'] = $val['start_url'];
 		$data['zmc_joinurl'] = $val['join_url'];
 		if(!empty($data['zmc_uuid'])){
-			$zoom_meetings_calendar = new zoom_meetings_calendar(&$db);
+			$zoom_meetings_calendar = new zoom_meetings_calendar($db);
 			$zoom_meetings_calendar->insert($data);
 			$data1 = array();
 			foreach($data as $k => $v){
@@ -170,7 +170,7 @@ class ZoomManager{
 		$presenter_email = $this->default_email;
 
 		$uid = $data['u_id'];
-		$account = new account(&$db);
+		$account = new account($db);
 		$rows = $account->getByID($uid);
 		$presenter_name = sprintf('%s[%s]',$rows['u_cname'],$rows['u_name']);
 
@@ -182,7 +182,7 @@ class ZoomManager{
 		$val = $this->action_update($uuid,$roomid,$name,$start,$end);
 		$data['vmc_url'] = $val['presenter']['presenter_url'];
 		if($val){
-			$zoom_meetings_calendar = new zoom_meetings_calendar(&$db);
+			$zoom_meetings_calendar = new zoom_meetings_calendar($db);
 			$zoom_meetings_calendar->update($uuid,$data);
 			return true;
 		}
@@ -192,7 +192,7 @@ class ZoomManager{
 		global $db;
 		$val = $this->action_delete($reservationid);
 		if($val){
-			$vcube_meetings_calendar = new vcube_meetings_calendar(&$db);
+			$vcube_meetings_calendar = new vcube_meetings_calendar($db);
 			$vcube_meetings_calendar->del($reservationid);
 			return true;
 		}
@@ -262,7 +262,7 @@ class ZoomManager{
 			$where_str = sprintf(' and u_id=%u',$uid);
 		}
 		
-		$zoom_meetings_calendar = new zoom_meetings_calendar(&$db);
+		$zoom_meetings_calendar = new zoom_meetings_calendar($db);
 		$data = $zoom_meetings_calendar->getList('',0,0,"timestampdiff('m',zmc_start,now())<43200".$where_str);
 		foreach($data['result'] as $row){
 			$timestamp = strtotime($row['zmc_start']);
@@ -309,7 +309,7 @@ class ZoomManager{
 			if(strtotime($arr['data']['meetings'][$i]['start_time']) < (time()+600) &&
 				(strtotime($arr['data']['meetings'][$i]['start_time'])+intval($arr['data']['meetings'][$i]['duration'])*60)>time()){
 				$uuid = $arr['data']['meetings'][$i]['uuid'];
-				//$Zoom_meetings_calendar = new Zoom_meetings_calendar(&$db);
+				//$Zoom_meetings_calendar = new Zoom_meetings_calendar($db);
 				$data = $zoom_meetings_calendar->getByUUID($uuid);
 				$arr['data']['meetings'][$i]['url'] = $data['zmc_starturl'];
 				$arr['data']['meetings'][$i]['uid'] = $data['u_id'];

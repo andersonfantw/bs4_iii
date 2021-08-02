@@ -262,7 +262,7 @@ left join bookshelf2_view_tags vt on(t.t_id=vt.t_id)
 SQL;
 			$data['result']=$db->get_results($sql);
 		}else{
-			$tag_disctionary = new tag_dictionary(&$db);
+			$tag_disctionary = new tag_dictionary($db);
 			$data = $tag_disctionary->getList();
 		}
 */
@@ -295,7 +295,7 @@ SQL;
 		$hasUpdate=false;
 		if(empty($this->tag_dispute_list)){
 			global $db;
-			$tag_dictionary = new tag_dictionary(&$db);
+			$tag_dictionary = new tag_dictionary($db);
 			foreach($this->dictionary1 as $dockey => $arr){
 				$data = array();
 				list($dockey,$quizid) = explode(':',$dockey);

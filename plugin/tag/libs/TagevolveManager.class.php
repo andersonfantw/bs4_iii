@@ -35,7 +35,7 @@ SQL;
 	function loadToTree(){
 		global $db;
 		$this->newTree();
-		//$tagevolve = new tagevolve(&$db);
+		//$tagevolve = new tagevolve($db);
 		//$data = $tagevolve->getList('',0,0,'');
 		$sql=<<<SQL
 select te.*,

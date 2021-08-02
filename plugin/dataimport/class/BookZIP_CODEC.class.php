@@ -70,7 +70,7 @@ class BookZip_CODEC implements iBSFile_CODEC{
 			$data['webbook_show']=1;
 			$data['ibook_show']=0;
 			$data['b_status']=1;
-			$book = new book(&$db);
+			$book = new book($db);
 			if(!$book->insert($fs->sql_safe($data))){
 				$ee->Error('500.1');
 			}

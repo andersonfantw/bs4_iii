@@ -2,7 +2,7 @@
 require_once dirname(__FILE__).'/../config.php';
 
 $init = new init('db','auth','bookshelf_auth','tpl','inputxss','filter','status','ehttp');
-$group = new group(&$db);
+$group = new group($db);
 /*if($group->checkGroupExist()){
 	$tpl->assign('WIZARD','off');	
 }*/
@@ -13,8 +13,8 @@ if($step<1){
   $error = false;
 
   /*
-     $db_process = new db_process(&$db,'groups','g_');
-     $group = new group(&$db);
+     $db_process = new db_process($db,'groups','g_');
+     $group = new group($db);
 
      if($type=='do_add' || $type=='do_update'){
      $data['g_name'] = $fs->valid($_POST['g_name'],'name');
@@ -37,8 +37,8 @@ if($step<1){
       foreach($class_number_arr as $key=>$val){
         $class_number_arr[$key] = (int) $val;
       }
-      $group = new group(&$db);
-      $c_db_process = new db_process(&$db,'category','c_');
+      $group = new group($db);
+      $c_db_process = new db_process($db,'category','c_');
       //新增年級主分類
       for($i=1;$i<=$grade_number;$i++){
         unset($c_data);

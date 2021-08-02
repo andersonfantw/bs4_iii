@@ -67,7 +67,7 @@ SQL;
   }
 	function rename($name){
 		global $db;
-		$tag = new tag(&$db);
+		$tag = new tag($db);
 		if(count($this->from)>0){
 			$tid = $this->from[0];
 			$result = $tag->getByID($tid);

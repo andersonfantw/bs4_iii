@@ -3,9 +3,9 @@ set_time_limit(1800);
 require_once dirname(__FILE__).'/../../../init/config.php';
 //$init = new init('db','auth','bookshelf_auth','filter');
 $init = new init('db','filter','ejson');
-$tag = new tag(&$db);
-$system_tag = new system_tag(&$db);
-$scanexam_test_tag = new scanexam_test_tag(&$db);
+$tag = new tag($db);
+$system_tag = new system_tag($db);
+$scanexam_test_tag = new scanexam_test_tag($db);
 
 $cmd = $fs->valid($_GET['cmd'],'cmd');
 $uid=intval($_SESSION['adminid']);
@@ -68,7 +68,7 @@ switch($cmd){
 		include_once $ConfigManager->getDefineSyspath();
 		$bsid=bssystem::getBSID();
 		$data = $tag->getBooksByTSID($bsid,$tsid,$bu_id);
-		$shortcut = new shortcut(&$db);
+		$shortcut = new shortcut($db);
 		$data1 = $shortcut->getByID($tsid);
 		$host_base = HostManager::getBookshelfBase();
 		if(MEMBER){
@@ -163,12 +163,12 @@ switch($cmd){
 		}
 		break;
 	case 'getMostContributed':
-		//°^Äm«×
+		//ï¿½^ï¿½mï¿½ï¿½
 		break;
 	case 'getShortcutList':
 		$uid = $fs->valid($_POST['uid'],'id');
 		$bsid = $fs->valid($_POST['bsid'],'id');
-		$shortcut = new shortcut(&$db);
+		$shortcut = new shortcut($db);
 		$shortcut->reset();
 		$shortcut->setBSID($bsid);
 		$shortcut->setStatus(1);
@@ -323,7 +323,7 @@ switch($cmd){
 						$_r[$r['key']]=$r;
 					}
 					$buid = bssystem::getLoginBUID();
-					$group = new group(&$db);
+					$group = new group($db);
 					$rs1 = $group->getListByBUID($buid);
 					foreach($rs1 as $r){
 						$_rs[] = $_r[$r['g_key']];
@@ -489,7 +489,7 @@ switch($cmd){
 		$reportid = $fs->valid($_POST['reportid'],'key');
 		$ptid = (int)$fs->valid($_POST['ptid'],'id');
 		$tid = (int)$fs->valid($_POST['tid'],'id');
-		$itutor_exercise_tag = new itutor_exercise_tag(&$db);
+		$itutor_exercise_tag = new itutor_exercise_tag($db);
 		$data = $itutor_exercise_tag->insert($dockey,$reportid,$ptid,$tid);
 		$ee->Message('200');
 		break;
@@ -500,7 +500,7 @@ switch($cmd){
 		$seq = (int)$fs->valid($_POST['seq'],'num');
 		$ptid = (int)$fs->valid($_POST['ptid'],'id');
 		$tid = (int)$fs->valid($_POST['tid'],'id');
-		$scanexam_exercise_tag = new scanexam_exercise_tag(&$db);
+		$scanexam_exercise_tag = new scanexam_exercise_tag($db);
 		$data = $scanexam_exercise_tag->insert($bskey,$sekey,$setdate,$seq,$ptid,$tid,$uid);
 		$ee->Message('200');
 		break;
@@ -509,7 +509,7 @@ switch($cmd){
 		$reportid = $fs->valid($_POST['reportid'],'key');
 		$ptid = $fs->valid($_POST['ptid'],'id');
 		$tid = $fs->valid($_POST['tid'],'id');
-		$itutor_exercise_tag = new itutor_exercise_tag(&$db);
+		$itutor_exercise_tag = new itutor_exercise_tag($db);
 		$itutor_exercise_tag->del($dockey,$reportid,$ptid,$tid);
 		$ee->Message('200');
 		break;
@@ -520,7 +520,7 @@ switch($cmd){
 		$seq = $fs->valid($_POST['seq'],'num');
 		$ptid = $fs->valid($_POST['ptid'],'id');
 		$tid = $fs->valid($_POST['tid'],'id');
-		$scanexam_exercise_tag = new scanexam_exercise_tag(&$db);
+		$scanexam_exercise_tag = new scanexam_exercise_tag($db);
 		$scanexam_exercise_tag->del($bskey,$sekey,$setdate,$seq,$ptid,$tid);
 		$ee->Message('200');
 		break;

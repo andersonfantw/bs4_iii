@@ -11,8 +11,8 @@ $status_arr=array(0=>QueueStatusEnum::ExceedMaxRetryTimes,
 						100=>QueueStatusEnum::ImportFail);
 
 $UploadQueue = new UploadQueue();
-$ini = new ini(&$db);
-$queue = new queue(&$db);
+$ini = new ini($db);
+$queue = new queue($db);
 
 $row = $ini->getByKey('uploadqueue','notice');
 if(empty($row)){

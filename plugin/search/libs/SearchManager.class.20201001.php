@@ -23,7 +23,7 @@ class SearchManager{
 	//return array(keyword) = synonyms, seperate by comma.
 	function getSynonyms($arr){
 		global $db;
-		$fulltext_synonyms = new fulltext_synonyms(&$db);
+		$fulltext_synonyms = new fulltext_synonyms($db);
 		$data = $fulltext_synonyms->getList();
 
 		$hash = array();
@@ -59,7 +59,7 @@ class SearchManager{
 		return $arrFoundSynonyms;
 	}
 	function fulltextsearch($value){
-		$_arr_from = array('/  /','/\( /','/ \)/','/ OR /','/ or /','/ AND /','/ and /','/¡U/','/¡®/','/ \| /','/ & /','/ /');
+		$_arr_from = array('/  /','/\( /','/ \)/','/ OR /','/ or /','/ AND /','/ and /','/ï¿½U/','/ï¿½ï¿½/','/ \| /','/ & /','/ /');
 		$_arr_to = array(' ','(',')','|','|','&','&','|','&','|','&','&');
 		$value = preg_replace($_arr_from,$_arr_to,$value);
 		$this->fulltextsearch = $value;
@@ -69,8 +69,8 @@ class SearchManager{
 		//$_GET[order[0][dir]]
 		//$_GET[start]
 		//$_GET[length]
-		//¦P¸qµü
-		//°õ¦æ³æ¦ì¡B©Ó¿ì¬ì§O
+		//ï¿½Pï¿½qï¿½ï¿½
+		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Bï¿½Ó¿ï¿½ï¿½O
 		if(!$this->validFulltextExpression($this->fulltextsearch)){
 			return $ee->Warning('400');
 		}
@@ -412,30 +412,30 @@ class SearchManager{
 	
 	private function SearchEnginRequrnFormatToDatatableFormat($data){
 /*
-½d¨Ò:  [[0,"",0.02519],[50,10],[10043,1,3,"4918139","®Ñ¦W",108,"­pµe¦WºÙ","°õ¦æ³æ¦ì","©Ó¿ì¬ì§O","©Ó¿ì¤H","»â°ì",140,"{¡K}"],[10042,1,3,"4918137","®Ñ¦W",...],[¡K],[¡K]]
+ï¿½dï¿½ï¿½:  [[0,"",0.02519],[50,10],[10043,1,3,"4918139","ï¿½Ñ¦W",108,"ï¿½pï¿½eï¿½Wï¿½ï¿½","ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½","ï¿½Ó¿ï¿½ï¿½O","ï¿½Ó¿ï¿½H","ï¿½ï¿½ï¿½",140,"{ï¿½K}"],[10042,1,3,"4918137","ï¿½Ñ¦W",...],[ï¿½K],[ï¿½K]]
 SearchEngin:
-data[0]¬°¦^¶Ç­È¡A[return_code,message]		
-	data[0][0]=0 ªí¥Ü¥¿½T¡A>0ªí¥Ü¿ù»~	
-	data[0][1] ¬°¿ù»~°T®§	
-	data[0][2] ·j´M®É¶¡ (¬í¼Æ)	
+data[0]ï¿½ï¿½ï¿½^ï¿½Ç­È¡A[return_code,message]		
+	data[0][0]=0 ï¿½ï¿½Ü¥ï¿½ï¿½Tï¿½A>0ï¿½ï¿½Ü¿ï¿½ï¿½~	
+	data[0][1] ï¿½ï¿½ï¿½ï¿½ï¿½~ï¿½Tï¿½ï¿½	
+	data[0][2] ï¿½jï¿½Mï¿½É¶ï¿½ (ï¿½ï¿½ï¿½)	
 		
-data[n], n>=1 ¬°¸ê®Æ		
-	data[1][0] Á`µ§¼Æ(total_num_info=1®É¤~¦³·N¸q)	
-	data[1][1] ¹ê»Ú¦^¶Çµ§¼Æ	
+data[n], n>=1 ï¿½ï¿½ï¿½ï¿½ï¿½		
+	data[1][0] ï¿½`ï¿½ï¿½ï¿½ï¿½(total_num_info=1ï¿½É¤~ï¿½ï¿½ï¿½Nï¿½q)	
+	data[1][1] ï¿½ï¿½Ú¦^ï¿½Çµï¿½ï¿½ï¿½	
 	n >= 2	
 	data[n][0] B_ID	
 	data[n][1] uid	
 	data[n][2] bs_id	
 	data[n][3] b_key	
-	data[n][4] ®Ñ¦W	
-	data[n][5] ¦~«×	
-	data[n][6] ­pµe¦WºÙ	
-	data[n][7] °õ¦æ³æ¦ì	
-	data[n][8] ©Ó¿ì¬ì§O	
-	data[n][9] ©Ó¿ì¤H	
-	data[n][10] »â°ì	
-	data[n][11] ÃöÁä¦r¥X²{Á`¼Æ (¦P¤@­pµe)	
-	data[n][12] ÃöÁä¦r¥X²{¦¸¼Æcount (json ¦r¦ê)  ¨Ò : {"kw1":121,"kw2":20,"kw3":12...}
+	data[n][4] ï¿½Ñ¦W	
+	data[n][5] ï¿½~ï¿½ï¿½	
+	data[n][6] ï¿½pï¿½eï¿½Wï¿½ï¿½	
+	data[n][7] ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½	
+	data[n][8] ï¿½Ó¿ï¿½ï¿½O	
+	data[n][9] ï¿½Ó¿ï¿½H	
+	data[n][10] ï¿½ï¿½ï¿½	
+	data[n][11] ï¿½ï¿½ï¿½ï¿½rï¿½Xï¿½{ï¿½`ï¿½ï¿½ (ï¿½Pï¿½@ï¿½pï¿½e)	
+	data[n][12] ï¿½ï¿½ï¿½ï¿½rï¿½Xï¿½{ï¿½ï¿½ï¿½ï¿½count (json ï¿½rï¿½ï¿½)  ï¿½ï¿½ : {"kw1":121,"kw2":20,"kw3":12...}
 
 Datatable:
 		//draw: 3

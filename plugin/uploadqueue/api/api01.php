@@ -112,7 +112,7 @@ $tmpfile=array(
 		}
 		$UploadQueue->setTagRoot($tagroot);
 
-		//mc=;ms=Math;bs=Physics;root=Chemistry:¤Æ¾Ç;Math=math104:¤ñªøµu;Physics=Physics1:ª½½u¹B°Ê
+		//mc=;ms=Math;bs=Physics;root=Chemistry:ï¿½Æ¾ï¿½;Math=math104:ï¿½ï¿½ï¿½ï¿½u;Physics=Physics1:ï¿½ï¿½ï¿½uï¿½Bï¿½ï¿½
 		$tags = $fs->valid($_POST['tags'],'name');
 		$arr = explode(';',$tags);
 		$arr_prt = array('prt10'=>'C','prt20'=>'M','prt30'=>'S','prt40'=>'F','prt50'=>'A','prt60'=>'P');
@@ -274,7 +274,7 @@ $tmpfile=array(
 	case 'progress':
 		validToken(28800);
 
-		$queue = new queue(&$db);
+		$queue = new queue($db);
 		$unprocess = $queue->getUnprocess();
 		$heartbeat = $UploadQueue->checkHeartbeat();
 		$ee->add('total',$unprocess['num']);
@@ -298,7 +298,7 @@ $tmpfile=array(
 			$ee->add('msg','Missing parameter [fileid]');
 			$ee->Error('406.60');
 		}
-		$queue = new queue(&$db);
+		$queue = new queue($db);
 		$data = $queue->getListByKey($key);
 		if(empty($data)){
 			$ee->add('key',$key);
@@ -318,7 +318,7 @@ $tmpfile=array(
 					break;
 				case QueueStatusEnum::ImportSuccess:
 					$bid = $row['b_id'];
-					$book = new book(&$db);
+					$book = new book($db);
 					$data1 = $book->getByID($bid);
 					$openurl = $data1['webbook_link'];
 					$openurl = str_replace(HttpLocalIPPort,'',$data1['webbook_link']);
@@ -373,7 +373,7 @@ $tmpfile=array(
 		break;
 	case 'getBookshelfList':
 		validToken();
-		$bookshelf = new bookshelf(&$db);
+		$bookshelf = new bookshelf($db);
 		$data = $bookshelf->getList('bs_id desc',0,0,'bs_status=1 and bs_list_status=1');
 		$arr = array();
 		foreach($data['result'] as $row){
@@ -385,7 +385,7 @@ $tmpfile=array(
 		validToken();
 		global $bs_code;
 		$bs_code = $fs->valid($_POST['bookshelfid'],'num');
-		$category = new category(&$db);
+		$category = new category($db);
 		$data = $category->getCategoryStructure();
 		$arr = array();
 		foreach($data['result'] as $pcate){
@@ -447,7 +447,7 @@ if(!empty($token)){
 		$TagTree->loadDB();
 
 		//see if user exist
-		$bookshelf_user = new bookshelf_user(&$db);
+		$bookshelf_user = new bookshelf_user($db);
 		$row_u = $bookshelf_user->getByName($account);
 		if(empty($row_u)){
 			$data = array();
@@ -465,7 +465,7 @@ if(!empty($token)){
 		}
 
 		//see if group exist
-		$group = new group(&$db);
+		$group = new group($db);
 		$arr_unit = explode(',',$units);
 		$arr_gids = array();
 		foreach($arr_unit as $unit){
@@ -494,8 +494,8 @@ if(!empty($token)){
 		validToken();
 		$pnkey = $fs->valid($_POST['pnkey'],'key');
 		$pn = $fs->valid($_POST['pn'],'name');
-		$tag = new tag(&$db);
-		$tagevolve = new tagevolve(&$db);
+		$tag = new tag($db);
+		$tagevolve = new tagevolve($db);
 		$tagrow = $tag->getByKey($pnkey);
 		if(count($tagrow)==1){
 			$tid = $tagrow['result'][0]['t_id'];
@@ -536,7 +536,7 @@ if(!empty($token)){
 	case 'search':
 		$index = $fs->valid($_POST['index'],'num');
 		//get user auth.
-		$group = new group(&$db);
+		$group = new group($db);
 		$buid = bssystem::getLoginBUID();
 		$arr_pcu = array('pcu30'=>175,
 											'pcu31'=>176,

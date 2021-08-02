@@ -6,7 +6,7 @@ $ZoomManager = new ZoomManager();
 $cmd = $fs->valid($_GET['cmd'],'cmd');
 switch($cmd){
 	case 'getAccountList':
-		$account = new account(&$db);
+		$account = new account($db);
 		$data = $account->getList();
 		$arr_keep = array('u_id','u_name');
 		for($i=0;$i<count($data['result']);$i++){
@@ -17,7 +17,7 @@ switch($cmd){
 		echo json_encode($data['result']);
 		break;
 	case 'getGroupList':
-		$group = new group(&$db);
+		$group = new group($db);
 		$data = $group->getList('',0,0,'',true);
 		echo json_encode($data['result']);
 		break;
@@ -156,7 +156,7 @@ switch($cmd){
 	case 'IsClassBegin':
 		$mode = $fs->valid($_POST['mode'],'cmd');
 		$buid = $fs->valid($_POST['buid'],'id');
-		$zoom_meetings_calendar = new zoom_meetings_calendar(&$db);
+		$zoom_meetings_calendar = new zoom_meetings_calendar($db);
 		$data = $zoom_meetings_calendar->getCurrentClass($mode,$buid);
 		echo json_encode($data);
 		break;
@@ -165,7 +165,7 @@ switch($cmd){
 		$name = $fs->valid($_GET['name'],'name');
 		$email = 'anderson@ttii.com.tw';
 
-		$zoom_meetings_calendar = new zoom_meetings_calendar(&$db);
+		$zoom_meetings_calendar = new zoom_meetings_calendar($db);
 		$arr = $zoom_meetings_calendar->getByRoomID($roomid);
 		if($arr){
 			$url = $arr['zmc_joinurl'].'?uname='.urlencode($name);

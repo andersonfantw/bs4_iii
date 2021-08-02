@@ -2,10 +2,10 @@
 require_once dirname(__FILE__).'/../init/config.php';
 $init = new init('db','auth','bookshelf_auth','tpl','inputxss','filter','status','ehttp');
 $ImportManager = new ImportManager();
-$allexam = new allexam(&$db);
-$scanexam_quiz = new scanexam_quiz(&$db);
-$scanexam_user = new scanexam_user(&$db);
-$scanexam_exercise = new scanexam_exercise(&$db);
+$allexam = new allexam($db);
+$scanexam_quiz = new scanexam_quiz($db);
+$scanexam_user = new scanexam_user($db);
+$scanexam_exercise = new scanexam_exercise($db);
 
 $m = $fs->valid($_GET['m'],'num');
 $cmd = $fs->valid($_GET['cmd'],'cmd');

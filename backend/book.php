@@ -4,8 +4,8 @@ $init = new init('db','auth','bookshelf_auth','tpl','inputxss','filter','status'
 require_once dirname(__FILE__).'/init.php';
 
 $type = $fs->valid($_GET['type'],'cmd');
-$book = new book(&$db);
-$game_reflection = new game_reflection(&$db);
+$book = new book($db);
+$game_reflection = new game_reflection($db);
 if($type=='do_add' || $type=='do_update'){
   $data['b_name'] = $fs->valid($_POST['b_name'],'name');
   $data['b_key'] = $fs->valid($_POST['b_key'],'key');
@@ -94,17 +94,17 @@ if($type=='do_add' || $type=='do_update')
 
 switch ($type) {
   case 'add':
-    $category = new category(&$db);
+    $category = new category($db);
     $cate_data = $category->getCategoryStructure();
     $tpl->assign('category',$cate_data);
     $tpl->display('backend/book_edit.tpl');
     break;
   case 'edit':
-    $bookshelf = new bookshelf(&$db);
+    $bookshelf = new bookshelf($db);
     $data_setup = $bookshelf->getByID($bs_code);
 
     $book_category = $book->getCategoryByBID($id);
-    $category = new category(&$db);
+    $category = new category($db);
     $cate_data = $category->getCategoryStructure($book_category);
 
     $data = $book->getByID($id);
@@ -223,7 +223,7 @@ switch ($type) {
     break;
   case 'users_bookshelf':    
     $book_users_bookshelf = $book->getUsersBookshelfByBID($id);
-    $bookshelf_user = new bookshelf_user(&$db);
+    $bookshelf_user = new bookshelf_user($db);
     $bookshelf_user_data = $bookshelf_user->getBookshelfUserStructure($book_users_bookshelf);
     $data = $book->getByID($id);
 
@@ -237,7 +237,7 @@ switch ($type) {
   default:    
     require_once LIBS_PATH.'/page.class.php';
     $host_base = HostManager::getBookshelfBase(true,false);
-    $category = new category(&$db);
+    $category = new category($db);
     $cate_data = $category->getCategoryStructure();
     if(REFLECTION_GAME){
 			$gr_data = $game_reflection->getCommonList($bs_code, 0, 'gr_id desc');
@@ -293,7 +293,7 @@ switch ($type) {
 		      $tpl->assign('pagebar',$pagebar);
 		    }
 			
-		    $bookshelf = new bookshelf(&$db,'bookshelfs');
+		    $bookshelf = new bookshelf($db,'bookshelfs');
 		    $bookshelf_rs = $bookshelf->getByID($bs_code);    
 		    $tpl->assign('bookshelf_data',$bookshelf_rs);
 		    $tpl->assign('data',$data['result']);

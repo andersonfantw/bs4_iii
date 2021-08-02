@@ -13,8 +13,8 @@
 * 1. create a tmp folder in /work/(tmp), move ebook html in it
 * 2. check/create license, and prepare ebk header data.
 * 3. check ebk sysfile & cover image:
-*ƒå		.tag
-*ƒå		.log
+*ï¿½ï¿½		.tag
+*ï¿½ï¿½		.log
 *			.ebk(all header)
 *    if lost files than create.
 *    check book cover image (/work/(tmp)/data/cover.jpg, coverM.jpg, coverS.jpg)
@@ -108,7 +108,7 @@ class EBK_Codec extends BSFile_CODEC implements iBSFile_CODEC{
 	function __destruct(){
 		//remove all tmp files.
 	}
-	//©Ò¦³ebkÀÉ®×&«Ê­±ÁY¹Ï¡A³£©ñ¦b/data
+	//ï¿½Ò¦ï¿½ebkï¿½É®ï¿½&ï¿½Ê­ï¿½ï¿½Yï¿½Ï¡Aï¿½ï¿½ï¿½ï¿½b/data
 	public function EBK_read_data($path){
 		var $pEBKDef = 'a5identification/i4length/i4licenseBSnum/i4licenseACnum';
 		var $pBookInfo = 'a255bookname/a255filename/l8publicshdate/a10version/i4pages/a5languagecode/a13ISBN/a20bookkey';
@@ -212,7 +212,7 @@ class EBK_Codec extends BSFile_CODEC implements iBSFile_CODEC{
 		$data['bs_id'] = $this->bsid;
 		$data['c_id'] = $this->cid;
 
-		$book = new book(&$db);
+		$book = new book($db);
 		$this->b_id = $book->insert($data, true);
 
 		//set license
@@ -235,7 +235,7 @@ class EBK_Codec extends BSFile_CODEC implements iBSFile_CODEC{
 
 		$maincate = array("EbkDef","BookInfo","Copyright","License","LicenseBS","LicenseAcc");
 
-		$book = new book(&$db);
+		$book = new book($db);
 		$data = $book->getByID($bid);
 		//get necessary data
 		$this->EbkDef=array();

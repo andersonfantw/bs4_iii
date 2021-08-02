@@ -14,7 +14,7 @@ session_destroy();
 require_once dirname(__FILE__).'/EcocatConnector.php';
 $init = new init('db','filter','ejson');
 $json = new Services_JSON();
-$book = new book(&$db);
+$book = new book($db);
 $bs = new BookshelfClient;
 
 $cmd = $fs->valid($_GET['cmd'],'cmd');
@@ -42,7 +42,7 @@ switch($cmd){
 				$_bsid = common::getcookie('bs');
 			  $val = common::insert_host_image($uploadfile,0,$resize,$_adminid,$_bsid);
 				if($val['id']) $data['file_id'] = $val['id'];
-				$book = new book(&$db);
+				$book = new book($db);
 				if(!$book->insert($fs->sql_safe($data))){
 					$ee->ERROR('500.40');
 				}
@@ -112,7 +112,7 @@ class BookshelfClient
     $db->connect();
     $db->fetch_array_type=MYSQL_ASSOC;
     $db->query("SET NAMES 'utf8'");
-		$account = new account(&$db);
+		$account = new account($db);
 		$data = $account->getAccountByBSID($id);
 		
     $param = array("account"=>$data['u_name'],"password"=>$data['u_password']);
@@ -125,7 +125,7 @@ class BookshelfClient
     $http_request .= "Content-Type: application/x-www-form-urlencoded\r\n";
     $http_request .= "Content-Length:".strlen($p)." \r\n\r\n"; 
 
-    $fp = fsockopen($this->BookshelfConnector_domain, $this->BookshelfConnector_port, &$errno, &$errstr, 10);
+    $fp = fsockopen($this->BookshelfConnector_domain, $this->BookshelfConnector_port, $errno, $errstr, 10);
     if (!$fp) {
       echo "$errstr ($errno)<br>\n";exit;
     }else{
@@ -389,7 +389,7 @@ class BookshelfClient
     $http_request .= "Content-Type: application/x-www-form-urlencoded\r\n";
     $http_request .= "Content-Length:".strlen($http_request_param)."\r\n\r\n"; 
 
-    $fp = fsockopen($this->BookshelfConnector_domain, $this->BookshelfConnector_port, &$errno, &$errstr, 10);
+    $fp = fsockopen($this->BookshelfConnector_domain, $this->BookshelfConnector_port, $errno, $errstr, 10);
     if (!$fp) {
       echo "$errstr ($errno)<br>\n";exit;
     }else{
@@ -412,7 +412,7 @@ class BookshelfClient
     $http_request .= "Content-Type: application/x-www-form-urlencoded\r\n";
     $http_request .= "Content-Length:".strlen($p)."\r\n\r\n"; 
 
-    $fp = fsockopen($this->BookshelfConnector_domain, $this->BookshelfConnector_port, &$errno, &$errstr, 10);
+    $fp = fsockopen($this->BookshelfConnector_domain, $this->BookshelfConnector_port, $errno, $errstr, 10);
 
     if (!$fp) {
       echo "$errstr ($errno)<br>\n";exit;

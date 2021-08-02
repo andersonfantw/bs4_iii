@@ -9,12 +9,12 @@ function execRegistStep3(){
 
 	$browser = new browser();
 	$_SESSION['_device'] = $browser::detect('ua_type');
-	$activecode = new activecode(&$db);
+	$activecode = new activecode($db);
 	$data = $activecode->getByID($_SESSION['regist_code']);
-	$bookshelf_user = new bookshelf_user(&$db);
+	$bookshelf_user = new bookshelf_user($db);
 	$data1 = $bookshelf_user->getByID($data['bu_id']);
 /*
-	$account = new account(&$db);
+	$account = new account($db);
 	$bsid = $data['bs_id'];
 	$data1 = $account->getAccountByBSID($bsid);
 	$accountname = $data1['u_name'];

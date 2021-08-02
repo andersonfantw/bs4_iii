@@ -5,7 +5,7 @@ require_once dirname(__FILE__).'/init.php';
 
 global $bs_code;
 $type = $fs->valid($_GET['type'],'cmd');
-$bookshelf = new bookshelf(&$db);
+$bookshelf = new bookshelf($db);
 $ConfigManager = new ConfigManager();
 
 if($type=='do_update'){

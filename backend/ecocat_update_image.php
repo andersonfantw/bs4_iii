@@ -3,14 +3,14 @@ require_once dirname(__FILE__).'/../config.php';
 $init = new init('db','auth','bookshelf_auth','tpl','filter','status','ehttp');
 require_once dirname(__FILE__).'/init.php';
 
-$db_process = new db_process(&$db,'books','b_');
+$db_process = new db_process($db,'books','b_');
 $id = (int) $_GET['id'];
 $page = (int) $_GET['page'];
 $page = ($page==0)?1:$page;
 //get books info
 $book_info = $db_process->getById($id);
 global $bs_code;
-$bookshelf = new bookshelf(&$db,'bookshelfs');
+$bookshelf = new bookshelf($db,'bookshelfs');
 $rsb = $bookshelf->getByID($bs_code);
 //echo 'http://'.LocalIP.$rsb['ecocat_api'];exit;
 $xml = simplexml_load_file(HttpLocalIPPort.$rsb['ecocat_api']); 

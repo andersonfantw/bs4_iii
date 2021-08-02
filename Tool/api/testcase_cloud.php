@@ -113,7 +113,7 @@ class testcase_cloud{
 	private function _del_bookshelf(){
 		echo ' -_del_bookshelf'.BR;
 		global $db;
-		$account = new account(&$db);
+		$account = new account($db);
 		$uid = $account->getUIDByAccountName('ttii');
 		foreach($this->_bsid as $bsid){
 			BookshelfManager::DeleteBookshelf($uid,$bsid);
@@ -122,7 +122,7 @@ class testcase_cloud{
 	private function _del_account(){
 		echo ' -_del_account'.BR;
 		global $db;
-		$account = new account(&$db);
+		$account = new account($db);
 		$uid = $account->getUIDByAccountName('ttii');
 		$account->del($uid);
 	}

@@ -23,7 +23,7 @@ if($op=='system_login'){
 }
 
 if($op=='sso'){
-	$account = new account(&$db);
+	$account = new account($db);
 	$rs = $account->getByName($acc);
 	$uid = $rs['u_id'];
 	BookshelfManager::SSOLogin($uid,$acc);
@@ -79,7 +79,7 @@ if($_POST){
     }
     
   }else{
-  	//®ÑÂdºŞ²z­ûµn¤J
+  	//ï¿½ï¿½ï¿½dï¿½Ş²zï¿½ï¿½ï¿½nï¿½J
 		$info = LicenseManager::getSystemActiveInfo();
 		if(!$info['active']){
 			switch($info['mode']){
@@ -117,12 +117,12 @@ if($_POST){
 $_bsid = common::getcookie('bs');
 if(empty($_bsid) && !empty($bs_code) ){
 	//setcookie('bs',$bs_code);
-	$bookshelf = new bookshelf(&$db);
+	$bookshelf = new bookshelf($db);
 	$data = $bookshelf->getByID($bs_code);
 	BookshelfManager::BSManagerLoginCookie($bs_code,$data['bs_name']);
 }
 $init = new init('tpl','auth','db');
-$account = new account(&$db);
+$account = new account($db);
 $_adminid = bssystem::getLoginUID();
 $data = $account->getBookshelfByUID($_adminid);
 $tpl->assign('data',$data);

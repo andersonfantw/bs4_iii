@@ -138,7 +138,7 @@ SQL;
 
 	function insert($data){
 		global $db;
-		$zoom_meetings_calendar_group = new zoom_meetings_calendar_group(&$db);
+		$zoom_meetings_calendar_group = new zoom_meetings_calendar_group($db);
 
 		$data['zmc_roomid'] = (string)$data['zmc_roomid'];
 		$data['CreateDate'] = date('Y-m-d H:i:s');
@@ -160,7 +160,7 @@ SQL;
 		$data1['g_id'] = intval($data['g_id']);
 		$data1['zmc_uuid'] = $uuid;
 		//update group
-		$zoom_meetings_calendar_group = new zoom_meetings_calendar_group(&$db);
+		$zoom_meetings_calendar_group = new zoom_meetings_calendar_group($db);
 		$zoom_meetings_calendar_group->del($uuid);
 		$zoom_meetings_calendar_group->insert($data1);
 		//update db
@@ -176,7 +176,7 @@ SQL;
 
 	function del($uuid){
 		global $db;
-		$zoom_meetings_calendar_group = new zoom_meetings_calendar_group(&$db);
+		$zoom_meetings_calendar_group = new zoom_meetings_calendar_group($db);
 		$zoom_meetings_calendar_group->del($uuid);
 
 		$sql=<<<SQL

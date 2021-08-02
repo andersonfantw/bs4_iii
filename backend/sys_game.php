@@ -5,11 +5,11 @@ require_once('Crypt/Blowfish.php');
 
 $init = new init('db','sysauth','tpl','inputxss','filter','status','ehttp');
 $type = $fs->valid($_GET['type'],'cmd');
-$db_process = new db_process(&$db,'bookshelfs','bs_');
-$bookshelf = new bookshelf(&$db,'bookshelfs');
-$bookshelf_share = new bookshelf_share(&$db,'bookshelf_share');
-$bookshelf_share_source = new bookshelf_share_source(&$db,'bookshelf_share_source');
-$game_reflection = new game_reflection(&$db);
+$db_process = new db_process($db,'bookshelfs','bs_');
+$bookshelf = new bookshelf($db,'bookshelfs');
+$bookshelf_share = new bookshelf_share($db,'bookshelf_share');
+$bookshelf_share_source = new bookshelf_share_source($db,'bookshelf_share_source');
+$game_reflection = new game_reflection($db);
 
 if($type=='do_add' || $type=='do_update'){
   $id = (int) $fs->valid($_POST['id'],'id');
@@ -36,7 +36,7 @@ switch ($type) {
     $tpl->display('backend/sys_game_edit.tpl');
     break;
   case 'edit':
-    $game = new db_process(&$db,'game_reflection','gr_');
+    $game = new db_process($db,'game_reflection','gr_');
     $data = $game->getList('gr_id desc',0,0,'gr_id='.$id);
     $tpl->assign('data',$data['result'][0]);
     $tpl->display('backend/sys_game_edit.tpl');
@@ -71,7 +71,7 @@ switch ($type) {
 	      $u_id = $u_id['u_id'];
 	      break;
 	    default:
-	    	$account = new db_process(&$db,'account','u_');
+	    	$account = new db_process($db,'account','u_');
 	    	$rs=$account->getList('',0,0,'u_name="event"');
 	    	if($rs){
 	    		$u_id = $rs['result'][0]['u_id'];
@@ -137,7 +137,7 @@ switch ($type) {
 
       /*******get ecocat api url**********/
       if(CONNECT_ECOCAT){
-        $account = new db_process(&$db,'account','u_');
+        $account = new db_process($db,'account','u_');
         $account_data = $account->getByID($u_id);
 
         $cbf = new Crypt_Blowfish(ENCRYPT_KEY);

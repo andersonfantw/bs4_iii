@@ -51,7 +51,7 @@ class ConvertManager{
 			$this->filename = $_FILES['uploadedFile']['name'];
 		}
 
-		$account = new account(&$db);
+		$account = new account($db);
 		$data = $account->getAccountByBSID($this->bsid);
 		$uid = $data['u_id'];
 
@@ -181,7 +181,7 @@ class ConvertManager{
 		$EcocatConnector = new EcocatConnector($this->bsid);
 		$result = $EcocatConnector->Process($process_id,$timestamp);
 		if($EcocatConnector->rate=='100'){
-      $account = new account(&$db);
+      $account = new account($db);
       $data = $account->getAccountByBSID($this->bsid);
 			if(CONNECT_ECOCAT_IMPORT){
 		  	$fromDir = ECOCAT_ROOT.'/lib/ecolab/export/'.$process_id;

@@ -1,6 +1,6 @@
 <?php
 class files extends db_process{
-  function files(&$db)
+  function files($db)
   {
   	parent::db_process($db,'file','f_');
   }

@@ -15,7 +15,7 @@ function execRegistStep2(){
 		if(!empty($json)){
 			$groups = $json['gid'];
 			$arr_gid = explode(',',$groups);
-			$group = new group(&$db);
+			$group = new group($db);
 			$plans = array();
 			foreach($arr_gid as $gid){
 				$data = $group->getByID($gid);
@@ -43,7 +43,7 @@ function execRegistStep2(){
 		//email check.
 		$email = strtolower($email);
 	
-		$bookshelf_user = new bookshelf_user(&$db);
+		$bookshelf_user = new bookshelf_user($db);
 		$data = $bookshelf_user->getByEmail($email);
 		if(!empty($data) && !in_array(array('anderson@ttii.com.tw'),$email)){
 			echo "<script>alert('".LANG_WARNING_EMAIL_OCCUPIED."');document.location.href=document.location.href;</script>";
@@ -66,7 +66,7 @@ function execRegistStep2(){
 		//$data['g_id'] = $groups;
 		$data['bu_receive_mail'] = $receive_mail;
 	
-		$bookshelf_user = new bookshelf_user(&$db);
+		$bookshelf_user = new bookshelf_user($db);
 		$rs = $bookshelf_user->getByName($account);
 		if(!empty($rs)){
 			echo "<script>alert('".LANG_WARNING_ACCOUNT_OCCUPIED."');document.location.href=document.location.href;</script>";

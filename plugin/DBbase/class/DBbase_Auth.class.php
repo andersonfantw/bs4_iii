@@ -23,7 +23,7 @@ SQL;
 			BookshelfManager::AdminLogin($su_name);
 
 			//login record
-			$login = new login(&$db);
+			$login = new login($db);
 			$uid = intval($rs['su_id']);
 			$type = 's';
 			$sessionid = session_id();
@@ -68,7 +68,7 @@ SQL;
 			BookshelfManager::BSManagerLogin($uid,$uname,$ucname);
 			
 			//login record
-			$login = new login(&$db);
+			$login = new login($db);
 			$uid = intval($rs['u_id']);
 			$type = 'a';
 			$sessionid = session_id();
@@ -92,7 +92,7 @@ SQL;
 				list($arg1) = func_get_args();
 				if(common::validSessionID($arg1)){
 					list($sid) = func_get_args();
-					$login = new login(&$db);
+					$login = new login($db);
 					$rs = $login->getBySESSIONID($sid);
 				}else{
 					list($account) = func_get_args();
@@ -145,10 +145,10 @@ SQL;
 			BookshelfManager::UserLogin($bu_id,$acc,$cname);
 
 			$buid = $rs['bu_id'];
-			$bookshelf_user = new bookshelf_user(&$db);
+			$bookshelf_user = new bookshelf_user($db);
 			$bookshelf_user->setLastLogin($buid);
 
-			$login = new login(&$db);
+			$login = new login($db);
 			$data1 = array();
 			$uid = intval($buid);
 			$type = 'u';

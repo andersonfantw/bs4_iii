@@ -2,9 +2,9 @@
 require_once dirname(__FILE__).'/../init/config.php';
 $init = new init('db','sysauth','tpl','inputxss','filter','status','ehttp');
 $type = $fs->valid($_GET['type'],'cmd');
-$bookshelf = new bookshelf(&$db,'bookshelfs');
-$bookshelf_share = new bookshelf_share(&$db,'bookshelf_share');
-$bookshelf_share_source = new bookshelf_share_source(&$db,'bookshelf_share_source');
+$bookshelf = new bookshelf($db,'bookshelfs');
+$bookshelf_share = new bookshelf_share($db,'bookshelf_share');
+$bookshelf_share_source = new bookshelf_share_source($db,'bookshelf_share_source');
 
 if($type=='do_add' || $type=='do_update'){
   $data['bss_ip'] = $fs->valid($_POST['bss_ip'],'ip');
@@ -35,7 +35,7 @@ switch ($type) {
     break;
   case 'search_bookshelf':
     $q_str = $fs->valid($_POST['q'],'query');
-    $bookshelf = new db_process(&$db,'bookshelfs','bs_');
+    $bookshelf = new db_process($db,'bookshelfs','bs_');
     $bookshelf_data = $bookshelf->getList('bs_name desc',0,0,"bs_name like '%".$q_str."%'");
     $tpl->assign('bookshelf_data',$bookshelf_data['result']);
     $tpl->display('backend/sys_bookshelf_share_edit_bookshelf_data.tpl');
@@ -48,7 +48,7 @@ switch ($type) {
   /*case 'edit':
     $data = $bookshelf->getList('bs_id desc',($page-1)*PER_PAGE,PER_PAGE,' bs.bs_id='.$id);
 
-    $account = new db_process(&$db,'account','u_');
+    $account = new db_process($db,'account','u_');
     $account_data = $account->getList('u_cname desc');
     $tpl->assign('account_data',$account_data['result']);
     $tpl->assign('data',$data['result'][0]);

@@ -2,8 +2,8 @@
 require_once dirname(__FILE__).'/../init/config.php';
 $init = new init('db','sysauth','tpl','inputxss','filter','status','ehttp');
 $ImportManager = new ImportManager();
-$allexam = new allexam(&$db);
-$scanexam_test = new scanexam_test(&$db);
+$allexam = new allexam($db);
+$scanexam_test = new scanexam_test($db);
 
 $type = $fs->valid($_GET['type'],'cmd');
 $m = $fs->valid($_GET['m'],'cmd');

@@ -15,14 +15,9 @@ ErrorDocument 414 /errorpage/error.php
 ErrorDocument 415 /errorpage/error.php
 ErrorDocument 416 /errorpage/error.php
 ErrorDocument 417 /errorpage/error.php
-ErrorDocument 418 /errorpage/error.php
-ErrorDocument 419 /errorpage/error.php
-ErrorDocument 420 /errorpage/error.php
-ErrorDocument 421 /errorpage/error.php
 ErrorDocument 422 /errorpage/error.php
 ErrorDocument 423 /errorpage/error.php
 ErrorDocument 424 /errorpage/error.php
-ErrorDocument 425 /errorpage/error.php
 ErrorDocument 426 /errorpage/error.php
 ErrorDocument 500 /errorpage/error.php
 ErrorDocument 501 /errorpage/error.php
@@ -33,7 +28,6 @@ ErrorDocument 505 /errorpage/error.php
 ErrorDocument 506 /errorpage/error.php
 ErrorDocument 507 /errorpage/error.php
 ErrorDocument 508 /errorpage/error.php
-ErrorDocument 509 /errorpage/error.php
 ErrorDocument 510 /errorpage/error.php
 
 AddType text/cache-manifest .appcache

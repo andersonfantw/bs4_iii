@@ -129,7 +129,7 @@ switch($cmd){
 	case 'progress':
 		validToken();
 
-		$queue = new queue(&$db);
+		$queue = new queue($db);
 		$unprocess = $queue->getUnprocess();
 		$heartbeat = $UploadQueue->checkHeartbeat();
 		$ee->add('total',$unprocess['num']);
@@ -153,7 +153,7 @@ switch($cmd){
 			$ee->add('msg','Missing parameter [fileid]');
 			$ee->Error('406.60');
 		}
-		$queue = new queue(&$db);
+		$queue = new queue($db);
 		$data = $queue->getListByKey($key);
 		if(empty($data)){
 			$ee->add('key',$key);
@@ -173,7 +173,7 @@ switch($cmd){
 					break;
 				case QueueStatusEnum::ImportSuccess:
 					$bid = $row['b_id'];
-					$book = new book(&$db);
+					$book = new book($db);
 					$data1 = $book->getByID($bid);
 					$openurl = $data1['webbook_link'];
 					$openurl = str_replace(HttpLocalIPPort,'',$data1['webbook_link']);
@@ -227,7 +227,7 @@ switch($cmd){
 		break;
 	case 'getBookshelfList':
 		validToken();
-		$bookshelf = new bookshelf(&$db);
+		$bookshelf = new bookshelf($db);
 		$data = $bookshelf->getList('bs_id desc',0,0,'bs_status=1 and bs_list_status=1');
 		$arr = array();
 		foreach($data['result'] as $row){
@@ -239,7 +239,7 @@ switch($cmd){
 		validToken();
 		global $bs_code;
 		$bs_code = $fs->valid($_POST['bookshelfid'],'num');
-		$category = new category(&$db);
+		$category = new category($db);
 		$data = $category->getCategoryStructure();
 		$arr = array();
 		foreach($data['result'] as $pcate){

@@ -66,7 +66,7 @@ class VCubeSeminarManager{
 	}
 	public function getReservationListForUser($buid,$start_limit,$end_limit){
 		global $db;
-		$vcube_seminar_calendar = new vcube_seminar_calendar(&$db);
+		$vcube_seminar_calendar = new vcube_seminar_calendar($db);
 		$_data = $vcube_seminar_calendar->getListByBUID($buid);
 		$data = array();
 		for($i=0;$i<count($_data['result']);$i++){
@@ -99,7 +99,7 @@ class VCubeSeminarManager{
 		$data['vsc_max'] = intval($data['vsc_max']);
 
 		$uid = $data['u_id'];
-		$account = new account(&$db);
+		$account = new account($db);
 		$rows = $account->getByID($uid);
 		$presenter_name = sprintf('%s[%s]',$rows['u_cname'],$rows['u_name']);
 
@@ -115,7 +115,7 @@ class VCubeSeminarManager{
 		$data['vsc_seminarkey'] = $val['seminar']['seminar_key'];
 		$data['vsc_url'] = $val['seminar']['chairman_url'];
 		if(!empty($data['vsc_seminarkey'])){
-			$vcube_seminar_calendar = new vcube_seminar_calendar(&$db);
+			$vcube_seminar_calendar = new vcube_seminar_calendar($db);
 			$vcube_seminar_calendar->insert($data);
 			$data1 = array();
 			foreach($data as $k => $v){
@@ -135,7 +135,7 @@ class VCubeSeminarManager{
 		$presenter_email = $this->default_email;
 
 		$uid = $data['u_id'];
-		$account = new account(&$db);
+		$account = new account($db);
 		$rows = $account->getByID($uid);
 		$presenter_name = sprintf('%s[%s]',$rows['u_cname'],$rows['u_name']);
 
@@ -148,7 +148,7 @@ class VCubeSeminarManager{
 		$val = $this->reserve_update($seminar_key,$roomkey,$name,$start,$end,$max);
 		$data['vsc_url'] = $val['presenter']['presenter_url'];
 		if($val){
-			$vcube_seminar_calendar = new vcube_seminar_calendar(&$db);
+			$vcube_seminar_calendar = new vcube_seminar_calendar($db);
 			$vcube_seminar_calendar->update($seminar_key,$data);
 			return true;
 		}
@@ -158,7 +158,7 @@ class VCubeSeminarManager{
 		global $db;
 		$val = $this->reserve_del($seminar_key);
 		if($val){
-			$vcube_seminar_calendar = new vcube_seminar_calendar(&$db);
+			$vcube_seminar_calendar = new vcube_seminar_calendar($db);
 			$vcube_seminar_calendar->del($seminar_key);
 			return true;
 		}
@@ -166,8 +166,8 @@ class VCubeSeminarManager{
 	}
 	public function addReservationGuest($seminar_key,$gid){
 		global $db;
-		$bookshelf_users = bookshelf_users(&$db);
-		$vcube_seminar_calendar_user = new vcube_seminar_calendar_user(&$db);
+		$bookshelf_users = bookshelf_users($db);
+		$vcube_seminar_calendar_user = new vcube_seminar_calendar_user($db);
 		$vcube_seminar_calendar_group = new vcube_seminar_calendar_group($db);
 		//insert seminar group
 		$data1 = array('vsc_seminarkey'=>$seminar_key,'g_id');
@@ -190,7 +190,7 @@ class VCubeSeminarManager{
 		}
 	}
 	public function delReservationGuest($seminar_key,$participantkey){
-		$vcube_seminar_calendar_user = new vcube_seminar_calendar_user(&$db);
+		$vcube_seminar_calendar_user = new vcube_seminar_calendar_user($db);
 		$val = $this->participant_del($reservationid);
 		if($val){
 			$vcube_seminar_calendar_user->del($reservationid);
@@ -212,7 +212,7 @@ class VCubeSeminarManager{
 			$where_str = sprintf(' and u_id=%u',$uid);
 		}
 		
-		$vcube_seminar_calendar = new vcube_seminar_calendar(&$db);
+		$vcube_seminar_calendar = new vcube_seminar_calendar($db);
 		$data = $vcube_seminar_calendar->getList('',0,0,"timestampdiff('m',vsc_start,now())<43200".$where_str);
 		foreach($data['result'] as $row){
 			$timestamp = strtotime($row['vsc_start']);
@@ -275,7 +275,7 @@ class VCubeSeminarManager{
 			$where_str = sprintf(' and u_id=%u',$uid);
 		}
 
-		$vcube_seminar_calendar = new vcube_seminar_calendar(&$db);
+		$vcube_seminar_calendar = new vcube_seminar_calendar($db);
 		$data = $vcube_seminar_calendar->getList('',0,0,"timestampdiff('m',vsc_start,now())<43200".$where_str);
 		foreach($data['result'] as $row){
 			$timestamp = strtotime($row['vsc_start']);

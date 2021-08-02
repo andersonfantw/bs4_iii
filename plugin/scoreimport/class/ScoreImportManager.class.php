@@ -355,13 +355,13 @@ class ScoreImportManager{
 		global $fs;
 		$insert_examinfo = false;
 
-		$bookshelf = new bookshelf(&$db);
-		$bookshelf_user = new bookshelf_user(&$db);
-		$scanexam_test = new scanexam_test(&$db);
-		$scanexam_test_tag = new scanexam_test_tag(&$db);
-		$scanexam_quiz = new scanexam_quiz(&$db);
-		$scanexam_user = new scanexam_user(&$db);
-		$scanexam_exercise = new scanexam_exercise(&$db);
+		$bookshelf = new bookshelf($db);
+		$bookshelf_user = new bookshelf_user($db);
+		$scanexam_test = new scanexam_test($db);
+		$scanexam_test_tag = new scanexam_test_tag($db);
+		$scanexam_quiz = new scanexam_quiz($db);
+		$scanexam_user = new scanexam_user($db);
+		$scanexam_exercise = new scanexam_exercise($db);
 
 		switch($this->mode){
 			case ScoreImportManagerModeEnum::InfoacerExam1:
@@ -532,7 +532,7 @@ class ScoreImportManager{
 					switch($this->mode){
 						case ScoreImportManagerModeEnum::InfoacerExam1:
 							if($allint){
-								$category = new category(&$db);
+								$category = new category($db);
 								$data = $category->getList('',0,0,'c_parent_id>0 and c_id in ('.$mapping_value.')');
 								$cid  = array();
 								foreach($data['result'] as $r){
@@ -599,7 +599,7 @@ class ScoreImportManager{
 							'msg'=>sprintf('Cover "%s" is missing!',$value));
 					}else{
 						//create covert to db
-						$account = new account(&$db);
+						$account = new account($db);
 						$data = $account->getAccountByBSID($this->bsid);
 						$uid = $data['u_id'];
 						//make sure is proper bookshelf(has uid);

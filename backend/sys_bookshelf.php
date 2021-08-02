@@ -4,9 +4,9 @@ require_once dirname(__FILE__).'/../init/config.php';
 
 $init = new init('db','sysauth','tpl','inputxss','filter','status','ehttp');
 $type = $fs->valid($_GET['type'],'cmd');
-$bookshelf = new bookshelf(&$db);
-$ini = new ini(&$db);
-$account = new account(&$db);
+$bookshelf = new bookshelf($db);
+$ini = new ini($db);
+$account = new account($db);
 $AccountManager = new AccountManager();
 
 if($type=='do_add' || $type=='do_update'){
@@ -25,7 +25,7 @@ $page = ($page==0)?1:$page;
 
 switch ($type) {
   case 'add':
-  	$ini = new ini(&$db);
+  	$ini = new ini($db);
   	$bs_number = $ini->getByKey('system','bs_number');
     $bs_max = $bs_number['val'];
     $bookshelf_data = $bookshelf->getList('bs_id desc',($page-1)*PER_PAGE,PER_PAGE);
@@ -58,7 +58,7 @@ switch ($type) {
 	    $data = array_merge($data, $inidata['bookshelf'.$id]);
     }
 
-    $account = new account(&$db);
+    $account = new account($db);
     $account_data = $account->getList('u_cname desc');
     $q_str = $fs->valid($_GET['bookshelf_q'],'query');
     $tpl->assign('q_str',$q_str);

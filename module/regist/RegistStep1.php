@@ -23,7 +23,7 @@ function execRegistStep1(){
 			//re-apply check
 			$json = json_decode($data['ac_data'],TRUE);
 			$gid = $json['gid'];
-			$activecode = new activecode(&$db);
+			$activecode = new activecode($db);
 			$num = $activecode->isReApply($buid,$gid);
 			//try to apply trial course more than once
 			if($num>0 && $json['trial']==1){

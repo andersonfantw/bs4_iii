@@ -6,7 +6,7 @@ $cmd = $fs->valid($_GET['cmd'],'cmd');
 
 switch($cmd){
 	case 'getAccountList':
-		$account = new account(&$db);
+		$account = new account($db);
 		$data = $account->getList();
 		$arr_keep = array('u_id','u_name');
 		for($i=0;$i<count($data['result']);$i++){
@@ -17,7 +17,7 @@ switch($cmd){
 		echo json_encode($data['result']);
 		break;
 	case 'getGroupList':
-		$group = new group(&$db);
+		$group = new group($db);
 		$data = $group->getList('',0,0,'',true);
 		echo json_encode($data['result']);
 		break;
@@ -104,7 +104,7 @@ switch($cmd){
 	case 'IsSeminarBegin':
 		$mode = $fs->valid($_POST['mode'],'cmd');
 		$buid = $fs->valid($_POST['buid'],'id');
-		$vcube_seminar_calendar = new vcube_seminar_calendar(&$db);
+		$vcube_seminar_calendar = new vcube_seminar_calendar($db);
 		$data = $vcube_seminar_calendar->getCurrentClass($mode,$buid);
 		echo json_encode($data);
 		break;

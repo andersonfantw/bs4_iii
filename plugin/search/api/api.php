@@ -6,8 +6,8 @@ $cmd = $fs->valid($_REQUEST['cmd'],'cmd');
 $type = $fs->valid($_POST['type'],'cmd');
 $_buid = $fs->valid($_POST['buid'],'id');
 
-$ini = new ini(&$db);
-$quicksearch = new quicksearch(&$db);
+$ini = new ini($db);
+$quicksearch = new quicksearch($db);
 $output = new Services_JSON();
 $json = new Services_JSON(SERVICES_JSON_ESCAPED_UNICODE);
 
@@ -102,12 +102,12 @@ switch($cmd){
 
 		//save fulltext search keywords
 		if($arrtag[0]!=''){
-			$bigdata_search_log = new bigdata_search_log(&$db);
+			$bigdata_search_log = new bigdata_search_log($db);
 			$uid = bssystem::getLoginUID();
 			if(empty($uid)){
 				$uid = bssystem::getLoginBUID();
 				$utype = 'u';
-				$group = new group(&$db);
+				$group = new group($db);
 				$data = $group->getListByBUID($uid);
 				$arrGroup = array();
 				foreach($data as $row){
@@ -148,7 +148,7 @@ switch($cmd){
 				list($k,$v) = explode('@',$arr1[$j]);
 				if(!empty($k) && !empty($v)){
 					if($arr[$i]=='pcu'){
-						if(in_array($v,$arrGroup)){
+						if(in_array($v,$arrGroup) || empty($arrGroup)){
 							$hasPCU = true;
 							$SearchManager->setCondition($arr[$i],$k,$v);
 						}

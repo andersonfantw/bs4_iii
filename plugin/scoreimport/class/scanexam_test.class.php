@@ -1,7 +1,7 @@
 <?PHP
 /*									exam											quiz(seq)
-bs_key,ex_key		´úÅç¨÷scanexam				ÃD¥Øscanscore_quiz
-buid						¦¨ÁZscanscore_user		µª®×scanscore_exercise
+bs_key,ex_key		ï¿½ï¿½ï¿½ï¿½ï¿½scanexam				ï¿½Dï¿½ï¿½scanscore_quiz
+buid						ï¿½ï¿½ï¿½Zscanscore_user		ï¿½ï¿½ï¿½ï¿½scanscore_exercise
 
 scanexam=array(....,quiz=>array(,,,,,));
 answer=array(....,exercise=>array(,,,,,));
@@ -65,9 +65,9 @@ SQL;
 		//bookshelf2_scanexam_test_tag
 		//bookshelf2_scanexam_user
 		//bookshelf2_scanexam_exercise
-		$scanexam_test_tag = new scanexam_test_tag(&$db);
-		$scanexam_user = new scanexam_user(&$db);
-		$scanexam_exercise = new scanexam_exercise(&$db);
+		$scanexam_test_tag = new scanexam_test_tag($db);
+		$scanexam_user = new scanexam_user($db);
+		$scanexam_exercise = new scanexam_exercise($db);
 		$scanexam_test_tag->del($se_key,'',$set_date);
 		$scanexam_user->del($bs_key,$se_key,$set_date);
 		$scanexam_exercise->del($bs_key,$se_key,$set_date);

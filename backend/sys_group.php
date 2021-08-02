@@ -4,7 +4,7 @@ $init = new init('db','sysauth','tpl','inputxss','filter','status','ehttp');
 
 $type = $fs->valid($_GET['type'],'cmd');
 
-$group = new group(&$db);
+$group = new group($db);
 $AccountManager = new AccountManager();
 
 if($type=='do_add' || $type=='do_update'){
@@ -24,7 +24,7 @@ $page = ($page==0)?1:$page;
 
 switch ($type) {
   case 'add':
-    $category = new category(&$db);
+    $category = new category($db);
     $cate_data = $category->getCategoryStructure(array(),true);
     $tpl->assign('category',$cate_data);
     $tpl->display('backend/sys_group_edit.tpl');
@@ -72,7 +72,7 @@ switch ($type) {
   default:
     require_once LIBS_PATH.'/page.class.php';
     /*
-    $category = new category(&$db);
+    $category = new category($db);
     $cate_data = $category->getCategoryStructure();
     if($cate_data){
       foreach($cate_data as $cate){

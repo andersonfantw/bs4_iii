@@ -4,8 +4,8 @@ $init = new init('db','auth','bookshelf_auth','tpl','inputxss','filter','status'
 require_once dirname(__FILE__).'/init.php';
 
 $type = $fs->valid($_GET['type'],'cmd');
-$db_process = new db_process(&$db,'groups','g_');
-$group = new group(&$db);
+$db_process = new db_process($db,'groups','g_');
+$group = new group($db);
 $AccountManager = new AccountManager();
 
 /*if($type=='do_add'){
@@ -52,7 +52,7 @@ $page = ($page==0)?1:$page;
 
 switch ($type) {
   case 'add':
-    $category = new category(&$db);
+    $category = new category($db);
     $cate_data = $category->getCategoryStructure();
     $tpl->assign('category',$cate_data);
     $tpl->display('backend/group_edit.tpl');
@@ -60,7 +60,7 @@ switch ($type) {
   case 'edit':
 /*
     $group_category = $group->getCategoryByGID($id);
-    $category = new category(&$db);
+    $category = new category($db);
     $cate_data = $category->getCategoryStructure($group_category);
 
     $data = $db_process->getByID($id);
@@ -104,7 +104,7 @@ switch ($type) {
   default:
     require_once LIBS_PATH.'/page.class.php';
     /*
-    $category = new category(&$db);
+    $category = new category($db);
     $cate_data = $category->getCategoryStructure();
     if($cate_data){
       foreach($cate_data as $cate){

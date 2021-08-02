@@ -15,7 +15,7 @@ $type = $fs->valid($_GET['type'],'cmd');
 $cid = $fs->valid($_GET['cid'],'id');
 $processid = $fs->valid($_GET['processid'],'key');
 
-$account = new account(&$db);
+$account = new account($db);
 $data = $account->getAccountByBSID($bs_code);
 $uid = $data['u_id'];
 

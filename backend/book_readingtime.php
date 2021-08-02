@@ -5,8 +5,8 @@ require_once dirname(__FILE__).'/init.php';
 
 $type = $fs->valid($_GET['type'],'cmd');
 
-//$db_process = new db_process(&$db,'reading_time','');
-$reading_time = new reading_time(&$db);
+//$db_process = new db_process($db,'reading_time','');
+$reading_time = new reading_time($db);
 
 $id = $fs->valid($_REQUEST['id'],'id');
 
@@ -14,9 +14,9 @@ $page = (int) $fs->valid($_GET['page'],'num');
 $page = ($page==0)?1:$page;
 switch ($type) {
   case 'edit':
-	$db_process = new db_process(&$db,'itutor','i_');
+	$db_process = new db_process($db,'itutor','i_');
 	$data = $db_process->getList('',0,0,'i_name=\''.$name.'\' and i_slidecount='.$sc.' and i_totalinteraction='.$ti);
-	$db_process_e = new db_process(&$db,'itutor_exercise','e_');
+	$db_process_e = new db_process($db,'itutor_exercise','e_');
 	$data_exercise = $db_process_e->getList('',0,0,'i_id='.$data['result'][0]['i_id']);
 	$arr_exercise = array();
 	$arr_index = array();

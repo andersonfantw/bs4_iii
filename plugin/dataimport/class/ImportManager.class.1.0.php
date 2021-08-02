@@ -320,7 +320,7 @@ class ImportManager extends ExportManager{
 		$this->bsid=$bsid;
 
 		if(LicenseManager::chkAuth(MEMBER_MODE,MemberModeEnum::INDIVIDUAL)){
-			$account = new account(&$db);
+			$account = new account($db);
 			$uid = $account->getUIDByBSID($this->bsid);
 			if(empty($uid)){
 				$this->has_error = true;
@@ -427,7 +427,7 @@ class ImportManager extends ExportManager{
 				}
 				$this->HeaderDef = $this->_data['group'];
 				if(empty($filename)) $filename='group_'.time();
-				$group = new group(&$db);
+				$group = new group($db);
 				$data = $group->getList('',0,0,$condition);
 				$obj = $this->_data['m_group'];
 				break;
@@ -437,7 +437,7 @@ class ImportManager extends ExportManager{
 				}
 				$this->HeaderDef = $this->_data['user'];
 				if(empty($filename)) $filename='user_'.time();
-				$bookshelf_user = new bookshelf_user(&$db);
+				$bookshelf_user = new bookshelf_user($db);
 				$data = $bookshelf_user->getList('',0,0,$condition);
 				$obj = $this->_data['m_user'];
 				break;
@@ -445,7 +445,7 @@ class ImportManager extends ExportManager{
 				$condition = sprintf("bs_id=%u ",$this->bsid);
 				$this->HeaderDef = $this->_data['category'];
 				if(empty($filename)) $filename='category_'.time();
-				$category = new category(&$db);
+				$category = new category($db);
 				$data = $category->getList('',0,0,$condition);
 				$obj = $this->_data['m_category'];
 				break;
@@ -454,7 +454,7 @@ class ImportManager extends ExportManager{
 				$this->HeaderDef = $this->_data['book'];
 				//還不能取得正確的清單
 				if(empty($filename)) $filename='book_'.time();
-				$book = new book(&$db);
+				$book = new book($db);
 				$_condition=<<<SQL
 ecocat_id=''
 and share_bs_id=''
@@ -481,7 +481,7 @@ SQL;
 			case ImportManagerModeEnum::MANAGER:
 				$this->HeaderDef = $this->_data['manager'];
 				if(empty($filename)) $filename='manager_'.time();
-				$account = new account(&$db);
+				$account = new account($db);
 				$data = $account->getList();
 				$obj = $this->_data['m_manager'];
 				break;
@@ -586,36 +586,36 @@ SQL;
 			case ImportManagerModeEnum::GROUP:
 				$this->HeaderDef = $this->_data['group'];
 				$this->HeaderDefColMapping = $this->_data['m_group'];
-				$obj = new group(&$db);
+				$obj = new group($db);
 				$prefix='g_';
 				$tsn='g.';
 				break;
 			case ImportManagerModeEnum::USER:
 				$this->HeaderDef = $this->_data['user'];
 				$this->HeaderDefColMapping = $this->_data['m_user'];
-				$group = new group(&$db);
-				$obj = new bookshelf_user(&$db);
+				$group = new group($db);
+				$obj = new bookshelf_user($db);
 				$prefix='bu_';
 				$tsn='bu.';
 				break;
 			case ImportManagerModeEnum::CATEGORY:
 				$this->HeaderDef = $this->_data['category'];
 				$this->HeaderDefColMapping = $this->_data['m_category'];
-				$obj = new category(&$db);
+				$obj = new category($db);
 				$prefix='c_';
 				$tsn='';
 				break;
 			case ImportManagerModeEnum::BOOK:
 				$this->HeaderDef = $this->_data['book'];
 				$this->HeaderDefColMapping = $this->_data['m_book'];
-				$obj = new book(&$db);
+				$obj = new book($db);
 				$prefix='b_';
 				$tsn='';
 				break;
 			case ImportManagerModeEnum::MANAGER:
 				$this->HeaderDef = $this->_data['manager'];
 				$this->HeaderDefColMapping = $this->_data['m_manager'];
-				$obj = new account(&$db);
+				$obj = new account($db);
 				$prefix='u_';
 				$tsn='a.';
 				break;
@@ -773,7 +773,7 @@ SQL;
 					//check if all id exists
 					switch($this->mode){
 						case ImportManagerModeEnum::CATEGORY:
-							$category = new category(&$db);
+							$category = new category($db);
 							//should be only one id in parentid
 							if(count($mapping_ids)!=1){
 								//error, can't set multi parent_id
@@ -826,7 +826,7 @@ SQL;
 							break;
 						case ImportManagerModeEnum::BOOK:
 							if($allint){
-								$category = new category(&$db);
+								$category = new category($db);
 								$data = $category->getList('',0,0,'c_parent_id>0 and c_id in ('.$mapping_value.')');
 								$cid  = array();
 								foreach($data['result'] as $r){
@@ -862,7 +862,7 @@ SQL;
 								}
 							}
 							if($allint){
-								$group = new group(&$db);
+								$group = new group($db);
 								$data = $group->getList('',0,0,'g.g_id in ('.$mapping_value.')');
 								$gid  = array();
 								foreach($data['result'] as $r){
@@ -942,7 +942,7 @@ SQL;
 							'msg'=>sprintf('Cover "%s" is missing!',$value));
 					}else{
 						//create covert to db
-						$account = new account(&$db);
+						$account = new account($db);
 						$data = $account->getAccountByBSID($this->bsid);
 						$uid = $data['u_id'];
 						//make sure is proper bookshelf(has uid);

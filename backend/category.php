@@ -3,10 +3,10 @@ require_once dirname(__FILE__).'/../init/config.php';
 $init = new init('db','auth','bookshelf_auth','tpl','inputxss','filter','status','ehttp');
 require_once dirname(__FILE__).'/init.php';
 
-$group = new group(&$db);
+$group = new group($db);
 
 $type = $fs->valid($_GET['type'],'cmd');
-$category = new category(&$db);
+$category = new category($db);
 
 if($type=='do_add' || $type=='do_update'){
 	$data['c_name'] = $fs->valid($_POST['c_name'],'name');

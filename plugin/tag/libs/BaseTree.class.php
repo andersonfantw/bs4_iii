@@ -41,7 +41,7 @@ class BaseTree{
 		if(!array_key_exists($parentKey,$this->hash)){
 			//echo 'err';
 		}else{
-			$this->hash[$parentKey]->addChild(&$node);
+			$this->hash[$parentKey]->addChild($node);
 		}
 	}
 	public function getNode($TagKey){
@@ -76,7 +76,7 @@ class BaseTree{
 			$this->_tempstr.=substr ($_str,1);
 
 			foreach($node->children as $n){
-				$this->_toString(&$n);
+				$this->_toString($n);
 			}
 		}
 	}
@@ -107,7 +107,7 @@ class BaseTree{
 		if(!empty($node->children)){
 			foreach($node->children as $n){
 				echo str_repeat('_',$n->depth).implode(':',$n->data)."\r\n";
-				$this->_treeLog(&$n);
+				$this->_treeLog($n);
 			}
 		}
 	}

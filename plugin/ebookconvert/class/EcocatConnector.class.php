@@ -45,8 +45,8 @@ class EcocatConnector
 			if($f_retrieve_data){
 	      global $db;
 			
-				$bookshelf = new bookshelf(&$db);
-				$account = new account(&$db);
+				$bookshelf = new bookshelf($db);
+				$account = new account($db);
 				$json = new Services_JSON();
 
 				list($this->EcocatConnector_domain,$this->EcocatConnector_port) = explode(':',LocalIPPort);

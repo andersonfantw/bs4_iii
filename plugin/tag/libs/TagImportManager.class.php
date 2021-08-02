@@ -191,7 +191,7 @@ class TagImportManager{
 			$dataheader[] = $mapping_value;
 		}
 
-		$book = new book(&$db);
+		$book = new book($db);
 		//tags value
 		for($j=2;$j<=$highestRow;$j++){
 			$arr = array();

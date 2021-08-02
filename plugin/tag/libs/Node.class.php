@@ -23,12 +23,11 @@ class Node{
 		$node->depth = $this->depth+1;
 		//$k = $json->encode($node->data);
 		if(!array_key_exists($node->key,$this->children)){
-			$this->children[$node->key] = &$node;
+			$this->children[$node->key] = $node;
 		}
 	}
 	public function remove(){
 		unset($this->data);
-		unset($this);
 	}
 	public function path(){
 		$p = array();

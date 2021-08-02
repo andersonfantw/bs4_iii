@@ -6,7 +6,7 @@ require_once dirname(__FILE__).'/init.php';
 global $bs_code;
 
 $type = $fs->valid($_GET['type'],'cmd');
-$activecode = new activecode(&$db);
+$activecode = new activecode($db);
 $ActiveCodeManager = new ActiveCodeManager();
 
 if($type=='do_add'){
@@ -33,7 +33,7 @@ switch ($type) {
 		if(!LicenseManager::chkAuth(MEMBER_MODE,MemberModeEnum::CENTRALIZE)){
 			$condition = sprintf('bs_id=%d',$bs_code);
 		}
-		$group = new group(&$db);
+		$group = new group($db);
 		$data = $group->getList('',0,0,$condition);
 
   	$tpl->assign('activecdoe',$code);
@@ -61,7 +61,7 @@ switch ($type) {
   case 'list':
   default:
   	require_once LIBS_PATH.'/page.class.php';
-  	$group = new group(&$db);
+  	$group = new group($db);
   	if(!LicenseManager::chkAuth(MEMBER_MODE,MemberModeEnum::CENTRALIZE)){
   		$condition = sprintf(' and bs_id=%d',$bs_code);
   	}

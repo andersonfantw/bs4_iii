@@ -17,8 +17,8 @@ Time:系統時間
 require_once dirname(__FILE__).'/../../../init/config.php';
 $init = new init('db');
 
-$tag = new tag(&$db);
-$system_tag = new system_tag(&$db);
+$tag = new tag($db);
+$system_tag = new system_tag($db);
 $rs = $tag->getByKey('#Time');
 if($rs){
 	$tid=$rs[0]['t_id'];

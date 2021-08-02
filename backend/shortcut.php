@@ -4,7 +4,7 @@ $init = new init('db','auth','bookshelf_auth','tpl','inputxss','filter','status'
 require_once dirname(__FILE__).'/init.php';
 
 $type = $fs->valid($_GET['type'],'cmd');
-$shortcut = new shortcut(&$db);
+$shortcut = new shortcut($db);
 
 if($type=='do_add' || $type=='do_update'){
 	$data['bs_id'] = bssystem::getBSID();

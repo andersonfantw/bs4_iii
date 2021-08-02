@@ -4,7 +4,7 @@ require_once dirname(__FILE__).'/../init/config.php';
 $init = new init('db','sysauth','tpl','filter','status','ehttp');
 
 $type = $fs->valid($_GET['type'],'cmd');
-$system_setup = new system_setup(&$db);
+$system_setup = new system_setup($db);
 $ConfigManager = new ConfigManager();
 
 switch ($type) {

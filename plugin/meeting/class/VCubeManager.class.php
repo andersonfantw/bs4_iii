@@ -210,7 +210,7 @@ class VCubeManager{
 	}
 	public function getReservationListForUser($buid,$start_limit,$end_limit){
 		global $db;
-		$vcube_meetings_calendar = new vcube_meetings_calendar(&$db);
+		$vcube_meetings_calendar = new vcube_meetings_calendar($db);
 		$_data = $vcube_meetings_calendar->getListByBUID($buid);
 		$data = array();
 		for($i=0;$i<count($_data['result']);$i++){
@@ -244,7 +244,7 @@ class VCubeManager{
 		$presenter_email = $this->default_email;
 
 		$uid = $data['u_id'];
-		$account = new account(&$db);
+		$account = new account($db);
 		$rows = $account->getByID($uid);
 		$presenter_name = sprintf('%s[%s]',$rows['u_cname'],$rows['u_name']);
 
@@ -255,7 +255,7 @@ class VCubeManager{
 		$end = $data['vmc_end'];
 /*
 		unset($data['g_id']);
-		$bookshelf_users = bookshelf_users(&$db);
+		$bookshelf_users = bookshelf_users($db);
 		$rows = $bookshelf_users->getList('',0,0,sprintf('g_id=%u',$gid));
 		$guest = array();
 		$arr_buid = array();
@@ -274,7 +274,7 @@ class VCubeManager{
 		//$data['vmc_url'] = $val['presenter']['presenter_url'];
 		$data['vmc_url'] = $val['url'];
 		if(!empty($data['vmc_reservationid'])){
-			$vcube_meetings_calendar = new vcube_meetings_calendar(&$db);
+			$vcube_meetings_calendar = new vcube_meetings_calendar($db);
 			$vcube_meetings_calendar->insert($data);
 			$data1 = array();
 			foreach($data as $k => $v){
@@ -295,7 +295,7 @@ class VCubeManager{
 		$presenter_email = $this->default_email;
 
 		$uid = $data['u_id'];
-		$account = new account(&$db);
+		$account = new account($db);
 		$rows = $account->getByID($uid);
 		$presenter_name = sprintf('%s[%s]',$rows['u_cname'],$rows['u_name']);
 
@@ -307,7 +307,7 @@ class VCubeManager{
 		$val = $this->action_update($reservationid,$roomid,$name,$start,$end,$sender_email,1,$presenter_name,$presenter_email);
 		$data['vmc_url'] = $val['presenter']['presenter_url'];
 		if($val){
-			$vcube_meetings_calendar = new vcube_meetings_calendar(&$db);
+			$vcube_meetings_calendar = new vcube_meetings_calendar($db);
 			$vcube_meetings_calendar->update($reservationid,$data);
 			return true;
 		}
@@ -317,7 +317,7 @@ class VCubeManager{
 		global $db;
 		$val = $this->action_delete($reservationid);
 		if($val){
-			$vcube_meetings_calendar = new vcube_meetings_calendar(&$db);
+			$vcube_meetings_calendar = new vcube_meetings_calendar($db);
 			$vcube_meetings_calendar->del($reservationid);
 			return true;
 		}
@@ -325,8 +325,8 @@ class VCubeManager{
 	}
 	public function addReservationGuest($reservationid,$gid){
 		global $db;
-		$bookshelf_users = bookshelf_users(&$db);
-		$vcube_meetings_calendar_user = new vcube_meetings_calendar_user(&$db);
+		$bookshelf_users = bookshelf_users($db);
+		$vcube_meetings_calendar_user = new vcube_meetings_calendar_user($db);
 		$rows = $bookshelf_users->getList('',0,0,sprintf('g_id=%u',$gid));
 		
 		foreach($rows as $r){
@@ -343,7 +343,7 @@ class VCubeManager{
 		}
 	}
 	public function delReservationGuest($reservationid){
-		$vcube_meetings_calendar_user = new vcube_meetings_calendar_user(&$db);
+		$vcube_meetings_calendar_user = new vcube_meetings_calendar_user($db);
 		$val = $this->action_delete_invite($reservationid);
 		if($val){
 			$vcube_meetings_calendar_user->del($reservationid);
@@ -810,7 +810,7 @@ class VCubeManager{
 			$where_str = sprintf(' and a.u_id=%u',$uid);
 		}
 		
-		$vcube_meetings_calendar = new vcube_meetings_calendar(&$db);
+		$vcube_meetings_calendar = new vcube_meetings_calendar($db);
 		$data = $vcube_meetings_calendar->getList('',0,0,"timestampdiff('m',vmc_start,now())<43200".$where_str);
 		foreach($data['result'] as $row){
 			$timestamp = strtotime($row['vmc_start']);
@@ -857,7 +857,7 @@ class VCubeManager{
 			//get link ready 10 mins before class begin
 			if(intval($arr['data']['reservations']['reservation'][$i]['reservation_start_date']) < (time()+600) &&
 				intval($arr['data']['reservations']['reservation'][$i]['reservation_end_date'])>time()){
-				$vcube_meetings_calendar = new vcube_meetings_calendar(&$db);
+				$vcube_meetings_calendar = new vcube_meetings_calendar($db);
 				$data = $vcube_meetings_calendar->getByReservationID($reservationid);
 				$arr['data']['reservations']['reservation'][$i]['url'] = $data['vmc_url'];
 				$arr['data']['reservations']['reservation'][$i]['uid'] = $data['u_id'];

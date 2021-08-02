@@ -2,7 +2,7 @@
 require_once dirname(__FILE__).'/../init/config.php';
 $init = new init('db','sysauth','tpl','inputxss','filter','status','ehttp');
 $LogManager = new LogManager(__FILE__);
-$tagevolve = new tagevolve(&$db);
+$tagevolve = new tagevolve($db);
 $TagevolveManager = new TagevolveManager();
 
 $type = $fs->valid($_GET['type'],'cmd');
@@ -24,7 +24,7 @@ switch ($type) {
     $tpl->display('backend/sys_tagevolve_edit.tpl');
     break;
   case 'do_add':
-  	$tagevolve = new tagevolve(&$db);
+  	$tagevolve = new tagevolve($db);
   	$is_success = true;
   	switch($te_type){
   		case 0:

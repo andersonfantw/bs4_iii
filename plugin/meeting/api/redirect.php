@@ -26,7 +26,7 @@ switch($cmd){
 				$url = $arr['guests']['guest']['invite_url'];
 			}
 		}else{
-			$vcube_meetings_calendar = new vcube_meetings_calendar(&$db);
+			$vcube_meetings_calendar = new vcube_meetings_calendar($db);
 			$data = $vcube_meetings_calendar->getByReservationID($reservationid);
 			$url = $data['vmc_url'];
 		}

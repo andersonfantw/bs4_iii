@@ -3,7 +3,7 @@ function execListByAccount($uid){
 /*
 	$init = new init('db');
 	global $db;
-	$bookshelf = new bookshelf(&$db);
+	$bookshelf = new bookshelf($db);
 	$data = $bookshelf->getList('bs_id desc',0,0,'bs_status=1 and bs_list_status=1 and u_id='.$uid);
 */
 	if(CONFIG_LOGINMODE){

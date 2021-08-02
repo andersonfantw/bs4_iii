@@ -5,7 +5,7 @@ require_once dirname(__FILE__).'/../init/config.php';
 $init = new init('db','sysauth','tpl','inputxss','filter','status','ehttp');
 $type = $fs->valid($_GET['type'],'cmd');
 $LogManager = new LogManager(__FILE__);
-$fulltext_synonyms = new fulltext_synonyms(&$db);
+$fulltext_synonyms = new fulltext_synonyms($db);
 
 if($type=='do_add' || $type=='do_update'){
   $data['fts_name'] = $fs->valid($_POST['name'],'name');

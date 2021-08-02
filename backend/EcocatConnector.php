@@ -34,8 +34,8 @@ class EcocatClient
 			$_bsid = common::getcookie('bs');
 			$id = (int)$_bsid;
 			
-			$bookshelf = new bookshelf(&$db,'bookshelfs');
-			$account = new account(&$db);
+			$bookshelf = new bookshelf($db,'bookshelfs');
+			$account = new account($db);
 			$json = new Services_JSON();
 			
 			$data = $bookshelf->getList('bs_id desc',0,0,' bs_id='.$id);

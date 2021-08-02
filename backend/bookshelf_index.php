@@ -6,7 +6,7 @@ require_once dirname(__FILE__).'/init.php';
 $bs_code = (int) $_GET['bs'];
 $type = $_GET['type'];
 
-$bookshelf = new bookshelf(&$db);
+$bookshelf = new bookshelf($db);
 $data = $bookshelf->getByID($bs_code);
 $_bsid = common::getcookie('bs');
 if( (empty($_bsid) && !empty($bs_code)) || ($_bsid!=$bs_code)){

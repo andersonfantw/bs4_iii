@@ -9,7 +9,7 @@ switch($cmd){
 		$seminar_key = $fs->valid($_GET['seminarkey'],'key');
 		if(empty($uid)){
 			$VCubeSeminarManager = new VCubeSeminarManager();
-			$vcube_seminar_calendar_user = new vcube_seminar_calendar_user(&$db);
+			$vcube_seminar_calendar_user = new vcube_seminar_calendar_user($db);
 			//$invitation_key = $fs->valid($_GET['invitationkey'],'key');
 			//$email = $fs->valid($_GET['email'],'email');
 			$email = 'anderson@ttii.com.tw';
@@ -35,7 +35,7 @@ switch($cmd){
 				$url = $arr['participant']['url'];
 			}
 		}else{
-			$vcube_seminar_calendar = new vcube_seminar_calendar(&$db);
+			$vcube_seminar_calendar = new vcube_seminar_calendar($db);
 			$data = $vcube_seminar_calendar->getBySeminarKey($seminar_key);
 			$url = $data['vsc_url'];
 		}

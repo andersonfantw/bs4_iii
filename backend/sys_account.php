@@ -4,7 +4,7 @@ require_once('Crypt/Blowfish.php');
 
 $init = new init('db','sysauth','tpl','inputxss','filter','status','ehttp');
 $type = $fs->valid($_GET['type'],'cmd');
-$account = new account(&$db);
+$account = new account($db);
 $account_manager = new AccountManager;
 
 $u_id = (int) $fs->valid($_REQUEST['id'],'id');

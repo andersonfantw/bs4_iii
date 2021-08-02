@@ -4,7 +4,7 @@ require_once dirname(__FILE__).'/../init/config.php';
 $init = new init('db','sysauth','tpl','filter','status','ejson');
 
 $type = $fs->valid($_GET['type'],'cmd');
-$ini = new ini(&$db);
+$ini = new ini($db);
 $ConfigManager = new ConfigManager();
 
 switch ($type) {
@@ -130,7 +130,7 @@ switch ($type) {
 		
 		/***********file upload*************/
 		
-		$ini = new ini(&$db);
+		$ini = new ini($db);
 		$result = $ini->update('sysbs',$dataw);
 		if($_SESSION['sysuser']=='admin'){
 			$result = $ini->update('system',$data);

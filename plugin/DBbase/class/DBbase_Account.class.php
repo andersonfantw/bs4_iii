@@ -6,7 +6,7 @@ class DBbase_Account implements iAccountInterface{
 
 	public function getBSManagerList(){
 		global $db;
-		$account = new db_process(&$db,'account','u_');
+		$account = new db_process($db,'account','u_');
 		switch(func_num_args()){
 			case 0:
 				/* sys_bookshelf.add */
@@ -25,7 +25,7 @@ class DBbase_Account implements iAccountInterface{
 	function SearchManagerAccount(){
 		global $db;
 		list($str) = func_get_args();
-		$account = new db_process(&$db,'account','u_');
+		$account = new db_process($db,'account','u_');
 		$data = $account->getList('u_name asc, u_cname asc',0,0,"u_cname like '%".$str."%'");
 		return $data;
 	}
@@ -47,13 +47,13 @@ class DBbase_Account implements iAccountInterface{
 			case 1:
 				/* sys_bookshelf */
 				list($bsid) = func_get_args();
-				$bookshelf = new bookshelf(&$db);
+				$bookshelf = new bookshelf($db);
 				$data = $bookshelf->get_bookshelf_groups_structure($bsid);
 				break;
 			default:
 				/* group */
 				list($orderby,$limit_from,$offset,$where) = func_get_args();
-				$group = new group(&$db);
+				$group = new group($db);
 				$data = $group->getList($orderby,$limit_from,$offset,$where);
 				break;
 		}
@@ -63,7 +63,7 @@ class DBbase_Account implements iAccountInterface{
 	public function getGroup(){
 		global $db;
 		list($gid) = func_get_args();
-		$group = new group(&$db);
+		$group = new group($db);
 		return $group->getByID($gid);
 	}
 
@@ -72,8 +72,8 @@ class DBbase_Account implements iAccountInterface{
 		switch(func_num_args()){
 			case 1:
 				list($id) = func_get_args();
-				$group = new group(&$db);
-				$category = new category(&$db);
+				$group = new group($db);
+				$category = new category($db);
 
 				$checked_arr = $group->getCategoryByGID($id);
 				$data = $category->getCategoryStructure($checked_arr);
@@ -81,8 +81,8 @@ class DBbase_Account implements iAccountInterface{
 				break;
 			case 2:
 				list($id,$all) = func_get_args();
-				$group = new group(&$db);
-				$category = new category(&$db);
+				$group = new group($db);
+				$category = new category($db);
 
 				$checked_arr = $group->getCategoryByGID($id);
 				$data = $category->getCategoryStructure($checked_arr,$all);
@@ -96,7 +96,7 @@ class DBbase_Account implements iAccountInterface{
 		global $db;
 		/* sys_bookshelf */
 		list($bsid,$groups_arr) = func_get_args();
-		$bookshelf = new bookshelf(&$db);
+		$bookshelf = new bookshelf($db);
 		$data = $bookshelf->update_bookshelf_groups($bsid,$groups_arr);
 		return $data;
 	}
@@ -104,7 +104,7 @@ class DBbase_Account implements iAccountInterface{
 	public function updGroup($g_id,$data,$bsid){
 		global $db;
 		global $bs_code;
-		$group = new group(&$db);
+		$group = new group($db);
 		$rs=$group->update($g_id,$data);
 		
 		return $rs;
@@ -116,12 +116,12 @@ class DBbase_Account implements iAccountInterface{
 			case 1:
 				/* bookshelf_user, select by group_key */
 				list($group_key) = func_get_args();
-				$bookshelf_user = new bookshelf_user(&$db);
+				$bookshelf_user = new bookshelf_user($db);
 				$data = $bookshelf_user->getList('bu_cname desc','','',"g_id like '%".$group_key."%'");
 				break;
 			case 4:
 				list($orderby,$limit_from,$offset,$where) = func_get_args();
-				$bookshelf_user = new bookshelf_user(&$db);
+				$bookshelf_user = new bookshelf_user($db);
     		$data = $bookshelf_user->getList($orderby,$limit_from,$offset,$where);
 				break;
 			case 5:
@@ -133,7 +133,7 @@ class DBbase_Account implements iAccountInterface{
                 $where = $where.' and g_id='.$gid;
         }
 
-				$bookshelf_user = new bookshelf_user(&$db);
+				$bookshelf_user = new bookshelf_user($db);
     		$data = $bookshelf_user->getList($orderby,$limit_from,$offset,$where);
 				break;
 		}

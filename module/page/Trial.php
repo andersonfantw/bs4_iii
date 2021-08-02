@@ -10,7 +10,7 @@ function execTrial($g_id){
 	$name = $fs->valid($_POST['name'],'name');
 	$email = $fs->valid($_POST['email'],'email');
 	
-	$group = new group(&$db);
+	$group = new group($db);
 	$data = $group->getByID($g_id);
 
 	//check if group[trial] not valid (!=1), redirect to main page 
@@ -20,7 +20,7 @@ function execTrial($g_id){
   }
 
 	//limit check
-	$bookshelf_user = new bookshelf_user(&$db);
+	$bookshelf_user = new bookshelf_user($db);
 	$count = $bookshelf_user->getCountByGID($g_id);
 	
   if($gdata['limit']!='' && intval($gdata['limit'])<=intval($count)){
@@ -31,7 +31,7 @@ function execTrial($g_id){
 		$_msg = LANG_TRIAL_MISSIMG_PARAMETERS;
 	}
 
-	$activecode = new activecode(&$db);
+	$activecode = new activecode($db);
 	$hasApplyTrial=false;
 	if(!in_array($email,$exceptlist)){
 		$hasApplyTrial = $activecode->isApplyTrial($email,$g_id);
@@ -134,7 +134,7 @@ SQL;
 			$strjson = json_encode(array('trial'=>true,'username'=>$name,'gid'=>$g_id));
 			$data1['arr_gid'] = array($g_id);
 			$data1['ac_data'] = $strjson;
-			$activecode = new activecode(&$db);
+			$activecode = new activecode($db);
 			$activecode->insert($data1);
 	
 			$_msg = LANG_TRIAL_MSG;

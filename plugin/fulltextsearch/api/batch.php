@@ -3,7 +3,7 @@
 require_once dirname(__FILE__).'/../../../init/config.php';
 $init = new init('db','tpl','inputxss','filter','getIP','ejson');
 
-$book = new book(&$db);
+$book = new book($db);
 $SaveSubsManager = new SaveSubsManager();
 
 $book->setCols(array('b_id','b_name','webbook_link'));

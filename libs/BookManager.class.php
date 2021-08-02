@@ -25,7 +25,6 @@ class BookManager{
 			$status=0;
 			//insert ebook to dbmaker
 			$result = CSDUtility::ebook2dbmaker($uid, $bsid, $Uniquekey, $tmpfolder, $originalfile);
-var_dump($result);
 			if($result['rc']!=0){
 				$ee->add('msg',$result['errmsg']);
 				$ee->Error('500');

@@ -62,7 +62,7 @@ var $query_id = 0;
 
 #-#############################################
 # desc: constructor
-function odbc($server, $user, $pass, $database, $pre='', $socket=''){
+function __construct($server, $user, $pass, $database, $pre='', $socket=''){
     $this->server=$server;
     $this->user=$user;
     $this->pass=$pass;

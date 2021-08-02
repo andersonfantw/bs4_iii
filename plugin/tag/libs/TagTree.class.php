@@ -197,7 +197,7 @@ class TagTree{
 			$this->_tempstr.=substr ($_str,1);
 
 			foreach($node->children as $n){
-				$this->_toString(&$n,$source_index,$debug);
+				$this->_toString($n,$source_index,$debug);
 			}
 		}
 	}
@@ -211,7 +211,7 @@ class TagTree{
 		if(!$this->load_db){
 			global $db;
 			$this->load_db = true;
-			$tag = new tag(&$db);
+			$tag = new tag($db);
 			$tags = $tag->getList();
 			$this->newTree();
 			foreach($tags['result'] as $t){
@@ -241,7 +241,7 @@ class TagTree{
 
 	public function bindOnBook($bid,$treeindex=0){
 		global $db;
-		$tag = new tag(&$db);
+		$tag = new tag($db);
 		foreach($this->_saveseq as $nodekey){
 			if(empty($this->tree[$treeindex]->hash[$nodekey]->children)){
 				$tid = $this->tree[0]->hash[$nodekey]->data['id'];
@@ -252,7 +252,7 @@ class TagTree{
 
 	function saveDB(){
 		global $db;
-		$tag = new tag(&$db);
+		$tag = new tag($db);
 		foreach($this->_saveseq as $nodekey){
 			$node = $this->tree[0]->hash[$nodekey];
 			if(!isset($node->data['id']) && $node->key!='root'){

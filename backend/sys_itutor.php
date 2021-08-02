@@ -9,8 +9,8 @@ if(!(LicenseManager::IsEcocatLicenseValid() || LicenseManager::IsBookshelfLicens
 }
 
 $type = $fs->valid($_GET['type'],'cmd');
-$itutor = new itutor(&$db);
-$exercise = new exercise(&$db);
+$itutor = new itutor($db);
+$exercise = new exercise($db);
 
 $id = $fs->valid($_REQUEST['id'],'key');
 $name = $fs->valid($_REQUEST['n'],'name');
@@ -23,7 +23,7 @@ switch ($type) {
 	default:
   case 'list':
 		$data = $itutor->getList('',0,0,"id='".$id."'");
-	  //$db_process_e = new db_process(&$db,'itutor_exercise','e_');
+	  //$db_process_e = new db_process($db,'itutor_exercise','e_');
 	  $data_exercise = $exercise->getList('',0,0,"id='".$id."'");
 		$arr_exercise = array();
 		$arr_index = array();

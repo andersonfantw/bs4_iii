@@ -23,7 +23,7 @@ class SearchManager{
 	//return array(keyword) = synonyms, seperate by comma.
 	function getSynonyms($arr){
 		global $db;
-		$fulltext_synonyms = new fulltext_synonyms(&$db);
+		$fulltext_synonyms = new fulltext_synonyms($db);
 		$data = $fulltext_synonyms->getList();
 
 		$hash = array();
@@ -195,7 +195,7 @@ class SearchManager{
 						$tmpTags = array($t['val']);
 					}
 				}
-				$n = count($arrPCUPI[$key]);
+				$n = count($arrPCU[$key]);
 				if($arrPCU[$key][$n-1]['from']!=102){
 					$arrPCU[$key][] = array('from'=>102,'to'=>$y,'pcu'=>$tmpTags);
 				}
@@ -206,7 +206,7 @@ class SearchManager{
 			$arr_path = $TagevolveManager->getPathByKey($key);
 			if(empty($arr_path)){
 				//don't have evolve
-				$arrPI[$key][] = array('from'=>102,'to'=>$thisyear,'pcu'=>array($v['val']));
+				$arrPI[$key][] = array('from'=>102,'to'=>$thisyear,'pi'=>array($v['val']));
 			}else{
 				$arrPI[$key] = array();
 
@@ -221,7 +221,7 @@ class SearchManager{
 						$tmpTags = array($t['val']);
 					}
 				}
-				$n = count($arrPCUPI[$key]);
+				$n = count($arrPI[$key]);
 				if($arrPI[$key][$n-1]['from']!=102){
 					$arrPI[$key][] = array('from'=>102,'to'=>$y,'pi'=>$tmpTags);
 				}
@@ -522,7 +522,7 @@ PCU C(102~105:c1,106~109:c2),D(102~106:d1,107~109:d2)
 	}
 
 	private function connect($orderby='',$limit_from=0,$offset=0){
-		$order = split(' ',$orderby);
+		$order = preg_split(' ',$orderby);
 		foreach($this->operand as $k=>$v){
 			$this->operand[$k] = urlencode($v);
 		}

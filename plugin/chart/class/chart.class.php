@@ -11,7 +11,7 @@ class chart{
   }
 	public function bs_summary(){
 		global $db;
-		$account = new account(&$db);
+		$account = new account($db);
 		$data = array();
 		$sql=<<<SQL
 select 'Enabled' as label, count(*) as y
@@ -116,7 +116,7 @@ SQL;
 
 	public function book_summary(){
 		global $db;
-		$account = new account(&$db);
+		$account = new account($db);
 		$data = array();
 		$sql=<<<SQL
 select 'Enabled' as label, count(*) as y

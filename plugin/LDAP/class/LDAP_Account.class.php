@@ -74,7 +74,7 @@ class LDAP_Account extends DB_Account implements iAccountInterface{
 				/* sys_bookshelf */
 				list($nasUserInfo) = func_get_args();
 				list($name,$cname) = explode('|', $nasUserInfo);
-				$account = new account(&$db);
+				$account = new account($db);
 				$row = $account->getByName($name);
 				$u_id = $row['u_id'];
 
@@ -134,7 +134,7 @@ class LDAP_Account extends DB_Account implements iAccountInterface{
 	public function getGroup(){
 		global $db;
 		list($gkey) = func_get_args();
-		$group = new group(&$db);
+		$group = new group($db);
 		return $group->getByKey($gkey);
 	}
 
@@ -143,8 +143,8 @@ class LDAP_Account extends DB_Account implements iAccountInterface{
 		list($id) = func_get_args();
 
 		if(LicenseManager::chkAuth(MEMBER_SYSTEM,MemberSystemEnum::NAS_LDAP)){		
-			$group = new group(&$db);
-			$category = new category(&$db);
+			$group = new group($db);
+			$category = new category($db);
 
     	$checked_arr = $group->getCategoryByKey($id);
     	$data = $category->getCategoryStructure($checked_arr);
@@ -159,7 +159,7 @@ class LDAP_Account extends DB_Account implements iAccountInterface{
 		global $db;
 		/* sys_bookshelf */
 		list($bsid,$groups_arr) = func_get_args();
-		$group = new group(&$db);
+		$group = new group($db);
 
     foreach ($groups_arr as $key => $g_name) {
       if(substr($g_name, 0, 2) == '::'){
@@ -184,7 +184,7 @@ class LDAP_Account extends DB_Account implements iAccountInterface{
 	public function updGroup($g_key,$data){
 		global $db;
 		global $bs_code;
-		$group = new group(&$db);
+		$group = new group($db);
 		if(empty($g_key)){
 			return null;
 		}
@@ -215,7 +215,7 @@ class LDAP_Account extends DB_Account implements iAccountInterface{
 				}
 				break;
 		}
-		$group = new group(&$db);
+		$group = new group($db);
 		$group_data = $group->getByKey($gid);
 		$data = parent::getUserList($orderby,$limit_from,$offset,$where);
 

@@ -4,7 +4,7 @@ $init = new init('db','sysauth','tpl','inputxss','filter','status','ehttp');
 
 $type = $fs->valid($_GET['type'],'cmd');
 
-$tagevolve = new tagevolve(&$db);
+$tagevolve = new tagevolve($db);
 $TagevolveManager = new TagevolveManager();
 
 if($type=='do_add' || $type=='do_update'){
@@ -25,7 +25,7 @@ switch ($type) {
     $tpl->display('backend/sys_tagevolve_edit.tpl');
     break;
   case 'do_add':
-  	$tagevolve = new tagevolve(&$db);
+  	$tagevolve = new tagevolve($db);
   	$is_success = true;
   	if($te_type=='1'){
   		list($_tid,$_tval)=explode(':',$arr_oldtag[0]);

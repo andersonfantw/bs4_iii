@@ -114,7 +114,7 @@ SQL;
 			$data['webbook_show']=1;
 			$data['ibook_show']=1;
 			$data['b_status']=$result['status'];
-			$book = new book(&$db);
+			$book = new book($db);
 			$id = $book->insert($fs->sql_safe($data));
 			if(!$id){
 				$ee->Error('500.1');

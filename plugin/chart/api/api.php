@@ -74,11 +74,11 @@ switch($cmd){
 				break;
 			case 1:
 				$uid = bssystem::getUID();
-				$account = new account(&$db);
+				$account = new account($db);
 				$data = $account->getBookshelfByUID($uid);
 				break;
 			case 2:
-				$bookshelf = new bookshelf(&$db);
+				$bookshelf = new bookshelf($db);
 				$data = $bookshelf->getList();
 				break;
 		}
@@ -86,7 +86,7 @@ switch($cmd){
 		break;
 	case 'getDDLItemGroups':
 		$site = $fs->valid($_POST['site'],'num');
-		$group = new group(&$db);
+		$group = new group($db);
 		switch($site){
 			case 0:
 				break;
@@ -102,23 +102,23 @@ switch($cmd){
 		break;
 	case 'getDDLItemUsers':
 		$gid = $fs->valid($_POST['gid'],'id');
-		$bookshelf_user = new bookshelf_user(&$db);
+		$bookshelf_user = new bookshelf_user($db);
 		$data = $bookshelf_user->getList('',0,0,sprintf('g_id=%u',$gid),true);
 		_filterCols(array('bu_id','bu_name','bu_cname'),&$data['result']);
 		break;
 	case 'getDDLItemBooks':
 		$bsid = bssystem::getBSID();
-		$book = new book(&$db);
+		$book = new book($db);
 		$book->setBSID($bsid);
 		$data = $book->getList();
 		_filterCols(array('b_id','b_name'),&$data['result']);
 		break;
 	case 'getDDLItemDifficulty':
-		$tag = new tag(&$db);
+		$tag = new tag($db);
 		$data = $tag->getTagByPKey('');
 		break;
 	case 'getDDLItemSemester':
-		$tag = new tag(&$db);
+		$tag = new tag($db);
 		$data = $tag->getTagByPKey('');
 		break;
 	case 'queryChart':

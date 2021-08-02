@@ -261,12 +261,12 @@ class UploadQueue{
 		$data['q_tmpname'] = $workpath;
 		$data['q_key'] = $key;
 		$data['q_data'] = json_encode($this->data);
-		$queue = new queue(&$db);
+		$queue = new queue($db);
 		return $queue->insert($data);
 	}
 	public function get($id){
 		global $db;
-		$queue = new queue(&$db);
+		$queue = new queue($db);
 		return $queue->getByID($id);
 	}
 	public function add($key,$uploadfile,$bookname=''){
@@ -275,7 +275,7 @@ class UploadQueue{
 
 		$this->uploadfile = $uploadfile;
 
-		$queue = new queue(&$db);
+		$queue = new queue($db);
 		$data = $queue->getListByKey($key);
 		if(count($data)==0){
 			$row = null;
@@ -321,7 +321,7 @@ class UploadQueue{
 			$data1['q_key'] = $key;
 			$data1['q_data'] = json_encode($this->data);
 			$data1['createdate'] = date("Y-m-d H:i:s");
-			$queue = new queue(&$db);
+			$queue = new queue($db);
 			return $queue->updateByKey($key,$data1);
 /*
 		}elseif($row['status']==100){
@@ -345,12 +345,12 @@ class UploadQueue{
 	}
 	private function updateStatus($id,$status){
 		global $db;
-		$queue = new queue(&$db);
+		$queue = new queue($db);
 		$queue->updateStatus($id,$status);
 	}
 	private function retry($id){
 		global $db;
-		$queue = new queue(&$db);
+		$queue = new queue($db);
 		$queue->retry($id);
 	}
 	private function _del($row,$real=false){
@@ -360,7 +360,7 @@ class UploadQueue{
 			$converting_qid = $row['q_id'];
 			 return false;
 		}
-		$queue = new queue(&$db);
+		$queue = new queue($db);
 		$queue->del($row['q_id'],$real);
 		//檢查是否轉書成功
 		if(!empty($row['b_id'])){
@@ -377,13 +377,13 @@ class UploadQueue{
 	}
 	public function del($id,$real){
 		global $db;
-		$queue = new queue(&$db);
+		$queue = new queue($db);
 		$row = $queue->getByID($id);
 		return $this->_del($row,$real);
 	}
 	public function delByKey($key){
 		global $db;
-		$queue = new queue(&$db);
+		$queue = new queue($db);
 		//取得未被標記為刪除的key的項目
 		$data = $queue->getListByKey($key);
 		$converting_qid=0;
@@ -395,7 +395,7 @@ class UploadQueue{
 	}
 	public function getNext(){
 		global $db;
-		$queue = new queue(&$db);
+		$queue = new queue($db);
 		$data = $queue->getNext();
 		return $data;
 	}
@@ -469,7 +469,7 @@ print_r("\nSuccess!!");
 					$this->updateHeartbeat($qid,$ecocatid,100);
 					$bid = $this->addToBookshelf($ecocatid,$timestamp,$filename,$_key);
 					$status = (ENABLE_DECENTRALIZED)?QueueStatusEnum::Success:QueueStatusEnum::ImportSuccess;
-					$queue = new queue(&$db);
+					$queue = new queue($db);
 					$queue->update($qid,array('b_id'=>$bid,'status'=>$status));
 					$is_unlink = $this->removeHeartbeat();
 					if($is_unlink) $this->doNext();
@@ -477,7 +477,7 @@ print_r("\nSuccess!!");
 					if($rate != $result['rate']){
 						$rate = $result['rate'];
 						$this->updateHeartbeat($qid,$ecocatid,$rate);
-						$queue = new queue(&$db);
+						$queue = new queue($db);
 						$queue->updateStatus($qid,intval($rate));
 					}elseif((time()-$modifytimestamp>600) && ($result['rate']=='0') && $item['q_retry']==2){
 print_r("\nTimeout!!");
@@ -516,7 +516,7 @@ var_dump($result);
 print_r("\nError406.61!!");
 print_r("\nMail=");
 var_dump($qid,$filename,$this->tagstr);
-						$queue = new queue(&$db);
+						$queue = new queue($db);
 						$queue->updateStatus($qid,QueueStatusEnum::IncorrectFilename);
 						$this->_mail(QueueStatusEnum::IncorrectFilename,$qid,$filename,$this->tagstr);
 						$this->removeHeartbeat();
@@ -528,7 +528,7 @@ print_r("\nConvert Error!!");
 var_dump($result);
 print_r("\nMail=");
 var_dump($qid,$filename,$this->tagstr);
-						$queue = new queue(&$db);
+						$queue = new queue($db);
 						$queue->updateStatus($qid,QueueStatusEnum::Fail);
 						$this->removeHeartbeat();
 					}
@@ -542,7 +542,7 @@ print_r($result);
 						$bid = intval($result['bid']);
 						$this->_bindOnBook($bid);
 						$status = (ENABLE_DECENTRALIZED)?QueueStatusEnum::Success:QueueStatusEnum::ImportSuccess;
-						$queue = new queue(&$db);
+						$queue = new queue($db);
 						$queue->update($qid,array('b_id'=>$bid,'status'=>$status));
 						$this->removeHeartbeat();
 					}else{
@@ -605,7 +605,7 @@ print_r("\nRetry under 3 times");
 
 		$spell_mapping = array('right'=>1,'left'=>2);
 		if(!empty($this->bskey)){
-			$bookshelf = new bookshelf(&$db);
+			$bookshelf = new bookshelf($db);
 			$row = $bookshelf->getByKey($this->bskey);
 			if(!empty($row)){
 				$this->bsid = $row[0]['bs_id'];
@@ -629,7 +629,7 @@ print_r("\nRetry under 3 times");
 			$this->data = $this->_setDataFromParams();
 			$data1=array();
 			$data1['q_data'] = json_encode($this->data);
-			$queue = new queue(&$db);
+			$queue = new queue($db);
 			$queue->update($qid,$data1);
 		}
 		if($cate2==-2){
@@ -668,7 +668,7 @@ print_r("\nRetry under 3 times");
 			$ee = $this->ee;
 		}
 
-		$category = new category(&$db);
+		$category = new category($db);
 		if(!empty($this->cid)){
 			$row = $category->getByID($this->cid);
 			//check it's exist cate
@@ -884,7 +884,7 @@ print_r("\nRetry under 3 times");
 						$data = array();
 						$data['q_name'] = $filename;
 						$data['q_tmpname'] = $tmpname;
-						$queue = new queue(&$db);
+						$queue = new queue($db);
 						$queue->insert($data);
 					}else{
 						//something like hard disk full

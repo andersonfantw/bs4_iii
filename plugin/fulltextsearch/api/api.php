@@ -22,7 +22,7 @@ if(count($arr_key)!=count($arr_pnt)){
 	$ee->Error('406');
 }
 
-$book = new book(&$db);
+$book = new book($db);
 $row = $book->getByKey($bkey);
 
 $result = array();

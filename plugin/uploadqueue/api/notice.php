@@ -19,8 +19,8 @@ $content =<<<LOG
 LOG;
 
 $UploadQueue = new UploadQueue();
-$ini = new ini(&$db);
-$queue = new queue(&$db);
+$ini = new ini($db);
+$queue = new queue($db);
 
 $row = $ini->getByKey('uploadqueue','notice');
 if(empty($row)){

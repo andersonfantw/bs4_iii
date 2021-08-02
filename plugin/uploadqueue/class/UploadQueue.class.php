@@ -91,8 +91,8 @@ class UploadQueue{
 		global $db;
 		$this->uid = 1;
 		$this->TagTree = new TagTree();
-		$this->queue = new queue(&$db);
-		$this->ini = new ini(&$db);
+		$this->queue = new queue($db);
+		$this->ini = new ini($db);
 		$this->tags = array();
 		$this->heartbeat = CACHE_PATH.'/heartbeat';
 		$this->ecocat_allow_type = array('pdf','ppt','doc','xls','pptx','docx','xlsx');
@@ -101,7 +101,7 @@ class UploadQueue{
 	public function setBSID($_bsid){
 		global $db;
 		if($_bsid){
-			$bookshelf = new bookshelf(&$db);
+			$bookshelf = new bookshelf($db);
 			$result = $bookshelf->getByKey($_bsid);
 			$this->bskey = $result['bs_key'];
 			$this->parentbskey = $result['bs_key'];
@@ -114,7 +114,7 @@ class UploadQueue{
 	public function setBSKey($_bskey){
 		global $db;
 		if($_bskey){
-			$bookshelf = new bookshelf(&$db);
+			$bookshelf = new bookshelf($db);
 			$result = $bookshelf->getByID($_bskey);
 			$this->bsid = $result['bs_id'];
 			if(empty($this->bsname)){
@@ -273,7 +273,7 @@ class UploadQueue{
 		$this->childcateKey = $data['ccatek'];
 		$this->_childcateName = $data['ccateN'];
 		//fillup empty data
-		$bookshelf = new bookshelf(&$db);
+		$bookshelf = new bookshelf($db);
 		if($this->bsid){
 			$result = $bookshelf->getByID($this->bsid);
 			$this->bskey = $result[0]['bs_key'];
@@ -293,7 +293,7 @@ class UploadQueue{
 		global $db;
 		//fillup empty data
 
-		$bookshelf = new bookshelf(&$db);
+		$bookshelf = new bookshelf($db);
 		if($this->bsid){
 			$result = $bookshelf->getByID($this->bsid);
 			$this->bskey = $result[0]['bs_key'];
@@ -951,7 +951,7 @@ print_r("\nRetry under 3 times");
 
 		$spell_mapping = array('right'=>1,'left'=>2);
 		if(!empty($this->bskey)){
-			$bookshelf = new bookshelf(&$db);
+			$bookshelf = new bookshelf($db);
 			$row = $bookshelf->getByKey($this->bskey);
 			if(!empty($row)){
 				$this->bsid = $row[0]['bs_id'];
@@ -975,7 +975,7 @@ print_r("\nRetry under 3 times");
 			$this->data = $this->_setDataFromParams();
 			$data1=array();
 			$data1['q_data'] = json_encode($this->data);
-			$queue = new queue(&$db);
+			$queue = new queue($db);
 			$queue->update($qid,$data1);
 		}
 		if($cate2==-2){
@@ -1014,7 +1014,7 @@ print_r("\nRetry under 3 times");
 			$ee = $this->ee;
 		}
 
-		$category = new category(&$db);
+		$category = new category($db);
 		if(!empty($this->cid)){
 			$row = $category->getByID($this->cid);
 			//check it's exist cate
@@ -1229,7 +1229,7 @@ print_r("\nRetry under 3 times");
 						$data = array();
 						$data['q_name'] = $filename;
 						$data['q_tmpname'] = $tmpname;
-						$queue = new queue(&$db);
+						$queue = new queue($db);
 						$queue->insert($data);
 					}else{
 						//something like hard disk full
@@ -1380,7 +1380,7 @@ print_r("\nRetry under 3 times");
 		//send the message, check for errors
 		if ($mail->send()) {
 			print_r("\nsend mail success");
-			$maillog = new maillog(&$db);
+			$maillog = new maillog($db);
 			$data = array(
 				'ML_TARGET' => MailTypeEnum::UploadQueue,
 				'TARGET_ID' => (int)$qid,

@@ -701,7 +701,7 @@ class WebConsoleRPCServer extends BaseJsonRpcServer {
 
             // Prefix
             if (!empty($completion_prefix) && !empty($completion)) {
-                foreach ($completion as &$value) $value = $completion_prefix . $value;
+                foreach ($completion as $value) $value = $completion_prefix . $value;
             }
 
             // Pattern

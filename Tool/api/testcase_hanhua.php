@@ -19,7 +19,7 @@ class testcase_hanhua{
 		$this->lookup_userid();
 		$this->_check_group_users();
 		global $db;
-		$bookshelf_user = new bookshelf_user(&$db);
+		$bookshelf_user = new bookshelf_user($db);
 		$data = $bookshelf_user->getByName('ttii');
 		$bookshelf_user->del($data['bu_id'],0);
 	}
@@ -65,7 +65,7 @@ class testcase_hanhua{
 
 	private function _check_group_users($name){
     global $db;
-    $bookshelf_user = new bookshelf_user(&$db);
+    $bookshelf_user = new bookshelf_user($db);
     $data = $bookshelf_user->getByName('ttii');
     echo 'buid='.$data['bu_id'].BR;
     $sql=<<<SQL

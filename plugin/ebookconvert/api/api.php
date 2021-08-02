@@ -13,7 +13,7 @@ $output = $json = new Services_JSON();
 switch($cmd){
 	case 'GetSkinList':
 		//param: bs
-		$account = new account(&$db);
+		$account = new account($db);
 		$EcocatConnector = new EcocatConnector($bsid);
 		$arr = $EcocatConnector->GetSkinList();
 		if(isset($arr['detail']["message"])){
@@ -39,7 +39,7 @@ switch($cmd){
 		break;
 	case 'GetSpellList':
 		//param: bs
-		$account = new account(&$db);
+		$account = new account($db);
 		$EcocatConnector = new EcocatConnector($bsid);
 		$array = $EcocatConnector->GetSpellList();
 		$row = $account->getAccountByBSID($bsid);
@@ -53,7 +53,7 @@ switch($cmd){
 		echo $json->encode($data);exit;
 		break;
 	case 'SetSkinSettings':
-		$account = new account(&$db);
+		$account = new account($db);
 		$array=array('left'=>2,'right'=>1);
 		$data = array();
 		$data['u_ecocat_skin'] = $fs->valid($_POST['skin'],'filename');

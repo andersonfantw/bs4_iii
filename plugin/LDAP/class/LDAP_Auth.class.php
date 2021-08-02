@@ -24,9 +24,9 @@ class LDAP_Auth extends DB_Auth implements iAuthInterface{
 	public function validAdmin(){
 		global $db;
 		/* index */
-		//¨t²ÎºÞ²z­ûadmin, webadminµn¤J
+		//ï¿½tï¿½ÎºÞ²zï¿½ï¿½admin, webadminï¿½nï¿½J
 		list($acc,$pwd) = func_get_args();
-		$db_process = new db_process(&$db,'system_account','su_');
+		$db_process = new db_process($db,'system_account','su_');
 
     $nasAuthId = $this->LDAPAgent->login($acc, $pwd);
 
@@ -39,10 +39,10 @@ class LDAP_Auth extends DB_Auth implements iAuthInterface{
 	public function validBSManager(){
 		global $db;
 		/* index */
-		//¬d¸ß¬O§_³Q³]©w¬°®ÑÂdºÞ²z­û¡A¦³³]©wªÌ´N¥i¥Hµn¤J
+		//ï¿½dï¿½ß¬Oï¿½_ï¿½Qï¿½]ï¿½wï¿½ï¿½ï¿½ï¿½ï¿½dï¿½Þ²zï¿½ï¿½ï¿½Aï¿½ï¿½ï¿½]ï¿½wï¿½Ì´Nï¿½iï¿½Hï¿½nï¿½J
 		list($acc,$pwd) = func_get_args();
 		
-		$account = new account(&$db);
+		$account = new account($db);
 /*
 		if(!empty($account) && strpos(LDAP_EXCLUDE_ACCOUNT,$account)===false){
 			$account = LDAP_DOMAIN_PREFIX.$account;
@@ -64,8 +64,8 @@ class LDAP_Auth extends DB_Auth implements iAuthInterface{
 		list($acc,$pwd) = func_get_args();
 		//$account = LDAP_DOMAIN_PREFIX.$account;
 		
-		$group = new group(&$db);
-		$booshelf_user = new bookshelf_user(&$db);
+		$group = new group($db);
+		$booshelf_user = new bookshelf_user($db);
 		$nasAuthId = $this->LDAPAgent->login($acc, $pwd);
 		if(LicenseManager::chkAuth(MEMBER_MODE,MemberModeEnum::USER_LOGIN_VERIFY_LOOSE_MODE)){
 			//loose mode
@@ -86,9 +86,9 @@ class LDAP_Auth extends DB_Auth implements iAuthInterface{
 			}
 		}else{
 			//strict mode
-			//¨Ï¥ÎªÌ¦b¸ê®Æ®w¤¤¡A´N§ó·s¨Ï¥ÎªÌªº¸s²Õ¡A¨Ã¬d¸ß¬O§_¦³Åv­­
-			//¨Ï¥ÎªÌ¤£¦b¸ê®Æ®w¤¤¡A´N·s¼W¨Ï¥ÎªÌ¡A¤Î©ÒÄÝ¸s²Õ¡A¨Ã¬d¸ß¬O§_¦³Åv­­
-			//¸s²Õ¤£¤@©w(³q±`¤£·|)¥Ñ¤j«á¥x«ü©wµ¹®ÑÂd«á¥x
+			//ï¿½Ï¥ÎªÌ¦bï¿½ï¿½Æ®wï¿½ï¿½ï¿½Aï¿½Nï¿½ï¿½sï¿½Ï¥ÎªÌªï¿½ï¿½sï¿½Õ¡Aï¿½Ã¬dï¿½ß¬Oï¿½_ï¿½ï¿½ï¿½vï¿½ï¿½
+			//ï¿½Ï¥ÎªÌ¤ï¿½ï¿½bï¿½ï¿½Æ®wï¿½ï¿½ï¿½Aï¿½Nï¿½sï¿½Wï¿½Ï¥ÎªÌ¡Aï¿½Î©ï¿½ï¿½Ý¸sï¿½Õ¡Aï¿½Ã¬dï¿½ß¬Oï¿½_ï¿½ï¿½ï¿½vï¿½ï¿½
+			//ï¿½sï¿½Õ¤ï¿½ï¿½@ï¿½w(ï¿½qï¿½`ï¿½ï¿½ï¿½|)ï¿½Ñ¤jï¿½ï¿½xï¿½ï¿½ï¿½wï¿½ï¿½ï¿½ï¿½ï¿½dï¿½ï¿½x
 		  //update user's group
 		  if($nasAuthId != ''){
 		    $nasGroups = $this->LDAPAgent->listUserGroups('', $acc);

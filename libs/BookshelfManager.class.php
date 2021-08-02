@@ -394,7 +394,7 @@ class BookshelfManager{
     $http_request .= "Content-Type: application/x-www-form-urlencoded\r\n";
     $http_request .= "Content-Length:".strlen($http_request_param)."\r\n\r\n"; 
 
-    $fp = fsockopen($BookshelfConnector_domain, $BookshelfConnector_port, &$errno, &$errstr, 10);
+    $fp = fsockopen($BookshelfConnector_domain, $BookshelfConnector_port, $errno, $errstr, 10);
     if (!$fp) {
       echo "$errstr ($errno)<br>\n";exit;
     }else{

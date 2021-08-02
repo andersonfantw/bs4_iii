@@ -1,7 +1,7 @@
 <?php
 class init{
 
-  function init($param=NULL){
+  function __construct($param=NULL){
 		self::_init();
 
     $arg_list = func_get_args();
@@ -57,7 +57,7 @@ class init{
 		if(!empty($method)){
 			$page = $page.'|'.$method;
 		}
-		if(!LicenseManager::chkAuth(MEMBER_MODE,
+		if(!(new LicenseManager)->chkAuth(MEMBER_MODE,
 			MemberSystemFuncMapping::getMapping($page)))
 		{
 			$ErrorHandler = new ErrorHandler('header');
@@ -166,7 +166,7 @@ class init{
               $USER_IP = $SimpleIP;
               break;
           case '1':
-              $b = ereg ("^([0-9]{1,3}\.){3,3}[0-9]{1,3}", $TrueIP, $IP_array);
+              $b = preg_match ("^([0-9]{1,3}\.){3,3}[0-9]{1,3}", $TrueIP, $IP_array);
               if ($b && (count($IP_array)>0)){
                   // True IP behind a proxy
                   $USER_IP = $IP_array[0];

@@ -16,7 +16,7 @@ function execDesktop($uid,$bs_id,$token){
 		}
 	}
 
-	$bookshelf = new bookshelf(&$db,'bookshelfs');
+	$bookshelf = new bookshelf($db,'bookshelfs');
 	$data = $bookshelf->getList('bs_id desc',0,0,sprintf('bs_status=1 and bs_id=%u',$bs_id));
 	if(empty($data['result'])){
 		$ee->Error('404');

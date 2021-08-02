@@ -7,7 +7,7 @@ require_once('Crypt/Blowfish.php');
 
 global $bs_code;
 $type = $fs->valid($_GET['type'],'cmd');
-$game_reflection = new game_reflection(&$db);
+$game_reflection = new game_reflection($db);
 
 if($type=='do_add' || $type=='do_update'){
   $game_data['grc_mark'] = (int)$fs->valid($_POST['grc_mark'],'num');

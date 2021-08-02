@@ -138,7 +138,7 @@ SQL;
 
 	function insert($data){
 		global $db;
-		$vcube_meetings_calendar_group = new vcube_seminar_calendar_group(&$db);
+		$vcube_meetings_calendar_group = new vcube_seminar_calendar_group($db);
 
 		$data['CreateDate'] = date('Y-m-d H:i:s');
 
@@ -159,7 +159,7 @@ SQL;
 		$data1['g_id'] = intval($data['g_id']);
 		$data1['vsc_seminarkey'] = $seminar_key;
 		//update group
-		$vcube_meetings_calendar_group = new vcube_seminar_calendar_group(&$db);
+		$vcube_meetings_calendar_group = new vcube_seminar_calendar_group($db);
 		$vcube_meetings_calendar_group->del($seminar_key);
 		$vcube_meetings_calendar_group->insert($data1);
 		//update db
@@ -175,7 +175,7 @@ SQL;
 
 	function del($seminar_key){
 		global $db;
-		$vcube_meetings_calendar_group = new vcube_meetings_calendar_group(&$db);
+		$vcube_meetings_calendar_group = new vcube_meetings_calendar_group($db);
 		$vcube_meetings_calendar_group->del($seminar_key);
 
 		$sql=<<<SQL

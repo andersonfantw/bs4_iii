@@ -5,7 +5,7 @@ require_once dirname(__FILE__).'/init.php';
 require_once('Crypt/Blowfish.php');
 
 $type = $fs->valid($_GET['type'],'cmd');
-$db_process = new db_process(&$db,'account','u_');
+$db_process = new db_process($db,'account','u_');
 
 $account = $fs->valid($_COOKIE['adminuser'],'acc');
 
