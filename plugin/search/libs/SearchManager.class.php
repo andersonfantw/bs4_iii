@@ -180,7 +180,9 @@ class SearchManager{
 			$arr_path = $TagevolveManager->getPathByKey($key);
 			if(empty($arr_path)){
 				//don't have evolve
-				$arrPCU[$key][] = array('from'=>102,'to'=>$thisyear,'pcu'=>array($v['val']));
+				if(!empty($arrTagYear)){
+					$arrPCU[$key][] = array('from'=>$arrTagYear[0],'to'=>$arrTagYear[count($arrTagYear)-1],'pcu'=>array($v['val']));
+				}else $arrPCU[$key][] = array('from'=>102,'to'=>$thisyear,'pcu'=>array($v['val']));
 			}else{
 				$arrPCU[$key] = array();
 				
@@ -206,7 +208,9 @@ class SearchManager{
 			$arr_path = $TagevolveManager->getPathByKey($key);
 			if(empty($arr_path)){
 				//don't have evolve
-				$arrPI[$key][] = array('from'=>102,'to'=>$thisyear,'pi'=>array($v['val']));
+				if(!empty($arrTagYear)){
+					$arrPI[$key][] = array('from'=>$arrTagYear[0],'to'=>$arrTagYear[count($arrTagYear)-1],'pi'=>array($v['val']));
+				}else $arrPI[$key][] = array('from'=>102,'to'=>$thisyear,'pi'=>array($v['val']));
 			}else{
 				$arrPI[$key] = array();
 
@@ -307,7 +311,7 @@ PCU C(102~105:c1,106~109:c2),D(102~106:d1,107~109:d2)
 							}
 							if(empty($arrTagYear)){						//not set year period
 								$arrYear[$key][$y][] = array('pi',$i,$j);
-							}elseif(in_array($j,$arrTagYear)){	//when set year period
+							}elseif(in_array($y,$arrTagYear)){	//when set year period
 								$arrYear[$key][$y][] = array('pi',$i,$j);
 							}
 						}
@@ -320,7 +324,7 @@ PCU C(102~105:c1,106~109:c2),D(102~106:d1,107~109:d2)
 							}
 							if(empty($arrTagYear)){						//not set year period
 								$arrYear[$key][$y][] = array('pcu',$i,$j);
-							}elseif(in_array($j,$arrTagYear)){	//when set year period
+							}elseif(in_array($y,$arrTagYear)){	//when set year period
 								$arrYear[$key][$y][] = array('pcu',$i,$j);
 							}
 						}

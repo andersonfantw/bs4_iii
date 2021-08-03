@@ -16,7 +16,7 @@ var Loader = function(options, returnFunction){
 	var _basepath = '/';
 	//var system_scripts=['json2','cookie','common.class.1.0','bs.class.2.7','baseClass.class','taffy-min','lzw','piwik','jquery-ui-1.11.4.custom.min'];
 	//var system_css=['jquery-ui-1.11.4.custom.min'];
-	var system_scripts=['json2','cookie','common.class.1.0','bs.class.2.5','baseClass.class','taffy-min','lzw','piwik'];
+	var system_scripts=['json2','cookie','common.class.1.0','bs.class.2.5','baseClass.class','taffy-min','lzw'];
 	var system_css=[];
 
 	var default_options={
