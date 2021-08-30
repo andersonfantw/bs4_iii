@@ -841,6 +841,7 @@ print_r("\nRetry under 3 times");
 				$filesize = filesize($tmpname);
 				$this->createHeartbeat($qid,$timestamp,'',$filename,0,$qkey);
 
+				$title = '';
 				if(in_array($subname,$this->ecocat_allow_type)){
 					//something wrong may occur while start conver, and will stop program execution.
 					$result = $this->convert(-1,$qid,$tmpname,$filename,$this->spell);
@@ -848,7 +849,7 @@ print_r("\nRetry under 3 times");
 						$ecocatid = $result['process_id'];
 						$_rate = $result['rate'];
 						$this->queue->updateStatus($qid,intval($_rate));
-						$this->updateHeartbeat($qid,$ecocatid,$process['rate']);
+						$this->updateHeartbeat($qid,$ecocatid,$_rate);
 						$LogManager->event('Upload success',
 							sprintf("qid=%u, filename=%s, ecocatid=%s, key=%s, tmpfile=%s, filesize=%s, timestamp=%s",$qid,$filename,$ecocatid,$qkey,$tmpname,$filesize,$timestamp));
 					}elseif($result['code']=='406.61'){
@@ -1403,10 +1404,10 @@ print_r("\n".$content);
 			$str = $arr[$i];
 			if($arr[$i]!="") break;
 		}
-		if(strpos($str,'ERROR')==-1){
-			return array('status'=>-2,'msg'=>$str);
-		}else{
+		if(strpos($str,'ERROR')===false){
 			return array('status'=>0,'msg'=>$str);
+		}else{
+			return array('status'=>-2,'msg'=>$str);
 		}
 	}
 }

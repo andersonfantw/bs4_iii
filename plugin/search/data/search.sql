@@ -16,11 +16,18 @@ left join BOOKSHELF2_ACCOUNT_BOOKSHELF ab on(ab.bs_id=b.bs_id)
 
 CREATE VIEW BOOKSHELF2_VIEW_FULLTEXT_BOOKTAG_REF as
 select
-b.b_id as bid,b.b_key as bkey,b.b_name as bname,
-tk.tk_name as key, tv.tv_name as val,
+    b.b_id as bid,b.b_key as bkey,b.b_name as bname,
+    tk.tk_name as key, tv.tv_name as val,
 tk1.tk_name as pkey, tv1.tv_name as pval
 from bookshelf2_books b
-left join bookshelf2_book_tag bt on(b.b_id=bt.b_id)
+left join (
+	select 1 as mode,b_id,t_id,createdate
+	from BOOKSHELF2_BOOK_TAG bt
+	union
+	select 2 as mode,b_id,td.t_id,td.createdate
+	from BOOKSHELF2_TAG_DICTIONARY td
+	left join bookshelf2_books b on(td.dockey=b.b_key)
+) bt on(b.b_id=bt.b_id)
 left join BOOKSHELF2_TAG t1 on(t1.t_id=bt.t_id)
 left join BOOKSHELF2_TAGKEY tk on(t1.tk_id=tk.tk_id)
 left join BOOKSHELF2_TAGVAL tv on(t1.tv_id=tv.tv_id)

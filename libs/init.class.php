@@ -86,7 +86,7 @@ class init{
         $dbr = new DatabaseI(DB_SLAVE_SERVER ,DB_SLAVE_USER ,DB_SLAVE_PASS ,DB_SLAVE_DATABASE, '', DB_SLAVE_SOCKET);
         $dbr->connect(true);
         $dbr->fetch_array_type=MYSQL_ASSOC;
-        //$dbr->query("SET NAMES 'utf8'");
+        $dbr->query("SET NAMES 'utf8'");
     }
   }
 

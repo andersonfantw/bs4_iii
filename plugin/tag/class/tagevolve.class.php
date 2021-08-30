@@ -88,7 +88,7 @@ SQL;
 		}
 	}
 	function combine(){
-		$tag = new tag(&$this->db);
+		$tag = new tag($this->db);
 		if(count($this->from)>1 && count($this->to)==1){
 			if(in_array($this->to[0],$this->from)){
 				//error
@@ -116,7 +116,7 @@ SQL;
 		}
 	}
 	function separate(){
-		$tag = new tag(&$this->db);
+		$tag = new tag($this->db);
 		if(count($this->from)==1 && count($this->to)>1){
 			//make sure from_tid not in to_tid
 			if(in_array($this->from[0],$this->to)){

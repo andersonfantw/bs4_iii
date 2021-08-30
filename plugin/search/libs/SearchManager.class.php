@@ -526,7 +526,7 @@ PCU C(102~105:c1,106~109:c2),D(102~106:d1,107~109:d2)
 	}
 
 	private function connect($orderby='',$limit_from=0,$offset=0){
-		$order = preg_split(' ',$orderby);
+		$order = explode(' ',$orderby);
 		foreach($this->operand as $k=>$v){
 			$this->operand[$k] = urlencode($v);
 		}

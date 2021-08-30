@@ -129,7 +129,7 @@ switch ($type) {
   	//BookshelfManager::UserLogout();
   	//BookshelfManager::UserLogin(12, 'c1053', '袁建仁');
 	//echo sprintf('<script>document.location.href="%s/%s/%s/";</script>',WEB_URL,str_replace(LDAP_DOMAIN_PREFIX,'',$_acc),$_bsid);
-  	header(sprintf('Location:%s/%s/%s/',WEB_URL,str_replace(LDAP_DOMAIN_PREFIX,'',$acc),$bsid));
+  	header(sprintf('Location:%s/%s/%s/',WEB_URL,str_replace(LDAP_DOMAIN_PREFIX,'',$_acc),$_bsid));
 	exit;
   	break;
   case 'group':
